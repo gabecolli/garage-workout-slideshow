@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-08-22",
+  "generatedAt": "2026-08-22T15:17:40Z",
+  "planId": "DP-20260822-001",
+  "title": "SATURDAY ACCESSORY / PRIMER",
+  "emphasis": "Grip, easy pressing, unilateral legs, neck, elastic power, and loaded work capacity.",
+  "featuredMode": "RINGS + CARRIES",
+  "levels": {
+    "floor": "A/B/C ×1",
+    "standard": "Ignition + A/B/C ×1",
+    "bonus": "5-min mobility"
+  },
+  "ignition": {
+    "name": "Zone-2 Treadmill",
+    "prescription": "10:00",
+    "home": "Easy curved-treadmill pace",
+    "away": "Brisk outdoor walk",
+    "cue": "Keep the pace conversational.",
+    "category": "conditioning",
+    "media": {
+      "type": "youtube",
+      "videoId": "7Uam46SqHac",
+      "sourceUrl": "https://www.youtube.com/watch?v=7Uam46SqHac",
+      "thumbnailUrl": "https://i.ytimg.com/vi/7Uam46SqHac/hqdefault.jpg",
+      "sourceName": "Curved treadmill form tutorial"
+    }
+  },
+  "deposits": [
+    {
+      "label": "A",
+      "title": "GRIP + PRESS",
+      "rounds": 1,
+      "effort": "RPE 4–6 • crisp accessory work",
+      "exercises": [
+        {
+          "id": "EX-G006",
+          "name": "Towel Hang",
+          "prescription": "20 SEC",
+          "home": "Active towel hang",
+          "away": "Heavy-backpack pinch hold, 20 sec",
+          "cue": "Keep the shoulders active and crush the towel.",
+          "category": "rings-calisthenics",
+          "media": {
+            "type": "youtube",
+            "videoId": "gvgpRes6FwA",
+            "sourceUrl": "https://www.youtube.com/watch?v=gvgpRes6FwA",
+            "thumbnailUrl": "https://i.ytimg.com/vi/gvgpRes6FwA/hqdefault.jpg",
+            "sourceName": "Coach Shreck — Towel Hang"
+          }
+        },
+        {
+          "id": "EX-R008",
+          "name": "Ring Triceps Extension",
+          "prescription": "8 REPS",
+          "home": "Easy ring angle",
+          "away": "8 diamond push-ups",
+          "cue": "Keep the body rigid and hinge only at the elbows.",
+          "category": "rings-calisthenics",
+          "media": {
+            "type": "youtube",
+            "videoId": "wACo_KKsfkI",
+            "sourceUrl": "https://www.youtube.com/watch?v=wACo_KKsfkI",
+            "thumbnailUrl": "https://i.ytimg.com/vi/wACo_KKsfkI/hqdefault.jpg",
+            "sourceName": "Ring triceps extension tutorial"
+          }
+        }
+      ]
+    },
+    {
+      "label": "B",
+      "title": "LEGS + ARMOR",
+      "rounds": 1,
+      "effort": "RPE 4–5 • leave plenty in reserve",
+      "exercises": [
+        {
+          "id": "EX-H023",
+          "name": "Step-Up",
+          "prescription": "8 / SIDE",
+          "home": "Low step-up",
+          "away": "Stair or stable bench",
+          "cue": "Drive through the working leg; do not bounce off the trail foot.",
+          "category": "strength",
+          "media": {
+            "type": "youtube",
+            "videoId": "nmuC472g9rE",
+            "sourceUrl": "https://www.youtube.com/watch?v=nmuC472g9rE",
+            "thumbnailUrl": "https://i.ytimg.com/vi/nmuC472g9rE/hqdefault.jpg",
+            "sourceName": "Joanna Soh — Step-Ups"
+          }
+        },
+        {
+          "id": "EX-T028",
+          "name": "Self-Resisted Neck Isometrics",
+          "prescription": "10 SEC / DIRECTION",
+          "home": "Moderate hand pressure",
+          "away": "Same",
+          "cue": "Keep the head still; build tension gradually.",
+          "category": "strength",
+          "media": {
+            "type": "youtube",
+            "videoId": "kwKq9n8ima4",
+            "sourceUrl": "https://www.youtube.com/watch?v=kwKq9n8ima4",
+            "thumbnailUrl": "https://i.ytimg.com/vi/kwKq9n8ima4/hqdefault.jpg",
+            "sourceName": "Neck isometric rehab tutorial"
+          }
+        }
+      ]
+    },
+    {
+      "label": "C",
+      "title": "POWER + CAPACITY",
+      "rounds": 1,
+      "effort": "Stop before speed, posture, or landing quality drops",
+      "exercises": [
+        {
+          "id": "EX-E003",
+          "name": "Broad Jump",
+          "prescription": "3 REPS",
+          "home": "Clear garage floor; full reset",
+          "away": "Outdoor or clear floor space",
+          "cue": "Stick each landing before the next rep.",
+          "category": "power",
+          "media": {
+            "type": "youtube",
+            "videoId": "8BRnpWIB3qg",
+            "sourceUrl": "https://www.youtube.com/watch?v=8BRnpWIB3qg",
+            "thumbnailUrl": "https://i.ytimg.com/vi/8BRnpWIB3qg/hqdefault.jpg",
+            "sourceName": "Standing broad jump demonstration"
+          }
+        },
+        {
+          "id": "EX-G019",
+          "name": "Farmer Carry",
+          "prescription": "20 SEC",
+          "home": "Brisk kettlebell or dumbbell march",
+          "away": "Loaded-backpack bear-hug march",
+          "cue": "Stay tall and take quiet, controlled steps.",
+          "category": "kettlebell",
+          "media": {
+            "type": "youtube",
+            "videoId": "YbkFh25leLY",
+            "sourceUrl": "https://www.youtube.com/watch?v=YbkFh25leLY",
+            "thumbnailUrl": "https://i.ytimg.com/vi/YbkFh25leLY/hqdefault.jpg",
+            "sourceName": "StrongFirst — Farmer’s Walk"
+          }
+        }
+      ]
+    }
+  ],
+  "martialSupplement": {
+    "duration": "5 min",
+    "text": "Closed-guard post removal → angle → posture-break entry; 2 controlled reps/side each minute; dummy or solo. Separate—not counted."
+  }
+}
