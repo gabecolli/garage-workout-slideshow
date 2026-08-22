@@ -363,7 +363,19 @@ button {
   border: 0;
 }
 
-.media-shell__fallback,
+.media-shell__fallback {
+  z-index: 2;
+  background: #020303;
+  opacity: 1;
+  object-fit: contain;
+  transition: opacity 300ms ease;
+}
+
+.media-shell.is-playing .media-shell__fallback {
+  pointer-events: none;
+  opacity: 0;
+}
+
 .media-shell__image {
   object-fit: contain;
 }
