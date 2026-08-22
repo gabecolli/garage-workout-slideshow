@@ -1,0 +1,159 @@
+:root {
+  color-scheme: dark;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #17130f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #17130f;
+}
+
+button {
+  font: inherit;
+}
+
+.slideshow {
+  position: fixed;
+  inset: 0;
+  background: #17130f;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    opacity 600ms ease,
+    visibility 0s linear 600ms;
+}
+
+.slide.is-active {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+.slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.controls {
+  position: fixed;
+  z-index: 2;
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  left: 50%;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem;
+  color: #fff;
+  background: rgb(17 14 11 / 88%);
+  border: 1px solid rgb(255 255 255 / 22%);
+  border-radius: 0.75rem;
+  box-shadow: 0 0.5rem 2rem rgb(0 0 0 / 35%);
+  opacity: 0.18;
+  transform: translateX(-50%);
+  transition: opacity 180ms ease;
+}
+
+.controls:hover,
+.controls:focus-within {
+  opacity: 1;
+}
+
+.controls button {
+  min-height: 2.25rem;
+  padding: 0.4rem 0.7rem;
+  color: inherit;
+  background: rgb(255 255 255 / 10%);
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 0.45rem;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background: rgb(255 255 255 / 18%);
+}
+
+.controls button:focus-visible {
+  outline: 3px solid #f1b83b;
+  outline-offset: 2px;
+}
+
+.controls output {
+  min-width: 3.5rem;
+  padding-inline: 0.35rem;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.progress {
+  position: fixed;
+  z-index: 3;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: rgb(255 255 255 / 10%);
+}
+
+.progress__bar {
+  width: 100%;
+  height: 100%;
+  background: #d24b2f;
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.progress__bar.is-running {
+  animation: countdown var(--slide-duration) linear forwards;
+}
+
+.noscript {
+  position: fixed;
+  z-index: 4;
+  top: 1rem;
+  left: 50%;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  color: #fff;
+  background: #a83225;
+  border-radius: 0.5rem;
+  transform: translateX(-50%);
+}
+
+@keyframes countdown {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (hover: none) {
+  .controls {
+    opacity: 0.7;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slide {
+    transition: none;
+  }
+}
