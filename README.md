@@ -19,9 +19,13 @@ workout.
 
 ## Display behavior
 
-- Overview, ignition, and one demonstration slide per HOME movement.
+- One overview page per three deposits, followed by ignition and one
+  demonstration slide per HOME movement. The display supports three to five
+  deposits, two or three exercises per deposit, and independently prescribed
+  round counts.
 - YouTube videos use privacy-enhanced embeds, autoplay muted, and restart when
-  their slide returns. A thumbnail remains available as a visual fallback.
+  their slide returns. Exact, reputable YouTube Shorts are preferred; a
+  thumbnail remains available as a visual fallback until playback begins.
 - Slides rotate every 18 seconds. Previous, pause/play, next, arrow keys, and
   spacebar remain available.
 
