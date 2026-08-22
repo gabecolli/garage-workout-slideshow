@@ -155,8 +155,11 @@ function makeMedia(exercise) {
   return shell;
 }
 
-function makeOverview(workout) {
+function makeOverview(workout, deposits, pageIndex = 0, pageCount = 1) {
   const slide = createElement("section", "slide slide--overview");
+  if (deposits.some((deposit) => (deposit.exercises || []).length > 2)) {
+    slide.classList.add("slide--overview-dense");
+  }
   slide.dataset.slide = "";
   slide.setAttribute("aria-hidden", "true");
 
@@ -166,9 +169,17 @@ function makeOverview(workout) {
     createElement(
       "p",
       "eyebrow",
-      `DAILY FIGHTER DEPOSITS • ${formatPlanDate(workout.date).toUpperCase()}`,
+      `DAILY FIGHTER DEPOSITS • ${formatPlanDate(workout.date).toUpperCase()}${
+        pageCount > 1 ? ` • OVERVIEW ${pageIndex + 1}/${pageCount}` : ""
+      }`,
     ),
-    createElement("h1", "overview-title", safeText(workout.title, "TODAY’S WORKOUT")),
+    createElement(
+      "h1",
+      "overview-title",
+      pageIndex === 0
+        ? safeText(workout.title, "TODAY’S WORKOUT")
+        : safeText(workout.additionalTitle, "MORE DEPOSITS"),
+    ),
     createElement("p", "overview-emphasis", safeText(workout.emphasis)),
   );
   const mode = createElement("div", "featured-mode");
@@ -193,7 +204,7 @@ function makeOverview(workout) {
   }
 
   const grid = createElement("div", "deposit-grid");
-  for (const deposit of workout.deposits || []) {
+  for (const deposit of deposits) {
     const card = createElement("article", "deposit-card");
     const top = createElement("div", "deposit-card__top");
     top.append(
@@ -314,10 +325,17 @@ function makeExerciseSlide(exercise, deposit) {
 }
 
 function buildSlides(workout) {
-  const nextSlides = [makeOverview(workout)];
+  const deposits = workout.deposits || [];
+  const overviewPages = [];
+  for (let index = 0; index < deposits.length; index += 3) {
+    overviewPages.push(deposits.slice(index, index + 3));
+  }
+  const nextSlides = overviewPages.map((page, index) =>
+    makeOverview(workout, page, index, overviewPages.length),
+  );
   const ignitionSlide = makeIgnitionSlide(workout.ignition);
   if (ignitionSlide) nextSlides.push(ignitionSlide);
-  for (const deposit of workout.deposits || []) {
+  for (const deposit of deposits) {
     for (const exercise of deposit.exercises || []) {
       nextSlides.push(makeExerciseSlide(exercise, deposit));
     }
@@ -327,12 +345,27 @@ function buildSlides(workout) {
 
 function validateWorkout(workout) {
   if (!workout || typeof workout !== "object") throw new Error("Workout data is missing");
-  if (!Array.isArray(workout.deposits) || workout.deposits.length !== 3) {
-    throw new Error("Workout must contain three deposits");
+  if (
+    !Array.isArray(workout.deposits) ||
+    workout.deposits.length < 3 ||
+    workout.deposits.length > 5
+  ) {
+    throw new Error("Workout must contain three to five deposits");
   }
   for (const deposit of workout.deposits) {
-    if (!Array.isArray(deposit.exercises) || deposit.exercises.length !== 2) {
-      throw new Error("Each deposit must contain two exercises");
+    if (
+      !Array.isArray(deposit.exercises) ||
+      deposit.exercises.length < 2 ||
+      deposit.exercises.length > 3
+    ) {
+      throw new Error("Each deposit must contain two or three exercises");
+    }
+    if (
+      !Number.isInteger(deposit.rounds) ||
+      deposit.rounds < 1 ||
+      deposit.rounds > 5
+    ) {
+      throw new Error("Deposit rounds must be between one and five");
     }
   }
 }
