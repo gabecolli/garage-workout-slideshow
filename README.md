@@ -1,16 +1,28 @@
 # Garage Workout Slideshow
 
-A dependency-free static website that rotates through three garage workout
-posters every 15 seconds.
+A dependency-free, TV-first display for the current Daily FIGHTER Deposits
+workout.
 
 **Live site:** <https://gabecolli.github.io/garage-workout-slideshow/>
 
-## Controls
+## How it stays current
 
-- **Previous/Next:** move between posters manually.
-- **Pause/Play:** stop or restart automatic rotation.
-- **Left/Right arrows:** move between posters from the keyboard.
-- **Space:** pause or restart automatic rotation.
+- The daily workout automation replaces `data/today.json` after it builds and
+  logs the day’s plan.
+- An already-open display polls that file every 60 seconds with cache-busting.
+- When `generatedAt` changes, the slideshow rebuilds itself without a manual
+  browser refresh.
+- The page also reloads itself every six hours to recover cleanly from long TV
+  browser sessions.
+- If the live JSON cannot be reached, the page keeps showing the last loaded
+  workout; on a cold start it falls back to the three static movement posters.
 
-The site contains no analytics, advertising, server-side code, or paid
-services. It is deployed from this public repository with GitHub Pages.
+## Display behavior
+
+- Overview, ignition, and one demonstration slide per HOME movement.
+- YouTube videos use privacy-enhanced embeds, autoplay muted, and restart when
+  their slide returns. A thumbnail remains available as a visual fallback.
+- Slides rotate every 18 seconds. Previous, pause/play, next, arrow keys, and
+  spacebar remain available.
+
+There are no analytics, ads, paid services, or server-side components.
