@@ -1,14 +1,14 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "date": "2026-08-22",
-  "generatedAt": "2026-08-22T15:17:40Z",
+  "generatedAt": "2026-08-22T18:49:33Z",
   "planId": "DP-20260822-001",
   "title": "SATURDAY ACCESSORY / PRIMER",
   "emphasis": "Grip, easy pressing, unilateral legs, neck, elastic power, and loaded work capacity.",
   "featuredMode": "RINGS + CARRIES",
   "levels": {
     "floor": "A/B/C ×1",
-    "standard": "Ignition + A/B/C ×1",
+    "standard": "Ignition + A/B/C ×2",
     "bonus": "5-min mobility"
   },
   "ignition": {
@@ -30,7 +30,7 @@
     {
       "label": "A",
       "title": "GRIP + PRESS",
-      "rounds": 1,
+      "rounds": 2,
       "effort": "RPE 4–6 • crisp accessory work",
       "exercises": [
         {
@@ -70,7 +70,7 @@
     {
       "label": "B",
       "title": "LEGS + ARMOR",
-      "rounds": 1,
+      "rounds": 2,
       "effort": "RPE 4–5 • leave plenty in reserve",
       "exercises": [
         {
@@ -110,7 +110,7 @@
     {
       "label": "C",
       "title": "POWER + CAPACITY",
-      "rounds": 1,
+      "rounds": 2,
       "effort": "Stop before speed, posture, or landing quality drops",
       "exercises": [
         {
@@ -151,5 +151,6 @@
   "martialSupplement": {
     "duration": "5 min",
     "text": "Closed-guard post removal → angle → posture-break entry; 2 controlled reps/side each minute; dummy or solo. Separate—not counted."
-  }
+  },
+  "additionalTitle": "MORE DEPOSITS"
 }
