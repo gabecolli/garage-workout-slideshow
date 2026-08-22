@@ -237,6 +237,18 @@ button {
   padding-block: 0.9rem;
 }
 
+.slide--overview-dense .deposit-card__moves {
+  gap: clamp(0.45rem, 0.8vh, 0.75rem);
+}
+
+.slide--overview-dense .deposit-card__move strong {
+  font-size: clamp(1rem, 1.35vw, 1.65rem);
+}
+
+.slide--overview-dense .deposit-card__move > span:last-child {
+  font-size: clamp(0.82rem, 1vw, 1.18rem);
+}
+
 .deposit-card__move {
   display: grid;
   grid-template-columns: 1fr auto;
