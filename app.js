@@ -18,6 +18,7 @@ let pollId;
 let isPaused = false;
 let currentRevision = "";
 let hasWorkout = false;
+let youtubeSequence = 0;
 
 const CATEGORY_LABELS = {
   "rings-calisthenics": "RINGS / CALISTHENICS",
@@ -98,6 +99,8 @@ function makeMedia(exercise) {
       modestbranding: "1",
       iv_load_policy: "3",
       disablekb: "1",
+      enablejsapi: "1",
+      origin: window.location.origin,
       start: String(start),
     });
     if (end) params.set("end", String(end));
@@ -109,12 +112,14 @@ function makeMedia(exercise) {
     shell.append(fallback);
 
     const frame = createElement("iframe", "media-shell__video");
+    frame.id = `fighter-youtube-${++youtubeSequence}`;
     frame.title = `${safeText(exercise.name, "Exercise")} video demonstration`;
     frame.allow = "autoplay; encrypted-media; picture-in-picture";
     frame.referrerPolicy = "strict-origin-when-cross-origin";
     frame.setAttribute("allowfullscreen", "");
     frame.dataset.youtube = "true";
     frame.dataset.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(videoId)}?${params}`;
+    frame.addEventListener("load", () => connectYouTubeFrame(frame));
     shell.append(frame);
   } else if (thumbnail) {
     const image = createElement("img", "media-shell__image");
@@ -376,11 +381,63 @@ function activateMedia() {
       if (index === currentIndex) {
         if (!frame.src) frame.src = frame.dataset.src;
       } else if (frame.hasAttribute("src")) {
+        frame.closest(".media-shell")?.classList.remove("is-playing");
         frame.removeAttribute("src");
       }
     }
   });
 }
+
+function connectYouTubeFrame(frame) {
+  let attempts = 0;
+  const listen = () => {
+    if (!frame.isConnected || !frame.hasAttribute("src")) return;
+    const target = frame.contentWindow;
+    if (!target) return;
+    target.postMessage(
+      JSON.stringify({ event: "listening", id: frame.id }),
+      "https://www.youtube-nocookie.com",
+    );
+    target.postMessage(
+      JSON.stringify({
+        event: "command",
+        func: "addEventListener",
+        args: ["onStateChange"],
+        id: frame.id,
+      }),
+      "https://www.youtube-nocookie.com",
+    );
+    attempts += 1;
+    if (attempts < 4) window.setTimeout(listen, 750);
+  };
+  listen();
+}
+
+window.addEventListener("message", (event) => {
+  if (
+    event.origin !== "https://www.youtube-nocookie.com" &&
+    event.origin !== "https://www.youtube.com"
+  ) {
+    return;
+  }
+  let payload;
+  try {
+    payload = typeof event.data === "string" ? JSON.parse(event.data) : event.data;
+  } catch {
+    return;
+  }
+  const frame = Array.from(document.querySelectorAll("[data-youtube]")).find(
+    (candidate) => candidate.contentWindow === event.source,
+  );
+  if (!frame) return;
+  const state =
+    payload?.event === "onStateChange"
+      ? payload.info
+      : payload?.info?.playerState;
+  if (state === 1) {
+    frame.closest(".media-shell")?.classList.add("is-playing");
+  }
+});
 
 function render() {
   if (!slides.length) return;
