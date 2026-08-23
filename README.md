@@ -26,7 +26,12 @@ workout.
 - YouTube videos use privacy-enhanced embeds, autoplay muted, and restart when
   their slide returns. Exact, reputable YouTube Shorts are preferred; a
   thumbnail remains available as a visual fallback until playback begins.
-- Slides rotate every 18 seconds. Previous, pause/play, next, arrow keys, and
-  spacebar remain available.
+- Overview and cardio-only slides rotate every 18 seconds. Each non-cardio
+  exercise expands into one slide per prescribed round, displays REPS and TIME,
+  and stays visible for its full exercise countdown before advancing.
+- Pause freezes the active countdown and resume continues it. Previous/next,
+  arrow keys, or revisiting an exercise reset that exercise timer. The separate
+  martial supplement uses the same timer but never counts as physical work.
+- Previous, pause/play, next, arrow keys, and spacebar remain available.
 
 There are no analytics, ads, paid services, or server-side components.
