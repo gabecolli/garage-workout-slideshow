@@ -1,20 +1,21 @@
 {
   "schemaVersion": 2,
-  "date": "2026-08-22",
-  "generatedAt": "2026-08-22T23:03:23.961Z",
-  "planId": "DP-20260822-001",
-  "title": "SATURDAY ACCESSORY / PRIMER",
-  "emphasis": "Grip, easy pressing, unilateral legs, neck, elastic power, and loaded work capacity.",
-  "featuredMode": "RINGS + CARRIES",
+  "date": "2026-08-23",
+  "generatedAt": "2026-08-23T17:04:55.881Z",
+  "planId": "DP-20260823-001",
+  "title": "DOPA BAND PULL + POSTERIOR-CHAIN POWER",
+  "additionalTitle": "MORE DEPOSITS",
+  "emphasis": "Dopa Band grip-pull, posterior-chain strength, trunk bracing, and full-body power.",
+  "featuredMode": "DOPAMINEO / DOPA BAND",
   "levels": {
     "floor": "A/B/C ×1",
-    "standard": "Ignition + A/B/C ×2",
+    "standard": "Ignition + A×3/B×3/C×3",
     "bonus": "5-min mobility"
   },
   "ignition": {
     "name": "Zone-2 Treadmill",
     "prescription": "10:00",
-    "home": "Easy curved-treadmill pace",
+    "home": "Easy curved-treadmill Zone 2",
     "away": "Brisk outdoor walk",
     "cue": "Keep the pace conversational.",
     "category": "conditioning",
@@ -29,80 +30,80 @@
   "deposits": [
     {
       "label": "A",
-      "title": "GRIP + PRESS",
-      "rounds": 2,
-      "effort": "RPE 4–6 • crisp accessory work",
+      "title": "GRIP/PULL + PRESS",
+      "rounds": 3,
+      "effort": "4 RIR • controlled strength",
       "exercises": [
         {
-          "id": "EX-G006",
-          "name": "Towel Hang",
-          "prescription": "20 SEC",
-          "home": "Active towel hang",
-          "away": "Heavy-backpack pinch hold, 20 sec",
-          "cue": "Keep the shoulders active and crush the towel.",
-          "category": "rings-calisthenics",
+          "id": "EX-DOPA-0053",
+          "name": "Dopa Band Standing Row Single Arm",
+          "prescription": "10 / SIDE",
+          "home": "Dopa Band standing one-arm row",
+          "away": "10 hard backpack rows/side",
+          "cue": "Lead with the shoulder blade; no jerking.",
+          "category": "dopamineo",
           "media": {
             "type": "youtube",
-            "videoId": "1tyj-rajgZ8",
-            "sourceUrl": "https://www.youtube.com/shorts/1tyj-rajgZ8",
-            "thumbnailUrl": "https://i.ytimg.com/vi/1tyj-rajgZ8/hqdefault.jpg",
-            "sourceName": "Double Towel Hang Grip Demo"
+            "videoId": "d1o2LcNf9pA",
+            "sourceUrl": "https://www.youtube.com/shorts/d1o2LcNf9pA",
+            "thumbnailUrl": "https://i.ytimg.com/vi/d1o2LcNf9pA/hqdefault.jpg",
+            "sourceName": "DopamineO — Standing Row Single Arm"
           }
         },
         {
-          "id": "EX-R008",
-          "name": "Ring Triceps Extension",
+          "id": "EX-R002",
+          "name": "Ring Push-Up",
           "prescription": "8 REPS",
-          "home": "Easy ring angle",
-          "away": "8 diamond push-ups",
-          "cue": "Keep the body rigid and hinge only at the elbows.",
+          "home": "Ring push-ups",
+          "away": "10 push-ups",
+          "cue": "Turn the rings naturally and keep the body rigid.",
           "category": "rings-calisthenics",
           "media": {
             "type": "youtube",
-            "videoId": "z8gz-0_Ma6A",
-            "sourceUrl": "https://www.youtube.com/shorts/z8gz-0_Ma6A",
-            "thumbnailUrl": "https://i.ytimg.com/vi/z8gz-0_Ma6A/hqdefault.jpg",
-            "sourceName": "NL Calisthenics — Ring Triceps Extension"
+            "videoId": "I6xjdjSj7XE",
+            "sourceUrl": "https://www.youtube.com/shorts/I6xjdjSj7XE",
+            "thumbnailUrl": "https://i.ytimg.com/vi/I6xjdjSj7XE/hqdefault.jpg",
+            "sourceName": "The Movement Athlete — Ring Push-Up"
           }
         }
       ]
     },
     {
       "label": "B",
-      "title": "LEGS + ARMOR",
-      "rounds": 2,
-      "effort": "RPE 4–5 • leave plenty in reserve",
+      "title": "HIPS/LEGS + TRUNK",
+      "rounds": 3,
+      "effort": "4 RIR • controlled strength",
       "exercises": [
         {
-          "id": "EX-H023",
-          "name": "Step-Up",
-          "prescription": "8 / SIDE",
-          "home": "Low step-up",
-          "away": "Stair or stable bench",
-          "cue": "Drive through the working leg; do not bounce off the trail foot.",
-          "category": "strength",
+          "id": "EX-DOPA-0065",
+          "name": "Dopa Band Standing Hip Thrust",
+          "prescription": "10 REPS",
+          "home": "Dopa Band standing hip thrust",
+          "away": "8 hamstring walkouts",
+          "cue": "Send the hips back; finish tall without overextending.",
+          "category": "dopamineo",
           "media": {
             "type": "youtube",
-            "videoId": "9day6RhW8XA",
-            "sourceUrl": "https://www.youtube.com/shorts/9day6RhW8XA",
-            "thumbnailUrl": "https://i.ytimg.com/vi/9day6RhW8XA/hqdefault.jpg",
-            "sourceName": "Rachel Dillon — Step-Up Form"
+            "videoId": "mnRsmrlQWfQ",
+            "sourceUrl": "https://www.youtube.com/shorts/mnRsmrlQWfQ",
+            "thumbnailUrl": "https://i.ytimg.com/vi/mnRsmrlQWfQ/hqdefault.jpg",
+            "sourceName": "DopamineO — Standing Hip Thrust"
           }
         },
         {
-          "id": "EX-T028",
-          "name": "Self-Resisted Neck Isometrics",
-          "prescription": "10 SEC / DIRECTION",
-          "home": "Moderate hand pressure",
-          "away": "Same",
-          "cue": "Keep the head still; build tension gradually.",
-          "category": "strength",
+          "id": "EX-DOPA-0073",
+          "name": "Dopa Band Pallof Press",
+          "prescription": "8 / SIDE",
+          "home": "Dopa Band Pallof press",
+          "away": "8 dead bugs/side",
+          "cue": "Brace first and resist rotation.",
+          "category": "dopamineo",
           "media": {
             "type": "youtube",
-            "videoId": "a3vljeDevr8",
-            "sourceUrl": "https://www.youtube.com/shorts/a3vljeDevr8",
-            "thumbnailUrl": "https://i.ytimg.com/vi/a3vljeDevr8/hqdefault.jpg",
-            "sourceName": "Self-Resisted Neck Strengthening"
+            "videoId": "bZfT5f4HsoU",
+            "sourceUrl": "https://www.youtube.com/shorts/bZfT5f4HsoU",
+            "thumbnailUrl": "https://i.ytimg.com/vi/bZfT5f4HsoU/hqdefault.jpg",
+            "sourceName": "DopamineO — Pallof Press"
           }
         }
       ]
@@ -110,39 +111,39 @@
     {
       "label": "C",
       "title": "POWER + CAPACITY",
-      "rounds": 2,
-      "effort": "Stop before speed, posture, or landing quality drops",
+      "rounds": 3,
+      "effort": "RPE 6 • stop before snap, height, posture, or rhythm declines",
       "exercises": [
         {
-          "id": "EX-E003",
-          "name": "Broad Jump",
-          "prescription": "3 REPS",
-          "home": "Clear garage floor; full reset",
-          "away": "Outdoor or clear floor space",
-          "cue": "Stick each landing before the next rep.",
+          "id": "EX-E005",
+          "name": "Medicine-Ball Slam",
+          "prescription": "5 REPS",
+          "home": "Medicine-ball slams with a full reset",
+          "away": "5 squat jumps",
+          "cue": "Reach tall, brace, and attack the floor.",
           "category": "power",
           "media": {
             "type": "youtube",
-            "videoId": "xDRZMnZOBkY",
-            "sourceUrl": "https://www.youtube.com/shorts/xDRZMnZOBkY",
-            "thumbnailUrl": "https://i.ytimg.com/vi/xDRZMnZOBkY/hqdefault.jpg",
-            "sourceName": "Overtime Athletes — Broad Jump Technique"
+            "videoId": "GqtUa5jknnY",
+            "sourceUrl": "https://www.youtube.com/shorts/GqtUa5jknnY",
+            "thumbnailUrl": "https://i.ytimg.com/vi/GqtUa5jknnY/hqdefault.jpg",
+            "sourceName": "BJ Gaddour — Medicine Ball Slam"
           }
         },
         {
-          "id": "EX-G019",
-          "name": "Farmer Carry",
+          "id": "EX-DOPA-0138",
+          "name": "Dopa Band Mountain Climbers",
           "prescription": "20 SEC",
-          "home": "Brisk kettlebell or dumbbell march",
-          "away": "Loaded-backpack bear-hug march",
-          "cue": "Stay tall and take quiet, controlled steps.",
-          "category": "kettlebell",
+          "home": "Dopa Band mountain climbers",
+          "away": "20-sec fast high-knee march",
+          "cue": "Stay rhythmic, braced, and clean.",
+          "category": "dopamineo",
           "media": {
             "type": "youtube",
-            "videoId": "1uOs1hP3u4A",
-            "sourceUrl": "https://www.youtube.com/shorts/1uOs1hP3u4A",
-            "thumbnailUrl": "https://i.ytimg.com/vi/1uOs1hP3u4A/hqdefault.jpg",
-            "sourceName": "Colossus Fitness — Farmer’s Walk"
+            "videoId": "B0-RPFpDgM8",
+            "sourceUrl": "https://www.youtube.com/shorts/B0-RPFpDgM8",
+            "thumbnailUrl": "https://i.ytimg.com/vi/B0-RPFpDgM8/hqdefault.jpg",
+            "sourceName": "DopamineO — Banded Mountain Climbers"
           }
         }
       ]
@@ -150,7 +151,6 @@
   ],
   "martialSupplement": {
     "duration": "5 min",
-    "text": "Closed-guard post removal → angle → posture-break entry; 2 controlled reps/side each minute; dummy or solo. Separate—not counted."
-  },
-  "additionalTitle": "MORE DEPOSITS"
+    "text": "Separate—not counted: optional knee-cut pass entry → settled side control; 2 controlled reps/side each minute, dummy or solo footwork."
+  }
 }
