@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "date": "2026-08-23",
-  "generatedAt": "2026-08-23T17:04:55.881Z",
+  "generatedAt": "2026-08-23T21:34:46.712Z",
   "planId": "DP-20260823-001",
   "title": "DOPA BAND PULL + POSTERIOR-CHAIN POWER",
   "additionalTitle": "MORE DEPOSITS",
@@ -25,7 +25,11 @@
       "sourceUrl": "https://www.youtube.com/shorts/hGaVza0pWdw",
       "thumbnailUrl": "https://i.ytimg.com/vi/hGaVza0pWdw/hqdefault.jpg",
       "sourceName": "Untamed Strength — Curved Treadmill"
-    }
+    },
+    "reps": "TIMED",
+    "timeSeconds": 600,
+    "time": "10:00",
+    "timerMode": "cardio-exempt"
   },
   "deposits": [
     {
@@ -48,7 +52,11 @@
             "sourceUrl": "https://www.youtube.com/shorts/d1o2LcNf9pA",
             "thumbnailUrl": "https://i.ytimg.com/vi/d1o2LcNf9pA/hqdefault.jpg",
             "sourceName": "DopamineO — Standing Row Single Arm"
-          }
+          },
+          "reps": "10 / SIDE",
+          "timeSeconds": 50,
+          "time": "0:50",
+          "timerMode": "exercise"
         },
         {
           "id": "EX-R002",
@@ -64,7 +72,11 @@
             "sourceUrl": "https://www.youtube.com/shorts/I6xjdjSj7XE",
             "thumbnailUrl": "https://i.ytimg.com/vi/I6xjdjSj7XE/hqdefault.jpg",
             "sourceName": "The Movement Athlete — Ring Push-Up"
-          }
+          },
+          "reps": "8",
+          "timeSeconds": 32,
+          "time": "0:32",
+          "timerMode": "exercise"
         }
       ]
     },
@@ -88,7 +100,11 @@
             "sourceUrl": "https://www.youtube.com/shorts/mnRsmrlQWfQ",
             "thumbnailUrl": "https://i.ytimg.com/vi/mnRsmrlQWfQ/hqdefault.jpg",
             "sourceName": "DopamineO — Standing Hip Thrust"
-          }
+          },
+          "reps": "10",
+          "timeSeconds": 35,
+          "time": "0:35",
+          "timerMode": "exercise"
         },
         {
           "id": "EX-DOPA-0073",
@@ -104,7 +120,11 @@
             "sourceUrl": "https://www.youtube.com/shorts/bZfT5f4HsoU",
             "thumbnailUrl": "https://i.ytimg.com/vi/bZfT5f4HsoU/hqdefault.jpg",
             "sourceName": "DopamineO — Pallof Press"
-          }
+          },
+          "reps": "8 / SIDE",
+          "timeSeconds": 50,
+          "time": "0:50",
+          "timerMode": "exercise"
         }
       ]
     },
@@ -128,7 +148,11 @@
             "sourceUrl": "https://www.youtube.com/shorts/GqtUa5jknnY",
             "thumbnailUrl": "https://i.ytimg.com/vi/GqtUa5jknnY/hqdefault.jpg",
             "sourceName": "BJ Gaddour — Medicine Ball Slam"
-          }
+          },
+          "reps": "5",
+          "timeSeconds": 30,
+          "time": "0:30",
+          "timerMode": "exercise"
         },
         {
           "id": "EX-DOPA-0138",
@@ -144,12 +168,33 @@
             "sourceUrl": "https://www.youtube.com/shorts/B0-RPFpDgM8",
             "thumbnailUrl": "https://i.ytimg.com/vi/B0-RPFpDgM8/hqdefault.jpg",
             "sourceName": "DopamineO — Banded Mountain Climbers"
-          }
+          },
+          "reps": "TIMED",
+          "timeSeconds": 20,
+          "time": "0:20",
+          "timerMode": "exercise"
         }
       ]
     }
   ],
   "martialSupplement": {
+    "name": "Dummy Knee-Cut Pass",
+    "reps": "2 / SIDE / MIN",
+    "timeSeconds": 300,
+    "time": "5:00",
+    "timerMode": "exercise",
+    "prescription": "2 / SIDE / MIN",
+    "home": "Dummy knee-cut pass entry → settled side control",
+    "away": "Solo knee-cut footwork",
+    "cue": "Win inside space, cut the angle, then settle before resetting.",
+    "category": "martial",
+    "media": {
+      "type": "youtube",
+      "videoId": "F5QOctE5fsY",
+      "sourceUrl": "https://www.youtube.com/shorts/F5QOctE5fsY",
+      "thumbnailUrl": "https://i.ytimg.com/vi/F5QOctE5fsY/hqdefault.jpg",
+      "sourceName": "John Danaher / BJJ Fanatics — Knee Cut Pass"
+    },
     "duration": "5 min",
     "text": "Separate—not counted: optional knee-cut pass entry → settled side control; 2 controlled reps/side each minute, dummy or solo footwork."
   }
