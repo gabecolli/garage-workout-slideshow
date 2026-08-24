@@ -1,20 +1,24 @@
 {
   "schemaVersion": 3,
-  "date": "2026-08-23",
-  "generatedAt": "2026-08-23T21:34:46.712Z",
-  "planId": "DP-20260823-001",
-  "title": "DOPA BAND PULL + POSTERIOR-CHAIN POWER",
+  "date": "2026-08-24",
+  "generatedAt": "2026-08-24T13:14:51.392Z",
+  "planId": "DP-20260824-001",
+  "title": "KETTLEBELL ARMOR + LATERAL STRENGTH",
   "additionalTitle": "MORE DEPOSITS",
-  "emphasis": "Dopa Band grip-pull, posterior-chain strength, trunk bracing, and full-body power.",
-  "featuredMode": "DOPAMINEO / DOPA BAND",
+  "emphasis": "Grip endurance, vertical pressing, lateral-leg strength, loaded trunk armor, and hinge power.",
+  "featuredMode": "KETTLEBELL",
   "levels": {
     "floor": "A/B/C ×1",
-    "standard": "Ignition + A×3/B×3/C×3",
+    "standard": "Ignition + A×2/B×2/C×2",
     "bonus": "5-min mobility"
   },
   "ignition": {
     "name": "Zone-2 Treadmill",
     "prescription": "10:00",
+    "reps": "TIMED",
+    "timeSeconds": 600,
+    "time": "10:00",
+    "timerMode": "cardio-exempt",
     "home": "Easy curved-treadmill Zone 2",
     "away": "Brisk outdoor walk",
     "cue": "Keep the pace conversational.",
@@ -25,177 +29,173 @@
       "sourceUrl": "https://www.youtube.com/shorts/hGaVza0pWdw",
       "thumbnailUrl": "https://i.ytimg.com/vi/hGaVza0pWdw/hqdefault.jpg",
       "sourceName": "Untamed Strength — Curved Treadmill"
-    },
-    "reps": "TIMED",
-    "timeSeconds": 600,
-    "time": "10:00",
-    "timerMode": "cardio-exempt"
+    }
   },
   "deposits": [
     {
       "label": "A",
       "title": "GRIP/PULL + PRESS",
-      "rounds": 3,
-      "effort": "4 RIR • controlled strength",
+      "rounds": 2,
+      "effort": "4–5 RIR • clean accessory work",
       "exercises": [
         {
-          "id": "EX-DOPA-0053",
-          "name": "Dopa Band Standing Row Single Arm",
-          "prescription": "10 / SIDE",
-          "home": "Dopa Band standing one-arm row",
-          "away": "10 hard backpack rows/side",
-          "cue": "Lead with the shoulder blade; no jerking.",
-          "category": "dopamineo",
+          "id": "EX-G007",
+          "name": "Dead Hang",
+          "prescription": "30 SEC",
+          "reps": "TIMED",
+          "timeSeconds": 30,
+          "time": "0:30",
+          "timerMode": "exercise",
+          "home": "Active dead hang",
+          "away": "Sturdy-overhead hold or towel-row isometric",
+          "cue": "Stay long through the neck; keep the body quiet.",
+          "category": "strength",
           "media": {
             "type": "youtube",
-            "videoId": "d1o2LcNf9pA",
-            "sourceUrl": "https://www.youtube.com/shorts/d1o2LcNf9pA",
-            "thumbnailUrl": "https://i.ytimg.com/vi/d1o2LcNf9pA/hqdefault.jpg",
-            "sourceName": "DopamineO — Standing Row Single Arm"
-          },
-          "reps": "10 / SIDE",
-          "timeSeconds": 50,
-          "time": "0:50",
-          "timerMode": "exercise"
+            "videoId": "dOCQjaasbGs",
+            "sourceUrl": "https://www.youtube.com/shorts/dOCQjaasbGs",
+            "thumbnailUrl": "https://i.ytimg.com/vi/dOCQjaasbGs/hqdefault.jpg",
+            "sourceName": "Dead Hang Tutorial"
+          }
         },
         {
-          "id": "EX-R002",
-          "name": "Ring Push-Up",
-          "prescription": "8 REPS",
-          "home": "Ring push-ups",
-          "away": "10 push-ups",
-          "cue": "Turn the rings naturally and keep the body rigid.",
+          "id": "EX-R009",
+          "name": "Pike Push-Up",
+          "prescription": "6 REPS",
+          "reps": "6",
+          "timeSeconds": 30,
+          "time": "0:30",
+          "timerMode": "exercise",
+          "home": "Pike push-ups",
+          "away": "8 high-incline push-ups",
+          "cue": "Send the head forward and down; keep the hips high.",
           "category": "rings-calisthenics",
           "media": {
             "type": "youtube",
-            "videoId": "I6xjdjSj7XE",
-            "sourceUrl": "https://www.youtube.com/shorts/I6xjdjSj7XE",
-            "thumbnailUrl": "https://i.ytimg.com/vi/I6xjdjSj7XE/hqdefault.jpg",
-            "sourceName": "The Movement Athlete — Ring Push-Up"
-          },
-          "reps": "8",
-          "timeSeconds": 32,
-          "time": "0:32",
-          "timerMode": "exercise"
+            "videoId": "jz_Vr4JbUjc",
+            "sourceUrl": "https://www.youtube.com/shorts/jz_Vr4JbUjc",
+            "thumbnailUrl": "https://i.ytimg.com/vi/jz_Vr4JbUjc/hqdefault.jpg",
+            "sourceName": "STRIQfit — Pike Push-Up"
+          }
         }
       ]
     },
     {
       "label": "B",
-      "title": "HIPS/LEGS + TRUNK",
-      "rounds": 3,
+      "title": "LATERAL LEGS + CARRY",
+      "rounds": 2,
       "effort": "4 RIR • controlled strength",
       "exercises": [
         {
-          "id": "EX-DOPA-0065",
-          "name": "Dopa Band Standing Hip Thrust",
-          "prescription": "10 REPS",
-          "home": "Dopa Band standing hip thrust",
-          "away": "8 hamstring walkouts",
-          "cue": "Send the hips back; finish tall without overextending.",
-          "category": "dopamineo",
+          "id": "EX-H021",
+          "name": "Cossack Squat",
+          "prescription": "6 / SIDE",
+          "reps": "6 / SIDE",
+          "timeSeconds": 48,
+          "time": "0:48",
+          "timerMode": "exercise",
+          "home": "Bodyweight Cossack squats",
+          "away": "Bodyweight Cossack squats",
+          "cue": "Sit toward the working heel; keep the long leg straight.",
+          "category": "mobility",
           "media": {
             "type": "youtube",
-            "videoId": "mnRsmrlQWfQ",
-            "sourceUrl": "https://www.youtube.com/shorts/mnRsmrlQWfQ",
-            "thumbnailUrl": "https://i.ytimg.com/vi/mnRsmrlQWfQ/hqdefault.jpg",
-            "sourceName": "DopamineO — Standing Hip Thrust"
-          },
-          "reps": "10",
-          "timeSeconds": 35,
-          "time": "0:35",
-          "timerMode": "exercise"
+            "videoId": "pJzSDpcehuQ",
+            "sourceUrl": "https://www.youtube.com/shorts/pJzSDpcehuQ",
+            "thumbnailUrl": "https://i.ytimg.com/vi/pJzSDpcehuQ/hqdefault.jpg",
+            "sourceName": "FitnessFAQs — Cossack Squat"
+          }
         },
         {
-          "id": "EX-DOPA-0073",
-          "name": "Dopa Band Pallof Press",
-          "prescription": "8 / SIDE",
-          "home": "Dopa Band Pallof press",
-          "away": "8 dead bugs/side",
-          "cue": "Brace first and resist rotation.",
-          "category": "dopamineo",
+          "id": "EX-G020",
+          "name": "Kettlebell Suitcase Carry",
+          "prescription": "30 SEC / SIDE",
+          "reps": "TIMED",
+          "timeSeconds": 60,
+          "time": "1:00",
+          "timerMode": "exercise",
+          "home": "Kettlebell suitcase carry",
+          "away": "Loaded-backpack suitcase march",
+          "cue": "Stay tall; do not lean toward or away from the load.",
+          "category": "kettlebell",
           "media": {
             "type": "youtube",
-            "videoId": "bZfT5f4HsoU",
-            "sourceUrl": "https://www.youtube.com/shorts/bZfT5f4HsoU",
-            "thumbnailUrl": "https://i.ytimg.com/vi/bZfT5f4HsoU/hqdefault.jpg",
-            "sourceName": "DopamineO — Pallof Press"
-          },
-          "reps": "8 / SIDE",
-          "timeSeconds": 50,
-          "time": "0:50",
-          "timerMode": "exercise"
+            "videoId": "uIRpleRXfds",
+            "sourceUrl": "https://www.youtube.com/shorts/uIRpleRXfds",
+            "thumbnailUrl": "https://i.ytimg.com/vi/uIRpleRXfds/hqdefault.jpg",
+            "sourceName": "GBRS Performance — Suitcase Carry"
+          }
         }
       ]
     },
     {
       "label": "C",
-      "title": "POWER + CAPACITY",
-      "rounds": 3,
-      "effort": "RPE 6 • stop before snap, height, posture, or rhythm declines",
+      "title": "HINGE POWER + CAPACITY",
+      "rounds": 2,
+      "effort": "RPE 6 • stop before snap, posture, or rhythm declines",
       "exercises": [
         {
-          "id": "EX-E005",
-          "name": "Medicine-Ball Slam",
-          "prescription": "5 REPS",
-          "home": "Medicine-ball slams with a full reset",
-          "away": "5 squat jumps",
-          "cue": "Reach tall, brace, and attack the floor.",
-          "category": "power",
+          "id": "EX-H008",
+          "name": "Kettlebell Swing",
+          "prescription": "10 REPS",
+          "reps": "10",
+          "timeSeconds": 25,
+          "time": "0:25",
+          "timerMode": "exercise",
+          "home": "Two-hand kettlebell swings",
+          "away": "4 broad jumps with full resets",
+          "cue": "Snap the hips and let the bell float.",
+          "category": "kettlebell",
           "media": {
             "type": "youtube",
-            "videoId": "GqtUa5jknnY",
-            "sourceUrl": "https://www.youtube.com/shorts/GqtUa5jknnY",
-            "thumbnailUrl": "https://i.ytimg.com/vi/GqtUa5jknnY/hqdefault.jpg",
-            "sourceName": "BJ Gaddour — Medicine Ball Slam"
-          },
-          "reps": "5",
-          "timeSeconds": 30,
-          "time": "0:30",
-          "timerMode": "exercise"
+            "videoId": "jRhW6kOYNF8",
+            "sourceUrl": "https://www.youtube.com/shorts/jRhW6kOYNF8",
+            "thumbnailUrl": "https://i.ytimg.com/vi/jRhW6kOYNF8/hqdefault.jpg",
+            "sourceName": "Kettlebell Wellness — StrongFirst Swing"
+          }
         },
         {
-          "id": "EX-DOPA-0138",
-          "name": "Dopa Band Mountain Climbers",
-          "prescription": "20 SEC",
-          "home": "Dopa Band mountain climbers",
-          "away": "20-sec fast high-knee march",
-          "cue": "Stay rhythmic, braced, and clean.",
-          "category": "dopamineo",
+          "id": "EX-I002",
+          "name": "Jump-Rope Intervals",
+          "prescription": "30 SEC",
+          "reps": "TIMED",
+          "timeSeconds": 30,
+          "time": "0:30",
+          "timerMode": "exercise",
+          "home": "Relaxed-fast boxer-step jump rope",
+          "away": "Quiet fast-feet shuffle",
+          "cue": "Stay light and stop before the rhythm breaks.",
+          "category": "conditioning",
           "media": {
             "type": "youtube",
-            "videoId": "B0-RPFpDgM8",
-            "sourceUrl": "https://www.youtube.com/shorts/B0-RPFpDgM8",
-            "thumbnailUrl": "https://i.ytimg.com/vi/B0-RPFpDgM8/hqdefault.jpg",
-            "sourceName": "DopamineO — Banded Mountain Climbers"
-          },
-          "reps": "TIMED",
-          "timeSeconds": 20,
-          "time": "0:20",
-          "timerMode": "exercise"
+            "videoId": "nDgbKDlnq4E",
+            "sourceUrl": "https://www.youtube.com/shorts/nDgbKDlnq4E",
+            "thumbnailUrl": "https://i.ytimg.com/vi/nDgbKDlnq4E/hqdefault.jpg",
+            "sourceName": "Crossrope — Boxer Step"
+          }
         }
       ]
     }
   ],
   "martialSupplement": {
-    "name": "Dummy Knee-Cut Pass",
+    "name": "Knee-Shield Underhook Wrestle-Up",
+    "prescription": "2 / SIDE / MIN",
     "reps": "2 / SIDE / MIN",
     "timeSeconds": 300,
     "time": "5:00",
     "timerMode": "exercise",
-    "prescription": "2 / SIDE / MIN",
-    "home": "Dummy knee-cut pass entry → settled side control",
-    "away": "Solo knee-cut footwork",
-    "cue": "Win inside space, cut the angle, then settle before resetting.",
+    "home": "Knee shield → underhook → wrestle-up",
+    "away": "Solo half-guard technical stand-up pattern",
+    "cue": "Win the underhook, come to the elbow, then build height.",
     "category": "martial",
     "media": {
       "type": "youtube",
-      "videoId": "F5QOctE5fsY",
-      "sourceUrl": "https://www.youtube.com/shorts/F5QOctE5fsY",
-      "thumbnailUrl": "https://i.ytimg.com/vi/F5QOctE5fsY/hqdefault.jpg",
-      "sourceName": "John Danaher / BJJ Fanatics — Knee Cut Pass"
+      "videoId": "q0iMZ3QUrVo",
+      "sourceUrl": "https://www.youtube.com/shorts/q0iMZ3QUrVo",
+      "thumbnailUrl": "https://i.ytimg.com/vi/q0iMZ3QUrVo/hqdefault.jpg",
+      "sourceName": "BJJ Essentials — Half-Guard Wrestle-Up"
     },
     "duration": "5 min",
-    "text": "Separate—not counted: optional knee-cut pass entry → settled side control; 2 controlled reps/side each minute, dummy or solo footwork."
+    "text": "Separate—not counted: optional knee-shield underhook to wrestle-up; 2 deliberate reps/side each minute, dummy or solo."
   }
 }
