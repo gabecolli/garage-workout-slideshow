@@ -25,6 +25,9 @@ let slideStartedAt = 0;
 let slideRemainingMs = 0;
 let slideTotalMs = 0;
 let activeCountdownOutput = null;
+let activeCountdownLabel = null;
+let activeCountdownPanel = null;
+let activeTimerPhase = "slide";
 
 const CATEGORY_LABELS = {
   "rings-calisthenics": "RINGS / CALISTHENICS",
@@ -53,6 +56,11 @@ function getTimeSeconds(item) {
   return Number.isFinite(seconds) && seconds > 0 ? Math.round(seconds) : 0;
 }
 
+function getSetupSeconds(item) {
+  const seconds = Number(item?.setupSeconds);
+  return Number.isFinite(seconds) && seconds > 0 ? Math.round(seconds) : 0;
+}
+
 function formatDuration(seconds) {
   const total = Math.max(0, Math.ceil(Number(seconds) || 0));
   const minutes = Math.floor(total / 60);
@@ -73,6 +81,7 @@ function makeExerciseClock(item) {
   for (const [label, value] of [
     ["REPS", safeText(item?.reps, "TIMED")],
     ["TIME", getTimeLabel(item)],
+    ["SETUP", formatDuration(getSetupSeconds(item))],
   ]) {
     const field = createElement("div", "timing-field");
     field.append(
@@ -81,9 +90,17 @@ function makeExerciseClock(item) {
     );
     fields.append(field);
   }
-  const countdown = createElement("div", "exercise-countdown");
-  countdown.append(createElement("span", "exercise-countdown__label", "COUNTDOWN"));
-  const output = createElement("output", "exercise-countdown__value", getTimeLabel(item));
+  const setupSeconds = getSetupSeconds(item);
+  const countdown = createElement("div", `exercise-countdown ${setupSeconds ? "is-setup" : "is-work"}`);
+  countdown.dataset.timerPhasePanel = "";
+  const phaseLabel = createElement("span", "exercise-countdown__label", setupSeconds ? "GET READY" : "WORK");
+  phaseLabel.dataset.timerPhaseLabel = "";
+  countdown.append(phaseLabel);
+  const output = createElement(
+    "output",
+    "exercise-countdown__value",
+    formatDuration(setupSeconds || getTimeSeconds(item)),
+  );
   output.dataset.exerciseCountdown = "";
   countdown.append(output);
   clock.append(fields, countdown);
@@ -362,6 +379,7 @@ function makeExerciseSlide(exercise, deposit, roundNumber = 1) {
   slide.dataset.slide = "";
   slide.dataset.timerMode = "exercise";
   slide.dataset.countdownSeconds = String(getTimeSeconds(exercise));
+  slide.dataset.setupSeconds = String(getSetupSeconds(exercise));
   slide.setAttribute("aria-hidden", "true");
 
   const detail = createElement("article", "exercise-detail");
@@ -430,6 +448,8 @@ function validateTimedMovement(item, label) {
   const seconds = getTimeSeconds(item);
   if (!Number.isInteger(seconds) || seconds < 1) throw new Error(`${label} must include a positive timeSeconds value`);
   if (!safeText(item?.time) || item.time !== formatDuration(seconds)) throw new Error(`${label} TIME must match timeSeconds in m:ss format`);
+  const setupSeconds = getSetupSeconds(item);
+  if (![15, 20, 30].includes(setupSeconds)) throw new Error(`${label} setupSeconds must be 15, 20, or 30`);
 }
 
 function validateWorkout(workout) {
@@ -553,9 +573,21 @@ window.addEventListener("message", (event) => {
   }
 });
 
-function getActiveSlideDurationMs() {
+function getActiveWorkDurationMs() {
   const seconds = Number(slides[currentIndex]?.dataset.countdownSeconds);
   if (Number.isFinite(seconds) && seconds > 0) return Math.round(seconds * 1000);
+  return 0;
+}
+
+function getActiveSetupDurationMs() {
+  const seconds = Number(slides[currentIndex]?.dataset.setupSeconds);
+  if (Number.isFinite(seconds) && seconds > 0) return Math.round(seconds * 1000);
+  return 0;
+}
+
+function getActiveSlideDurationMs() {
+  if (activeTimerPhase === "setup") return getActiveSetupDurationMs();
+  if (activeTimerPhase === "work") return getActiveWorkDurationMs();
   return SLIDE_INTERVAL_MS;
 }
 
@@ -564,6 +596,26 @@ function clearTimerHandles() {
   window.clearInterval(timerTickId);
   timerId = undefined;
   timerTickId = undefined;
+}
+
+function setActiveTimerPhase(phase) {
+  activeTimerPhase = phase;
+  if (activeCountdownLabel) {
+    activeCountdownLabel.textContent = phase === "setup" ? "GET READY" : "WORK";
+  }
+  if (activeCountdownPanel) {
+    activeCountdownPanel.classList.toggle("is-setup", phase === "setup");
+    activeCountdownPanel.classList.toggle("is-work", phase === "work");
+  }
+}
+
+function resetActiveTimerPhase() {
+  const hasWorkTimer = getActiveWorkDurationMs() > 0;
+  const hasSetupTimer = getActiveSetupDurationMs() > 0;
+  setActiveTimerPhase(hasWorkTimer ? (hasSetupTimer ? "setup" : "work") : "slide");
+  slideTotalMs = getActiveSlideDurationMs();
+  slideRemainingMs = slideTotalMs;
+  slideStartedAt = 0;
 }
 
 function currentRemainingMs() {
@@ -585,24 +637,45 @@ function pauseCurrentTimer() {
   updateTimerVisual();
 }
 
+function finishCurrentTimerPhase() {
+  slideRemainingMs = 0;
+  slideStartedAt = 0;
+  clearTimerHandles();
+  updateTimerVisual();
+
+  if (activeTimerPhase === "setup") {
+    setActiveTimerPhase("work");
+    slideTotalMs = getActiveSlideDurationMs();
+    slideRemainingMs = slideTotalMs;
+    updateTimerVisual();
+    startCurrentTimer(false);
+    return;
+  }
+
+  timerId = window.setTimeout(() => showSlide(currentIndex + 1), TIMER_TICK_MS);
+}
+
 function startCurrentTimer(reset = false) {
   clearTimerHandles();
-  activeCountdownOutput = slides[currentIndex]?.querySelector("[data-exercise-countdown]") || null;
-  if (reset || !slideRemainingMs || slideRemainingMs < 1) {
+  const activeSlide = slides[currentIndex];
+  activeCountdownOutput = activeSlide?.querySelector("[data-exercise-countdown]") || null;
+  activeCountdownLabel = activeSlide?.querySelector("[data-timer-phase-label]") || null;
+  activeCountdownPanel = activeSlide?.querySelector("[data-timer-phase-panel]") || null;
+
+  if (reset) {
+    resetActiveTimerPhase();
+  } else if (!slideRemainingMs || slideRemainingMs < 1) {
     slideTotalMs = getActiveSlideDurationMs();
     slideRemainingMs = slideTotalMs;
   }
+
+  setActiveTimerPhase(activeTimerPhase);
   updateTimerVisual();
   if (isPaused || document.hidden || slides.length < 2) return;
+
   slideStartedAt = performance.now();
   timerTickId = window.setInterval(updateTimerVisual, TIMER_TICK_MS);
-  timerId = window.setTimeout(() => {
-    slideRemainingMs = 0;
-    slideStartedAt = 0;
-    clearTimerHandles();
-    updateTimerVisual();
-    timerId = window.setTimeout(() => showSlide(currentIndex + 1), TIMER_TICK_MS);
-  }, slideRemainingMs);
+  timerId = window.setTimeout(finishCurrentTimerPhase, slideRemainingMs);
 }
 
 function render({ resetTimer = true } = {}) {
