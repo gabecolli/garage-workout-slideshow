@@ -740,11 +740,14 @@ button {
 /* Per-exercise timing contract — schema v3 */
 .exercise-title { font-size: clamp(2.4rem, 4.8vw, 6.5rem); }
 .exercise-clock { display: grid; gap: 0.65rem; margin: clamp(0.7rem, 1.4vh, 1.15rem) 0; }
-.exercise-timing { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+.exercise-timing { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.6rem; }
 .timing-field { min-width: 0; padding: 0.65rem 0.8rem; background: rgb(255 255 255 / 5%); border: 1px solid var(--line); border-radius: 0.75rem; }
 .timing-field__label, .cardio-duration__label, .exercise-countdown__label { display: block; color: var(--fighter); font-size: clamp(0.62rem, 0.78vw, 0.9rem); font-weight: 950; letter-spacing: 0.12em; }
 .timing-field__value { display: block; overflow: hidden; color: var(--gold); font-size: clamp(1.25rem, 2vw, 2.35rem); font-weight: 950; line-height: 1.05; text-overflow: ellipsis; white-space: nowrap; }
-.exercise-countdown { padding: 0.65rem 0.85rem 0.5rem; background: linear-gradient(135deg, rgb(241 75 42 / 18%), rgb(244 185 66 / 10%)); border: 2px solid rgb(241 75 42 / 52%); border-radius: 0.9rem; box-shadow: 0 0 2rem rgb(241 75 42 / 12%); }
+.exercise-countdown { padding: 0.65rem 0.85rem 0.5rem; background: linear-gradient(135deg, rgb(241 75 42 / 18%), rgb(244 185 66 / 10%)); border: 2px solid rgb(241 75 42 / 52%); border-radius: 0.9rem; box-shadow: 0 0 2rem rgb(241 75 42 / 12%); transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease; }
+.exercise-countdown.is-setup { background: linear-gradient(135deg, rgb(22 112 103 / 30%), rgb(244 185 66 / 12%)); border-color: rgb(75 204 190 / 66%); box-shadow: 0 0 2rem rgb(75 204 190 / 15%); }
+.exercise-countdown.is-setup .exercise-countdown__label { color: #8de1d7; }
+.exercise-countdown.is-work .exercise-countdown__label { color: var(--fighter); }
 .exercise-countdown__value { display: block; color: #fff; font-size: clamp(4rem, 7.8vw, 9rem); font-variant-numeric: tabular-nums; font-weight: 950; letter-spacing: -0.07em; line-height: 0.86; }
 .cardio-duration { display: grid; gap: 0.15rem; margin: clamp(1rem, 2vh, 1.8rem) 0; padding: 0.9rem 1rem; background: rgb(22 112 103 / 14%); border: 1px solid rgb(75 204 190 / 34%); border-radius: 0.9rem; }
 .cardio-duration__value { color: var(--gold); font-size: clamp(2.8rem, 5vw, 6rem); font-variant-numeric: tabular-nums; font-weight: 950; letter-spacing: -0.05em; line-height: 0.95; }
