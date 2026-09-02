@@ -1,15 +1,20 @@
 {
   "schemaVersion": 3,
   "date": "2026-09-02",
-  "generatedAt": "2026-09-02T13:00:47Z",
-  "planId": "DP-20260902-UW-001",
+  "generatedAt": "2026-09-02T13:55:00Z",
+  "planId": "DP-20260902-UW-002",
   "title": "DAILY FIGHTER DEPOSITS",
   "additionalTitle": "MORE DEPOSITS",
-  "emphasis": "45-MIN ULTIMATE WARRIOR — COMPRESSION + CALISTHENICS STRENGTH + POWER",
+  "emphasis": "45-MIN ULTIMATE WARRIOR — FOUNDATION SKILL + CALISTHENICS STRENGTH + POWER",
   "featuredMode": "RINGS/CALISTHENICS + FULL GYM",
+  "transitionPolicy": {
+    "sameSetupSeconds": 15,
+    "standardSeconds": 20,
+    "equipmentChangeSeconds": 30
+  },
   "levels": {
-    "floor": "Ignition + A×3/B×2/E×2 (~27 min); if BJJ: Ignition + A×2 + mobility OR skip",
-    "standard": "Ignition + A×3/B×3/C×3/D×3/E×4 (~45 min)",
+    "floor": "Ignition + A×2/B×2/E×1 (~27 min)",
+    "standard": "Ignition + A×3/B×3/C×2/D×2/E×2 (~45 min including setup buffers)",
     "bonus": "5-min mobility"
   },
   "ignition": {
@@ -18,6 +23,7 @@
     "reps": "TIMED",
     "timeSeconds": 600,
     "time": "10:00",
+    "setupSeconds": 0,
     "timerMode": "cardio-exempt",
     "home": "Curved-treadmill Zone 2 for 10:00",
     "away": "Brisk outdoor walk for 10:00",
@@ -34,48 +40,50 @@
   "deposits": [
     {
       "label": "A",
-      "title": "COMPRESSION SKILL",
+      "title": "FOUNDATION SKILL",
       "rounds": 3,
       "effort": "3 RIR; rest 60 sec after the pair",
       "exercises": [
         {
-          "id": "EX-T019",
-          "name": "Hanging Leg Raise",
-          "prescription": "5 strict reps",
-          "reps": "5",
-          "timeSeconds": 35,
-          "time": "0:35",
+          "id": "EX-T018",
+          "name": "Hanging Knee Raise",
+          "prescription": "Foundation rung — 6 strict reps",
+          "reps": "6",
+          "timeSeconds": 30,
+          "time": "0:30",
+          "setupSeconds": 20,
           "timerMode": "exercise",
-          "home": "5 strict hanging leg raises",
-          "away": "5 slow lying leg raises",
-          "cue": "Posterior pelvic tilt; no swing",
+          "home": "6 strict hanging knee raises",
+          "away": "6 slow lying knee raises",
+          "cue": "Posterior pelvic tilt; no swing. Gate: 3×6–8 clean twice before the next rung",
           "category": "rings-calisthenics",
           "media": {
             "type": "youtube",
-            "videoId": "FMYJ1lgtSoY",
-            "sourceUrl": "https://www.youtube.com/shorts/FMYJ1lgtSoY",
-            "thumbnailUrl": "https://i.ytimg.com/vi/FMYJ1lgtSoY/hqdefault.jpg",
-            "sourceName": "YouTube Shorts"
+            "videoId": "xGjWrATlWJM",
+            "sourceUrl": "https://www.youtube.com/shorts/xGjWrATlWJM",
+            "thumbnailUrl": "https://i.ytimg.com/vi/xGjWrATlWJM/hqdefault.jpg",
+            "sourceName": "Dr. Matt"
           }
         },
         {
-          "id": "EX-T020",
-          "name": "Tuck L-Sit Ring Support",
-          "prescription": "15-sec hold",
+          "id": "EX-CAL-PL001",
+          "name": "Planche Lean",
+          "prescription": "Foundation rung — 15-sec hold",
           "reps": "TIMED",
           "timeSeconds": 15,
           "time": "0:15",
+          "setupSeconds": 20,
           "timerMode": "exercise",
-          "home": "15-sec tuck L-sit on rings",
-          "away": "15-sec chair tuck support",
-          "cue": "Push tall; knees high; rings quiet",
+          "home": "15-sec floor planche lean",
+          "away": "15-sec hands-elevated planche lean",
+          "cue": "Lock elbows; protract; hollow. Gate: 3×15–20 sec clean twice before pseudo-planche work",
           "category": "rings-calisthenics",
           "media": {
             "type": "youtube",
-            "videoId": "9_NgQUZHeKk",
-            "sourceUrl": "https://www.youtube.com/shorts/9_NgQUZHeKk",
-            "thumbnailUrl": "https://i.ytimg.com/vi/9_NgQUZHeKk/hqdefault.jpg",
-            "sourceName": "YouTube Shorts"
+            "videoId": "s4_dcFZstSA",
+            "sourceUrl": "https://www.youtube.com/shorts/s4_dcFZstSA",
+            "thumbnailUrl": "https://i.ytimg.com/vi/s4_dcFZstSA/hqdefault.jpg",
+            "sourceName": "Calisthenics Worldwide"
           }
         }
       ]
@@ -93,6 +101,7 @@
           "reps": "5",
           "timeSeconds": 35,
           "time": "0:35",
+          "setupSeconds": 30,
           "timerMode": "exercise",
           "home": "+10-lb weighted pull-ups ×5",
           "away": "Backpack pull-ups ×5 or hard backpack rows ×8/side",
@@ -113,6 +122,7 @@
           "reps": "5",
           "timeSeconds": 30,
           "time": "0:30",
+          "setupSeconds": 20,
           "timerMode": "exercise",
           "home": "5 controlled ring dips",
           "away": "8 feet-elevated push-ups",
@@ -131,7 +141,7 @@
     {
       "label": "C",
       "title": "LEGS + TRUNK",
-      "rounds": 3,
+      "rounds": 2,
       "effort": "3 RIR; rest 75 sec after the pair",
       "exercises": [
         {
@@ -141,6 +151,7 @@
           "reps": "8",
           "timeSeconds": 40,
           "time": "0:40",
+          "setupSeconds": 30,
           "timerMode": "exercise",
           "home": "8 belt squats at a load leaving 3 clean reps",
           "away": "8 backpack goblet squats",
@@ -161,6 +172,7 @@
           "reps": "TIMED",
           "timeSeconds": 25,
           "time": "0:25",
+          "setupSeconds": 20,
           "timerMode": "exercise",
           "home": "25-sec hollow-body hold",
           "away": "25-sec tuck hollow hold",
@@ -179,7 +191,7 @@
     {
       "label": "D",
       "title": "ROTATIONAL + HORIZONTAL POWER",
-      "rounds": 3,
+      "rounds": 2,
       "effort": "RPE 6; full reset; rest 60 sec after the pair",
       "exercises": [
         {
@@ -189,6 +201,7 @@
           "reps": "3 / SIDE",
           "timeSeconds": 30,
           "time": "0:30",
+          "setupSeconds": 30,
           "timerMode": "exercise",
           "home": "3 rotational scoop throws per side",
           "away": "3 explosive band rotations per side",
@@ -209,6 +222,7 @@
           "reps": "3",
           "timeSeconds": 25,
           "time": "0:25",
+          "setupSeconds": 20,
           "timerMode": "exercise",
           "home": "3 broad jumps with a reset",
           "away": "3 broad jumps outdoors",
@@ -227,7 +241,7 @@
     {
       "label": "E",
       "title": "ENGINE + GRIP ARMOR",
-      "rounds": 4,
+      "rounds": 2,
       "effort": "RPE 7; rest 30 sec after the pair",
       "exercises": [
         {
@@ -237,6 +251,7 @@
           "reps": "TIMED",
           "timeSeconds": 40,
           "time": "0:40",
+          "setupSeconds": 30,
           "timerMode": "exercise",
           "home": "40-sec heavy farmer carry",
           "away": "40-sec heavy-bag, backpack, or bucket carry",
@@ -257,6 +272,7 @@
           "reps": "TIMED",
           "timeSeconds": 40,
           "time": "0:40",
+          "setupSeconds": 20,
           "timerMode": "exercise",
           "home": "40-sec boxer-step jump rope",
           "away": "40-sec quiet fast-feet shuffle",
@@ -279,6 +295,7 @@
     "reps": "TIMED",
     "timeSeconds": 300,
     "time": "5:00",
+    "setupSeconds": 20,
     "timerMode": "exercise",
     "home": "Five minutes with a grappling dummy",
     "away": "Five minutes of solo supine leg pummeling",
