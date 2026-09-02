@@ -1,1 +1,291 @@
-{"schemaVersion":3,"date":"2026-09-02","generatedAt":"2026-09-02T00:47:25-05:00","planId":"DP-20260902-001","title":"DAILY FIGHTER DEPOSITS","additionalTitle":"MORE DEPOSITS","emphasis":"Hamstrings + trunk + lower-leg recovery","featuredMode":"RECOVERY / BODYWEIGHT","levels":{"floor":"A/B/C ×1","standard":"Floor only","bonus":"None"},"ignition":{"name":"Easy Treadmill Walk","prescription":"10:00 easy conversational walk","reps":"TIMED","timeSeconds":600,"time":"10:00","timerMode":"cardio-exempt","home":"Easy curved-treadmill walk for 10:00","away":"Easy outdoor walk for 10:00","cue":"Keep arms relaxed and breathing conversational","category":"conditioning","media":{"type":"youtube","videoId":"hGaVza0pWdw","sourceUrl":"https://www.youtube.com/shorts/hGaVza0pWdw","thumbnailUrl":"https://i.ytimg.com/vi/hGaVza0pWdw/hqdefault.jpg","sourceName":"Untamed Strength"}},"deposits":[{"label":"A","title":"HAMSTRINGS + TRUNK","rounds":1,"effort":"RPE 3; 6 RIR","exercises":[{"id":"EX-H013","name":"Hamstring Walkout","prescription":"6 controlled reps","reps":"6","timeSeconds":45,"time":"0:45","timerMode":"exercise","home":"6 hamstring walkouts with arms relaxed","away":"Same on clear floor space","cue":"Use small controlled heel steps","category":"rings-calisthenics","media":{"type":"youtube","videoId":"Fdd8tsEj8dc","sourceUrl":"https://www.youtube.com/shorts/Fdd8tsEj8dc","thumbnailUrl":"https://i.ytimg.com/vi/Fdd8tsEj8dc/hqdefault.jpg","sourceName":"Be Fit Training Physiotherapy"}},{"id":"EX-T005","name":"Dead Bug","prescription":"5 leg-only reps per side","reps":"5 / SIDE","timeSeconds":40,"time":"0:40","timerMode":"exercise","home":"5 leg-only dead bugs per side; arms resting","away":"Same on clear floor space","cue":"Exhale; back stays heavy","category":"rings-calisthenics","media":{"type":"youtube","videoId":"rLwILN9NTlY","sourceUrl":"https://www.youtube.com/shorts/rLwILN9NTlY","thumbnailUrl":"https://i.ytimg.com/vi/rLwILN9NTlY/hqdefault.jpg","sourceName":"YouTube Shorts"}}]},{"label":"B","title":"UNILATERAL LEGS + SPINE","rounds":1,"effort":"RPE 2–3; 6 RIR","exercises":[{"id":"EX-H023","name":"Step-Up","prescription":"6 bodyweight reps per side","reps":"6 / SIDE","timeSeconds":50,"time":"0:50","timerMode":"exercise","home":"6 low step-ups per side; arms relaxed","away":"6 stair step-ups per side","cue":"Drive through the working leg","category":"strength","media":{"type":"youtube","videoId":"eTQv2Cstv8I","sourceUrl":"https://www.youtube.com/shorts/eTQv2Cstv8I","thumbnailUrl":"https://i.ytimg.com/vi/eTQv2Cstv8I/hqdefault.jpg","sourceName":"E3 Rehab"}},{"id":"EX-T002","name":"Spinal Wave","prescription":"5 slow reps","reps":"5","timeSeconds":30,"time":"0:30","timerMode":"exercise","home":"5 slow spinal waves with arms loose","away":"5 standing spinal waves","cue":"Move smoothly; never force range","category":"mobility","media":{"type":"youtube","videoId":"WGg-JPFZRv8","sourceUrl":"https://www.youtube.com/shorts/WGg-JPFZRv8","thumbnailUrl":"https://i.ytimg.com/vi/WGg-JPFZRv8/hqdefault.jpg","sourceName":"YouTube Shorts"}}]},{"label":"C","title":"LOWER-LEG + HIP CONTROL","rounds":1,"effort":"RPE 3; controlled range only","exercises":[{"id":"EX-H026","name":"Tibialis Raise","prescription":"12 controlled reps","reps":"12","timeSeconds":25,"time":"0:25","timerMode":"exercise","home":"12 wall-supported tibialis raises","away":"Same against any wall","cue":"Heels down; lift toes","category":"strength","media":{"type":"youtube","videoId":"-rP_9ZVBf9M","sourceUrl":"https://www.youtube.com/shorts/-rP_9ZVBf9M","thumbnailUrl":"https://i.ytimg.com/vi/-rP_9ZVBf9M/hqdefault.jpg","sourceName":"RNG Fitness"}},{"id":"EX-H027","name":"Supported Hip Airplane","prescription":"3 controlled reps per side","reps":"3 / SIDE","timeSeconds":35,"time":"0:35","timerMode":"exercise","home":"3 supported hip airplanes per side","away":"Use wall support","cue":"Use the uninvolved arm only; rotate from the hip","category":"mobility","media":{"type":"youtube","videoId":"bBpI6ZbNhGk","sourceUrl":"https://www.youtube.com/shorts/bBpI6ZbNhGk","thumbnailUrl":"https://i.ytimg.com/vi/bBpI6ZbNhGk/hqdefault.jpg","sourceName":"Simone Sports Performance"}}]}],"martialSupplement":{"name":"Guard Posture-Break Leg Activity","prescription":"Continuous controlled leg activity for 5:00","reps":"TIMED","timeSeconds":300,"time":"5:00","timerMode":"exercise","home":"Supine guard posture-break leg activity with arms relaxed","away":"Same on clear floor space","cue":"Pull with the legs; skip if symptoms change","category":"martial","media":null,"duration":"5:00","text":"Separate—not counted: optional guard posture-break leg activity"}}
+{
+  "schemaVersion": 3,
+  "date": "2026-09-02",
+  "generatedAt": "2026-09-02T13:00:47Z",
+  "planId": "DP-20260902-UW-001",
+  "title": "DAILY FIGHTER DEPOSITS",
+  "additionalTitle": "MORE DEPOSITS",
+  "emphasis": "45-MIN ULTIMATE WARRIOR — COMPRESSION + CALISTHENICS STRENGTH + POWER",
+  "featuredMode": "RINGS/CALISTHENICS + FULL GYM",
+  "levels": {
+    "floor": "Ignition + A×3/B×2/E×2 (~27 min); if BJJ: Ignition + A×2 + mobility OR skip",
+    "standard": "Ignition + A×3/B×3/C×3/D×3/E×4 (~45 min)",
+    "bonus": "5-min mobility"
+  },
+  "ignition": {
+    "name": "Zone-2 Treadmill",
+    "prescription": "10:00 conversational Zone 2",
+    "reps": "TIMED",
+    "timeSeconds": 600,
+    "time": "10:00",
+    "timerMode": "cardio-exempt",
+    "home": "Curved-treadmill Zone 2 for 10:00",
+    "away": "Brisk outdoor walk for 10:00",
+    "cue": "Conversational breathing; arrive warm, not tired",
+    "category": "conditioning",
+    "media": {
+      "type": "youtube",
+      "videoId": "hGaVza0pWdw",
+      "sourceUrl": "https://www.youtube.com/shorts/hGaVza0pWdw",
+      "thumbnailUrl": "https://i.ytimg.com/vi/hGaVza0pWdw/hqdefault.jpg",
+      "sourceName": "Untamed Strength"
+    }
+  },
+  "deposits": [
+    {
+      "label": "A",
+      "title": "COMPRESSION SKILL",
+      "rounds": 3,
+      "effort": "3 RIR; rest 60 sec after the pair",
+      "exercises": [
+        {
+          "id": "EX-T019",
+          "name": "Hanging Leg Raise",
+          "prescription": "5 strict reps",
+          "reps": "5",
+          "timeSeconds": 35,
+          "time": "0:35",
+          "timerMode": "exercise",
+          "home": "5 strict hanging leg raises",
+          "away": "5 slow lying leg raises",
+          "cue": "Posterior pelvic tilt; no swing",
+          "category": "rings-calisthenics",
+          "media": {
+            "type": "youtube",
+            "videoId": "FMYJ1lgtSoY",
+            "sourceUrl": "https://www.youtube.com/shorts/FMYJ1lgtSoY",
+            "thumbnailUrl": "https://i.ytimg.com/vi/FMYJ1lgtSoY/hqdefault.jpg",
+            "sourceName": "YouTube Shorts"
+          }
+        },
+        {
+          "id": "EX-T020",
+          "name": "Tuck L-Sit Ring Support",
+          "prescription": "15-sec hold",
+          "reps": "TIMED",
+          "timeSeconds": 15,
+          "time": "0:15",
+          "timerMode": "exercise",
+          "home": "15-sec tuck L-sit on rings",
+          "away": "15-sec chair tuck support",
+          "cue": "Push tall; knees high; rings quiet",
+          "category": "rings-calisthenics",
+          "media": {
+            "type": "youtube",
+            "videoId": "9_NgQUZHeKk",
+            "sourceUrl": "https://www.youtube.com/shorts/9_NgQUZHeKk",
+            "thumbnailUrl": "https://i.ytimg.com/vi/9_NgQUZHeKk/hqdefault.jpg",
+            "sourceName": "YouTube Shorts"
+          }
+        }
+      ]
+    },
+    {
+      "label": "B",
+      "title": "CALISTHENICS STRENGTH",
+      "rounds": 3,
+      "effort": "2 RIR; rest 90 sec after the pair",
+      "exercises": [
+        {
+          "id": "EX-G004",
+          "name": "Weighted Pull-Up",
+          "prescription": "+10 lb × 5",
+          "reps": "5",
+          "timeSeconds": 35,
+          "time": "0:35",
+          "timerMode": "exercise",
+          "home": "+10-lb weighted pull-ups ×5",
+          "away": "Backpack pull-ups ×5 or hard backpack rows ×8/side",
+          "cue": "Dead hang; clean chin; no kicking",
+          "category": "rings-calisthenics",
+          "media": {
+            "type": "youtube",
+            "videoId": "9aD6_71_234",
+            "sourceUrl": "https://www.youtube.com/shorts/9aD6_71_234",
+            "thumbnailUrl": "https://i.ytimg.com/vi/9aD6_71_234/hqdefault.jpg",
+            "sourceName": "YouTube Shorts"
+          }
+        },
+        {
+          "id": "EX-R005",
+          "name": "Ring Dip",
+          "prescription": "5 controlled reps",
+          "reps": "5",
+          "timeSeconds": 30,
+          "time": "0:30",
+          "timerMode": "exercise",
+          "home": "5 controlled ring dips",
+          "away": "8 feet-elevated push-ups",
+          "cue": "Stable shoulders; use pain-free depth",
+          "category": "rings-calisthenics",
+          "media": {
+            "type": "youtube",
+            "videoId": "MyfNG5_DLJM",
+            "sourceUrl": "https://www.youtube.com/shorts/MyfNG5_DLJM",
+            "thumbnailUrl": "https://i.ytimg.com/vi/MyfNG5_DLJM/hqdefault.jpg",
+            "sourceName": "YouTube Shorts"
+          }
+        }
+      ]
+    },
+    {
+      "label": "C",
+      "title": "LEGS + TRUNK",
+      "rounds": 3,
+      "effort": "3 RIR; rest 75 sec after the pair",
+      "exercises": [
+        {
+          "id": "EX-H001",
+          "name": "Belt Squat",
+          "prescription": "8 reps at 3 RIR",
+          "reps": "8",
+          "timeSeconds": 40,
+          "time": "0:40",
+          "timerMode": "exercise",
+          "home": "8 belt squats at a load leaving 3 clean reps",
+          "away": "8 backpack goblet squats",
+          "cue": "Torso tall; knees track; full foot",
+          "category": "strength",
+          "media": {
+            "type": "youtube",
+            "videoId": "cWZrLzEqD5w",
+            "sourceUrl": "https://www.youtube.com/shorts/cWZrLzEqD5w",
+            "thumbnailUrl": "https://i.ytimg.com/vi/cWZrLzEqD5w/hqdefault.jpg",
+            "sourceName": "YouTube Shorts"
+          }
+        },
+        {
+          "id": "EX-T022",
+          "name": "Hollow-Body Hold",
+          "prescription": "25-sec hold",
+          "reps": "TIMED",
+          "timeSeconds": 25,
+          "time": "0:25",
+          "timerMode": "exercise",
+          "home": "25-sec hollow-body hold",
+          "away": "25-sec tuck hollow hold",
+          "cue": "Lower back stays down; ribs tucked",
+          "category": "rings-calisthenics",
+          "media": {
+            "type": "youtube",
+            "videoId": "lNIALQyQjM0",
+            "sourceUrl": "https://www.youtube.com/shorts/lNIALQyQjM0",
+            "thumbnailUrl": "https://i.ytimg.com/vi/lNIALQyQjM0/hqdefault.jpg",
+            "sourceName": "YouTube Shorts"
+          }
+        }
+      ]
+    },
+    {
+      "label": "D",
+      "title": "ROTATIONAL + HORIZONTAL POWER",
+      "rounds": 3,
+      "effort": "RPE 6; full reset; rest 60 sec after the pair",
+      "exercises": [
+        {
+          "id": "EX-E007",
+          "name": "Rotational Medicine-Ball Scoop Throw",
+          "prescription": "3 explosive reps per side",
+          "reps": "3 / SIDE",
+          "timeSeconds": 30,
+          "time": "0:30",
+          "timerMode": "exercise",
+          "home": "3 rotational scoop throws per side",
+          "away": "3 explosive band rotations per side",
+          "cue": "Turn hips; brace the finish",
+          "category": "power",
+          "media": {
+            "type": "youtube",
+            "videoId": "MilgWMme3Q4",
+            "sourceUrl": "https://www.youtube.com/shorts/MilgWMme3Q4",
+            "thumbnailUrl": "https://i.ytimg.com/vi/MilgWMme3Q4/hqdefault.jpg",
+            "sourceName": "Boxing Science"
+          }
+        },
+        {
+          "id": "EX-E003",
+          "name": "Broad Jump",
+          "prescription": "3 reset reps",
+          "reps": "3",
+          "timeSeconds": 25,
+          "time": "0:25",
+          "timerMode": "exercise",
+          "home": "3 broad jumps with a reset",
+          "away": "3 broad jumps outdoors",
+          "cue": "Stick every landing; stop when distance drops",
+          "category": "power",
+          "media": {
+            "type": "youtube",
+            "videoId": "AupLjwEflR4",
+            "sourceUrl": "https://www.youtube.com/shorts/AupLjwEflR4",
+            "thumbnailUrl": "https://i.ytimg.com/vi/AupLjwEflR4/hqdefault.jpg",
+            "sourceName": "Speed Development"
+          }
+        }
+      ]
+    },
+    {
+      "label": "E",
+      "title": "ENGINE + GRIP ARMOR",
+      "rounds": 4,
+      "effort": "RPE 7; rest 30 sec after the pair",
+      "exercises": [
+        {
+          "id": "EX-G019",
+          "name": "Farmer Carry",
+          "prescription": "40-sec heavy carry",
+          "reps": "TIMED",
+          "timeSeconds": 40,
+          "time": "0:40",
+          "timerMode": "exercise",
+          "home": "40-sec heavy farmer carry",
+          "away": "40-sec heavy-bag, backpack, or bucket carry",
+          "cue": "Tall posture; crush the handles; quiet steps",
+          "category": "strength",
+          "media": {
+            "type": "youtube",
+            "videoId": "k83HQI2P-rk",
+            "sourceUrl": "https://www.youtube.com/shorts/k83HQI2P-rk",
+            "thumbnailUrl": "https://i.ytimg.com/vi/k83HQI2P-rk/hqdefault.jpg",
+            "sourceName": "YouTube Shorts"
+          }
+        },
+        {
+          "id": "EX-I002",
+          "name": "Boxer-Step Jump Rope",
+          "prescription": "40-sec interval",
+          "reps": "TIMED",
+          "timeSeconds": 40,
+          "time": "0:40",
+          "timerMode": "exercise",
+          "home": "40-sec boxer-step jump rope",
+          "away": "40-sec quiet fast-feet shuffle",
+          "cue": "Stay relaxed; low bounce; keep rhythm",
+          "category": "conditioning",
+          "media": {
+            "type": "youtube",
+            "videoId": "f_YoMCxwi48",
+            "sourceUrl": "https://www.youtube.com/shorts/f_YoMCxwi48",
+            "thumbnailUrl": "https://i.ytimg.com/vi/f_YoMCxwi48/hqdefault.jpg",
+            "sourceName": "YouTube Shorts"
+          }
+        }
+      ]
+    }
+  ],
+  "martialSupplement": {
+    "name": "Guard Posture-Break Leg Activity",
+    "prescription": "Continuous controlled reps for 5:00",
+    "reps": "TIMED",
+    "timeSeconds": 300,
+    "time": "5:00",
+    "timerMode": "exercise",
+    "home": "Five minutes with a grappling dummy",
+    "away": "Five minutes of solo supine leg pummeling",
+    "cue": "Smooth deliberate reps; martial practice stays separate",
+    "category": "martial",
+    "media": null,
+    "duration": "5:00",
+    "text": "Separate—not counted: optional guard posture-break leg activity"
+  }
+}
