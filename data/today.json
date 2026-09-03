@@ -1,13 +1,18 @@
 {
   "schemaVersion": 3,
   "date": "2026-09-03",
-  "generatedAt": "2026-09-03T05:24:14Z",
+  "generatedAt": "2026-09-03T16:48:02Z",
   "planId": "DP-20260903-UW-001",
   "title": "DAILY FIGHTER — ULTIMATE WARRIOR",
   "additionalTitle": "MORE DEPOSITS",
   "emphasis": "Front-lever foundation + rings strength + posterior-chain power",
   "featuredMode": "RINGS / CALISTHENICS + BARBELL / KETTLEBELL",
-  "transitionPolicy": {"sameSetupSeconds": 15, "standardSeconds": 20, "equipmentChangeSeconds": 30},
+  "transitionPolicy": {
+    "sameSetupSeconds": 15,
+    "standardSeconds": 20,
+    "equipmentChangeSeconds": 30,
+    "sideSwitchSeconds": 10
+  },
   "levels": {
     "floor": "25–30 min: Ignition + A + B. BJJ: A×2/B×2/C×1/D×1/E×1 or skip if class load/time is high.",
     "standard": "Complete 42–48 min: Ignition + A×3/B×3/C×2/D×2/E×2.",
@@ -25,7 +30,13 @@
     "away": "Brisk outdoor walk for 10:00",
     "cue": "Conversational pace; finish warm, not tired",
     "category": "conditioning",
-    "media": {"type":"youtube","videoId":"hGaVza0pWdw","sourceUrl":"https://www.youtube.com/shorts/hGaVza0pWdw","thumbnailUrl":"https://i.ytimg.com/vi/hGaVza0pWdw/hqdefault.jpg","sourceName":"Zone 2 Treadmill"}
+    "media": {
+      "type": "youtube",
+      "videoId": "hGaVza0pWdw",
+      "sourceUrl": "https://www.youtube.com/shorts/hGaVza0pWdw",
+      "thumbnailUrl": "https://i.ytimg.com/vi/hGaVza0pWdw/hqdefault.jpg",
+      "sourceName": "Zone 2 Treadmill"
+    }
   },
   "deposits": [
     {
@@ -34,8 +45,48 @@
       "rounds": 3,
       "effort": "RPE 7; 45 sec rest. Stay on foundation until two qualifying exposures.",
       "exercises": [
-        {"id":"EX-G008","name":"Scapular Pull-Up","prescription":"8 clean reps","reps":"8","timeSeconds":30,"time":"0:30","setupSeconds":20,"timerMode":"exercise","home":"Pull-up-bar scapular pull-ups","away":"Band straight-arm pulldowns","cue":"Locked elbows; shoulders move only. Gate: 3×6–8 twice at 2–3 RIR.","category":"rings-calisthenics","media":{"type":"youtube","videoId":"9M8ylnbriB0","sourceUrl":"https://www.youtube.com/shorts/9M8ylnbriB0","thumbnailUrl":"https://i.ytimg.com/vi/9M8ylnbriB0/hqdefault.jpg","sourceName":"Simple Scap Pull-up Tutorial"}},
-        {"id":"EX-T022","name":"Hollow-Body Hold","prescription":"25-sec hold","reps":"TIMED","timeSeconds":25,"time":"0:25","setupSeconds":15,"timerMode":"exercise","home":"Hollow-body hold","away":"Tuck hollow hold","cue":"Lower back heavy. Gate: 3×20 sec clean twice before longer leverage.","category":"rings-calisthenics","media":{"type":"youtube","videoId":"lNIALQyQjM0","sourceUrl":"https://www.youtube.com/shorts/lNIALQyQjM0","thumbnailUrl":"https://i.ytimg.com/vi/lNIALQyQjM0/hqdefault.jpg","sourceName":"Hollow-Body Hold"}}
+        {
+          "id": "EX-G008",
+          "name": "Scapular Pull-Up",
+          "prescription": "8 clean reps",
+          "reps": "8",
+          "timeSeconds": 30,
+          "time": "0:30",
+          "setupSeconds": 20,
+          "timerMode": "exercise",
+          "home": "Pull-up-bar scapular pull-ups",
+          "away": "Band straight-arm pulldowns",
+          "cue": "Locked elbows; shoulders move only. Gate: 3×6–8 twice at 2–3 RIR.",
+          "category": "rings-calisthenics",
+          "media": {
+            "type": "youtube",
+            "videoId": "9M8ylnbriB0",
+            "sourceUrl": "https://www.youtube.com/shorts/9M8ylnbriB0",
+            "thumbnailUrl": "https://i.ytimg.com/vi/9M8ylnbriB0/hqdefault.jpg",
+            "sourceName": "Simple Scap Pull-up Tutorial"
+          }
+        },
+        {
+          "id": "EX-T022",
+          "name": "Hollow-Body Hold",
+          "prescription": "25-sec hold",
+          "reps": "TIMED",
+          "timeSeconds": 25,
+          "time": "0:25",
+          "setupSeconds": 15,
+          "timerMode": "exercise",
+          "home": "Hollow-body hold",
+          "away": "Tuck hollow hold",
+          "cue": "Lower back heavy. Gate: 3×20 sec clean twice before longer leverage.",
+          "category": "rings-calisthenics",
+          "media": {
+            "type": "youtube",
+            "videoId": "lNIALQyQjM0",
+            "sourceUrl": "https://www.youtube.com/shorts/lNIALQyQjM0",
+            "thumbnailUrl": "https://i.ytimg.com/vi/lNIALQyQjM0/hqdefault.jpg",
+            "sourceName": "Hollow-Body Hold"
+          }
+        }
       ]
     },
     {
@@ -44,8 +95,48 @@
       "rounds": 3,
       "effort": "2 RIR, RPE 8 max; 60 sec rest.",
       "exercises": [
-        {"id":"EX-G009","name":"Ring Row","prescription":"10 hard-angle reps","reps":"10","timeSeconds":40,"time":"0:40","setupSeconds":20,"timerMode":"exercise","home":"Hard-angle ring rows","away":"Backpack rows, 10 / SIDE","cue":"Rigid body; one-second squeeze at the top.","category":"rings-calisthenics","media":{"type":"youtube","videoId":"etiOULaW7tc","sourceUrl":"https://www.youtube.com/shorts/etiOULaW7tc","thumbnailUrl":"https://i.ytimg.com/vi/etiOULaW7tc/hqdefault.jpg","sourceName":"KILOS Lifting"}},
-        {"id":"EX-R009","name":"Pike Push-Up","prescription":"8 controlled reps","reps":"8","timeSeconds":35,"time":"0:35","setupSeconds":20,"timerMode":"exercise","home":"Floor pike push-ups","away":"Hands-elevated pike push-ups","cue":"Head travels forward and down; finish tall.","category":"rings-calisthenics","media":{"type":"youtube","videoId":"f4bqhcmSWNU","sourceUrl":"https://www.youtube.com/shorts/f4bqhcmSWNU","thumbnailUrl":"https://i.ytimg.com/vi/f4bqhcmSWNU/hqdefault.jpg","sourceName":"SaturnoMovement"}}
+        {
+          "id": "EX-G009",
+          "name": "Ring Row",
+          "prescription": "10 hard-angle reps",
+          "reps": "10",
+          "timeSeconds": 40,
+          "time": "0:40",
+          "setupSeconds": 20,
+          "timerMode": "exercise",
+          "home": "Hard-angle ring rows",
+          "away": "Backpack rows, 10 / SIDE",
+          "cue": "Rigid body; one-second squeeze at the top.",
+          "category": "rings-calisthenics",
+          "media": {
+            "type": "youtube",
+            "videoId": "etiOULaW7tc",
+            "sourceUrl": "https://www.youtube.com/shorts/etiOULaW7tc",
+            "thumbnailUrl": "https://i.ytimg.com/vi/etiOULaW7tc/hqdefault.jpg",
+            "sourceName": "KILOS Lifting"
+          }
+        },
+        {
+          "id": "EX-R009",
+          "name": "Pike Push-Up",
+          "prescription": "8 controlled reps",
+          "reps": "8",
+          "timeSeconds": 35,
+          "time": "0:35",
+          "setupSeconds": 20,
+          "timerMode": "exercise",
+          "home": "Floor pike push-ups",
+          "away": "Hands-elevated pike push-ups",
+          "cue": "Head travels forward and down; finish tall.",
+          "category": "rings-calisthenics",
+          "media": {
+            "type": "youtube",
+            "videoId": "f4bqhcmSWNU",
+            "sourceUrl": "https://www.youtube.com/shorts/f4bqhcmSWNU",
+            "thumbnailUrl": "https://i.ytimg.com/vi/f4bqhcmSWNU/hqdefault.jpg",
+            "sourceName": "SaturnoMovement"
+          }
+        }
       ]
     },
     {
@@ -54,8 +145,53 @@
       "rounds": 2,
       "effort": "3 RIR; 60 sec rest.",
       "exercises": [
-        {"id":"EX-H006","name":"Barbell Romanian Deadlift","prescription":"8 reps, 3-sec lowering","reps":"8","timeSeconds":45,"time":"0:45","setupSeconds":30,"timerMode":"exercise","home":"Barbell RDL at a load leaving 3 RIR","away":"Backpack RDL","cue":"Hips back; lats tight; own the eccentric.","category":"strength","media":{"type":"youtube","videoId":"tlfVk-JpHvE","sourceUrl":"https://www.youtube.com/shorts/tlfVk-JpHvE","thumbnailUrl":"https://i.ytimg.com/vi/tlfVk-JpHvE/hqdefault.jpg","sourceName":"Squat University"}},
-        {"id":"EX-T009","name":"Side Plank","prescription":"25 sec / SIDE","reps":"TIMED","timeSeconds":50,"time":"0:50","setupSeconds":20,"timerMode":"exercise","home":"Full side plank","away":"Knee-supported side plank","cue":"Stack shoulders and hips; no sagging.","category":"strength","media":{"type":"youtube","videoId":"sH5PiIUjDW8","sourceUrl":"https://www.youtube.com/shorts/sH5PiIUjDW8","thumbnailUrl":"https://i.ytimg.com/vi/sH5PiIUjDW8/hqdefault.jpg","sourceName":"Side Plank Correct Technique"}}
+        {
+          "id": "EX-H006",
+          "name": "Barbell Romanian Deadlift",
+          "prescription": "8 reps, 3-sec lowering",
+          "reps": "8",
+          "timeSeconds": 45,
+          "time": "0:45",
+          "setupSeconds": 30,
+          "timerMode": "exercise",
+          "home": "Barbell RDL at a load leaving 3 RIR",
+          "away": "Backpack RDL",
+          "cue": "Hips back; lats tight; own the eccentric.",
+          "category": "strength",
+          "media": {
+            "type": "youtube",
+            "videoId": "tlfVk-JpHvE",
+            "sourceUrl": "https://www.youtube.com/shorts/tlfVk-JpHvE",
+            "thumbnailUrl": "https://i.ytimg.com/vi/tlfVk-JpHvE/hqdefault.jpg",
+            "sourceName": "Squat University"
+          }
+        },
+        {
+          "id": "EX-T009",
+          "name": "Side Plank",
+          "prescription": "25 sec / SIDE",
+          "reps": "TIMED",
+          "timeSeconds": 50,
+          "time": "0:50",
+          "setupSeconds": 20,
+          "timerMode": "exercise",
+          "home": "Full side plank",
+          "away": "Knee-supported side plank",
+          "cue": "Stack shoulders and hips; no sagging.",
+          "category": "strength",
+          "media": {
+            "type": "youtube",
+            "videoId": "sH5PiIUjDW8",
+            "sourceUrl": "https://www.youtube.com/shorts/sH5PiIUjDW8",
+            "thumbnailUrl": "https://i.ytimg.com/vi/sH5PiIUjDW8/hqdefault.jpg",
+            "sourceName": "Side Plank Correct Technique"
+          },
+          "sideMode": "per-side",
+          "sideCount": 2,
+          "sideSeconds": 25,
+          "sideTime": "0:25",
+          "switchSeconds": 10
+        }
       ]
     },
     {
@@ -64,8 +200,48 @@
       "rounds": 2,
       "effort": "RPE 6; 45 sec rest; stop when speed or height drops.",
       "exercises": [
-        {"id":"EX-H008","name":"Kettlebell Swing","prescription":"10 crisp reps","reps":"10","timeSeconds":25,"time":"0:25","setupSeconds":30,"timerMode":"exercise","home":"Two-hand kettlebell swings","away":"3 broad jumps with full reset","cue":"Snap hips; float the bell; no squatty reps.","category":"kettlebell","media":{"type":"youtube","videoId":"CA_LkNOu34w","sourceUrl":"https://www.youtube.com/shorts/CA_LkNOu34w","thumbnailUrl":"https://i.ytimg.com/vi/CA_LkNOu34w/hqdefault.jpg","sourceName":"Two-Hand Kettlebell Swing"}},
-        {"id":"EX-R017","name":"Explosive Push-Up","prescription":"4 explosive reps","reps":"4","timeSeconds":20,"time":"0:20","setupSeconds":20,"timerMode":"exercise","home":"Explosive floor push-ups","away":"Fast hands-elevated push-ups","cue":"Stop before hand height or trunk position drops.","category":"power","media":{"type":"youtube","videoId":"6l-lQilhHnI","sourceUrl":"https://www.youtube.com/shorts/6l-lQilhHnI","thumbnailUrl":"https://i.ytimg.com/vi/6l-lQilhHnI/hqdefault.jpg","sourceName":"Explosive Push-Up Tutorial"}}
+        {
+          "id": "EX-H008",
+          "name": "Kettlebell Swing",
+          "prescription": "10 crisp reps",
+          "reps": "10",
+          "timeSeconds": 25,
+          "time": "0:25",
+          "setupSeconds": 30,
+          "timerMode": "exercise",
+          "home": "Two-hand kettlebell swings",
+          "away": "3 broad jumps with full reset",
+          "cue": "Snap hips; float the bell; no squatty reps.",
+          "category": "kettlebell",
+          "media": {
+            "type": "youtube",
+            "videoId": "CA_LkNOu34w",
+            "sourceUrl": "https://www.youtube.com/shorts/CA_LkNOu34w",
+            "thumbnailUrl": "https://i.ytimg.com/vi/CA_LkNOu34w/hqdefault.jpg",
+            "sourceName": "Two-Hand Kettlebell Swing"
+          }
+        },
+        {
+          "id": "EX-R017",
+          "name": "Explosive Push-Up",
+          "prescription": "4 explosive reps",
+          "reps": "4",
+          "timeSeconds": 20,
+          "time": "0:20",
+          "setupSeconds": 20,
+          "timerMode": "exercise",
+          "home": "Explosive floor push-ups",
+          "away": "Fast hands-elevated push-ups",
+          "cue": "Stop before hand height or trunk position drops.",
+          "category": "power",
+          "media": {
+            "type": "youtube",
+            "videoId": "6l-lQilhHnI",
+            "sourceUrl": "https://www.youtube.com/shorts/6l-lQilhHnI",
+            "thumbnailUrl": "https://i.ytimg.com/vi/6l-lQilhHnI/hqdefault.jpg",
+            "sourceName": "Explosive Push-Up Tutorial"
+          }
+        }
       ]
     },
     {
@@ -74,8 +250,53 @@
       "rounds": 2,
       "effort": "RPE 7; 20 sec rest; posture and breathing stay controlled.",
       "exercises": [
-        {"id":"EX-G020","name":"Suitcase Carry","prescription":"30 sec / SIDE","reps":"TIMED","timeSeconds":60,"time":"1:00","setupSeconds":30,"timerMode":"exercise","home":"Heavy kettlebell or dumbbell suitcase carry","away":"Loaded-backpack suitcase carry","cue":"Walk tall; do not lean toward or away from the load.","category":"strength","media":{"type":"youtube","videoId":"9xjSFwKIehY","sourceUrl":"https://www.youtube.com/shorts/9xjSFwKIehY","thumbnailUrl":"https://i.ytimg.com/vi/9xjSFwKIehY/hqdefault.jpg","sourceName":"Par4Success"}},
-        {"id":"EX-I002","name":"Boxer-Step Jump Rope","prescription":"40-sec interval","reps":"TIMED","timeSeconds":40,"time":"0:40","setupSeconds":20,"timerMode":"exercise","home":"Boxer-step jump rope","away":"Quiet fast-feet shuffle","cue":"Relax shoulders; keep a sustainable nasal-breathing rhythm.","category":"conditioning","media":{"type":"youtube","videoId":"f_YoMCxwi48","sourceUrl":"https://www.youtube.com/shorts/f_YoMCxwi48","thumbnailUrl":"https://i.ytimg.com/vi/f_YoMCxwi48/hqdefault.jpg","sourceName":"Boxer-Step Jump Rope"}}
+        {
+          "id": "EX-G020",
+          "name": "Suitcase Carry",
+          "prescription": "30 sec / SIDE",
+          "reps": "TIMED",
+          "timeSeconds": 60,
+          "time": "1:00",
+          "setupSeconds": 30,
+          "timerMode": "exercise",
+          "home": "Heavy kettlebell or dumbbell suitcase carry",
+          "away": "Loaded-backpack suitcase carry",
+          "cue": "Walk tall; do not lean toward or away from the load.",
+          "category": "strength",
+          "media": {
+            "type": "youtube",
+            "videoId": "9xjSFwKIehY",
+            "sourceUrl": "https://www.youtube.com/shorts/9xjSFwKIehY",
+            "thumbnailUrl": "https://i.ytimg.com/vi/9xjSFwKIehY/hqdefault.jpg",
+            "sourceName": "Par4Success"
+          },
+          "sideMode": "per-side",
+          "sideCount": 2,
+          "sideSeconds": 30,
+          "sideTime": "0:30",
+          "switchSeconds": 10
+        },
+        {
+          "id": "EX-I002",
+          "name": "Boxer-Step Jump Rope",
+          "prescription": "40-sec interval",
+          "reps": "TIMED",
+          "timeSeconds": 40,
+          "time": "0:40",
+          "setupSeconds": 20,
+          "timerMode": "exercise",
+          "home": "Boxer-step jump rope",
+          "away": "Quiet fast-feet shuffle",
+          "cue": "Relax shoulders; keep a sustainable nasal-breathing rhythm.",
+          "category": "conditioning",
+          "media": {
+            "type": "youtube",
+            "videoId": "f_YoMCxwi48",
+            "sourceUrl": "https://www.youtube.com/shorts/f_YoMCxwi48",
+            "thumbnailUrl": "https://i.ytimg.com/vi/f_YoMCxwi48/hqdefault.jpg",
+            "sourceName": "Boxer-Step Jump Rope"
+          }
+        }
       ]
     }
   ],
@@ -91,7 +312,13 @@
     "away": "Same deliberate pattern on clear floor",
     "cue": "Build frames, move hips, recover the shield cleanly",
     "category": "martial",
-    "media": {"type":"youtube","videoId":"r4emUG7dC8c","sourceUrl":"https://www.youtube.com/shorts/r4emUG7dC8c","thumbnailUrl":"https://i.ytimg.com/vi/r4emUG7dC8c/hqdefault.jpg","sourceName":"Bernardo Faria BJJ Fanatics"},
+    "media": {
+      "type": "youtube",
+      "videoId": "r4emUG7dC8c",
+      "sourceUrl": "https://www.youtube.com/shorts/r4emUG7dC8c",
+      "thumbnailUrl": "https://i.ytimg.com/vi/r4emUG7dC8c/hqdefault.jpg",
+      "sourceName": "Bernardo Faria BJJ Fanatics"
+    },
     "duration": "5:00",
     "text": "Separate—not counted: optional knee-shield recovery to closed guard."
   }
