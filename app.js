@@ -67,7 +67,24 @@ function formatDuration(seconds) {
   return `${minutes}:${String(total % 60).padStart(2, "0")}`;
 }
 
+function isPerSide(item) {
+  return item?.sideMode === "per-side" && Number(item?.sideCount) === 2;
+}
+
+function getSideSeconds(item) {
+  const seconds = Number(item?.sideSeconds);
+  return Number.isFinite(seconds) && seconds > 0 ? Math.round(seconds) : 0;
+}
+
+function getSwitchSeconds(item) {
+  const seconds = Number(item?.switchSeconds);
+  return Number.isFinite(seconds) && seconds > 0 ? Math.round(seconds) : 0;
+}
+
 function getTimeLabel(item) {
+  if (isPerSide(item)) {
+    return `${safeText(item?.sideTime, formatDuration(getSideSeconds(item)))} / SIDE`;
+  }
   return safeText(item?.time, formatDuration(getTimeSeconds(item)));
 }
 
@@ -99,7 +116,7 @@ function makeExerciseClock(item) {
   const output = createElement(
     "output",
     "exercise-countdown__value",
-    formatDuration(setupSeconds || getTimeSeconds(item)),
+    formatDuration(setupSeconds || (isPerSide(item) ? getSideSeconds(item) : getTimeSeconds(item))),
   );
   output.dataset.exerciseCountdown = "";
   countdown.append(output);
@@ -380,6 +397,11 @@ function makeExerciseSlide(exercise, deposit, roundNumber = 1) {
   slide.dataset.timerMode = "exercise";
   slide.dataset.countdownSeconds = String(getTimeSeconds(exercise));
   slide.dataset.setupSeconds = String(getSetupSeconds(exercise));
+  if (isPerSide(exercise)) {
+    slide.dataset.sideMode = "per-side";
+    slide.dataset.sideSeconds = String(getSideSeconds(exercise));
+    slide.dataset.switchSeconds = String(getSwitchSeconds(exercise));
+  }
   slide.setAttribute("aria-hidden", "true");
 
   const detail = createElement("article", "exercise-detail");
@@ -450,6 +472,19 @@ function validateTimedMovement(item, label) {
   if (!safeText(item?.time) || item.time !== formatDuration(seconds)) throw new Error(`${label} TIME must match timeSeconds in m:ss format`);
   const setupSeconds = getSetupSeconds(item);
   if (![15, 20, 30].includes(setupSeconds)) throw new Error(`${label} setupSeconds must be 15, 20, or 30`);
+  if (item?.sideMode === "per-side") {
+    if (Number(item?.sideCount) !== 2) throw new Error(`${label} sideCount must equal 2`);
+    const sideSeconds = getSideSeconds(item);
+    if (!Number.isInteger(sideSeconds) || sideSeconds < 1) throw new Error(`${label} sideSeconds must be positive`);
+    if (!safeText(item?.sideTime) || item.sideTime !== formatDuration(sideSeconds)) {
+      throw new Error(`${label} sideTime must match sideSeconds in m:ss format`);
+    }
+    if (seconds !== sideSeconds * 2) throw new Error(`${label} timeSeconds must equal both sides combined`);
+    const switchSeconds = getSwitchSeconds(item);
+    if (!Number.isInteger(switchSeconds) || switchSeconds < 1 || switchSeconds > 30) {
+      throw new Error(`${label} switchSeconds must be between 1 and 30`);
+    }
+  }
 }
 
 function validateWorkout(workout) {
@@ -585,8 +620,26 @@ function getActiveSetupDurationMs() {
   return 0;
 }
 
+function isActivePerSide() {
+  return slides[currentIndex]?.dataset.sideMode === "per-side";
+}
+
+function getActiveSideDurationMs() {
+  const seconds = Number(slides[currentIndex]?.dataset.sideSeconds);
+  if (Number.isFinite(seconds) && seconds > 0) return Math.round(seconds * 1000);
+  return 0;
+}
+
+function getActiveSwitchDurationMs() {
+  const seconds = Number(slides[currentIndex]?.dataset.switchSeconds);
+  if (Number.isFinite(seconds) && seconds > 0) return Math.round(seconds * 1000);
+  return 0;
+}
+
 function getActiveSlideDurationMs() {
   if (activeTimerPhase === "setup") return getActiveSetupDurationMs();
+  if (activeTimerPhase === "left" || activeTimerPhase === "right") return getActiveSideDurationMs();
+  if (activeTimerPhase === "switch") return getActiveSwitchDurationMs();
   if (activeTimerPhase === "work") return getActiveWorkDurationMs();
   return SLIDE_INTERVAL_MS;
 }
@@ -600,19 +653,30 @@ function clearTimerHandles() {
 
 function setActiveTimerPhase(phase) {
   activeTimerPhase = phase;
+  const phaseLabels = {
+    setup: "GET READY",
+    work: "WORK",
+    left: "LEFT SIDE",
+    switch: "SWITCH SIDES",
+    right: "RIGHT SIDE",
+  };
   if (activeCountdownLabel) {
-    activeCountdownLabel.textContent = phase === "setup" ? "GET READY" : "WORK";
+    activeCountdownLabel.textContent = phaseLabels[phase] || "WORK";
   }
   if (activeCountdownPanel) {
-    activeCountdownPanel.classList.toggle("is-setup", phase === "setup");
-    activeCountdownPanel.classList.toggle("is-work", phase === "work");
+    activeCountdownPanel.classList.toggle("is-setup", phase === "setup" || phase === "switch");
+    activeCountdownPanel.classList.toggle("is-work", ["work", "left", "right"].includes(phase));
   }
 }
 
 function resetActiveTimerPhase() {
   const hasWorkTimer = getActiveWorkDurationMs() > 0;
   const hasSetupTimer = getActiveSetupDurationMs() > 0;
-  setActiveTimerPhase(hasWorkTimer ? (hasSetupTimer ? "setup" : "work") : "slide");
+  let nextPhase = "slide";
+  if (hasWorkTimer) {
+    nextPhase = hasSetupTimer ? "setup" : (isActivePerSide() ? "left" : "work");
+  }
+  setActiveTimerPhase(nextPhase);
   slideTotalMs = getActiveSlideDurationMs();
   slideRemainingMs = slideTotalMs;
   slideStartedAt = 0;
@@ -643,8 +707,17 @@ function finishCurrentTimerPhase() {
   clearTimerHandles();
   updateTimerVisual();
 
+  let nextPhase = "";
   if (activeTimerPhase === "setup") {
-    setActiveTimerPhase("work");
+    nextPhase = isActivePerSide() ? "left" : "work";
+  } else if (activeTimerPhase === "left") {
+    nextPhase = getActiveSwitchDurationMs() > 0 ? "switch" : "right";
+  } else if (activeTimerPhase === "switch") {
+    nextPhase = "right";
+  }
+
+  if (nextPhase) {
+    setActiveTimerPhase(nextPhase);
     slideTotalMs = getActiveSlideDurationMs();
     slideRemainingMs = slideTotalMs;
     updateTimerVisual();
