@@ -1,12 +1,12 @@
 {
   "schemaVersion": 3,
-  "date": "2026-09-03",
-  "generatedAt": "2026-09-03T16:48:02Z",
-  "planId": "DP-20260903-UW-001",
+  "date": "2026-09-04",
+  "generatedAt": "2026-09-04T05:45:00Z",
+  "planId": "DP-20260904-UW-001",
   "title": "DAILY FIGHTER — ULTIMATE WARRIOR",
   "additionalTitle": "MORE DEPOSITS",
-  "emphasis": "Front-lever foundation + rings strength + posterior-chain power",
-  "featuredMode": "RINGS / CALISTHENICS + BARBELL / KETTLEBELL",
+  "emphasis": "Planche + compression foundation, weighted pulling, squat strength, and rotational power",
+  "featuredMode": "CALISTHENICS / RINGS + BELT SQUAT / MED BALL",
   "transitionPolicy": {
     "sameSetupSeconds": 15,
     "standardSeconds": 20,
@@ -14,9 +14,9 @@
     "sideSwitchSeconds": 10
   },
   "levels": {
-    "floor": "25–30 min: Ignition + A + B. BJJ: A×2/B×2/C×1/D×1/E×1 or skip if class load/time is high.",
-    "standard": "Complete 42–48 min: Ignition + A×3/B×3/C×2/D×2/E×2.",
-    "bonus": "Optional 5–10 min mobility or easy Zone 2."
+    "floor": "~28 min: Ignition + A×3/B×2/C×1.",
+    "standard": "45:35 complete: Ignition + A×3/B×3/C×2/D×2/E×2.",
+    "bonus": "Optional 5–10 min mobility. BJJ: Ignition + A×2/B×1/E×1 (~20:50), or skip if class load/time is high."
   },
   "ignition": {
     "name": "Zone-2 Treadmill",
@@ -41,79 +41,79 @@
   "deposits": [
     {
       "label": "A",
-      "title": "FRONT-LEVER FOUNDATION",
+      "title": "FOUNDATION SKILL",
       "rounds": 3,
-      "effort": "RPE 7; 45 sec rest. Stay on foundation until two qualifying exposures.",
+      "effort": "RPE 7; 60 sec rest. Hold foundation until the gate is earned.",
       "exercises": [
         {
-          "id": "EX-G008",
-          "name": "Scapular Pull-Up",
-          "prescription": "8 clean reps",
-          "reps": "8",
+          "id": "EX-CAL-PL001",
+          "name": "Planche Lean",
+          "prescription": "15-sec foundation hold",
+          "reps": "TIMED",
+          "timeSeconds": 15,
+          "time": "0:15",
+          "setupSeconds": 20,
+          "timerMode": "exercise",
+          "home": "Floor or parallettes planche lean",
+          "away": "Hands-elevated planche lean",
+          "cue": "Lock elbows, protract hard, stay hollow. Gate: 3×15–20 sec twice at RPE ≤8.",
+          "category": "rings-calisthenics",
+          "media": {
+            "type": "youtube",
+            "videoId": "s4_dcFZstSA",
+            "sourceUrl": "https://www.youtube.com/shorts/s4_dcFZstSA",
+            "thumbnailUrl": "https://i.ytimg.com/vi/s4_dcFZstSA/hqdefault.jpg",
+            "sourceName": "Planche Lean Tutorial"
+          }
+        },
+        {
+          "id": "EX-T018",
+          "name": "Hanging Knee Raise",
+          "prescription": "6 strict foundation reps",
+          "reps": "6",
           "timeSeconds": 30,
           "time": "0:30",
           "setupSeconds": 20,
           "timerMode": "exercise",
-          "home": "Pull-up-bar scapular pull-ups",
-          "away": "Band straight-arm pulldowns",
-          "cue": "Locked elbows; shoulders move only. Gate: 3×6–8 twice at 2–3 RIR.",
+          "home": "Strict hanging knee raises",
+          "away": "Slow lying knee raises",
+          "cue": "Curl pelvis; no swing. Gate: 3×6–8 twice at 2–3 RIR before harder leg raises.",
           "category": "rings-calisthenics",
           "media": {
             "type": "youtube",
-            "videoId": "9M8ylnbriB0",
-            "sourceUrl": "https://www.youtube.com/shorts/9M8ylnbriB0",
-            "thumbnailUrl": "https://i.ytimg.com/vi/9M8ylnbriB0/hqdefault.jpg",
-            "sourceName": "Simple Scap Pull-up Tutorial"
-          }
-        },
-        {
-          "id": "EX-T022",
-          "name": "Hollow-Body Hold",
-          "prescription": "25-sec hold",
-          "reps": "TIMED",
-          "timeSeconds": 25,
-          "time": "0:25",
-          "setupSeconds": 15,
-          "timerMode": "exercise",
-          "home": "Hollow-body hold",
-          "away": "Tuck hollow hold",
-          "cue": "Lower back heavy. Gate: 3×20 sec clean twice before longer leverage.",
-          "category": "rings-calisthenics",
-          "media": {
-            "type": "youtube",
-            "videoId": "lNIALQyQjM0",
-            "sourceUrl": "https://www.youtube.com/shorts/lNIALQyQjM0",
-            "thumbnailUrl": "https://i.ytimg.com/vi/lNIALQyQjM0/hqdefault.jpg",
-            "sourceName": "Hollow-Body Hold"
+            "videoId": "xGjWrATlWJM",
+            "sourceUrl": "https://www.youtube.com/shorts/xGjWrATlWJM",
+            "thumbnailUrl": "https://i.ytimg.com/vi/xGjWrATlWJM/hqdefault.jpg",
+            "sourceName": "Hanging Knee Raise"
           }
         }
       ]
     },
     {
       "label": "B",
-      "title": "RINGS STRENGTH",
+      "title": "WEIGHTED PULL + PIKE PRESS",
       "rounds": 3,
-      "effort": "2 RIR, RPE 8 max; 60 sec rest.",
+      "effort": "2 RIR, RPE 8 max; 90 sec rest.",
       "exercises": [
         {
-          "id": "EX-G009",
-          "name": "Ring Row",
-          "prescription": "10 hard-angle reps",
-          "reps": "10",
-          "timeSeconds": 40,
-          "time": "0:40",
-          "setupSeconds": 20,
+          "id": "EX-G004",
+          "name": "Weighted Pull-Up",
+          "prescription": "5 reps at +10 lb",
+          "reps": "5",
+          "timeSeconds": 35,
+          "time": "0:35",
+          "setupSeconds": 30,
           "timerMode": "exercise",
-          "home": "Hard-angle ring rows",
-          "away": "Backpack rows, 10 / SIDE",
-          "cue": "Rigid body; one-second squeeze at the top.",
+          "home": "Weighted pull-ups at +10 lb",
+          "away": "Backpack pull-ups or 8 hard backpack rows",
+          "cue": "Dead hang; clean chin; hold load until two qualifying exposures.",
           "category": "rings-calisthenics",
           "media": {
             "type": "youtube",
-            "videoId": "etiOULaW7tc",
-            "sourceUrl": "https://www.youtube.com/shorts/etiOULaW7tc",
-            "thumbnailUrl": "https://i.ytimg.com/vi/etiOULaW7tc/hqdefault.jpg",
-            "sourceName": "KILOS Lifting"
+            "videoId": "9aD6_71_234",
+            "sourceUrl": "https://www.youtube.com/shorts/9aD6_71_234",
+            "thumbnailUrl": "https://i.ytimg.com/vi/9aD6_71_234/hqdefault.jpg",
+            "sourceName": "Weighted Pull-Up"
           }
         },
         {
@@ -127,7 +127,7 @@
           "timerMode": "exercise",
           "home": "Floor pike push-ups",
           "away": "Hands-elevated pike push-ups",
-          "cue": "Head travels forward and down; finish tall.",
+          "cue": "Head forward and down; finish tall; stop with 2 reps in reserve.",
           "category": "rings-calisthenics",
           "media": {
             "type": "youtube",
@@ -141,29 +141,29 @@
     },
     {
       "label": "C",
-      "title": "HINGE + TRUNK",
+      "title": "SQUAT + TRUNK",
       "rounds": 2,
-      "effort": "3 RIR; 60 sec rest.",
+      "effort": "3 RIR; 75 sec rest.",
       "exercises": [
         {
-          "id": "EX-H006",
-          "name": "Barbell Romanian Deadlift",
-          "prescription": "8 reps, 3-sec lowering",
+          "id": "EX-H001",
+          "name": "Belt Squat",
+          "prescription": "8 reps at 3 RIR",
           "reps": "8",
-          "timeSeconds": 45,
-          "time": "0:45",
+          "timeSeconds": 40,
+          "time": "0:40",
           "setupSeconds": 30,
           "timerMode": "exercise",
-          "home": "Barbell RDL at a load leaving 3 RIR",
-          "away": "Backpack RDL",
-          "cue": "Hips back; lats tight; own the eccentric.",
+          "home": "Belt squat at a load leaving 3 RIR",
+          "away": "Backpack goblet squat",
+          "cue": "Torso tall; knees track; no grinding.",
           "category": "strength",
           "media": {
             "type": "youtube",
-            "videoId": "tlfVk-JpHvE",
-            "sourceUrl": "https://www.youtube.com/shorts/tlfVk-JpHvE",
-            "thumbnailUrl": "https://i.ytimg.com/vi/tlfVk-JpHvE/hqdefault.jpg",
-            "sourceName": "Squat University"
+            "videoId": "cWZrLzEqD5w",
+            "sourceUrl": "https://www.youtube.com/shorts/cWZrLzEqD5w",
+            "thumbnailUrl": "https://i.ytimg.com/vi/cWZrLzEqD5w/hqdefault.jpg",
+            "sourceName": "Belt Squat"
           }
         },
         {
@@ -175,9 +175,14 @@
           "time": "0:50",
           "setupSeconds": 20,
           "timerMode": "exercise",
+          "sideMode": "per-side",
+          "sideCount": 2,
+          "sideSeconds": 25,
+          "sideTime": "0:25",
+          "switchSeconds": 10,
           "home": "Full side plank",
           "away": "Knee-supported side plank",
-          "cue": "Stack shoulders and hips; no sagging.",
+          "cue": "LEFT 25 sec → SWITCH 10 sec → RIGHT 25 sec; stack shoulders and hips.",
           "category": "strength",
           "media": {
             "type": "youtube",
@@ -185,61 +190,61 @@
             "sourceUrl": "https://www.youtube.com/shorts/sH5PiIUjDW8",
             "thumbnailUrl": "https://i.ytimg.com/vi/sH5PiIUjDW8/hqdefault.jpg",
             "sourceName": "Side Plank Correct Technique"
-          },
-          "sideMode": "per-side",
-          "sideCount": 2,
-          "sideSeconds": 25,
-          "sideTime": "0:25",
-          "switchSeconds": 10
+          }
         }
       ]
     },
     {
       "label": "D",
-      "title": "HINGE + PUSH POWER",
+      "title": "ROTATION + JUMP POWER",
       "rounds": 2,
-      "effort": "RPE 6; 45 sec rest; stop when speed or height drops.",
+      "effort": "RPE 6; 45 sec rest; stop when speed, distance, or landing drops.",
       "exercises": [
         {
-          "id": "EX-H008",
-          "name": "Kettlebell Swing",
-          "prescription": "10 crisp reps",
-          "reps": "10",
-          "timeSeconds": 25,
-          "time": "0:25",
+          "id": "EX-E007",
+          "name": "Rotational Medicine-Ball Scoop Throw",
+          "prescription": "3 reps / SIDE",
+          "reps": "3 / SIDE",
+          "timeSeconds": 30,
+          "time": "0:30",
           "setupSeconds": 30,
           "timerMode": "exercise",
-          "home": "Two-hand kettlebell swings",
-          "away": "3 broad jumps with full reset",
-          "cue": "Snap hips; float the bell; no squatty reps.",
-          "category": "kettlebell",
-          "media": {
-            "type": "youtube",
-            "videoId": "CA_LkNOu34w",
-            "sourceUrl": "https://www.youtube.com/shorts/CA_LkNOu34w",
-            "thumbnailUrl": "https://i.ytimg.com/vi/CA_LkNOu34w/hqdefault.jpg",
-            "sourceName": "Two-Hand Kettlebell Swing"
-          }
-        },
-        {
-          "id": "EX-R017",
-          "name": "Explosive Push-Up",
-          "prescription": "4 explosive reps",
-          "reps": "4",
-          "timeSeconds": 20,
-          "time": "0:20",
-          "setupSeconds": 20,
-          "timerMode": "exercise",
-          "home": "Explosive floor push-ups",
-          "away": "Fast hands-elevated push-ups",
-          "cue": "Stop before hand height or trunk position drops.",
+          "sideMode": "per-side",
+          "sideCount": 2,
+          "sideSeconds": 15,
+          "sideTime": "0:15",
+          "switchSeconds": 10,
+          "home": "Rotational medicine-ball scoop throws",
+          "away": "Explosive band rotations, 3 / SIDE",
+          "cue": "LEFT 15 sec → SWITCH 10 sec → RIGHT 15 sec; turn hips and brace the finish.",
           "category": "power",
           "media": {
             "type": "youtube",
-            "videoId": "6l-lQilhHnI",
-            "sourceUrl": "https://www.youtube.com/shorts/6l-lQilhHnI",
-            "thumbnailUrl": "https://i.ytimg.com/vi/6l-lQilhHnI/hqdefault.jpg",
-            "sourceName": "Explosive Push-Up Tutorial"
+            "videoId": "MilgWMme3Q4",
+            "sourceUrl": "https://www.youtube.com/shorts/MilgWMme3Q4",
+            "thumbnailUrl": "https://i.ytimg.com/vi/MilgWMme3Q4/hqdefault.jpg",
+            "sourceName": "Medicine-Ball Scoop Throw"
+          }
+        },
+        {
+          "id": "EX-E003",
+          "name": "Broad Jump",
+          "prescription": "3 reps with full reset",
+          "reps": "3",
+          "timeSeconds": 25,
+          "time": "0:25",
+          "setupSeconds": 20,
+          "timerMode": "exercise",
+          "home": "Broad jumps with stuck landings",
+          "away": "Broad jumps in clear outdoor space",
+          "cue": "Reset every rep; stop before distance or landing quality drops.",
+          "category": "power",
+          "media": {
+            "type": "youtube",
+            "videoId": "AupLjwEflR4",
+            "sourceUrl": "https://www.youtube.com/shorts/AupLjwEflR4",
+            "thumbnailUrl": "https://i.ytimg.com/vi/AupLjwEflR4/hqdefault.jpg",
+            "sourceName": "Broad Jump"
           }
         }
       ]
@@ -251,30 +256,25 @@
       "effort": "RPE 7; 20 sec rest; posture and breathing stay controlled.",
       "exercises": [
         {
-          "id": "EX-G020",
-          "name": "Suitcase Carry",
-          "prescription": "30 sec / SIDE",
+          "id": "EX-G019",
+          "name": "Farmer Carry",
+          "prescription": "40-sec bilateral carry",
           "reps": "TIMED",
-          "timeSeconds": 60,
-          "time": "1:00",
+          "timeSeconds": 40,
+          "time": "0:40",
           "setupSeconds": 30,
           "timerMode": "exercise",
-          "home": "Heavy kettlebell or dumbbell suitcase carry",
-          "away": "Loaded-backpack suitcase carry",
-          "cue": "Walk tall; do not lean toward or away from the load.",
+          "home": "Heavy kettlebell or dumbbell farmer carry",
+          "away": "Heavy bags, buckets, or loaded backpack carry",
+          "cue": "Crush the handles; walk tall with quiet steps.",
           "category": "strength",
           "media": {
             "type": "youtube",
-            "videoId": "9xjSFwKIehY",
-            "sourceUrl": "https://www.youtube.com/shorts/9xjSFwKIehY",
-            "thumbnailUrl": "https://i.ytimg.com/vi/9xjSFwKIehY/hqdefault.jpg",
-            "sourceName": "Par4Success"
-          },
-          "sideMode": "per-side",
-          "sideCount": 2,
-          "sideSeconds": 30,
-          "sideTime": "0:30",
-          "switchSeconds": 10
+            "videoId": "k83HQI2P-rk",
+            "sourceUrl": "https://www.youtube.com/shorts/k83HQI2P-rk",
+            "thumbnailUrl": "https://i.ytimg.com/vi/k83HQI2P-rk/hqdefault.jpg",
+            "sourceName": "Farmer Carry"
+          }
         },
         {
           "id": "EX-I002",
@@ -287,7 +287,7 @@
           "timerMode": "exercise",
           "home": "Boxer-step jump rope",
           "away": "Quiet fast-feet shuffle",
-          "cue": "Relax shoulders; keep a sustainable nasal-breathing rhythm.",
+          "cue": "Relax shoulders; keep a sustainable rhythm.",
           "category": "conditioning",
           "media": {
             "type": "youtube",
@@ -301,25 +301,19 @@
     }
   ],
   "martialSupplement": {
-    "name": "Knee-Shield Recovery",
-    "prescription": "2 deliberate recoveries / SIDE / MIN for 5:00",
-    "reps": "2 / SIDE / MIN",
+    "name": "Toreando Pass Footwork",
+    "prescription": "2 reps / SIDE / MIN, alternating continuously for 5:00",
+    "reps": "2 / SIDE / MIN (ALTERNATING)",
     "timeSeconds": 300,
     "time": "5:00",
     "setupSeconds": 20,
     "timerMode": "exercise",
-    "home": "Dummy or solo knee-shield recovery to closed guard",
+    "home": "Dummy or solo toreando-pass footwork",
     "away": "Same deliberate pattern on clear floor",
-    "cue": "Build frames, move hips, recover the shield cleanly",
+    "cue": "Alternate sides continuously; posture first, then clean angle change",
     "category": "martial",
-    "media": {
-      "type": "youtube",
-      "videoId": "r4emUG7dC8c",
-      "sourceUrl": "https://www.youtube.com/shorts/r4emUG7dC8c",
-      "thumbnailUrl": "https://i.ytimg.com/vi/r4emUG7dC8c/hqdefault.jpg",
-      "sourceName": "Bernardo Faria BJJ Fanatics"
-    },
+    "media": null,
     "duration": "5:00",
-    "text": "Separate—not counted: optional knee-shield recovery to closed guard."
+    "text": "Separate—not counted: optional toreando-pass footwork."
   }
 }
