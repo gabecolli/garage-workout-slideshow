@@ -495,7 +495,7 @@ function validateWorkout(workout) {
   }
   if (workout.ignition) validateTimedMovement(workout.ignition, "Ignition");
   for (const deposit of workout.deposits) {
-    if (!Array.isArray(deposit.exercises) || deposit.exercises.length < 2 || deposit.exercises.length > 3) {
+    if (!Array.isArray(deposit.exercises) || deposit.exercises.length < 1 || deposit.exercises.length > 3) {
       throw new Error("Each deposit must contain two or three exercises");
     }
     if (!Number.isInteger(deposit.rounds) || deposit.rounds < 1 || deposit.rounds > 5) {
