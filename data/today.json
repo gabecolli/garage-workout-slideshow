@@ -1,94 +1,285 @@
 {
   "schemaVersion": 3,
-  "date": "2026-09-12",
-  "generatedAt": "2026-09-12T00:35:53-05:00",
-  "planId": "DP-20260912-UW-001",
-  "title": "DAILY FIGHTER — WEEK 1 DAY 3",
+  "date": "2026-09-13",
+  "generatedAt": "2026-09-13T00:49:36-05:00",
+  "planId": "DP-20260913-UW-001",
+  "title": "DAILY FIGHTER — WEEK 1 DAY 4",
   "additionalTitle": "MORE DEPOSITS",
-  "emphasis": "Foundation Saturday MEDIUM: compression and support, vertical strength, squat and neck armor, rotational power, and repeatable conditioning",
-  "featuredMode": "CALISTHENICS + BELT SQUAT/MED BALL",
-  "transitionPolicy": {"sameSetupSeconds":15,"standardSeconds":20,"equipmentChangeSeconds":30,"sideSwitchSeconds":10},
+  "emphasis": "Foundation Sunday LOWER STRESS: bodyline and compression, submaximal rings, posterior-chain durability, spinal-engine mobility, elastic power, and repeatable conditioning",
+  "featuredMode": "CALISTHENICS + DOPA BAND",
+  "transitionPolicy": {
+    "sameSetupSeconds": 15,
+    "standardSeconds": 20,
+    "equipmentChangeSeconds": 30,
+    "sideSwitchSeconds": 10
+  },
   "levels": {
-    "floor": "25:00: Ignition + A×3/B×3.",
-    "standard": "45:55 complete: Ignition + A×3/B×3/C×3/D×3/E×4.",
-    "bonus": "Optional 5–10 min mobility. BJJ: Ignition + A×2/B×1/D×1/E×1 (18:45), or skip if class/time load is high."
+    "floor": "26:40: Ignition + A×3/B×3/C×1.",
+    "standard": "46:00 complete: Ignition + A×3/B×3/C×3/D×2/E×4.",
+    "bonus": "Optional 5–10 min mobility. BJJ: Ignition + A×2/B×1/E×1 (18:35), or skip if class/time load is high."
   },
   "ignition": {
-    "name": "Forward/Backward Treadmill Walk",
-    "prescription": "1:00 easy forward + 1:00 controlled backward ×5",
+    "name": "Zone-2 Curved-Treadmill Walk",
+    "prescription": "10:00 continuous easy walk",
     "reps": "TIMED",
     "timeSeconds": 600,
     "time": "10:00",
     "setupSeconds": 0,
     "timerMode": "cardio-exempt",
-    "home": "Curved treadmill: 1:00 easy forward + 1:00 controlled backward ×5",
-    "away": "Forward/backward outdoor walk in a clear area with the same timing",
-    "cue": "RPE 5; short backward steps; stay controlled",
+    "home": "Curved treadmill: 10:00 easy nasal-breathing walk",
+    "away": "Brisk outdoor walk for 10:00",
+    "cue": "RPE 5; conversational breathing",
     "category": "conditioning",
-    "media": {"type":"youtube","videoId":"K2gDTqQaO7U","sourceUrl":"https://www.youtube.com/shorts/K2gDTqQaO7U","thumbnailUrl":"https://i.ytimg.com/vi/K2gDTqQaO7U/hqdefault.jpg","sourceName":"Rehabilitation Specialist"}
+    "media": {
+      "type": "youtube",
+      "videoId": "hGaVza0pWdw",
+      "sourceUrl": "https://www.youtube.com/shorts/hGaVza0pWdw",
+      "thumbnailUrl": "https://i.ytimg.com/vi/hGaVza0pWdw/hqdefault.jpg",
+      "sourceName": "Verified Conditioning Coach"
+    }
   },
   "deposits": [
     {
       "label": "A",
-      "title": "COMPRESSION + SUPPORT",
+      "title": "BODYLINE + COMPRESSION",
       "rounds": 3,
-      "effort": "Rest 1:00. Knee raise advances reps only after two completed 3×6 exposures; tuck support repeats its current rung for the second qualifying exposure.",
+      "effort": "Rest 1:00; RPE 6. Main rung remains hanging knee raise after 3×7 on 2026-09-12; this auxiliary does not advance the gate. Next gate: two verified 3×8 exposures at RPE ≤8.",
       "exercises": [
-        {"id":"EX-T018","name":"Hanging Knee Raise","prescription":"7 clean reps","reps":"7","timeSeconds":35,"time":"0:35","setupSeconds":20,"timerMode":"exercise","home":"Pull-up bar: 7 hanging knee raises","away":"Reverse crunches ×7","cue":"Curl pelvis; minimize swing","category":"rings-calisthenics","media":{"type":"youtube","videoId":"xGjWrATlWJM","sourceUrl":"https://www.youtube.com/shorts/xGjWrATlWJM","thumbnailUrl":"https://i.ytimg.com/vi/xGjWrATlWJM/hqdefault.jpg","sourceName":"Verified Calisthenics Coach"}},
-        {"id":"EX-T020","name":"Tuck L-Sit Ring Support","prescription":"15-sec feet-assisted hold as needed","reps":"TIMED","timeSeconds":15,"time":"0:15","setupSeconds":30,"timerMode":"exercise","home":"Rings: 15-sec tuck L-sit support","away":"Chair tuck support for 15 sec","cue":"Push tall; knees high; rings quiet","category":"rings-calisthenics","media":{"type":"youtube","videoId":"9_NgQUZHeKk","sourceUrl":"https://www.youtube.com/shorts/9_NgQUZHeKk","thumbnailUrl":"https://i.ytimg.com/vi/9_NgQUZHeKk/hqdefault.jpg","sourceName":"Verified Calisthenics Coach"}}
+        {
+          "id": "EX-DOPA-0134",
+          "name": "Dopa Band Hollow Tuck Crunch",
+          "prescription": "8 controlled reps",
+          "reps": "8",
+          "timeSeconds": 30,
+          "time": "0:30",
+          "setupSeconds": 20,
+          "timerMode": "exercise",
+          "home": "Dopa Band hollow tuck crunch ×8",
+          "away": "Floor tuck crunch ×8",
+          "cue": "Posterior pelvic tilt; no lumbar collapse",
+          "category": "dopamineo",
+          "media": {
+            "type": "youtube",
+            "videoId": "NahXsgPSXXw",
+            "sourceUrl": "https://www.youtube.com/shorts/NahXsgPSXXw",
+            "thumbnailUrl": "https://i.ytimg.com/vi/NahXsgPSXXw/hqdefault.jpg",
+            "sourceName": "DopamineO"
+          }
+        }
       ]
     },
     {
       "label": "B",
-      "title": "VERTICAL STRENGTH",
+      "title": "SUBMAXIMAL RINGS",
       "rounds": 3,
-      "effort": "Rest 1:15; 3 RIR, RPE ≤8. Repeat exact anchor quality; today can become the second qualifying exposure before one leverage/load step.",
+      "effort": "Rest 1:00; RPE 6, 5 RIR. Recovery-quality ring practice—not a hard progression exposure.",
       "exercises": [
-        {"id":"EX-G001","name":"Strict Pull-Up","prescription":"6 crisp reps","reps":"6","timeSeconds":35,"time":"0:35","setupSeconds":20,"timerMode":"exercise","home":"Pull-up bar: 6 strict pull-ups","away":"Playground pull-ups or band-assisted ×6","cue":"Chest tall; no kicking","category":"rings-calisthenics","media":{"type":"youtube","videoId":"WqCXcFrA1Iw","sourceUrl":"https://www.youtube.com/shorts/WqCXcFrA1Iw","thumbnailUrl":"https://i.ytimg.com/vi/WqCXcFrA1Iw/hqdefault.jpg","sourceName":"Verified Calisthenics Coach"}},
-        {"id":"EX-R009","name":"Pike Push-Up","prescription":"8 controlled reps","reps":"8","timeSeconds":35,"time":"0:35","setupSeconds":20,"timerMode":"exercise","home":"Floor: 8 pike push-ups","away":"Incline pike push-ups ×8","cue":"Head travels forward/down; full lockout","category":"rings-calisthenics","media":{"type":"youtube","videoId":"f4bqhcmSWNU","sourceUrl":"https://www.youtube.com/shorts/f4bqhcmSWNU","thumbnailUrl":"https://i.ytimg.com/vi/f4bqhcmSWNU/hqdefault.jpg","sourceName":"Verified Calisthenics Coach"}}
+        {
+          "id": "EX-G009",
+          "name": "Ring Row",
+          "prescription": "10 smooth reps at an easy angle",
+          "reps": "10",
+          "timeSeconds": 40,
+          "time": "0:40",
+          "setupSeconds": 20,
+          "timerMode": "exercise",
+          "home": "Ring rows ×10",
+          "away": "Towel rows around a sturdy post ×10",
+          "cue": "Rigid body; rings to ribs",
+          "category": "rings-calisthenics",
+          "media": {
+            "type": "youtube",
+            "videoId": "etiOULaW7tc",
+            "sourceUrl": "https://www.youtube.com/shorts/etiOULaW7tc",
+            "thumbnailUrl": "https://i.ytimg.com/vi/etiOULaW7tc/hqdefault.jpg",
+            "sourceName": "Verified Calisthenics Coach"
+          }
+        },
+        {
+          "id": "EX-R002",
+          "name": "Ring Push-Up",
+          "prescription": "8 controlled reps at an easy angle",
+          "reps": "8",
+          "timeSeconds": 30,
+          "time": "0:30",
+          "setupSeconds": 15,
+          "timerMode": "exercise",
+          "home": "Ring push-ups ×8",
+          "away": "Floor or incline push-ups ×8",
+          "cue": "Ribs down; rings quiet; full lockout",
+          "category": "rings-calisthenics",
+          "media": {
+            "type": "youtube",
+            "videoId": "QtJNskFMZpY",
+            "sourceUrl": "https://www.youtube.com/shorts/QtJNskFMZpY",
+            "thumbnailUrl": "https://i.ytimg.com/vi/QtJNskFMZpY/hqdefault.jpg",
+            "sourceName": "Verified Calisthenics Coach"
+          }
+        }
       ]
     },
     {
       "label": "C",
-      "title": "SQUAT + NECK ARMOR",
+      "title": "POSTERIOR CHAIN + SPINAL ENGINE",
       "rounds": 3,
-      "effort": "Rest 1:15. Belt squat uses a known pain-free 3-RIR load; no load progression without an exact recorded load. Neck stays submaximal.",
+      "effort": "Rest 0:45; RPE 5–6, 4 RIR. Controlled durability and rotational mobility.",
       "exercises": [
-        {"id":"EX-H001","name":"Belt Squat","prescription":"8 reps at a 3-RIR load","reps":"8","timeSeconds":45,"time":"0:45","setupSeconds":30,"timerMode":"exercise","home":"Belt squat ×8","away":"Loaded-backpack squat ×8","cue":"Knees track; torso tall","category":"strength","media":{"type":"youtube","videoId":"cWZrLzEqD5w","sourceUrl":"https://www.youtube.com/shorts/cWZrLzEqD5w","thumbnailUrl":"https://i.ytimg.com/vi/cWZrLzEqD5w/hqdefault.jpg","sourceName":"Verified Strength Specialist"}},
-        {"id":"EX-T030","name":"Band Neck Extension Isometric","prescription":"20-sec controlled hold","reps":"TIMED","timeSeconds":20,"time":"0:20","setupSeconds":30,"timerMode":"exercise","home":"Band neck-extension isometric for 20 sec","away":"Self-resisted extension hold for 20 sec","cue":"Chin tucked; no neck motion or strain","category":"strength","media":{"type":"youtube","videoId":"TatjJdPj3yY","sourceUrl":"https://www.youtube.com/shorts/TatjJdPj3yY","thumbnailUrl":"https://i.ytimg.com/vi/TatjJdPj3yY/hqdefault.jpg","sourceName":"Physical Therapy Specialist"}}
+        {
+          "id": "EX-DOPA-0139",
+          "name": "Dopa Band Lying Hamstring Curl",
+          "prescription": "10 controlled reps",
+          "reps": "10",
+          "timeSeconds": 40,
+          "time": "0:40",
+          "setupSeconds": 30,
+          "timerMode": "exercise",
+          "home": "Dopa Band lying hamstring curls ×10",
+          "away": "Hamstring walkouts ×6",
+          "cue": "Hips tall; smooth curl; no cramping",
+          "category": "dopamineo",
+          "media": {
+            "type": "youtube",
+            "videoId": "3vPGwr5jg4M",
+            "sourceUrl": "https://www.youtube.com/shorts/3vPGwr5jg4M",
+            "thumbnailUrl": "https://i.ytimg.com/vi/3vPGwr5jg4M/hqdefault.jpg",
+            "sourceName": "DopamineO"
+          }
+        },
+        {
+          "id": "EX-DOPA-0183",
+          "name": "Dopa Band Windmill Stretch",
+          "prescription": "8 continuous alternating reps",
+          "reps": "8 ALTERNATING",
+          "timeSeconds": 40,
+          "time": "0:40",
+          "setupSeconds": 20,
+          "timerMode": "exercise",
+          "home": "Dopa Band windmills ×8 alternating",
+          "away": "Bodyweight windmills ×8 alternating",
+          "cue": "Rotate through hips and upper back; control lumbar spine",
+          "category": "mobility",
+          "media": {
+            "type": "youtube",
+            "videoId": "An0mduNhczY",
+            "sourceUrl": "https://www.youtube.com/shorts/An0mduNhczY",
+            "thumbnailUrl": "https://i.ytimg.com/vi/An0mduNhczY/hqdefault.jpg",
+            "sourceName": "DopamineO"
+          }
+        }
       ]
     },
     {
       "label": "D",
-      "title": "ROTATIONAL POWER",
-      "rounds": 3,
-      "effort": "Rest 0:45. Add only the third set versus 2026-09-06; stop when hip turn, distance, or posture declines.",
+      "title": "LOW-FATIGUE POWER",
+      "rounds": 2,
+      "effort": "Rest 0:45; RPE 6. Stop when contact, height, throw speed, or posture declines.",
       "exercises": [
-        {"id":"EX-E007","name":"Rotational Medicine-Ball Scoop Throw","prescription":"3 throws / SIDE","reps":"3 / SIDE","timeSeconds":30,"time":"0:30","setupSeconds":30,"timerMode":"exercise","sideMode":"per-side","sideCount":2,"sideSeconds":15,"sideTime":"0:15","switchSeconds":10,"home":"Medicine-ball scoop throws: 3 / SIDE","away":"Band rotational throw pattern: 3 / SIDE","cue":"Turn hips; brace the finish","category":"power","media":{"type":"youtube","videoId":"MilgWMme3Q4","sourceUrl":"https://www.youtube.com/shorts/MilgWMme3Q4","thumbnailUrl":"https://i.ytimg.com/vi/MilgWMme3Q4/hqdefault.jpg","sourceName":"Verified Power Specialist"}}
+        {
+          "id": "EX-DOPA-0116",
+          "name": "Dopa Band Jump Ski Movement",
+          "prescription": "6 crisp reps",
+          "reps": "6",
+          "timeSeconds": 20,
+          "time": "0:20",
+          "setupSeconds": 30,
+          "timerMode": "exercise",
+          "home": "Dopa Band jump ski ×6",
+          "away": "Low-amplitude squat jumps ×4",
+          "cue": "Quick contact; land quietly",
+          "category": "power",
+          "media": {
+            "type": "youtube",
+            "videoId": "WDSRHX7ecQk",
+            "sourceUrl": "https://www.youtube.com/shorts/WDSRHX7ecQk",
+            "thumbnailUrl": "https://i.ytimg.com/vi/WDSRHX7ecQk/hqdefault.jpg",
+            "sourceName": "DopamineO"
+          }
+        },
+        {
+          "id": "EX-E006",
+          "name": "Medicine-Ball Chest Pass",
+          "prescription": "4 reset throws",
+          "reps": "4",
+          "timeSeconds": 20,
+          "time": "0:20",
+          "setupSeconds": 30,
+          "timerMode": "exercise",
+          "home": "Medicine-ball chest passes ×4",
+          "away": "Fast incline push-ups ×4",
+          "cue": "Reset each rep; throw through the wall",
+          "category": "power",
+          "media": {
+            "type": "youtube",
+            "videoId": "GZAxYgRKP8Y",
+            "sourceUrl": "https://www.youtube.com/shorts/GZAxYgRKP8Y",
+            "thumbnailUrl": "https://i.ytimg.com/vi/GZAxYgRKP8Y/hqdefault.jpg",
+            "sourceName": "Verified Power Specialist"
+          }
+        }
       ]
     },
     {
       "label": "E",
-      "title": "ENGINE + GRIP ARMOR",
+      "title": "ENGINE + SCAPULAR ARMOR",
       "rounds": 4,
-      "effort": "Rest 0:30; RPE 7. Sprawls are conditioning only; keep every interval and hang repeatable.",
+      "effort": "Rest 0:20; RPE 6. Every interval stays rhythmic and repeatable.",
       "exercises": [
-        {"id":"EX-I006","name":"Sprawl Intervals","prescription":"20-sec controlled conditioning","reps":"TIMED","timeSeconds":20,"time":"0:20","setupSeconds":20,"timerMode":"exercise","home":"Mat: controlled sprawls for 20 sec","away":"Step-back sprawls on grass/floor for 20 sec","cue":"Fast recovery; clean posture; no technique drilling","category":"conditioning","media":{"type":"youtube","videoId":"BoxmLgpHKgQ","sourceUrl":"https://www.youtube.com/shorts/BoxmLgpHKgQ","thumbnailUrl":"https://i.ytimg.com/vi/BoxmLgpHKgQ/hqdefault.jpg","sourceName":"Verified Conditioning Coach"}},
-        {"id":"EX-G007","name":"Active Dead Hang","prescription":"25-sec controlled hang","reps":"TIMED","timeSeconds":25,"time":"0:25","setupSeconds":20,"timerMode":"exercise","home":"Pull-up bar: active dead hang for 25 sec","away":"Towel lat-press isometric for 25 sec","cue":"Long neck; shoulders controlled; steady grip","category":"rings-calisthenics","media":{"type":"youtube","videoId":"dOCQjaasbGs","sourceUrl":"https://www.youtube.com/shorts/dOCQjaasbGs","thumbnailUrl":"https://i.ytimg.com/vi/dOCQjaasbGs/hqdefault.jpg","sourceName":"Verified Calisthenics Coach"}}
+        {
+          "id": "EX-DOPA-0043",
+          "name": "Dopa Band Shoulder Stabilizer",
+          "prescription": "8 smooth reps",
+          "reps": "8",
+          "timeSeconds": 30,
+          "time": "0:30",
+          "setupSeconds": 20,
+          "timerMode": "exercise",
+          "home": "Dopa Band shoulder stabilizer ×8",
+          "away": "Wall scapular push-ups ×8",
+          "cue": "Ribs down; shoulder moves smoothly",
+          "category": "dopamineo",
+          "media": {
+            "type": "youtube",
+            "videoId": "0rujNNp9E-g",
+            "sourceUrl": "https://www.youtube.com/shorts/0rujNNp9E-g",
+            "thumbnailUrl": "https://i.ytimg.com/vi/0rujNNp9E-g/hqdefault.jpg",
+            "sourceName": "DopamineO"
+          }
+        },
+        {
+          "id": "EX-DOPA-0109",
+          "name": "Dopa Band Vitruvian Waves",
+          "prescription": "40-sec rhythmic interval",
+          "reps": "TIMED",
+          "timeSeconds": 40,
+          "time": "0:40",
+          "setupSeconds": 20,
+          "timerMode": "exercise",
+          "home": "Dopa Band Vitruvian waves for 40 sec",
+          "away": "Fast-feet march or low-impact jacks for 40 sec",
+          "cue": "Clean posture and breathing; no redline",
+          "category": "conditioning",
+          "media": {
+            "type": "youtube",
+            "videoId": "Lm4mqdpucWw",
+            "sourceUrl": "https://www.youtube.com/shorts/Lm4mqdpucWw",
+            "thumbnailUrl": "https://i.ytimg.com/vi/Lm4mqdpucWw/hqdefault.jpg",
+            "sourceName": "DopamineO"
+          }
+        }
       ]
     }
   ],
   "martialSupplement": {
-    "name": "Dummy Knee-Cut Pass",
+    "name": "Guard-Retention Leg Pummeling",
     "prescription": "2 reps / SIDE / MIN alternating for 5:00",
     "reps": "2 / SIDE / MIN ALTERNATING",
     "timeSeconds": 300,
     "time": "5:00",
     "setupSeconds": 20,
     "timerMode": "exercise",
-    "home": "Dummy + mat: alternating knee-cut pass entries",
-    "away": "Clear floor: controlled solo footwork",
-    "cue": "Posture first; knee line clear; finish balanced",
+    "home": "Mat or dummy: continuous alternating guard-retention leg pummeling",
+    "away": "Clear floor: controlled supine leg pummeling",
+    "cue": "Quiet hips; recover inside position; smooth breathing",
     "category": "martial",
     "media": null,
     "duration": "5:00",
