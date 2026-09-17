@@ -1,319 +1,45 @@
 {
   "schemaVersion": 3,
-  "date": "2026-09-16",
-  "generatedAt": "2026-09-16T00:41:39-05:00",
-  "planId": "DP-20260916-UW-001",
-  "title": "DAILY FIGHTER — WEEK 1 DAY 7",
+  "date": "2026-09-17",
+  "generatedAt": "2026-09-17T00:05:48-05:00",
+  "planId": "DP-20260917-UW-001",
+  "title": "DAILY FIGHTER — WEEK 2 DAY 8",
   "additionalTitle": "MORE DEPOSITS",
-  "emphasis": "Foundation Wednesday HARD: compression and support progression, weighted vertical strength, unilateral legs, spinal-engine bracing, upper-body power, grip, and repeatable conditioning",
-  "featuredMode": "COMPRESSION + WEIGHTED CALISTHENICS",
-  "transitionPolicy": {
-    "sameSetupSeconds": 15,
-    "standardSeconds": 20,
-    "equipmentChangeSeconds": 30,
-    "sideSwitchSeconds": 10
-  },
+  "emphasis": "Foundation Thursday LOWER STRESS: symptom-adjusted planche technique, submaximal rings, posterior-chain durability, spinal-engine rotation, elastic power, and aerobic base",
+  "featuredMode": "TECHNIQUE + DURABILITY + ENGINE",
+  "transitionPolicy": {"sameSetupSeconds":15,"standardSeconds":20,"equipmentChangeSeconds":30,"sideSwitchSeconds":10},
   "levels": {
-    "floor": "27:30: Ignition + A×3/B×2/E×1.",
-    "standard": "48:00 complete: Ignition + A×3/B×3/C×2/D×2/E×3.",
-    "bonus": "Optional 5–10 min mobility. BJJ: Ignition + A×2/C×1 (19:45), or skip if class/time load is high."
+    "floor": "25:35: Ignition + A×3/B×2 + 4:00 Zone 2.",
+    "standard": "45:00 complete: Ignition + A×3/B×3/C×3/D×2/E×1.",
+    "bonus": "Optional 5–10 min easy mobility. BJJ: Ignition + A×2/B×1 + 4:00 Zone 2 (20:50), or skip if class/time load is high."
   },
   "ignition": {
-    "name": "Sprawl Intervals",
-    "prescription": "SETUP 0:20; 0:20 step-back sprawls + 0:40 march/lunge reach ×9, then 0:40 march",
-    "reps": "TIMED",
-    "timeSeconds": 580,
-    "time": "9:40",
-    "setupSeconds": 20,
-    "timerMode": "exercise",
-    "home": "Mat: controlled step-back sprawls with tall march and lunge reach",
-    "away": "Clear floor or grass: identical low-impact flow",
-    "cue": "RPE 5; quiet feet, long spine, smooth hip opening",
-    "category": "conditioning",
-    "media": {
-      "type": "youtube",
-      "videoId": "BoxmLgpHKgQ",
-      "sourceUrl": "https://www.youtube.com/shorts/BoxmLgpHKgQ",
-      "thumbnailUrl": "https://i.ytimg.com/vi/BoxmLgpHKgQ/hqdefault.jpg",
-      "sourceName": "Verified Conditioning Coach"
-    }
+    "name":"Curved-Treadmill Intervals","prescription":"0:30 brisk + 0:30 easy ×10","reps":"TIMED","timeSeconds":600,"time":"10:00","setupSeconds":0,"timerMode":"cardio-exempt",
+    "home":"Curved treadmill: alternate brisk and easy walking","away":"Outdoor brisk/easy walk intervals","cue":"RPE 5; tall posture and conversational recovery","category":"conditioning",
+    "media":{"type":"youtube","videoId":"Q3mGikLadak","sourceUrl":"https://www.youtube.com/shorts/Q3mGikLadak","thumbnailUrl":"https://i.ytimg.com/vi/Q3mGikLadak/hqdefault.jpg","sourceName":"Verified Running Coach"}
   },
   "deposits": [
-    {
-      "label": "A",
-      "title": "COMPRESSION + SUPPORT PROGRESSION",
-      "rounds": 3,
-      "effort": "Rest 1:00; 3 RIR, RPE ≤8. Knee raises advance 7→8 reps; tuck support advances 15→20 sec. Change no other variable.",
-      "exercises": [
-        {
-          "id": "EX-T018",
-          "name": "Hanging Knee Raise",
-          "prescription": "8 strict reps",
-          "reps": "8",
-          "timeSeconds": 40,
-          "time": "0:40",
-          "setupSeconds": 20,
-          "timerMode": "exercise",
-          "home": "Pull-up bar: 8 strict hanging knee raises",
-          "away": "Floor reverse crunches ×8",
-          "cue": "Curl pelvis; pause; eliminate swing",
-          "category": "rings-calisthenics",
-          "media": {
-            "type": "youtube",
-            "videoId": "xGjWrATlWJM",
-            "sourceUrl": "https://www.youtube.com/shorts/xGjWrATlWJM",
-            "thumbnailUrl": "https://i.ytimg.com/vi/xGjWrATlWJM/hqdefault.jpg",
-            "sourceName": "Verified Calisthenics Coach"
-          }
-        },
-        {
-          "id": "EX-T020",
-          "name": "Tuck L-Sit Ring Support",
-          "prescription": "20-sec clean tuck support",
-          "reps": "TIMED",
-          "timeSeconds": 20,
-          "time": "0:20",
-          "setupSeconds": 30,
-          "timerMode": "exercise",
-          "home": "Rings: tuck L-sit support 20 sec",
-          "away": "Chair tuck support 20 sec",
-          "cue": "Push tall; knees high; rings quiet",
-          "category": "rings-calisthenics",
-          "media": {
-            "type": "youtube",
-            "videoId": "9_NgQUZHeKk",
-            "sourceUrl": "https://www.youtube.com/shorts/9_NgQUZHeKk",
-            "thumbnailUrl": "https://i.ytimg.com/vi/9_NgQUZHeKk/hqdefault.jpg",
-            "sourceName": "Verified Calisthenics Coach"
-          }
-        }
-      ]
-    },
-    {
-      "label": "B",
-      "title": "WEIGHTED VERTICAL STRENGTH",
-      "rounds": 3,
-      "effort": "Rest 1:15; 2–3 RIR, RPE ≤8. Weighted pull-ups advance reps only; shoulder press establishes a clean baseline.",
-      "exercises": [
-        {
-          "id": "EX-G004",
-          "name": "Weighted Pull-Up",
-          "prescription": "+10 lb ×6 crisp reps",
-          "reps": "6",
-          "timeSeconds": 40,
-          "time": "0:40",
-          "setupSeconds": 30,
-          "timerMode": "exercise",
-          "home": "Pull-up bar: +10-lb weighted pull-ups ×6",
-          "away": "Backpack pull-ups ×6 or strict pull-ups ×7",
-          "cue": "Dead hang; clean chin; no kicking or grinding",
-          "category": "rings-calisthenics",
-          "media": {
-            "type": "youtube",
-            "videoId": "9aD6_71_234",
-            "sourceUrl": "https://www.youtube.com/shorts/9aD6_71_234",
-            "thumbnailUrl": "https://i.ytimg.com/vi/9aD6_71_234/hqdefault.jpg",
-            "sourceName": "Verified Calisthenics Coach"
-          }
-        },
-        {
-          "id": "EX-DOPA-0055",
-          "name": "Dopa Band Shoulder Press",
-          "prescription": "8 controlled reps",
-          "reps": "8",
-          "timeSeconds": 35,
-          "time": "0:35",
-          "setupSeconds": 30,
-          "timerMode": "exercise",
-          "home": "Dopa Band shoulder press ×8 at 3 RIR",
-          "away": "Pike push-ups ×8",
-          "cue": "Ribs down; smooth lockout; no lumbar extension",
-          "category": "strength",
-          "media": {
-            "type": "youtube",
-            "videoId": "uHVC89gM5sU",
-            "sourceUrl": "https://www.youtube.com/shorts/uHVC89gM5sU",
-            "thumbnailUrl": "https://i.ytimg.com/vi/uHVC89gM5sU/hqdefault.jpg",
-            "sourceName": "DopamineO"
-          }
-        }
-      ]
-    },
-    {
-      "label": "C",
-      "title": "UNILATERAL LEGS + SPINAL ENGINE",
-      "rounds": 2,
-      "effort": "Rest 1:15; 3–4 RIR. Record the lunge load; missing prior load means no credited load progression.",
-      "exercises": [
-        {
-          "id": "EX-H015",
-          "name": "Reverse Lunge",
-          "prescription": "6 reps / SIDE",
-          "reps": "6/SIDE",
-          "timeSeconds": 60,
-          "time": "1:00",
-          "setupSeconds": 30,
-          "timerMode": "exercise",
-          "sideMode": "per-side",
-          "sideCount": 2,
-          "sideSeconds": 30,
-          "sideTime": "0:30",
-          "switchSeconds": 10,
-          "home": "DB or KB reverse lunges ×6/SIDE",
-          "away": "Bodyweight reverse lunges ×6/SIDE",
-          "cue": "Step back; front foot rooted; drive straight up",
-          "category": "lower-strength",
-          "media": {
-            "type": "youtube",
-            "videoId": "i3TNJmnInI0",
-            "sourceUrl": "https://www.youtube.com/shorts/i3TNJmnInI0",
-            "thumbnailUrl": "https://i.ytimg.com/vi/i3TNJmnInI0/hqdefault.jpg",
-            "sourceName": "Verified Strength Coach"
-          }
-        },
-        {
-          "id": "EX-DOPA-0073",
-          "name": "Dopa Band Pallof Press",
-          "prescription": "8 reps / SIDE",
-          "reps": "8/SIDE",
-          "timeSeconds": 40,
-          "time": "0:40",
-          "setupSeconds": 20,
-          "timerMode": "exercise",
-          "sideMode": "per-side",
-          "sideCount": 2,
-          "sideSeconds": 20,
-          "sideTime": "0:20",
-          "switchSeconds": 10,
-          "home": "Dopa Pallof presses ×8/SIDE",
-          "away": "Backpack or towel anti-rotation presses ×8/SIDE",
-          "cue": "Brace first; press without turning or leaning",
-          "category": "spinal-engine",
-          "media": {
-            "type": "youtube",
-            "videoId": "bZfT5f4HsoU",
-            "sourceUrl": "https://www.youtube.com/shorts/bZfT5f4HsoU",
-            "thumbnailUrl": "https://i.ytimg.com/vi/bZfT5f4HsoU/hqdefault.jpg",
-            "sourceName": "DopamineO"
-          }
-        }
-      ]
-    },
-    {
-      "label": "D",
-      "title": "UPPER-BODY POWER",
-      "rounds": 2,
-      "effort": "Rest 0:45. Stop when hand height, jump height, speed, landing, or posture declines.",
-      "exercises": [
-        {
-          "id": "EX-R017",
-          "name": "Explosive Push-Up",
-          "prescription": "4 explosive reps",
-          "reps": "4",
-          "timeSeconds": 20,
-          "time": "0:20",
-          "setupSeconds": 20,
-          "timerMode": "exercise",
-          "home": "Floor explosive push-ups ×4",
-          "away": "Fast incline push-ups ×4",
-          "cue": "Rigid body; accelerate; land quietly",
-          "category": "power",
-          "media": {
-            "type": "youtube",
-            "videoId": "6l-lQilhHnI",
-            "sourceUrl": "https://www.youtube.com/shorts/6l-lQilhHnI",
-            "thumbnailUrl": "https://i.ytimg.com/vi/6l-lQilhHnI/hqdefault.jpg",
-            "sourceName": "Verified Calisthenics Coach"
-          }
-        },
-        {
-          "id": "EX-DOPA-0185",
-          "name": "Dopa Band Overhead Jump Pull",
-          "prescription": "10 crisp reps",
-          "reps": "10",
-          "timeSeconds": 30,
-          "time": "0:30",
-          "setupSeconds": 30,
-          "timerMode": "exercise",
-          "home": "Dopa Band overhead jump-pulls ×10",
-          "away": "Low-amplitude jump-and-reaches ×10",
-          "cue": "Explode cleanly; quiet landing; stop before slowing",
-          "category": "power",
-          "media": {
-            "type": "youtube",
-            "videoId": "EF7NyCbHUfk",
-            "sourceUrl": "https://www.youtube.com/shorts/EF7NyCbHUfk",
-            "thumbnailUrl": "https://i.ytimg.com/vi/EF7NyCbHUfk/hqdefault.jpg",
-            "sourceName": "DopamineO"
-          }
-        }
-      ]
-    },
-    {
-      "label": "E",
-      "title": "GRIP + REPEATABLE ENGINE",
-      "rounds": 3,
-      "effort": "Rest 0:10; RPE 7. Maintain grip position, foot rhythm, posture, and recoverable breathing across all rounds.",
-      "exercises": [
-        {
-          "id": "EX-G007",
-          "name": "Dead Hang",
-          "prescription": "30-sec active hang",
-          "reps": "TIMED",
-          "timeSeconds": 30,
-          "time": "0:30",
-          "setupSeconds": 20,
-          "timerMode": "exercise",
-          "home": "Pull-up bar: active dead hang 30 sec",
-          "away": "Towel crush-and-lat-press isometric 30 sec",
-          "cue": "Long spine; shoulders controlled; crush the grip",
-          "category": "grip-armor",
-          "media": {
-            "type": "youtube",
-            "videoId": "dOCQjaasbGs",
-            "sourceUrl": "https://www.youtube.com/shorts/dOCQjaasbGs",
-            "thumbnailUrl": "https://i.ytimg.com/vi/dOCQjaasbGs/hqdefault.jpg",
-            "sourceName": "Verified Calisthenics Coach"
-          }
-        },
-        {
-          "id": "EX-DOPA-0276",
-          "name": "Dopa Band Fire Feet",
-          "prescription": "30-sec fast-feet interval",
-          "reps": "TIMED",
-          "timeSeconds": 30,
-          "time": "0:30",
-          "setupSeconds": 30,
-          "timerMode": "exercise",
-          "home": "Dopa Band fire feet for 30 sec",
-          "away": "Fast-feet shuffle for 30 sec",
-          "cue": "Stay rhythmic; hips under ribs; no posture collapse",
-          "category": "conditioning",
-          "media": {
-            "type": "youtube",
-            "videoId": "FA6F7NOAtXY",
-            "sourceUrl": "https://www.youtube.com/shorts/FA6F7NOAtXY",
-            "thumbnailUrl": "https://i.ytimg.com/vi/FA6F7NOAtXY/hqdefault.jpg",
-            "sourceName": "DopamineO"
-          }
-        }
-      ]
-    }
+    {"label":"A","title":"PLANCHE TECHNIQUE REGRESSION","rounds":3,"effort":"Rest 1:00; RPE 6. No progression today. Last qualifying planche work: 3×5 pseudo-planche push-ups on 9/14. Gate remains two clean 3×6–8 exposures ≤RPE 8 after symptoms permit.","exercises":[
+      {"id":"EX-CAL-PL001","name":"Planche Lean","prescription":"10-sec shallow pain-free lean","reps":"TIMED","timeSeconds":10,"time":"0:10","setupSeconds":20,"timerMode":"exercise","home":"Floor/parallettes; elevate hands if needed","away":"Wall or high-chair supported lean","cue":"Protract; locked elbows; stop for radiating or sharp pain","category":"rings-calisthenics","media":{"type":"youtube","videoId":"s4_dcFZstSA","sourceUrl":"https://www.youtube.com/shorts/s4_dcFZstSA","thumbnailUrl":"https://i.ytimg.com/vi/s4_dcFZstSA/hqdefault.jpg","sourceName":"Verified Calisthenics Coach"}},
+      {"id":"EX-T022","name":"Hollow-Body Hold","prescription":"20-sec short-lever hold","reps":"TIMED","timeSeconds":20,"time":"0:20","setupSeconds":15,"timerMode":"exercise","home":"Mat hollow hold","away":"Floor hollow hold","cue":"Lower back down; ribs tucked; breathe","category":"spinal-engine","media":{"type":"youtube","videoId":"lNIALQyQjM0","sourceUrl":"https://www.youtube.com/shorts/lNIALQyQjM0","thumbnailUrl":"https://i.ytimg.com/vi/lNIALQyQjM0/hqdefault.jpg","sourceName":"Verified Calisthenics Coach"}}
+    ]},
+    {"label":"B","title":"SUBMAXIMAL RING STRENGTH","rounds":3,"effort":"Rest 1:00; 5 RIR, RPE 6. Easy leverage and pain-free range; no load, depth, or rep progression.","exercises":[
+      {"id":"EX-G009","name":"Ring Row","prescription":"8 upright controlled reps","reps":"8","timeSeconds":35,"time":"0:35","setupSeconds":20,"timerMode":"exercise","home":"Upright ring rows ×8","away":"Sturdy towel rows ×8","cue":"Rings to ribs; body rigid; no shoulder symptoms","category":"rings-calisthenics","media":{"type":"youtube","videoId":"etiOULaW7tc","sourceUrl":"https://www.youtube.com/shorts/etiOULaW7tc","thumbnailUrl":"https://i.ytimg.com/vi/etiOULaW7tc/hqdefault.jpg","sourceName":"Verified Calisthenics Coach"}},
+      {"id":"EX-R002","name":"Ring Push-Up","prescription":"8 shallow controlled reps","reps":"8","timeSeconds":30,"time":"0:30","setupSeconds":15,"timerMode":"exercise","home":"High-ring or shallow ring push-ups ×8","away":"Incline push-ups ×8","cue":"Rings quiet; ribs stacked; skip if symptoms appear","category":"rings-calisthenics","media":{"type":"youtube","videoId":"QtJNskFMZpY","sourceUrl":"https://www.youtube.com/shorts/QtJNskFMZpY","thumbnailUrl":"https://i.ytimg.com/vi/QtJNskFMZpY/hqdefault.jpg","sourceName":"Verified Ring Coach"}}
+    ]},
+    {"label":"C","title":"POSTERIOR CHAIN + SPINAL ENGINE","rounds":3,"effort":"Rest 0:45; 4–5 RIR, RPE 6. Repeat Sunday’s clean lower-stress pattern without progression.","exercises":[
+      {"id":"EX-DOPA-0139","name":"Dopa Band Lying Hamstring Curl","prescription":"10 controlled reps","reps":"10","timeSeconds":40,"time":"0:40","setupSeconds":30,"timerMode":"exercise","home":"Dopa lying hamstring curls ×10","away":"Hamstring walkouts ×8","cue":"Hips tall; smooth curl; no lumbar extension","category":"posterior-chain","media":{"type":"youtube","videoId":"3vPGwr5jg4M","sourceUrl":"https://www.youtube.com/shorts/3vPGwr5jg4M","thumbnailUrl":"https://i.ytimg.com/vi/3vPGwr5jg4M/hqdefault.jpg","sourceName":"DopamineO"}},
+      {"id":"EX-DOPA-0183","name":"Dopa Band Windmill Stretch","prescription":"8 continuous alternating reps","reps":"8 alternating","timeSeconds":40,"time":"0:40","setupSeconds":20,"timerMode":"exercise","home":"Dopa windmills ×8 alternating","away":"Bodyweight windmills ×8 alternating","cue":"Rotate through hips and upper back; own the range","category":"spinal-engine","media":{"type":"youtube","videoId":"An0mduNhczY","sourceUrl":"https://www.youtube.com/shorts/An0mduNhczY","thumbnailUrl":"https://i.ytimg.com/vi/An0mduNhczY/hqdefault.jpg","sourceName":"DopamineO"}}
+    ]},
+    {"label":"D","title":"ELASTIC POWER MECHANICS","rounds":2,"effort":"Rest 0:45; RPE 6. Stop when jump height, rhythm, landing, or posture declines.","exercises":[
+      {"id":"EX-DOPA-0116","name":"Dopa Band Jump Ski Movement","prescription":"6 low-amplitude crisp reps","reps":"6","timeSeconds":20,"time":"0:20","setupSeconds":30,"timerMode":"exercise","home":"Dopa jump-ski ×6","away":"Low squat jumps ×6","cue":"Fast takeoff; quiet landing; stop before slowing","category":"power","media":{"type":"youtube","videoId":"WDSRHX7ecQk","sourceUrl":"https://www.youtube.com/shorts/WDSRHX7ecQk","thumbnailUrl":"https://i.ytimg.com/vi/WDSRHX7ecQk/hqdefault.jpg","sourceName":"DopamineO"}}
+    ]},
+    {"label":"E","title":"AEROBIC ENGINE + LOWER-LEG ARMOR","rounds":1,"effort":"RPE 5–6. Zone 2 progresses duration only from 7:00 to 8:00; finish with one easy durability set.","exercises":[
+      {"id":"EX-I004","name":"Zone-2 Treadmill","prescription":"8:00 continuous conversational pace","reps":"TIMED","timeSeconds":480,"time":"8:00","setupSeconds":0,"timerMode":"cardio-exempt","home":"Curved-treadmill Zone 2","away":"Brisk outdoor walk","cue":"Conversational breathing; posture never changes","category":"conditioning","media":{"type":"youtube","videoId":"hGaVza0pWdw","sourceUrl":"https://www.youtube.com/shorts/hGaVza0pWdw","thumbnailUrl":"https://i.ytimg.com/vi/hGaVza0pWdw/hqdefault.jpg","sourceName":"Verified Running Coach"}},
+      {"id":"EX-H026","name":"Tibialis Raise","prescription":"15 controlled reps","reps":"15","timeSeconds":30,"time":"0:30","setupSeconds":20,"timerMode":"exercise","home":"Wall tibialis raises ×15","away":"Wall tibialis raises ×15","cue":"Heels stay down; lift toes fully","category":"armor","media":{"type":"youtube","videoId":"d59BlBrXs4c","sourceUrl":"https://www.youtube.com/shorts/d59BlBrXs4c","thumbnailUrl":"https://i.ytimg.com/vi/d59BlBrXs4c/hqdefault.jpg","sourceName":"Verified Physical Therapist"}}
+    ]}
   ],
   "martialSupplement": {
-    "name": "Shoulder-Crunch Entry",
-    "prescription": "2 reps / SIDE / MIN alternating for 5:00",
-    "reps": "2 / SIDE / MIN ALTERNATING",
-    "timeSeconds": 300,
-    "time": "5:00",
-    "setupSeconds": 20,
-    "timerMode": "exercise",
-    "home": "Dummy + mat: alternating shoulder-crunch entries",
-    "away": "Clear floor: controlled solo grip-and-angle pattern",
-    "cue": "Win inside position; connect elbow; turn the corner",
-    "category": "martial",
-    "media": null,
-    "duration": "5:00",
-    "text": "Separate—not counted toward the physical workout or completion."
+    "id":"EX-DOPA-0047","name":"Dopa Band Reactive Guard","prescription":"2/SIDE/MIN continuous alternating","reps":"2/SIDE/MIN alternating","timeSeconds":300,"time":"5:00","setupSeconds":20,"timerMode":"exercise","home":"Dopa Band + mat: reactive guard-retention hip-and-leg recoveries","away":"Unresisted controlled solo hip-and-leg pattern","cue":"Shoulders relaxed and pain-free; solo work supplements coaching","category":"martial-supplement","media":{"type":"youtube","videoId":"4KhW6AAVqYk","sourceUrl":"https://www.youtube.com/shorts/4KhW6AAVqYk","thumbnailUrl":"https://i.ytimg.com/vi/4KhW6AAVqYk/hqdefault.jpg","sourceName":"DopamineO"}
   }
 }
