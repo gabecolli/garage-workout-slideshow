@@ -1,52 +1,40 @@
 {
   "schemaVersion": 3,
-  "date": "2026-09-25",
-  "generatedAt": "2026-09-25T00:35:07-05:00",
-  "planId": "DP-20260925-UW-001",
-  "title": "DAILY FIGHTER — FOUNDATION WEEK 3 DAY 16",
+  "date": "2026-09-26",
+  "generatedAt": "2026-09-26T00:48:29-05:00",
+  "planId": "DP-20260926-UW-001",
+  "title": "DAILY FIGHTER — FOUNDATION WEEK 3 DAY 17",
+  "emphasis": "Saturday MEDIUM, symptom-adapted: compression, unilateral/squat strength, hip rotation, landing mechanics and lower-leg engine. Current 2026-09-26 front-shoulder tenderness, cross-body pain and sharp pain radiating toward the biceps: upper anchors and throws are withheld; every movement must be pain-free.",
   "additionalTitle": "MORE DEPOSITS",
-  "emphasis": "Friday HARD: shoulder-conservative front-lever bodyline, weighted horizontal strength, barbell hinge, kettlebell power, active mobility and loaded carry. Current shoulder status is unknown; every movement stays pain-free.",
-  "featuredMode": "BODY CONTROL + STRENGTH + HINGE + CARRY",
-  "transitionPolicy": {"sameSetupSeconds":15,"standardSeconds":20,"equipmentChangeSeconds":30,"sideSwitchSeconds":10},
   "levels": {
-    "floor": "26:35: Ignition + A×3/B×2/C×1/D×1.",
-    "standard": "45:25 complete: Ignition + A×3/B×3/C×3/D×2/E×2.",
-    "bonus": "Optional 5:00 easy walk. BJJ: Ignition + A×2/B×1/E×1 (19:25), or skip if class/time load is high."
+    "floor": "27:15: Ignition + A×3/B×2/C×1/D×1.",
+    "standard": "46:15 complete: Ignition + A×3/B×3/C×3/D×3/E×3.",
+    "bonus": "Optional 5–10 min easy walk. BJJ: Ignition + A×2/C×1/D×1 (19:35), or skip if class/time load is high."
   },
   "ignition": {
-    "name":"Curved-Treadmill Intervals","prescription":"15 sec smooth + 45 sec easy ×10","reps":"10 rounds","timeSeconds":600,"time":"10:00","setupSeconds":0,"timerMode":"cardio-exempt","home":"Curved treadmill: smooth/easy intervals","away":"Outdoor run-walk: smooth/easy intervals","cue":"RPE 5; build heat without fatigue; shoulders relaxed","category":"conditioning",
-    "media":{"type":"youtube","videoId":"Q3mGikLadak","sourceUrl":"https://www.youtube.com/shorts/Q3mGikLadak","thumbnailUrl":"https://i.ytimg.com/vi/Q3mGikLadak/hqdefault.jpg","sourceName":"Assault Fitness"}
+    "name":"Zone-2 Treadmill","prescription":"10:00 conversational pace","reps":"TIMED","timeSeconds":600,"time":"10:00","setupSeconds":0,"timerMode":"cardio-exempt","home":"Curved-treadmill Zone 2","away":"Brisk outdoor walk","cue":"RPE 4–5; relaxed shoulders and smooth breathing","category":"conditioning","media":{"type":"youtube","videoId":"hGaVza0pWdw","sourceUrl":"https://www.youtube.com/shorts/hGaVza0pWdw","thumbnailUrl":"https://i.ytimg.com/vi/hGaVza0pWdw/hqdefault.jpg","sourceName":"Alan Thrall"}
   },
   "deposits": [
-    {
-      "label":"A","title":"FRONT-LEVER BODYLINE FOUNDATION","rounds":3,"effort":"Rest 0:45; RPE 4–5, ≥5 RIR. NONE VERIFIED; low-fatigue repeat only, no lever-gate credit. Next gate: tuck lever 3×15–20 sec on two user-confirmed exposures ≤RPE 8.",
-      "exercises":[{"id":"EX-FUNC-027","name":"Bent-Knee Hollow Hold","prescription":"20-sec hold","reps":"TIMED","timeSeconds":20,"time":"0:20","setupSeconds":15,"timerMode":"exercise","home":"Mat bent-knee hollow hold","away":"Floor bent-knee hollow hold","cue":"Arms by sides; low back down; bodyline adjunct only","category":"rings-calisthenics","media":{"type":"youtube","videoId":"vt_12h0vaG0","sourceUrl":"https://www.youtube.com/shorts/vt_12h0vaG0","thumbnailUrl":"https://i.ytimg.com/vi/vt_12h0vaG0/hq2.jpg","sourceName":"Dr. Kira Steele"}}]
-    },
-    {
-      "label":"B","title":"SUPPORTED PULL + SPLIT-STANCE PRESS","rounds":3,"effort":"Rest 1:00; RPE 6, 4 RIR. NONE VERIFIED; establish pain-free load/ROM baselines. Next gate: two clean user-confirmed 3×6–8 exposures at 2–3 RIR before load changes.",
-      "exercises":[
-        {"id":"EX-FUNC-001","name":"Chest-Supported Dumbbell Row","prescription":"8 controlled reps","reps":"8","timeSeconds":35,"time":"0:35","setupSeconds":30,"timerMode":"exercise","home":"Incline bench + dumbbells","away":"Supported two-bag rows","cue":"Neutral grip; chest supported; stop for symptoms","category":"strength","media":{"type":"youtube","videoId":"2ByilQ4NaAs","sourceUrl":"https://www.youtube.com/shorts/2ByilQ4NaAs","thumbnailUrl":"https://i.ytimg.com/vi/2ByilQ4NaAs/hq2.jpg","sourceName":"Andrew Kwong (DeltaBolic)"}},
-        {"id":"EX-FUNC-008","name":"Split-Stance One-Arm Cable Press","prescription":"6 reps/side","reps":"6/SIDE","timeSeconds":50,"time":"0:50","setupSeconds":30,"timerMode":"exercise","sideMode":"per-side","sideCount":2,"sideSeconds":25,"sideTime":"0:25","switchSeconds":10,"home":"Functional trainer cable press","away":"One-arm backpack press","cue":"LEFT → SWITCH → RIGHT; ribs stacked; symptom-free arc","category":"strength","media":{"type":"youtube","videoId":"6hY2HlS05gU","sourceUrl":"https://www.youtube.com/shorts/6hY2HlS05gU","thumbnailUrl":"https://i.ytimg.com/vi/6hY2HlS05gU/hq2.jpg","sourceName":"CresseyPerf"}}
-      ]
-    },
-    {
-      "label":"C","title":"BARBELL HINGE + LATERAL TRUNK","rounds":3,"effort":"Rest 1:00; RDL RPE 7/3 RIR; plank RPE 6/≥4 RIR. NONE VERIFIED; record load and ROM. Gates: two user-confirmed clean 3×8 RDL and 3×25-sec/side plank exposures.",
-      "exercises":[
-        {"id":"EX-H006","name":"Barbell Romanian Deadlift","prescription":"8 reps at comfortable ROM","reps":"8","timeSeconds":40,"time":"0:40","setupSeconds":30,"timerMode":"exercise","home":"Barbell Romanian deadlift","away":"Loaded-backpack Romanian deadlift","cue":"Hips back; lats tight; record actual load","category":"lower-strength","media":{"type":"youtube","videoId":"d-hn_0sEpRQ","sourceUrl":"https://www.youtube.com/shorts/d-hn_0sEpRQ","thumbnailUrl":"https://i.ytimg.com/vi/d-hn_0sEpRQ/hq2.jpg","sourceName":"Squat University"}},
-        {"id":"EX-T009","name":"Side Plank","prescription":"25 sec/side","reps":"TIMED/SIDE","timeSeconds":50,"time":"0:50","setupSeconds":20,"timerMode":"exercise","sideMode":"per-side","sideCount":2,"sideSeconds":25,"sideTime":"0:25","switchSeconds":10,"home":"Mat side plank","away":"Floor side plank","cue":"LEFT → SWITCH → RIGHT; shoulder stacked; pain-free support only","category":"trunk","media":{"type":"youtube","videoId":"sH5PiIUjDW8","sourceUrl":"https://www.youtube.com/shorts/sH5PiIUjDW8","thumbnailUrl":"https://i.ytimg.com/vi/sH5PiIUjDW8/hqdefault.jpg","sourceName":"VIGEO"}}
-      ]
-    },
-    {
-      "label":"D","title":"KETTLEBELL HIP POWER","rounds":2,"effort":"Rest 0:45; RPE 6, ≥4 RIR. NONE VERIFIED; establish a light power baseline and stop when speed, catch, posture, or comfort declines.",
-      "exercises":[{"id":"EX-FUNC-004","name":"Single-Arm Kettlebell Clean","prescription":"3 crisp reps/side","reps":"3/SIDE","timeSeconds":30,"time":"0:30","setupSeconds":30,"timerMode":"exercise","sideMode":"per-side","sideCount":2,"sideSeconds":15,"sideTime":"0:15","switchSeconds":10,"home":"Light kettlebell clean","away":"Fast unloaded hinge-to-rack","cue":"LEFT → SWITCH → RIGHT; quiet catch; stop for shoulder discomfort","category":"power","media":{"type":"youtube","videoId":"hfmqtDSC-Fc","sourceUrl":"https://www.youtube.com/shorts/hfmqtDSC-Fc","thumbnailUrl":"https://i.ytimg.com/vi/hfmqtDSC-Fc/hq2.jpg","sourceName":"Mark Wildman"}}]
-    },
-    {
-      "label":"E","title":"ACTIVE ANKLE MOBILITY + SUITCASE CARRY","rounds":2,"effort":"Rest 0:20; 6:20 total. Mobility RPE 4; carry RPE 7/3 RIR. NONE VERIFIED; establish pain-free ROM, load and posture baselines before progression.",
-      "exercises":[
-        {"id":"EX-FUNC-016","name":"Knee-to-Wall Ankle Mobilization","prescription":"6 reps/side","reps":"6/SIDE","timeSeconds":40,"time":"0:40","setupSeconds":20,"timerMode":"exercise","sideMode":"per-side","sideCount":2,"sideSeconds":20,"sideTime":"0:20","switchSeconds":10,"home":"Wall ankle mobilization","away":"Wall ankle mobilization","cue":"LEFT → SWITCH → RIGHT; heel down; smooth active range","category":"mobility","media":{"type":"youtube","videoId":"vcq7GllDOJI","sourceUrl":"https://www.youtube.com/shorts/vcq7GllDOJI","thumbnailUrl":"https://i.ytimg.com/vi/vcq7GllDOJI/hq2.jpg","sourceName":"Return 2 Sport PT & Performance"}},
-        {"id":"EX-G020","name":"Suitcase Carry","prescription":"30 sec/side","reps":"TIMED/SIDE","timeSeconds":60,"time":"1:00","setupSeconds":30,"timerMode":"exercise","sideMode":"per-side","sideCount":2,"sideSeconds":30,"sideTime":"0:30","switchSeconds":10,"home":"Kettlebell or dumbbell suitcase carry","away":"Loaded-bag suitcase carry","cue":"LEFT → SWITCH → RIGHT; tall posture; quiet steps; no lean","category":"armor","media":{"type":"youtube","videoId":"9xjSFwKIehY","sourceUrl":"https://www.youtube.com/shorts/9xjSFwKIehY","thumbnailUrl":"https://i.ytimg.com/vi/9xjSFwKIehY/hqdefault.jpg","sourceName":"P4S Golf"}}
-      ]
-    }
+    {"label":"A","title":"COMPRESSION — SUPPORT WITHHELD","rounds":3,"effort":"Rest 0:45; RPE 4–6, ≥4 RIR. Compression: NONE VERIFIED; establish bent-knee reps/form. Support withheld. Gate: two user-confirmed clean 3×6–8 exposures before straighter knees.","exercises":[
+      {"id":"EX-FUNC-017","name":"Seated Pike Compression Leg Lift","prescription":"6 bent-knee reps","reps":"6","timeSeconds":30,"time":"0:30","setupSeconds":20,"timerMode":"exercise","home":"Mat seated compression lifts","away":"Floor seated compression lifts","cue":"Sit tall; no leaning or bouncing","category":"rings-calisthenics","media":{"type":"youtube","videoId":"gKO268DHz24","sourceUrl":"https://www.youtube.com/shorts/gKO268DHz24","thumbnailUrl":"https://i.ytimg.com/vi/gKO268DHz24/hqdefault.jpg","sourceName":"PowerSurge Method"}},
+      {"id":"EX-T005","name":"Dead Bug","prescription":"6 alternating reps","reps":"6 alternating","timeSeconds":30,"time":"0:30","setupSeconds":15,"timerMode":"exercise","home":"Mat dead bug","away":"Floor dead bug","cue":"Exhale; back heavy; shoulders relaxed","category":"trunk","media":{"type":"youtube","videoId":"vgufDyLHcIE","sourceUrl":"https://www.youtube.com/shorts/vgufDyLHcIE","thumbnailUrl":"https://i.ytimg.com/vi/vgufDyLHcIE/hqdefault.jpg","sourceName":"Squat University"}}
+    ]},
+    {"label":"B","title":"ADAPTED UNILATERAL CONTROL","rounds":3,"effort":"Rest 1:00; RPE 6, 4 RIR. Upper pull/press withheld and not credited. NONE VERIFIED; establish pain-free split-squat load/ROM, then repeat before adding load.","exercises":[
+      {"id":"EX-FUNC-012","name":"Front-Foot-Elevated Dumbbell Split Squat","prescription":"6 reps/side","reps":"6/SIDE","timeSeconds":60,"time":"1:00","setupSeconds":30,"timerMode":"exercise","sideMode":"per-side","sideCount":2,"sideSeconds":30,"sideTime":"0:30","switchSeconds":10,"home":"Dumbbells + low stable step","away":"Bodyweight floor split squat","cue":"LEFT → SWITCH → RIGHT; quiet knee, level pelvis","category":"lower-strength","media":{"type":"youtube","videoId":"w2oxzOGPgfU","sourceUrl":"https://www.youtube.com/shorts/w2oxzOGPgfU","thumbnailUrl":"https://i.ytimg.com/vi/w2oxzOGPgfU/hqdefault.jpg","sourceName":"UNIT Fitness Rushden"}}
+    ]},
+    {"label":"C","title":"SQUAT + HIP ROTATION CONTROL","rounds":3,"effort":"Rest 1:00; squat RPE 7/3 RIR, airplane RPE 5. NONE VERIFIED; establish load/ROM and control. Cable rotation withheld; no rotation benchmark credit.","exercises":[
+      {"id":"EX-FUNC-013","name":"Heels-Elevated Dumbbell Goblet Squat","prescription":"8 controlled reps","reps":"8","timeSeconds":40,"time":"0:40","setupSeconds":30,"timerMode":"exercise","home":"Dumbbell + stable heel support","away":"Bodyweight squat to comfortable depth","cue":"Knees track; own depth; record load","category":"lower-strength","media":{"type":"youtube","videoId":"dMI2eY8tvc0","sourceUrl":"https://www.youtube.com/shorts/dMI2eY8tvc0","thumbnailUrl":"https://i.ytimg.com/vi/dMI2eY8tvc0/hqdefault.jpg","sourceName":"High Performance HQ"}},
+      {"id":"EX-H027","name":"Supported Hip Airplane","prescription":"4 reps/side","reps":"4/SIDE","timeSeconds":50,"time":"0:50","setupSeconds":20,"timerMode":"exercise","sideMode":"per-side","sideCount":2,"sideSeconds":25,"sideTime":"0:25","switchSeconds":10,"home":"Rack-supported hip airplane","away":"Wall-supported hip airplane","cue":"LEFT → SWITCH → RIGHT; rotate from hip","category":"mobility","media":{"type":"youtube","videoId":"uEqg50HSqMk","sourceUrl":"https://www.youtube.com/shorts/uEqg50HSqMk","thumbnailUrl":"https://i.ytimg.com/vi/uEqg50HSqMk/hqdefault.jpg","sourceName":"Dr. Carl Baird"}}
+    ]},
+    {"label":"D","title":"LANDING MECHANICS — THROW WITHHELD","rounds":3,"effort":"Rest 0:45; RPE 6, ≥5 RIR. Rotational throw withheld and not credited. Stop when speed, balance or landing quality declines.","exercises":[
+      {"id":"EX-FUNC-018","name":"Snap-Down to Athletic Stance","prescription":"5 crisp reps","reps":"5","timeSeconds":20,"time":"0:20","setupSeconds":20,"timerMode":"exercise","home":"Floor snap-downs","away":"Clear-floor snap-downs","cue":"Finish balanced and quiet","category":"power","media":{"type":"youtube","videoId":"NSU8RQCyD08","sourceUrl":"https://www.youtube.com/shorts/NSU8RQCyD08","thumbnailUrl":"https://i.ytimg.com/vi/NSU8RQCyD08/hqdefault.jpg","sourceName":"NeuStrength"}}
+    ]},
+    {"label":"E","title":"LOWER-BODY ENGINE + SHIN ARMOR","rounds":3,"effort":"Rest 0:20; 6:30 total; RPE 5–6. Repeatable cadence without posture loss; no loaded-strength progression.","exercises":[
+      {"id":"EX-H015","name":"Bodyweight Reverse Lunge","prescription":"8 alternating reps","reps":"8 alternating","timeSeconds":40,"time":"0:40","setupSeconds":20,"timerMode":"exercise","home":"Bodyweight reverse lunges","away":"Bodyweight reverse lunges","cue":"Front foot rooted; smooth cadence","category":"conditioning","media":{"type":"youtube","videoId":"i3TNJmnInI0","sourceUrl":"https://www.youtube.com/shorts/i3TNJmnInI0","thumbnailUrl":"https://i.ytimg.com/vi/i3TNJmnInI0/hqdefault.jpg","sourceName":"Girls Gone Strong"}},
+      {"id":"EX-H026","name":"Tibialis Raise","prescription":"15 controlled reps","reps":"15","timeSeconds":30,"time":"0:30","setupSeconds":20,"timerMode":"exercise","home":"Wall tibialis raises","away":"Wall tibialis raises","cue":"Heels down; full ankle range","category":"armor","media":{"type":"youtube","videoId":"d59BlBrXs4c","sourceUrl":"https://www.youtube.com/shorts/d59BlBrXs4c","thumbnailUrl":"https://i.ytimg.com/vi/d59BlBrXs4c/hqdefault.jpg","sourceName":"Fitness Pain Free"}}
+    ]}
   ],
-  "martialSupplement": {"id":"EX-F002","name":"Hip Escape","prescription":"3/SIDE/MIN alternating","reps":"3/SIDE/MIN alternating","timeSeconds":300,"time":"5:00","setupSeconds":20,"timerMode":"exercise","home":"Mat: slow hip escapes","away":"Mat: slow hip escapes","cue":"Separate optional BJJ practice; shoulders relaxed; never auto-log","category":"martial-supplement","media":{"type":"youtube","videoId":"FZHVLwQp7oE","sourceUrl":"https://www.youtube.com/shorts/FZHVLwQp7oE","thumbnailUrl":"https://i.ytimg.com/vi/FZHVLwQp7oE/hq2.jpg","sourceName":"Ares East Mesa BJJ"}}
+  "martialSupplement":{"id":"EX-DOPA-0219","name":"Guard-Retention Leg Pummeling","prescription":"2/SIDE/MIN alternating","reps":"2/SIDE/MIN alternating","timeSeconds":300,"time":"5:00","setupSeconds":20,"timerMode":"exercise","home":"Dopa band + mat: controlled leg pummeling","away":"Unresisted controlled leg pummeling","cue":"Separate; shoulders relaxed; move from hips; never auto-log","category":"martial-supplement","media":{"type":"youtube","videoId":"BrpwI25Cfb4","sourceUrl":"https://www.youtube.com/shorts/BrpwI25Cfb4","thumbnailUrl":"https://i.ytimg.com/vi/BrpwI25Cfb4/hqdefault.jpg","sourceName":"DopamineO"}},
+  "featuredMode":"COMPRESSION + LEGS + HIP CONTROL + ENGINE",
+  "transitionPolicy":{"sameSetupSeconds":15,"standardSeconds":20,"equipmentChangeSeconds":30,"sideSwitchSeconds":10}
 }
