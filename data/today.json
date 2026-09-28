@@ -158,7 +158,7 @@
           "sideMode": "per-side",
           "sideCount": 2,
           "sideSeconds": 20,
-          "sideTime": "0:20/SIDE",
+          "sideTime": "0:20",
           "switchSeconds": 10,
           "home": "Rack-supported hip airplane hold",
           "away": "Wall-supported hip airplane hold",
