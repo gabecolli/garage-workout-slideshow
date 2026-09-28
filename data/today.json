@@ -1,235 +1,90 @@
 {
   "schemaVersion": 3,
   "date": "2026-09-28",
-  "generatedAt": "2026-09-28T00:49:58-05:00",
-  "planId": "DP-20260928-UW-001",
+  "generatedAt": "2026-09-28T00:55:00-05:00",
+  "planId": "DP-20260928-UW-002",
   "title": "45-MIN FOUNDATION — WEEK 3 DAY 19",
-  "emphasis": "MONDAY HARD • SYMPTOM-ADAPTED",
-  "additionalTitle": "BODYLINE + NECK/SPINE/LOWER-LEG DURABILITY + BALANCE + AEROBIC BASE",
+  "emphasis": "MONDAY HARD • SYMPTOM-ADAPTED • REVISED",
+  "additionalTitle": "BODYLINE + HINGE + MOBILITY + BALANCE + BREATHING",
   "levels": {
-    "floor": "26:00: Ignition + A×3/B×2/C×1/D×1.",
-    "standard": "44:50 complete: Ignition + A×3/B×3/C×3/D×2 + 8:00 E.",
-    "bonus": "Optional 5–10 min relaxed supine breathing only. BJJ: Ignition + A×2/B×1/D×1 (18:50), or skip if class/time load is high."
+    "floor": "26:50: Ignition + A×3/B×2/C×1/D×1.",
+    "standard": "45:10 complete: Ignition + A×3/B×3/C×3/D×2 + E.",
+    "bonus": "Optional 5–10 min full rest or relaxed breathing only. BJJ: Ignition + A×2/B×1/D×1 (19:00), or skip if class/time load is high."
   },
   "ignition": {
-    "name": "Zone-2 Treadmill",
-    "prescription": "10:00 easy conversational walk",
+    "name": "Curved-Treadmill Walking Intervals",
+    "prescription": "0:15 smooth / 0:45 easy ×10",
     "reps": "TIMED",
     "timeSeconds": 600,
     "time": "10:00",
     "setupSeconds": 0,
     "timerMode": "cardio-exempt",
-    "home": "Curved treadmill: easy conversational walk",
-    "away": "Flat outdoor walk",
-    "cue": "RPE 4; short comfortable stride. Stop if thigh or knee pain rises.",
+    "home": "Curved treadmill: 0:15 smooth / 0:45 easy ×10",
+    "away": "Flat walk: 0:15 brisk / 0:45 easy ×10",
+    "cue": "Walking only; short comfortable stride. Stop if thigh or knee pain rises.",
     "category": "conditioning",
-    "media": {
-      "type": "youtube",
-      "videoId": "hGaVza0pWdw",
-      "sourceUrl": "https://www.youtube.com/shorts/hGaVza0pWdw",
-      "thumbnailUrl": "https://i.ytimg.com/vi/hGaVza0pWdw/hqdefault.jpg",
-      "sourceName": "Alan Thrall"
-    }
+    "media": {"type":"youtube","videoId":"Q3mGikLadak","sourceUrl":"https://www.youtube.com/shorts/Q3mGikLadak","thumbnailUrl":"https://i.ytimg.com/vi/Q3mGikLadak/hqdefault.jpg","sourceName":"Assault Fitness"}
   },
   "deposits": [
     {
       "label": "A",
       "title": "BODYLINE — PLANCHE WITHHELD",
       "rounds": 3,
-      "effort": "Rest 1:00; RPE 5, 5 RIR. Planche rung foundation; NONE VERIFIED. Bodyline adjunct only; gate remains two user-confirmed clean 3×6–8 pseudo-planche push-up exposures.",
-      "exercises": [
-        {
-          "id": "EX-T008",
-          "name": "McGill Curl-Up",
-          "prescription": "5 controlled reps",
-          "reps": "5",
-          "timeSeconds": 30,
-          "time": "0:30",
-          "setupSeconds": 20,
-          "timerMode": "exercise",
-          "home": "Mat McGill curl-up ×5",
-          "away": "Floor McGill curl-up ×5",
-          "cue": "Brace; lift only head/shoulders; use a comfortable knee angle and skip if symptoms reproduce",
-          "category": "rings-calisthenics",
-          "media": {
-            "type": "youtube",
-            "videoId": "BH5toeuGdfQ",
-            "sourceUrl": "https://www.youtube.com/shorts/BH5toeuGdfQ",
-            "thumbnailUrl": "https://i.ytimg.com/vi/BH5toeuGdfQ/hqdefault.jpg",
-            "sourceName": "Vital Force Physio"
-          }
-        }
-      ]
+      "effort": "Rest 1:00; RPE 5, 5 RIR. Intentional Monday anchor; NONE VERIFIED. No progression; planche gate remains two user-confirmed clean 3×6–8 exposures.",
+      "exercises": [{
+        "id":"EX-T008","name":"McGill Curl-Up","prescription":"5 controlled reps","reps":"5","timeSeconds":30,"time":"0:30","setupSeconds":20,"timerMode":"exercise",
+        "home":"Mat McGill curl-up ×5","away":"Floor McGill curl-up ×5","cue":"Brace; lift only head/shoulders; use a comfortable knee angle and skip if symptoms reproduce","category":"rings-calisthenics",
+        "media":{"type":"youtube","videoId":"BH5toeuGdfQ","sourceUrl":"https://www.youtube.com/shorts/BH5toeuGdfQ","thumbnailUrl":"https://i.ytimg.com/vi/BH5toeuGdfQ/hqdefault.jpg","sourceName":"Vital Force Physio"}
+      }]
     },
     {
       "label": "B",
-      "title": "ADAPTED NECK DURABILITY — UPPER WITHHELD",
+      "title": "THORACIC MOBILITY — UPPER WITHHELD",
       "rounds": 3,
-      "effort": "Rest 1:30; RPE 4, 5 RIR. Compound pull/press withheld and not credited; NONE VERIFIED. Deliberate low-fatigue corrective repeat; no progression.",
-      "exercises": [
-        {
-          "id": "EX-T028",
-          "name": "Self-Resisted Neck Isometrics",
-          "prescription": "10 sec each front/back/left/right",
-          "reps": "TIMED",
-          "timeSeconds": 40,
-          "time": "0:40",
-          "setupSeconds": 20,
-          "timerMode": "exercise",
-          "home": "Hands: gentle four-way neck isometrics",
-          "away": "Hands: same",
-          "cue": "Head still; 20–30% pressure; shoulders relaxed",
-          "category": "armor",
-          "media": {
-            "type": "youtube",
-            "videoId": "Ik6U4kIMmsg",
-            "sourceUrl": "https://www.youtube.com/shorts/Ik6U4kIMmsg",
-            "thumbnailUrl": "https://i.ytimg.com/vi/Ik6U4kIMmsg/hqdefault.jpg",
-            "sourceName": "PostureFlow"
-          }
-        }
-      ]
+      "effort": "Rest 1:30; RPE 4, 5 RIR. Compound pull/press withheld and not credited; NONE VERIFIED. New mobility substitute; no progression.",
+      "exercises": [{
+        "id":"EX-FUNC-015","name":"Side-Lying Open Book","prescription":"4/side","reps":"4/SIDE","timeSeconds":40,"time":"0:40","setupSeconds":20,"timerMode":"exercise","sideMode":"per-side","sideCount":2,"sideSeconds":20,"sideTime":"0:20","switchSeconds":10,
+        "home":"Mat open book ×4/side with knees comfortably supported","away":"Floor open book ×4/side with knees comfortably supported","cue":"Support the top arm; rotate only through a pain-free upper-back range; never force shoulder or knee position","category":"mobility",
+        "media":{"type":"youtube","videoId":"qC7jBVTSrCg","sourceUrl":"https://www.youtube.com/shorts/qC7jBVTSrCg","thumbnailUrl":"https://i.ytimg.com/vi/qC7jBVTSrCg/hqdefault.jpg","sourceName":"Rehab Science"}
+      }]
     },
     {
       "label": "C",
-      "title": "SPINE + LOWER-LEG DURABILITY — SQUAT WITHHELD",
+      "title": "HINGE + ACTIVE ANKLE MOBILITY",
       "rounds": 3,
-      "effort": "Rest 1:00; RPE 4–5, 5 RIR. Loaded squat withheld and not credited. Calf rung two-leg bodyweight; NONE VERIFIED; no progression.",
+      "effort": "Rest 1:00; RPE 3–4, 5–6 RIR. Very-light hinge baseline; NONE VERIFIED. No load/ROM progression; loaded/deep knee flexion remains withheld.",
       "exercises": [
-        {
-          "id": "EX-T001",
-          "name": "Segmental Cat-Cow",
-          "prescription": "6 slow reps",
-          "reps": "6",
-          "timeSeconds": 40,
-          "time": "0:40",
-          "setupSeconds": 20,
-          "timerMode": "exercise",
-          "home": "Padded mat: segmental cat-cow ×6",
-          "away": "Padded floor: same",
-          "cue": "Move slowly; pad or skip kneeling if the knee objects",
-          "category": "mobility",
-          "media": {
-            "type": "youtube",
-            "videoId": "EyK3-G-K-FQ",
-            "sourceUrl": "https://www.youtube.com/shorts/EyK3-G-K-FQ",
-            "thumbnailUrl": "https://i.ytimg.com/vi/EyK3-G-K-FQ/hqdefault.jpg",
-            "sourceName": "Fitness Pain Free"
-          }
-        },
-        {
-          "id": "EX-H025",
-          "name": "Standing Calf Raise",
-          "prescription": "12 controlled reps",
-          "reps": "12",
-          "timeSeconds": 30,
-          "time": "0:30",
-          "setupSeconds": 20,
-          "timerMode": "exercise",
-          "home": "Wall-supported two-leg calf raises ×12",
-          "away": "Wall-supported two-leg calf raises ×12",
-          "cue": "Pause high and low; knees soft, not deeply bent",
-          "category": "lower-body",
-          "media": {
-            "type": "youtube",
-            "videoId": "qmihweq30nA",
-            "sourceUrl": "https://www.youtube.com/shorts/qmihweq30nA",
-            "thumbnailUrl": "https://i.ytimg.com/vi/qmihweq30nA/hqdefault.jpg",
-            "sourceName": "Kar Weng | Physiotherapist for Healthy Aging"
-          }
-        }
+        {"id":"EX-FUNC-007","name":"Cable Pull-Through","prescription":"8 very-light reps","reps":"8","timeSeconds":40,"time":"0:40","setupSeconds":30,"timerMode":"exercise","home":"Very-light cable pull-through ×8","away":"Unloaded wall-tap hip hinge ×8","cue":"Small knee bend; hips back; stop for thigh, knee, shoulder or radiating symptoms","category":"lower-body","media":{"type":"youtube","videoId":"h1BEcRXkvxs","sourceUrl":"https://www.youtube.com/shorts/h1BEcRXkvxs","thumbnailUrl":"https://i.ytimg.com/vi/h1BEcRXkvxs/hqdefault.jpg","sourceName":"Human 2.0 Fitness"}},
+        {"id":"EX-FUNC-016","name":"Knee-to-Wall Ankle Mobilization","prescription":"6/side","reps":"6/SIDE","timeSeconds":40,"time":"0:40","setupSeconds":20,"timerMode":"exercise","sideMode":"per-side","sideCount":2,"sideSeconds":20,"sideTime":"0:20","switchSeconds":10,"home":"Wall-supported ankle mobilization ×6/side","away":"Same","cue":"Shallow pain-free knee travel only; heel down; do not force the bend","category":"mobility","media":{"type":"youtube","videoId":"vcq7GllDOJI","sourceUrl":"https://www.youtube.com/shorts/vcq7GllDOJI","thumbnailUrl":"https://i.ytimg.com/vi/vcq7GllDOJI/hqdefault.jpg","sourceName":"Return 2 Sport PT & Performance"}}
       ]
     },
     {
       "label": "D",
-      "title": "BALANCE + HIP CONTROL — POWER WITHHELD",
+      "title": "BALANCE — POWER WITHHELD",
       "rounds": 2,
-      "effort": "Rest 1:30; RPE 4, 5 RIR. Lower-body power withheld and not credited; displayed 2026-09-26 balance task repeated without progression.",
-      "exercises": [
-        {
-          "id": "EX-H027",
-          "name": "Supported Hip Airplane",
-          "prescription": "20 sec/side",
-          "reps": "TIMED",
-          "timeSeconds": 40,
-          "time": "0:40",
-          "setupSeconds": 20,
-          "timerMode": "exercise",
-          "sideMode": "per-side",
-          "sideCount": 2,
-          "sideSeconds": 20,
-          "sideTime": "0:20",
-          "switchSeconds": 10,
-          "home": "Rack-supported hip airplane hold",
-          "away": "Wall-supported hip airplane hold",
-          "cue": "Small pain-free hip rotation; almost-straight stance knee",
-          "category": "power",
-          "media": {
-            "type": "youtube",
-            "videoId": "uEqg50HSqMk",
-            "sourceUrl": "https://www.youtube.com/shorts/uEqg50HSqMk",
-            "thumbnailUrl": "https://i.ytimg.com/vi/uEqg50HSqMk/hqdefault.jpg",
-            "sourceName": "Dr. Carl Baird"
-          }
-        }
-      ]
+      "effort": "Rest 1:30; RPE 4, 5 RIR. Supported balance baseline; NONE VERIFIED. Power receives no credit; reduce hand support only after two user-confirmed pain-free exposures.",
+      "exercises": [{
+        "id":"EX-FUNC-031","name":"Supported Single-Leg Balance","prescription":"20 sec/side","reps":"TIMED","timeSeconds":40,"time":"0:40","setupSeconds":20,"timerMode":"exercise","sideMode":"per-side","sideCount":2,"sideSeconds":20,"sideTime":"0:20","switchSeconds":10,
+        "home":"Rack-supported single-leg balance","away":"Wall-supported single-leg balance","cue":"Light fingertip support; tall posture; almost-straight comfortable stance knee","category":"mobility",
+        "media":{"type":"youtube","videoId":"K--UfVC5LUk","sourceUrl":"https://www.youtube.com/shorts/K--UfVC5LUk","thumbnailUrl":"https://i.ytimg.com/vi/K--UfVC5LUk/hqdefault.jpg","sourceName":"Doug Weiss, DPT"}
+      }]
     },
     {
       "label": "E",
-      "title": "RECOVERY ENGINE",
+      "title": "BREATHING ARMOR",
       "rounds": 1,
-      "effort": "8:00 continuous; RPE 4–5. Deliberate symptom-limited aerobic repeat; no benchmark credit without user-confirmed pain-free completion.",
-      "exercises": [
-        {
-          "id": "EX-I004",
-          "name": "Zone-2 Treadmill",
-          "prescription": "8:00 conversational Zone 2",
-          "reps": "TIMED",
-          "timeSeconds": 480,
-          "time": "8:00",
-          "setupSeconds": 0,
-          "timerMode": "cardio-exempt",
-          "home": "Curved treadmill: conversational Zone 2",
-          "away": "Flat outdoor walk",
-          "cue": "Smooth posture; stop if symptoms increase",
-          "category": "conditioning",
-          "media": {
-            "type": "youtube",
-            "videoId": "hGaVza0pWdw",
-            "sourceUrl": "https://www.youtube.com/shorts/hGaVza0pWdw",
-            "thumbnailUrl": "https://i.ytimg.com/vi/hGaVza0pWdw/hqdefault.jpg",
-            "sourceName": "Alan Thrall"
-          }
-        }
-      ]
+      "effort": "6:20 including setup; RPE 2, 6 RIR. Recovery only; no conditioning benchmark credit.",
+      "exercises": [{
+        "id":"EX-FUNC-030","name":"Seated Diaphragmatic Breathing","prescription":"6:00 relaxed breathing","reps":"TIMED","timeSeconds":360,"time":"6:00","setupSeconds":20,"timerMode":"exercise","home":"Supported standing, seated, or supine—choose the symptom-free position","away":"Same","cue":"Relax shoulders; expand lower ribs; easy longer exhale; change position if the thigh/knee objects","category":"armor",
+        "media":{"type":"youtube","videoId":"v0Yj9HjgR64","sourceUrl":"https://www.youtube.com/shorts/v0Yj9HjgR64","thumbnailUrl":"https://i.ytimg.com/vi/v0Yj9HjgR64/hqdefault.jpg","sourceName":"Physiotherapist Michelle Kenway"}
+      }]
     }
   ],
   "martialSupplement": {
-    "id": "EX-DOPA-0212",
-    "name": "Technical-Stand-Up Visualization",
-    "prescription": "WATCH + VISUALIZE ONLY",
-    "reps": "WATCH + VISUALIZE",
-    "timeSeconds": 300,
-    "time": "5:00",
-    "setupSeconds": 20,
-    "timerMode": "exercise",
-    "home": "Watch exact demo; mentally rehearse only—no physical drilling",
-    "away": "Same",
-    "cue": "Separate; no reps while shoulder and thigh/knee symptoms remain unresolved; never auto-log",
-    "category": "martial-supplement",
-    "media": {
-      "type": "youtube",
-      "videoId": "jX_54nl7Fes",
-      "sourceUrl": "https://www.youtube.com/shorts/jX_54nl7Fes",
-      "thumbnailUrl": "https://i.ytimg.com/vi/jX_54nl7Fes/hqdefault.jpg",
-      "sourceName": "DopamineO"
-    }
+    "id":"EX-DOPA-0212","name":"Technical-Stand-Up Visualization","prescription":"WATCH + VISUALIZE ONLY","reps":"WATCH + VISUALIZE","timeSeconds":300,"time":"5:00","setupSeconds":20,"timerMode":"exercise",
+    "home":"Watch exact demo; mentally rehearse only—no physical drilling","away":"Same","cue":"Separate; no reps while shoulder and thigh/knee symptoms remain unresolved; never auto-log","category":"martial-supplement",
+    "media":{"type":"youtube","videoId":"jX_54nl7Fes","sourceUrl":"https://www.youtube.com/shorts/jX_54nl7Fes","thumbnailUrl":"https://i.ytimg.com/vi/jX_54nl7Fes/hqdefault.jpg","sourceName":"DopamineO"}
   },
   "featuredMode": "standard",
-  "transitionPolicy": {
-    "sameSetupSeconds": 15,
-    "standardSeconds": 20,
-    "equipmentChangeSeconds": 30,
-    "sideSwitchSeconds": 10
-  }
+  "transitionPolicy": {"sameSetupSeconds":15,"standardSeconds":20,"equipmentChangeSeconds":30,"sideSwitchSeconds":10}
 }
