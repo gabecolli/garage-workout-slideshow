@@ -1,90 +1,283 @@
 {
   "schemaVersion": 3,
   "date": "2026-09-29",
-  "generatedAt": "2026-09-29T00:03:54-05:00",
-  "planId": "DP-20260929-UW-001",
+  "generatedAt": "2026-09-29T09:05:00-05:00",
+  "planId": "DP-20260929-UW-002",
   "title": "45-MIN FOUNDATION — WEEK 3 DAY 20",
-  "emphasis": "TUESDAY MEDIUM • SYMPTOM-ADAPTED • NO 72-HOUR OVERLAP",
-  "additionalTitle": "BODYLINE + CUFF/NECK CONTROL + HINGE + ANKLE DURABILITY",
+  "emphasis": "TUESDAY MEDIUM • FRONT LEVER + RINGS + ROTATION + ENGINE",
+  "additionalTitle": "BODY CONTROL • COMPOUND STRENGTH • ROTATIONAL POWER",
   "levels": {
-    "floor": "27:25: Ignition + A×3/B×2/C×1/D×1.",
-    "standard": "45:55 complete: Ignition + A×3/B×3/C×3/D×2 + E.",
-    "bonus": "Optional 5–10 min full rest only. BJJ: Ignition + A×2/B×1/D×1 (19:20), or skip if class/time load is high."
+    "floor": "27:00: Ignition + A×3/B×2/C×1/D×1.",
+    "standard": "46:50: Ignition + A×3/B×3/C×3/D×2/E×1.",
+    "bonus": "Optional 5–10 min. BJJ 18:40: Ignition + A×2/B×1/D×1, or skip if class/time load is high."
   },
   "ignition": {
-    "name": "Supine Posterior Pelvic Tilt",
-    "prescription": "9:40 pelvic-tilt and relaxed-breathing flow",
+    "id": "EX-FUNC-038",
+    "name": "Jumping Jacks",
+    "prescription": "20 sec easy jacks / 38 sec walk ×10",
     "reps": "TIMED",
     "timeSeconds": 580,
     "time": "9:40",
     "setupSeconds": 20,
     "timerMode": "exercise",
-    "home": "Mat pelvic-tilt and relaxed-breathing flow",
-    "away": "Floor pelvic-tilt and relaxed-breathing flow",
-    "cue": "Slow exhale; tiny pain-free tilt; support the legs so no bent-knee position is forced.",
-    "category": "mobility",
-    "media": {"type":"youtube","videoId":"PJohJhNqPWQ","sourceUrl":"https://www.youtube.com/shorts/PJohJhNqPWQ","thumbnailUrl":"https://i.ytimg.com/vi/PJohJhNqPWQ/hqdefault.jpg","sourceName":"EmergeOrtho"}
+    "home": "20 sec easy jacks / 38 sec walk ×10",
+    "away": "20 sec step jacks / 38 sec walk ×10",
+    "cue": "10:00 including setup. Easy pattern prep.",
+    "category": "ignition",
+    "media": {
+      "type": "youtube",
+      "videoId": "S8V_iXijSwc",
+      "sourceUrl": "https://www.youtube.com/shorts/S8V_iXijSwc",
+      "thumbnailUrl": "https://i.ytimg.com/vi/S8V_iXijSwc/hqdefault.jpg",
+      "sourceName": "DukeHealth"
+    }
   },
   "deposits": [
     {
       "label": "A",
-      "title": "BODYLINE — FRONT LEVER WITHHELD",
+      "title": "FRONT-LEVER FOUNDATION",
       "rounds": 3,
-      "effort": "Rest 1:00; RPE 5, 5 RIR. Current rung: bent-knee hollow adjunct; last qualifying user-confirmed lever exposure: NONE VERIFIED. No progression; gate remains two clean 3×15–20-sec tuck-lever exposures after symptoms resolve.",
-      "exercises": [{
-        "id":"EX-FUNC-027","name":"Bent-Knee Hollow Hold","prescription":"20-sec hold","reps":"TIMED","timeSeconds":20,"time":"0:20","setupSeconds":15,"timerMode":"exercise",
-        "home":"Mat bent-knee hollow hold","away":"Floor bent-knee hollow hold","cue":"Arms by sides; choose any comfortable knee angle; stop for shoulder, thigh, or knee symptoms.","category":"rings-calisthenics",
-        "media":{"type":"youtube","videoId":"vt_12h0vaG0","sourceUrl":"https://www.youtube.com/shorts/vt_12h0vaG0","thumbnailUrl":"https://i.ytimg.com/vi/vt_12h0vaG0/hqdefault.jpg","sourceName":"Dr. Kira Steele"}
-      }]
+      "effort": "Rest 1:00; Foundation scapular pull rung; last qualifying user-confirmed exposure NONE VERIFIED. Repeat 6 clean reps, 3 RIR/RPE≤7; next 3×8 twice before a harder lever rung.",
+      "exercises": [
+        {
+          "id": "EX-G008",
+          "name": "Scapular Pull-Up",
+          "prescription": "6 Scapular Pull-Up",
+          "reps": "6",
+          "timeSeconds": 25,
+          "time": "0:25",
+          "setupSeconds": 20,
+          "timerMode": "exercise",
+          "home": "Active-hang scapular pull-up ×6",
+          "away": "Supported scapular pulldown ×6",
+          "cue": "Straight elbows; depress and retract without swinging.",
+          "category": "rings-calisthenics",
+          "media": {
+            "type": "youtube",
+            "videoId": "9M8ylnbriB0",
+            "sourceUrl": "https://www.youtube.com/shorts/9M8ylnbriB0",
+            "thumbnailUrl": "https://i.ytimg.com/vi/9M8ylnbriB0/hqdefault.jpg",
+            "sourceName": "livfitkarl"
+          }
+        }
+      ]
     },
     {
       "label": "B",
-      "title": "CUFF + NECK — COMPOUNDS WITHHELD",
+      "title": "HORIZONTAL RING STRENGTH",
       "rounds": 3,
-      "effort": "Rest 1:20; RPE 3, 6 RIR. Compound pull/press withheld and receives no strength credit. Recovery baseline only; no progression.",
+      "effort": "Rest 1:15; Ring horizontal pull/press, 3–4 RIR, RPE 6–7. No qualifying user-confirmed exact exposure; same 8-rep rung, no progression. Next gate two clean 3×8 exposures at ≤RPE8.",
       "exercises": [
-        {"id":"EX-FUNC-010","name":"Standing Cable External Rotation","prescription":"6/side, very light","reps":"6/SIDE","timeSeconds":40,"time":"0:40","setupSeconds":30,"timerMode":"exercise","sideMode":"per-side","sideCount":2,"sideSeconds":20,"sideTime":"0:20","switchSeconds":10,"home":"Very-light cable external rotation ×6/side","away":"Unloaded elbow-at-side rehearsal ×6/side","cue":"Elbow by ribs; use zero load if needed; skip for AC/biceps pain or radiation.","category":"upper-body","media":{"type":"youtube","videoId":"oyXJ1lykdig","sourceUrl":"https://www.youtube.com/shorts/oyXJ1lykdig","thumbnailUrl":"https://i.ytimg.com/vi/oyXJ1lykdig/hqdefault.jpg","sourceName":"Dartmouth Strength & Conditioning"}},
-        {"id":"EX-FUNC-033","name":"Seated Chin Tuck","prescription":"8 reps","reps":"8","timeSeconds":30,"time":"0:30","setupSeconds":20,"timerMode":"exercise","home":"Supported standing or chair chin tuck ×8","away":"Same","cue":"Chin level; glide straight back; shoulders fully relaxed.","category":"armor","media":{"type":"youtube","videoId":"QAM0VaRpXI8","sourceUrl":"https://www.youtube.com/shorts/QAM0VaRpXI8","thumbnailUrl":"https://i.ytimg.com/vi/QAM0VaRpXI8/hqdefault.jpg","sourceName":"Healthline / Karena Wu, DPT"}}
+        {
+          "id": "EX-G009",
+          "name": "Ring Row",
+          "prescription": "8 Ring Row",
+          "reps": "8",
+          "timeSeconds": 35,
+          "time": "0:35",
+          "setupSeconds": 20,
+          "timerMode": "exercise",
+          "home": "Ring row ×8, repeatable angle",
+          "away": "Fixed-bar incline row ×8",
+          "cue": "Rigid body; one-second squeeze.",
+          "category": "upper-body",
+          "media": {
+            "type": "youtube",
+            "videoId": "etiOULaW7tc",
+            "sourceUrl": "https://www.youtube.com/shorts/etiOULaW7tc",
+            "thumbnailUrl": "https://i.ytimg.com/vi/etiOULaW7tc/hqdefault.jpg",
+            "sourceName": "KILOS Performance and Fitness"
+          }
+        },
+        {
+          "id": "EX-R002",
+          "name": "Ring Push-Up",
+          "prescription": "8 Ring Push-Up",
+          "reps": "8",
+          "timeSeconds": 35,
+          "time": "0:35",
+          "setupSeconds": 15,
+          "timerMode": "exercise",
+          "home": "Ring push-up ×8, comfortable height",
+          "away": "Floor push-up ×8",
+          "cue": "Quiet rings, controlled depth.",
+          "category": "upper-body",
+          "media": {
+            "type": "youtube",
+            "videoId": "QtJNskFMZpY",
+            "sourceUrl": "https://www.youtube.com/shorts/QtJNskFMZpY",
+            "thumbnailUrl": "https://i.ytimg.com/vi/QtJNskFMZpY/hqdefault.jpg",
+            "sourceName": "FitnessFAQs"
+          }
+        }
       ]
     },
     {
       "label": "C",
-      "title": "UNLOADED HINGE + LOWER-LEG DURABILITY",
+      "title": "HIP STRENGTH + CONTROLLED ROTATION",
       "rounds": 3,
-      "effort": "Rest 1:00; RPE 4, 5 RIR. Hinge rung: unloaded wall pattern; NONE VERIFIED. Establish baseline only; loaded rotation withheld and receives no credit.",
+      "effort": "Rest 1:05; Hip-thrust foundation 8 and controlled cable rotation 6/side, 3–4 RIR/RPE 6–7. NONE VERIFIED exact load/ROM; establish and record both. Gate two clean exposures before load increase.",
       "exercises": [
-        {"id":"EX-FUNC-034","name":"Wall Hip Hinge","prescription":"8 reps","reps":"8","timeSeconds":40,"time":"0:40","setupSeconds":20,"timerMode":"exercise","home":"Wall hip-hinge taps ×8","away":"Same","cue":"Nearly straight, soft knees; shorten range or stop if thigh/knee pain rises.","category":"lower-body","media":{"type":"youtube","videoId":"xGxrLSCyA58","sourceUrl":"https://www.youtube.com/shorts/xGxrLSCyA58","thumbnailUrl":"https://i.ytimg.com/vi/xGxrLSCyA58/hqdefault.jpg","sourceName":"Par4Success"}},
-        {"id":"EX-FUNC-036","name":"Seated Heel-and-Toe Raise","prescription":"12 alternating reps","reps":"12","timeSeconds":40,"time":"0:40","setupSeconds":20,"timerMode":"exercise","home":"Supported seat heel-and-toe raises ×12","away":"Same","cue":"Use a comfortable knee angle; do not force ankle range.","category":"armor","media":{"type":"youtube","videoId":"ko5X9vHhmhk","sourceUrl":"https://www.youtube.com/shorts/ko5X9vHhmhk","thumbnailUrl":"https://i.ytimg.com/vi/ko5X9vHhmhk/hqdefault.jpg","sourceName":"Justin Agustin"}}
+        {
+          "id": "EX-H009",
+          "name": "Hip Thrust",
+          "prescription": "8 Hip Thrust",
+          "reps": "8",
+          "timeSeconds": 40,
+          "time": "0:40",
+          "setupSeconds": 30,
+          "timerMode": "exercise",
+          "home": "Barbell hip thrust ×8 at self-selected 3-RIR load; record lb",
+          "away": "Backpack hip thrust ×8; record lb",
+          "cue": "Ribs stacked; pause at full glute extension.",
+          "category": "lower-body",
+          "media": {
+            "type": "youtube",
+            "videoId": "W86oVlnLqY4",
+            "sourceUrl": "https://www.youtube.com/shorts/W86oVlnLqY4",
+            "thumbnailUrl": "https://i.ytimg.com/vi/W86oVlnLqY4/hqdefault.jpg",
+            "sourceName": "Gerardi Performance"
+          }
+        },
+        {
+          "id": "EX-FUNC-026",
+          "name": "Standing Cable Rotation",
+          "prescription": "6/SIDE Standing Cable Rotation",
+          "reps": "6/SIDE",
+          "timeSeconds": 40,
+          "time": "0:40",
+          "setupSeconds": 30,
+          "timerMode": "exercise",
+          "sideMode": "per-side",
+          "sideCount": 2,
+          "sideSeconds": 20,
+          "sideTime": "0:20",
+          "switchSeconds": 10,
+          "home": "Cable rotation ×6/side at controlled 4-RIR load; record lb",
+          "away": "Backpack standing rotation ×6/side",
+          "cue": "Pivot through hips; ribs follow; avoid lumbar end-range.",
+          "category": "lower-body",
+          "media": {
+            "type": "youtube",
+            "videoId": "rk6zS3eJICY",
+            "sourceUrl": "https://www.youtube.com/shorts/rk6zS3eJICY",
+            "thumbnailUrl": "https://i.ytimg.com/vi/rk6zS3eJICY/hqdefault.jpg",
+            "sourceName": "Live Lean TV"
+          }
+        }
       ]
     },
     {
       "label": "D",
-      "title": "WEIGHT ACCEPTANCE — POWER WITHHELD",
+      "title": "ROTATIONAL POWER",
       "rounds": 2,
-      "effort": "Rest 1:30; RPE 3, 6 RIR. New pain-free weight-shift baseline; rotational throw/power receives no credit. Reduce hand support only after two user-confirmed pain-free exposures.",
-      "exercises": [{
-        "id":"EX-FUNC-035","name":"Supported Standing Weight Shift","prescription":"20 sec/side","reps":"TIMED","timeSeconds":40,"time":"0:40","setupSeconds":20,"timerMode":"exercise","sideMode":"per-side","sideCount":2,"sideSeconds":20,"sideTime":"0:20","switchSeconds":10,
-        "home":"Rack-supported weight shift 0:20/side","away":"Wall-supported weight shift 0:20/side","cue":"Tiny smooth shift; nearly straight knees; stop for pain.","category":"mobility",
-        "media":{"type":"youtube","videoId":"LUd57n5RGTA","sourceUrl":"https://www.youtube.com/shorts/LUd57n5RGTA","thumbnailUrl":"https://i.ytimg.com/vi/LUd57n5RGTA/hqdefault.jpg","sourceName":"Vital Rehab & Performance Physical Therapy"}
-      }]
+      "effort": "Rest 1:00; Crisp rotational power, RPE 6–7. 20-lb ball only if speed stays high; stop as soon as power or posture drops. Baseline distance unknown, record it.",
+      "exercises": [
+        {
+          "id": "EX-E007",
+          "name": "Rotational Medicine-Ball Scoop Throw",
+          "prescription": "3/SIDE Rotational Medicine-Ball Scoop Throw",
+          "reps": "3/SIDE",
+          "timeSeconds": 30,
+          "time": "0:30",
+          "setupSeconds": 30,
+          "timerMode": "exercise",
+          "sideMode": "per-side",
+          "sideCount": 2,
+          "sideSeconds": 15,
+          "sideTime": "0:15",
+          "switchSeconds": 10,
+          "home": "20-lb med-ball scoop throw ×3/side if crisp",
+          "away": "Unloaded fast rotational pivot ×3/side",
+          "cue": "Turn hips and upper back together; reset each throw.",
+          "category": "power",
+          "media": {
+            "type": "youtube",
+            "videoId": "MilgWMme3Q4",
+            "sourceUrl": "https://www.youtube.com/shorts/MilgWMme3Q4",
+            "thumbnailUrl": "https://i.ytimg.com/vi/MilgWMme3Q4/hqdefault.jpg",
+            "sourceName": "Boxing Science"
+          }
+        }
+      ]
     },
     {
       "label": "E",
-      "title": "ANKLE-PUMP ARMOR",
+      "title": "AEROBIC ENGINE + ACTIVE MOBILITY",
       "rounds": 1,
-      "effort": "6:20 including setup; RPE 2, 6 RIR. Recovery armor only; no aerobic-engine benchmark credit.",
-      "exercises": [{
-        "id":"EX-FUNC-037","name":"Ankle Pumps","prescription":"0:30 smooth / 0:30 relaxed ×6","reps":"TIMED","timeSeconds":360,"time":"6:00","setupSeconds":20,"timerMode":"exercise",
-        "home":"Chair or supine—choose the symptom-free position","away":"Same","cue":"Pull toes up and point down smoothly; relax the knee.","category":"armor",
-        "media":{"type":"youtube","videoId":"YMPHnsDgVG4","sourceUrl":"https://www.youtube.com/shorts/YMPHnsDgVG4","thumbnailUrl":"https://i.ytimg.com/vi/YMPHnsDgVG4/hqdefault.jpg","sourceName":"Dr. Sumit Kapadia"}
-      }]
+      "effort": "Rest 0:00; 6:30 rope at conversational RPE 6 then 8 alternating Cossack reps as active hip/ankle mobility; 7:30 total.",
+      "exercises": [
+        {
+          "id": "EX-I002",
+          "name": "Jump Rope — Basic Bounce",
+          "prescription": "6:30 smooth basic-bounce rope at aerobic pace",
+          "reps": "TIMED",
+          "timeSeconds": 390,
+          "time": "6:30",
+          "setupSeconds": 0,
+          "timerMode": "cardio-exempt",
+          "home": "6:30 smooth basic-bounce rope at aerobic pace",
+          "away": "6:30 brisk continuous walk",
+          "cue": "Relax shoulders; repeatable output.",
+          "category": "engine",
+          "media": {
+            "type": "youtube",
+            "videoId": "XSY9AE72inM",
+            "sourceUrl": "https://www.youtube.com/shorts/XSY9AE72inM",
+            "thumbnailUrl": "https://i.ytimg.com/vi/XSY9AE72inM/hqdefault.jpg",
+            "sourceName": "Lauren Jumps"
+          }
+        },
+        {
+          "id": "EX-H021",
+          "name": "Cossack Squat",
+          "prescription": "8 ALTERNATING Cossack Squat",
+          "reps": "8 ALTERNATING",
+          "timeSeconds": 40,
+          "time": "0:40",
+          "setupSeconds": 20,
+          "timerMode": "exercise",
+          "home": "8 alternating shallow Cossack squats",
+          "away": "8 alternating side lunges",
+          "cue": "Shift actively through hip and ankle range.",
+          "category": "engine",
+          "media": {
+            "type": "youtube",
+            "videoId": "pJzSDpcehuQ",
+            "sourceUrl": "https://www.youtube.com/shorts/pJzSDpcehuQ",
+            "thumbnailUrl": "https://i.ytimg.com/vi/pJzSDpcehuQ/hqdefault.jpg",
+            "sourceName": "FitnessFAQs"
+          }
+        }
+      ]
     }
   ],
   "martialSupplement": {
-    "id":"EX-DOPA-0206","name":"Collar-Drag Visualization","prescription":"WATCH + VISUALIZE ONLY","reps":"WATCH + VISUALIZE","timeSeconds":300,"time":"5:00","setupSeconds":20,"timerMode":"exercise",
-    "home":"Watch exact collar-drag demo; mentally rehearse only","away":"Same","cue":"Separate and optional; no physical reps while symptoms remain unresolved; never auto-log.","category":"martial-supplement",
-    "media":{"type":"youtube","videoId":"2HXybjpCbIg","sourceUrl":"https://www.youtube.com/shorts/2HXybjpCbIg","thumbnailUrl":"https://i.ytimg.com/vi/2HXybjpCbIg/hqdefault.jpg","sourceName":"DopamineO"}
+    "id": "EX-DOPA-0206",
+    "name": "Collar-Drag Entries",
+    "prescription": "2/side/min alternating ×5 min",
+    "reps": "2/SIDE/MIN",
+    "timeSeconds": 300,
+    "time": "5:00",
+    "setupSeconds": 20,
+    "timerMode": "exercise",
+    "home": "Alternate collar-drag entries with reset",
+    "away": "Shadow-drill collar-drag entries",
+    "cue": "Separate optional BJJ work; never auto-log.",
+    "category": "martial-supplement",
+    "media": {
+      "type": "youtube",
+      "videoId": "2HXybjpCbIg",
+      "sourceUrl": "https://www.youtube.com/shorts/2HXybjpCbIg",
+      "thumbnailUrl": "https://i.ytimg.com/vi/2HXybjpCbIg/hqdefault.jpg",
+      "sourceName": "DopamineO"
+    }
   },
   "featuredMode": "standard",
-  "transitionPolicy": {"sameSetupSeconds":15,"standardSeconds":20,"equipmentChangeSeconds":30,"sideSwitchSeconds":10}
+  "transitionPolicy": {
+    "sameSetupSeconds": 15,
+    "standardSeconds": 20,
+    "equipmentChangeSeconds": 30,
+    "sideSwitchSeconds": 10
+  }
 }
