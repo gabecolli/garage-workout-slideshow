@@ -1,297 +1,271 @@
 {
   "schemaVersion": 3,
-  "date": "2026-10-03",
-  "generatedAt": "2026-10-03T05:12:18.075976+00:00",
-  "planId": "DP-20261003-UW-001",
-  "title": "45-MIN FOUNDATION — WEEK 4 DAY 24",
-  "emphasis": "SATURDAY MEDIUM • COMPRESSION + SUPPORT + VERTICAL STRENGTH + ROTATION",
-  "additionalTitle": "CONSOLIDATE • RECORD LOADS + FORM + EFFORT • NO ASSUMED GATE PROGRESS",
+  "date": "2026-10-04",
+  "generatedAt": "2026-10-04T05:53:45.044144+00:00",
+  "planId": "DP-20261004-UW-001",
+  "title": "45-MIN FOUNDATION — WEEK 4 DAY 25",
+  "emphasis": "SUNDAY LOWER STRESS • BODYLINE + SUBMAXIMAL RINGS + DURABILITY + POWER",
+  "additionalTitle": "CONSOLIDATE • NO ASSUMED GATE PROGRESS • CURRENT HIP-LEG REPORT ADAPTED",
   "levels": {
-    "floor": "27:55: Ignition+A×3/B×2/C×1.",
-    "standard": "45:55: Ignition+A×3/B×3/C×2/D×2/E×3.",
-    "bonus": "Optional 5–10 min easy walk. BJJ 19:55: Ignition+A×2/D×1/E×1, or skip physical workout if class/time load is high."
+    "floor": "25:05: Ignition+A×3/B×2/C×1.",
+    "standard": "43:40: Ignition+A×3/B×3/C×3/D×2/E×3.",
+    "bonus": "Optional 5–10 min relaxed mobility. BJJ 18:40: Ignition+A×2/B×1/D×1, or skip physical workout if class/time load is high."
   },
   "ignition": {
-    "id": "EX-FUNC-038",
-    "name": "Jumping Jacks",
+    "id": "EX-DOPA-0109",
+    "name": "Dopa Band Vitruvian Waves",
     "reps": "TIMED",
     "timeSeconds": 600,
     "time": "10:00",
     "setupSeconds": 0,
     "timerMode": "cardio-exempt",
-    "home": "0:30 easy jumping jacks / 0:30 relaxed march ×10",
-    "away": "0:30 easy step jacks / 0:30 relaxed walk ×10",
-    "cue": "Exactly 10:00 whole-body cardio and ankle/hip/shoulder preparation; RPE 4–5.",
+    "home": "0:30 smooth Vitruvian waves / 0:30 easy stance reset ×10",
+    "away": "0:30 fast arm swings / 0:30 relaxed standing reset ×10",
+    "cue": "Exactly 10:00 low-impact shoulder, trunk and aerobic preparation; RPE 4–5.",
     "media": {
       "type": "youtube",
-      "videoId": "S8V_iXijSwc",
-      "sourceUrl": "https://www.youtube.com/shorts/S8V_iXijSwc",
-      "thumbnailUrl": "https://i.ytimg.com/vi/S8V_iXijSwc/hqdefault.jpg",
-      "sourceName": "Duke Health"
+      "videoId": "Lm4mqdpucWw",
+      "sourceUrl": "https://www.youtube.com/shorts/Lm4mqdpucWw",
+      "thumbnailUrl": "https://i.ytimg.com/vi/Lm4mqdpucWw/hqdefault.jpg",
+      "sourceName": "DopamineO"
     },
-    "prescription": "0:30 easy jumping jacks / 0:30 relaxed march ×10",
+    "prescription": "0:30 smooth Vitruvian waves / 0:30 easy stance reset ×10",
     "category": "ignition"
   },
   "deposits": [
     {
       "label": "A",
-      "title": "COMPRESSION + SUPPORT FOUNDATION",
+      "title": "BODYLINE TECHNIQUE",
       "rounds": 3,
-      "effort": "Rest 1:00 after EVERY round, including final. RPE 6; 4 RIR. Foundation compression rung; last qualifying USER-CONFIRMED exposure NONE VERIFIED. Today variable NONE; establish 6 clean reps. Next gate: two clean 3×6–8 exposures at ≤RPE8/2–3 RIR before straighter legs. Foundation support prerequisite; last qualifying USER-CONFIRMED exposure NONE VERIFIED. Today variable NONE; repeat 15 sec. Next gate: two clean 3×15–20-sec exposures at ≤RPE8 before tuck-support/L-sit progression.",
+      "effort": "Rest 1:00 after EVERY round, including final. RPE 5; 5 RIR. Current rung: Sunday bodyline regression. Last qualifying USER-CONFIRMED compression exposure NONE VERIFIED. Today variable NONE; technique only and no compression-gate credit. Next gate remains two confirmed 3×6–8 hanging-knee-raise exposures at ≤RPE8/2–3 RIR.",
       "exercises": [
         {
-          "id": "EX-T018",
-          "name": "Hanging Knee Raise",
-          "reps": "6",
-          "timeSeconds": 40,
-          "time": "0:40",
-          "setupSeconds": 20,
-          "timerMode": "exercise",
-          "home": "6 strict hanging knee raises; curl pelvis and minimize swing",
-          "away": "6 reverse crunches on the floor",
-          "cue": "Foundation compression rung; last qualifying USER-CONFIRMED exposure NONE VERIFIED. Today variable NONE; establish 6 clean reps. Next gate: two clean 3×6–8 exposures at ≤RPE8/2–3 RIR before straighter legs.",
-          "media": {
-            "type": "youtube",
-            "videoId": "xGjWrATlWJM",
-            "sourceUrl": "https://www.youtube.com/shorts/xGjWrATlWJM",
-            "thumbnailUrl": "https://i.ytimg.com/vi/xGjWrATlWJM/hqdefault.jpg",
-            "sourceName": "GoTherex | Strong for Life"
-          },
-          "prescription": "6 strict hanging knee raises; curl pelvis and minimize swing",
-          "category": "rings-calisthenics"
-        },
-        {
-          "id": "EX-R006",
-          "name": "Ring Support Hold",
-          "reps": "TIMED",
-          "timeSeconds": 15,
-          "time": "0:15",
-          "setupSeconds": 30,
-          "timerMode": "exercise",
-          "home": "15-sec ring support hold; push tall and keep rings quiet",
-          "away": "15-sec top push-up support hold",
-          "cue": "Foundation support prerequisite; last qualifying USER-CONFIRMED exposure NONE VERIFIED. Today variable NONE; repeat 15 sec. Next gate: two clean 3×15–20-sec exposures at ≤RPE8 before tuck-support/L-sit progression.",
-          "media": {
-            "type": "youtube",
-            "videoId": "ABZ_Z99qvHM",
-            "sourceUrl": "https://www.youtube.com/shorts/ABZ_Z99qvHM",
-            "thumbnailUrl": "https://i.ytimg.com/vi/ABZ_Z99qvHM/hqdefault.jpg",
-            "sourceName": "The Bodyweight Process"
-          },
-          "prescription": "15-sec ring support hold; push tall and keep rings quiet",
-          "category": "rings-calisthenics"
-        }
-      ]
-    },
-    {
-      "label": "B",
-      "title": "SUBMAXIMAL VERTICAL PULL + PRESS",
-      "rounds": 3,
-      "effort": "Rest 1:15 after EVERY round, including final. RPE 7; 4 RIR. Current rung: ordinary strict pull-up. Last USER-CONFIRMED benchmark: 2026-07-31, 14 comfortable reps at RPE6. Today variable NONE; standardize 3×6 submaximally. Next gate: two clean 3×8 exposures at ≤RPE7 before added load. Foundation ring-press rung; last qualifying USER-CONFIRMED exposure NONE VERIFIED. Today variable NONE; establish 5 clean reps. Next gate: two clean 3×6–8 exposures at ≤RPE8/2–3 RIR before load.",
-      "exercises": [
-        {
-          "id": "EX-G001",
-          "name": "Strict Pull-Up",
-          "reps": "6",
-          "timeSeconds": 35,
-          "time": "0:35",
-          "setupSeconds": 20,
-          "timerMode": "exercise",
-          "home": "6 crisp strict pull-ups; stop with 4 RIR",
-          "away": "6 strict pull-ups on a park bar",
-          "cue": "Current rung: ordinary strict pull-up. Last USER-CONFIRMED benchmark: 2026-07-31, 14 comfortable reps at RPE6. Today variable NONE; standardize 3×6 submaximally. Next gate: two clean 3×8 exposures at ≤RPE7 before added load.",
-          "media": {
-            "type": "youtube",
-            "videoId": "WqCXcFrA1Iw",
-            "sourceUrl": "https://www.youtube.com/shorts/WqCXcFrA1Iw",
-            "thumbnailUrl": "https://i.ytimg.com/vi/WqCXcFrA1Iw/hqdefault.jpg",
-            "sourceName": "FitnessFAQs"
-          },
-          "prescription": "6 crisp strict pull-ups; stop with 4 RIR",
-          "category": "strength"
-        },
-        {
-          "id": "EX-R005",
-          "name": "Ring Dip",
+          "id": "EX-T008",
+          "name": "McGill Curl-Up",
           "reps": "5",
           "timeSeconds": 30,
           "time": "0:30",
           "setupSeconds": 20,
           "timerMode": "exercise",
-          "home": "5 controlled ring dips; stable rings and consistent depth",
-          "away": "5 stable parallel-bar or chair dips",
-          "cue": "Foundation ring-press rung; last qualifying USER-CONFIRMED exposure NONE VERIFIED. Today variable NONE; establish 5 clean reps. Next gate: two clean 3×6–8 exposures at ≤RPE8/2–3 RIR before load.",
+          "home": "5 controlled McGill curl-ups with a neutral spine",
+          "away": "5 controlled McGill curl-ups on a clear floor",
+          "cue": "Current rung: Sunday bodyline regression. Last qualifying USER-CONFIRMED compression exposure NONE VERIFIED. Today variable NONE; technique only and no compression-gate credit. Next gate remains two confirmed 3×6–8 hanging-knee-raise exposures at ≤RPE8/2–3 RIR.",
           "media": {
             "type": "youtube",
-            "videoId": "MyfNG5_DLJM",
-            "sourceUrl": "https://www.youtube.com/shorts/MyfNG5_DLJM",
-            "thumbnailUrl": "https://i.ytimg.com/vi/MyfNG5_DLJM/hqdefault.jpg",
-            "sourceName": "The Movement Athlete"
+            "videoId": "BH5toeuGdfQ",
+            "sourceUrl": "https://www.youtube.com/shorts/BH5toeuGdfQ",
+            "thumbnailUrl": "https://i.ytimg.com/vi/BH5toeuGdfQ/hqdefault.jpg",
+            "sourceName": "Vital Force Physio"
           },
-          "prescription": "5 controlled ring dips; stable rings and consistent depth",
+          "prescription": "5 controlled McGill curl-ups with a neutral spine",
+          "category": "bodyline-skill"
+        }
+      ]
+    },
+    {
+      "label": "B",
+      "title": "SUBMAXIMAL HORIZONTAL PULL + PRESS",
+      "rounds": 3,
+      "effort": "Rest 1:00 after EVERY round, including final. RPE 6; 5 RIR. Current rung: submaximal unilateral horizontal row. Last qualifying USER-CONFIRMED exposure NONE VERIFIED. Today variable NONE; establish 3×8/side at 5 RIR. Next gate: two confirmed clean 3×8/side exposures at ≤RPE7 before load. Current rung: foundation ring push-up. Last qualifying USER-CONFIRMED exposure NONE VERIFIED. Today variable NONE; repeat 8 clean reps submaximally. Next gate: two confirmed clean 3×8 exposures at ≤RPE7/4–5 RIR before leverage or load.",
+      "exercises": [
+        {
+          "id": "EX-G014",
+          "name": "Seated One-Arm Cable Row",
+          "reps": "8/SIDE",
+          "timeSeconds": 50,
+          "time": "0:50",
+          "setupSeconds": 30,
+          "timerMode": "exercise",
+          "home": "8 seated one-arm cable rows/side; square torso and pause at ribs",
+          "away": "8 seated one-arm backpack rows/side",
+          "cue": "Current rung: submaximal unilateral horizontal row. Last qualifying USER-CONFIRMED exposure NONE VERIFIED. Today variable NONE; establish 3×8/side at 5 RIR. Next gate: two confirmed clean 3×8/side exposures at ≤RPE7 before load.",
+          "media": {
+            "type": "youtube",
+            "videoId": "GGd76507zio",
+            "sourceUrl": "https://www.youtube.com/shorts/GGd76507zio",
+            "thumbnailUrl": "https://i.ytimg.com/vi/GGd76507zio/hqdefault.jpg",
+            "sourceName": "Jim Stoppani, PhD"
+          },
+          "prescription": "8 seated one-arm cable rows/side; square torso and pause at ribs",
+          "category": "strength",
+          "sideMode": "per-side",
+          "sideCount": 2,
+          "sideSeconds": 25,
+          "sideTime": "0:25",
+          "switchSeconds": 10
+        },
+        {
+          "id": "EX-R002",
+          "name": "Ring Push-Up",
+          "reps": "8",
+          "timeSeconds": 35,
+          "time": "0:35",
+          "setupSeconds": 20,
+          "timerMode": "exercise",
+          "home": "8 controlled ring push-ups; rigid body and quiet rings",
+          "away": "8 controlled floor or incline push-ups",
+          "cue": "Current rung: foundation ring push-up. Last qualifying USER-CONFIRMED exposure NONE VERIFIED. Today variable NONE; repeat 8 clean reps submaximally. Next gate: two confirmed clean 3×8 exposures at ≤RPE7/4–5 RIR before leverage or load.",
+          "media": {
+            "type": "youtube",
+            "videoId": "QtJNskFMZpY",
+            "sourceUrl": "https://www.youtube.com/shorts/QtJNskFMZpY",
+            "thumbnailUrl": "https://i.ytimg.com/vi/QtJNskFMZpY/hqdefault.jpg",
+            "sourceName": "FitnessFAQs"
+          },
+          "prescription": "8 controlled ring push-ups; rigid body and quiet rings",
           "category": "strength"
         }
       ]
     },
     {
       "label": "C",
-      "title": "SQUAT STRENGTH + CONTROLLED ROTATION",
-      "rounds": 2,
-      "effort": "Rest 1:00 after EVERY round, including final. RPE 7; 3 RIR. Foundation squat anchor last planned 2026-09-21; no qualifying USER-CONFIRMED load/form/effort baseline. Today variable NONE; 2 consolidation sets. Next gate needs two clean 3×8 exposures at ≤RPE8/2–3 RIR; today cannot pass it. Controlled loaded-rotation anchor last planned 2026-09-29; no qualifying USER-CONFIRMED baseline. Today variable NONE; repeat 6/side with coordinated pivot. Next gate: two clean 3×6–8/side exposures at ≤RPE8 before load.",
+      "title": "LOWER-LEG + NECK DURABILITY",
+      "rounds": 3,
+      "effort": "Rest 0:45 after EVERY round, including final. RPE 5; 5 RIR. Current rung: unloaded seated lower-leg durability. Last qualifying USER-CONFIRMED exposure NONE VERIFIED. Today variable NONE; establish matched ankle range. Next gate: two confirmed clean 3×12 exposures at ≤RPE6 before resistance. Current rung: four-way self-resisted neck isometrics. Last qualifying USER-CONFIRMED exposure NONE VERIFIED. Today variable NONE; repeat 10 sec/direction. Next gate: two confirmed 3-round exposures at ≤RPE6 before longer holds.",
       "exercises": [
         {
-          "id": "EX-H001",
-          "name": "Belt Squat",
-          "reps": "8",
+          "id": "EX-FUNC-036",
+          "name": "Seated Heel-and-Toe Raise",
+          "reps": "12",
           "timeSeconds": 40,
           "time": "0:40",
-          "setupSeconds": 30,
+          "setupSeconds": 20,
           "timerMode": "exercise",
-          "home": "8 belt squats; choose 3-RIR load and record total load and depth",
-          "away": "8 backpack goblet squats; record load",
-          "cue": "Foundation squat anchor last planned 2026-09-21; no qualifying USER-CONFIRMED load/form/effort baseline. Today variable NONE; 2 consolidation sets. Next gate needs two clean 3×8 exposures at ≤RPE8/2–3 RIR; today cannot pass it.",
+          "home": "12 seated heel-and-toe raises through controlled ankle range",
+          "away": "12 seated heel-and-toe raises on a stable chair",
+          "cue": "Current rung: unloaded seated lower-leg durability. Last qualifying USER-CONFIRMED exposure NONE VERIFIED. Today variable NONE; establish matched ankle range. Next gate: two confirmed clean 3×12 exposures at ≤RPE6 before resistance.",
           "media": {
             "type": "youtube",
-            "videoId": "cWZrLzEqD5w",
-            "sourceUrl": "https://www.youtube.com/shorts/cWZrLzEqD5w",
-            "thumbnailUrl": "https://i.ytimg.com/vi/cWZrLzEqD5w/hqdefault.jpg",
-            "sourceName": "Juggernaut Training Systems"
+            "videoId": "ko5X9vHhmhk",
+            "sourceUrl": "https://www.youtube.com/shorts/ko5X9vHhmhk",
+            "thumbnailUrl": "https://i.ytimg.com/vi/ko5X9vHhmhk/hqdefault.jpg",
+            "sourceName": "Justin Agustin"
           },
-          "prescription": "8 belt squats; choose 3-RIR load and record total load and depth",
-          "category": "strength-rotation"
+          "prescription": "12 seated heel-and-toe raises through controlled ankle range",
+          "category": "durability"
         },
         {
-          "id": "EX-FUNC-026",
-          "name": "Standing Cable Rotation",
-          "reps": "6/SIDE",
-          "timeSeconds": 50,
-          "time": "0:50",
-          "setupSeconds": 30,
+          "id": "EX-T028",
+          "name": "Self-Resisted Neck Isometrics",
+          "reps": "TIMED",
+          "timeSeconds": 40,
+          "time": "0:40",
+          "setupSeconds": 20,
           "timerMode": "exercise",
-          "home": "6 controlled cable rotations/side; record load and matched range",
-          "away": "6 backpack standing rotations/side",
-          "cue": "Controlled loaded-rotation anchor last planned 2026-09-29; no qualifying USER-CONFIRMED baseline. Today variable NONE; repeat 6/side with coordinated pivot. Next gate: two clean 3×6–8/side exposures at ≤RPE8 before load.",
+          "home": "10-sec self-resisted neck hold in each of four directions",
+          "away": "10-sec self-resisted neck hold in each of four directions",
+          "cue": "Current rung: four-way self-resisted neck isometrics. Last qualifying USER-CONFIRMED exposure NONE VERIFIED. Today variable NONE; repeat 10 sec/direction. Next gate: two confirmed 3-round exposures at ≤RPE6 before longer holds.",
           "media": {
             "type": "youtube",
-            "videoId": "rk6zS3eJICY",
-            "sourceUrl": "https://www.youtube.com/shorts/rk6zS3eJICY",
-            "thumbnailUrl": "https://i.ytimg.com/vi/rk6zS3eJICY/hq2.jpg",
-            "sourceName": "Live Lean TV"
+            "videoId": "Ik6U4kIMmsg",
+            "sourceUrl": "https://www.youtube.com/shorts/Ik6U4kIMmsg",
+            "thumbnailUrl": "https://i.ytimg.com/vi/Ik6U4kIMmsg/hqdefault.jpg",
+            "sourceName": "PostureFlow"
           },
-          "prescription": "6 controlled cable rotations/side; record load and matched range",
-          "category": "strength-rotation",
-          "sideMode": "per-side",
-          "sideCount": 2,
-          "sideSeconds": 25,
-          "sideTime": "0:25",
-          "switchSeconds": 10
+          "prescription": "10-sec self-resisted neck hold in each of four directions",
+          "category": "durability"
         }
       ]
     },
     {
       "label": "D",
-      "title": "ROTATIONAL POWER",
+      "title": "UPPER-BODY POWER MECHANICS",
       "rounds": 2,
-      "effort": "Rest 0:45 after EVERY round, including final. RPE 6; 4 RIR. Distinct from Tuesday's scoop throw; USER-CONFIRMED distance/load baseline NONE VERIFIED. Today variable NONE; record ball and best matched distance. Stop when speed, distance or posture declines.",
+      "effort": "Rest 0:45 after EVERY round, including final. RPE 5; 5 RIR. USER-CONFIRMED ball/load and distance baseline NONE VERIFIED. Today variable NONE; record ball and matched distance. Stop when speed, distance or posture declines.",
       "exercises": [
         {
-          "id": "EX-FUNC-020",
-          "name": "Medicine-Ball Shot-Put Throw",
-          "reps": "3/SIDE",
-          "timeSeconds": 30,
-          "time": "0:30",
+          "id": "EX-E006",
+          "name": "Medicine-Ball Chest Pass",
+          "reps": "4",
+          "timeSeconds": 20,
+          "time": "0:20",
           "setupSeconds": 30,
           "timerMode": "exercise",
-          "home": "3 med-ball shot-put throws/side with a ball light enough for speed",
-          "away": "3 explosive standing rotational pushes/side without release",
-          "cue": "Distinct from Tuesday's scoop throw; USER-CONFIRMED distance/load baseline NONE VERIFIED. Today variable NONE; record ball and best matched distance. Stop when speed, distance or posture declines.",
+          "home": "4 crisp no-rebound medicine-ball chest passes to a wall",
+          "away": "4 fast incline push-ups without leaving the surface",
+          "cue": "USER-CONFIRMED ball/load and distance baseline NONE VERIFIED. Today variable NONE; record ball and matched distance. Stop when speed, distance or posture declines.",
           "media": {
             "type": "youtube",
-            "videoId": "1h1usmKQPfs",
-            "sourceUrl": "https://www.youtube.com/shorts/1h1usmKQPfs",
-            "thumbnailUrl": "https://i.ytimg.com/vi/1h1usmKQPfs/hq2.jpg",
-            "sourceName": "Sean Smith"
+            "videoId": "GZAxYgRKP8Y",
+            "sourceUrl": "https://www.youtube.com/shorts/GZAxYgRKP8Y",
+            "thumbnailUrl": "https://i.ytimg.com/vi/GZAxYgRKP8Y/hqdefault.jpg",
+            "sourceName": "Fitness Pain Free"
           },
-          "prescription": "3 med-ball shot-put throws/side with a ball light enough for speed",
-          "category": "power",
-          "sideMode": "per-side",
-          "sideCount": 2,
-          "sideSeconds": 15,
-          "sideTime": "0:15",
-          "switchSeconds": 10
+          "prescription": "4 crisp no-rebound medicine-ball chest passes to a wall",
+          "category": "power"
         }
       ]
     },
     {
       "label": "E",
-      "title": "ROPE INTERVALS + LATERAL MOBILITY",
+      "title": "GRIP + RECOVERY ARMOR",
       "rounds": 3,
-      "effort": "Rest 0:20 after EVERY round, including final. RPE 7; 3 RIR. Repeatable interval engine; USER-CONFIRMED cadence baseline NONE VERIFIED. Today variable NONE; record misses/cadence and hold output across all 3 rounds. Active lateral hip/ankle mobility and strength; USER-CONFIRMED range baseline NONE VERIFIED. Today variable NONE; match comfortable depth side to side. E totals 7:30 with setup and rest.",
+      "effort": "Rest 0:20 after EVERY round, including final. RPE 4; 6 RIR. Current rung: unweighted grip hang. Last qualifying USER-CONFIRMED exposure NONE VERIFIED. Today variable NONE; establish three 30-sec submaximal holds. Next gate: two confirmed clean 3×30-sec exposures at ≤RPE6 before towel or load. Recovery armor and trunk control; slow exhale and keep rib movement quiet. E totals 6:30 with setup and rest.",
       "exercises": [
         {
-          "id": "EX-I002",
-          "name": "Jump-Rope Intervals",
+          "id": "EX-G007",
+          "name": "Dead Hang",
           "reps": "TIMED",
-          "timeSeconds": 40,
-          "time": "0:40",
-          "setupSeconds": 30,
+          "timeSeconds": 30,
+          "time": "0:30",
+          "setupSeconds": 20,
           "timerMode": "exercise",
-          "home": "40-sec smooth basic-bounce rope; repeat the same cadence each round",
-          "away": "40-sec low-impact line hops or fast walk",
-          "cue": "Repeatable interval engine; USER-CONFIRMED cadence baseline NONE VERIFIED. Today variable NONE; record misses/cadence and hold output across all 3 rounds.",
+          "home": "30-sec relaxed dead hang with a secure grip",
+          "away": "30-sec hang from a secure park bar",
+          "cue": "Current rung: unweighted grip hang. Last qualifying USER-CONFIRMED exposure NONE VERIFIED. Today variable NONE; establish three 30-sec submaximal holds. Next gate: two confirmed clean 3×30-sec exposures at ≤RPE6 before towel or load.",
           "media": {
             "type": "youtube",
-            "videoId": "XSY9AE72inM",
-            "sourceUrl": "https://www.youtube.com/shorts/XSY9AE72inM",
-            "thumbnailUrl": "https://i.ytimg.com/vi/XSY9AE72inM/hq2.jpg",
-            "sourceName": "Lauren Jumps"
+            "videoId": "dOCQjaasbGs",
+            "sourceUrl": "https://www.youtube.com/shorts/dOCQjaasbGs",
+            "thumbnailUrl": "https://i.ytimg.com/vi/dOCQjaasbGs/hqdefault.jpg",
+            "sourceName": "FitnessFAQs"
           },
-          "prescription": "40-sec smooth basic-bounce rope; repeat the same cadence each round",
-          "category": "engine-mobility"
+          "prescription": "30-sec relaxed dead hang with a secure grip",
+          "category": "engine-armor"
         },
         {
-          "id": "EX-H021",
-          "name": "Cossack Squat",
-          "reps": "6 ALTERNATING",
+          "id": "EX-FUNC-030",
+          "name": "Seated Diaphragmatic Breathing",
+          "reps": "TIMED",
           "timeSeconds": 40,
           "time": "0:40",
           "setupSeconds": 20,
           "timerMode": "exercise",
-          "home": "6 alternating bodyweight Cossack squats through controlled range",
-          "away": "6 alternating lateral squats",
-          "cue": "Active lateral hip/ankle mobility and strength; USER-CONFIRMED range baseline NONE VERIFIED. Today variable NONE; match comfortable depth side to side. E totals 7:30 with setup and rest.",
+          "home": "40-sec seated nasal diaphragmatic breathing",
+          "away": "40-sec seated nasal diaphragmatic breathing",
+          "cue": "Recovery armor and trunk control; slow exhale and keep rib movement quiet. E totals 6:30 with setup and rest.",
           "media": {
             "type": "youtube",
-            "videoId": "pJzSDpcehuQ",
-            "sourceUrl": "https://www.youtube.com/shorts/pJzSDpcehuQ",
-            "thumbnailUrl": "https://i.ytimg.com/vi/pJzSDpcehuQ/hqdefault.jpg",
-            "sourceName": "FitnessFAQs"
+            "videoId": "v0Yj9HjgR64",
+            "sourceUrl": "https://www.youtube.com/shorts/v0Yj9HjgR64",
+            "thumbnailUrl": "https://i.ytimg.com/vi/v0Yj9HjgR64/hqdefault.jpg",
+            "sourceName": "Michelle Kenway"
           },
-          "prescription": "6 alternating bodyweight Cossack squats through controlled range",
-          "category": "engine-mobility"
+          "prescription": "40-sec seated nasal diaphragmatic breathing",
+          "category": "engine-armor"
         }
       ]
     }
   ],
   "martialSupplement": {
-    "id": "EX-DOPA-0212",
-    "name": "Technical Stand-Up",
-    "reps": "2/SIDE/MIN ALTERNATING",
+    "id": "EX-DOPA-0202",
+    "name": "Dopa Band Hand-Fighting Drill",
+    "reps": "2 EXCHANGES/SIDE/MIN",
     "timeSeconds": 300,
     "time": "5:00",
     "setupSeconds": 20,
     "timerMode": "exercise",
-    "home": "Optional 5:00 unresisted alternating technical stand-ups, 2/side/min",
-    "away": "Same solo BJJ drill",
-    "cue": "Separate—not counted in physical duration, completion, or progression. Never auto-log.",
+    "home": "Optional 5:00 light Dopa-band hand-fighting entries, 2 exchanges/side/min",
+    "away": "Optional 5:00 light partner hand-fighting entries, 2 exchanges/side/min",
+    "cue": "Separate—not counted in physical duration, completion or progression. Never auto-log.",
     "media": {
       "type": "youtube",
-      "videoId": "jX_54nl7Fes",
-      "sourceUrl": "https://www.youtube.com/shorts/jX_54nl7Fes",
-      "thumbnailUrl": "https://i.ytimg.com/vi/jX_54nl7Fes/hqdefault.jpg",
+      "videoId": "EVQVIvDrW8g",
+      "sourceUrl": "https://www.youtube.com/shorts/EVQVIvDrW8g",
+      "thumbnailUrl": "https://i.ytimg.com/vi/EVQVIvDrW8g/hqdefault.jpg",
       "sourceName": "DopamineO"
     },
-    "prescription": "Optional 5:00 unresisted alternating technical stand-ups, 2/side/min",
+    "prescription": "Optional 5:00 light Dopa-band hand-fighting entries, 2 exchanges/side/min",
     "category": "martial"
   },
   "featuredMode": "standard",
