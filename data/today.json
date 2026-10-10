@@ -1,253 +1,190 @@
 {
   "schemaVersion": 3,
-  "date": "2026-10-09",
-  "generatedAt": "2026-10-09T05:52:02.956Z",
-  "planId": "DP-20261009-UW-001",
-  "title": "45-MIN INTENSIFICATION — BLOCK 2 WEEK 5 DAY 30",
-  "emphasis": "FRIDAY HARD • GREEN • FRONT LEVER + WEIGHTED HORIZONTAL STRENGTH + HINGE + CARRY",
-  "additionalTitle": "GREEN • FOUNDATION RUNGS RETAINED • NO UNVERIFIED ADVANCEMENT",
+  "date": "2026-10-10",
+  "generatedAt": "2026-10-10T06:01:31.620Z",
+  "planId": "DP-20261010-UW-001",
+  "title": "45-MIN INTENSIFICATION — BLOCK 2 WEEK 5 DAY 31",
+  "emphasis": "SATURDAY MEDIUM • GREEN • COMPRESSION + SUPPORT + VERTICAL STRENGTH + ROTATION",
+  "additionalTitle": "GREEN • FOUNDATION RUNGS RETAINED • NO INJURY-BASED RESTRICTIONS",
   "levels": {
-    "floor": "29:40: Ignition+A×3/B×2/C×1/D×1/E×1.",
-    "standard": "44:30: Ignition+A×3/B×3/C×3/D×2/E×2.",
-    "bonus": "Optional 5:00 easy walk. BJJ 20:55: Ignition+A×2/C×1/D×1/E×1, or skip physical workout if class/time load is high."
+    "floor": "25:20: Ignition+A×2/B×2/C×1/D×1.",
+    "standard": "47:50: Ignition+A×3/B×3/C×3/D×2/E×1.",
+    "bonus": "Optional 5–10 min easy walk. BJJ 20:10: Ignition+A×2/C×1/D×1, or skip physical workout if class/time load is high."
   },
   "ignition": {
-    "id": "EX-I002",
-    "name": "Jump-Rope Intervals",
+    "id": "EX-FUNC-039",
+    "name": "March in Place",
     "reps": "TIMED",
     "timeSeconds": 600,
     "time": "10:00",
     "setupSeconds": 0,
     "timerMode": "cardio-exempt",
-    "home": "Jump rope 0:20 smooth + 0:40 easy bounce/walk ×10, RPE4–5",
-    "away": "Shadow rope 0:20 + easy walk 0:40 ×10, RPE4–5",
-    "cue": "Exactly 10 minutes. Prepare feet, calves, hips, hinge, trunk and shoulders for Friday HARD; no martial drilling.",
+    "home": "March in place 10:00, building from easy to brisk cadence at RPE4–5",
+    "away": "Brisk walk 10:00, building from easy to brisk cadence at RPE4–5",
+    "cue": "Exactly 10 minutes. Prepare hips, ankles, trunk and shoulders for Saturday medium work; no martial drilling.",
     "media": {
       "type": "youtube",
-      "videoId": "XSY9AE72inM",
-      "sourceUrl": "https://www.youtube.com/shorts/XSY9AE72inM",
-      "thumbnailUrl": "https://i.ytimg.com/vi/XSY9AE72inM/hqdefault.jpg",
-      "sourceName": "Lauren Jumps"
+      "videoId": "FEc4eikj3Yo",
+      "sourceUrl": "https://www.youtube.com/shorts/FEc4eikj3Yo",
+      "thumbnailUrl": "https://i.ytimg.com/vi/FEc4eikj3Yo/hqdefault.jpg",
+      "sourceName": "Turo Family Chiropractic"
     },
-    "prescription": "Jump rope 0:20 smooth + 0:40 easy bounce/walk ×10, RPE4–5",
+    "prescription": "March in place 10:00, building from easy to brisk cadence at RPE4–5",
     "category": "ignition"
   },
   "deposits": [
     {
       "label": "A",
-      "title": "FRONT-LEVER SKILL",
+      "title": "COMPRESSION + SUPPORT",
       "rounds": 3,
-      "effort": "Rest 0:55 after EVERY round, including final. Planned RPE7; 3RIR. Current rung: 10-sec tuck front-lever hold. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation rung in Week 5 because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×15–20-sec exposures at ≤RPE8 before 3×3–5 assisted/tuck ice cream makers. Stable Tuesday/Friday skill anchor; repeat occurs after 72 hours and adds no unverified progression.",
+      "effort": "Rest 0:55 after EVERY round, including final. Planned RPE7; 3RIR. Current rung: strict hanging knee raise. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation rung because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×6–8 exposures at 2–3RIR/≤RPE8 before partial straight-leg raises. Stable Wednesday/Saturday compression anchor; deliberate repeat after 72 hours. Current rung: 10-sec ring support hold. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation rung because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×15–20-sec exposures at ≤RPE8 before one-leg/full L-sit work. Stable Wednesday/Saturday support anchor; deliberate repeat after 72 hours.",
       "exercises": [
         {
-          "id": "EX-CAL-FL001",
-          "name": "Tuck Front Lever Hold",
+          "id": "EX-T018",
+          "name": "Hanging Knee Raise",
+          "reps": "6",
+          "timeSeconds": 30,
+          "time": "0:30",
+          "setupSeconds": 20,
+          "timerMode": "exercise",
+          "home": "6 strict hanging knee raises; curl pelvis and eliminate swing",
+          "away": "6 reverse crunches; curl pelvis slowly",
+          "cue": "Current rung: strict hanging knee raise. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation rung because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×6–8 exposures at 2–3RIR/≤RPE8 before partial straight-leg raises. Stable Wednesday/Saturday compression anchor; deliberate repeat after 72 hours.",
+          "media": {
+            "type": "youtube",
+            "videoId": "xGjWrATlWJM",
+            "sourceUrl": "https://www.youtube.com/shorts/xGjWrATlWJM",
+            "thumbnailUrl": "https://i.ytimg.com/vi/xGjWrATlWJM/hqdefault.jpg",
+            "sourceName": "GoTherex | Strong for Life"
+          },
+          "prescription": "6 strict hanging knee raises; curl pelvis and eliminate swing",
+          "category": "strength"
+        },
+        {
+          "id": "EX-R006",
+          "name": "Ring Support Hold",
           "reps": "TIMED",
           "timeSeconds": 10,
           "time": "0:10",
-          "setupSeconds": 20,
+          "setupSeconds": 15,
           "timerMode": "exercise",
-          "home": "Tuck front-lever hold 0:10; depress shoulders, posterior tilt, hips level",
-          "away": "Tuck lever row hold under a sturdy table 0:10",
-          "cue": "Current rung: 10-sec tuck front-lever hold. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation rung in Week 5 because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×15–20-sec exposures at ≤RPE8 before 3×3–5 assisted/tuck ice cream makers. Stable Tuesday/Friday skill anchor; repeat occurs after 72 hours and adds no unverified progression.",
+          "home": "Ring support hold 0:10; push tall and keep rings quiet",
+          "away": "Top push-up support 0:10; push tall",
+          "cue": "Current rung: 10-sec ring support hold. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation rung because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×15–20-sec exposures at ≤RPE8 before one-leg/full L-sit work. Stable Wednesday/Saturday support anchor; deliberate repeat after 72 hours.",
           "media": {
             "type": "youtube",
-            "videoId": "EkdHh8DYlQ0",
-            "sourceUrl": "https://www.youtube.com/shorts/EkdHh8DYlQ0",
-            "thumbnailUrl": "https://i.ytimg.com/vi/EkdHh8DYlQ0/hqdefault.jpg",
-            "sourceName": "Summerfunfitness"
+            "videoId": "ABZ_Z99qvHM",
+            "sourceUrl": "https://www.youtube.com/shorts/ABZ_Z99qvHM",
+            "thumbnailUrl": "https://i.ytimg.com/vi/ABZ_Z99qvHM/hqdefault.jpg",
+            "sourceName": "The Bodyweight Process"
           },
-          "prescription": "Tuck front-lever hold 0:10; depress shoulders, posterior tilt, hips level",
+          "prescription": "Ring support hold 0:10; push tall and keep rings quiet",
           "category": "strength"
         }
       ]
     },
     {
       "label": "B",
-      "title": "WEIGHTED HORIZONTAL PULL + PRESS",
+      "title": "SUBMAX VERTICAL PULL + PRESS",
       "rounds": 3,
-      "effort": "Rest 1:00 after EVERY round, including final. Planned RPE7; 3RIR. Current rung: one-arm cable-row foundation. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation rung in Week 5 because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×6–8/side exposures with known load at 2–3RIR/≤RPE8 before the smallest load increase.  Current rung: split-stance single-arm cable-press foundation. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation rung in Week 5 because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×6–8/side exposures with known load/ROM at 2–3RIR/≤RPE8 before the smallest load increase. Deliberate Friday weighted-press anchor, last planned Oct 2.",
+      "effort": "Rest 1:00 after EVERY round, including final. Planned RPE6; 4RIR. Current rung: bodyweight strict pull-up, 5 crisp reps. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation rung because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×6–8 exposures at 2–3RIR/≤RPE8 before adding load. Five reps uses the reported 14-rep benchmark conservatively; last planned Oct 5. Current rung: floor pike push-up. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation rung because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×6–8 exposures at 2–3RIR/≤RPE8 before feet elevation or load. Submaximal Saturday vertical press; last planned Oct 5.",
       "exercises": [
         {
-          "id": "EX-G014",
-          "name": "One-Arm Cable Row",
-          "reps": "6/SIDE",
-          "timeSeconds": 40,
-          "time": "0:40",
-          "setupSeconds": 30,
+          "id": "EX-G001",
+          "name": "Strict Pull-Up",
+          "reps": "5",
+          "timeSeconds": 30,
+          "time": "0:30",
+          "setupSeconds": 15,
           "timerMode": "exercise",
-          "home": "6 one-arm seated cable rows/side at 3RIR; torso square",
-          "away": "6 one-arm backpack rows/side at 3RIR",
-          "cue": "Current rung: one-arm cable-row foundation. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation rung in Week 5 because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×6–8/side exposures with known load at 2–3RIR/≤RPE8 before the smallest load increase. ",
+          "home": "5 strict pull-ups; chest tall, no kick",
+          "away": "5 sturdy-beam pull-ups or 8 controlled backpack pulldowns",
+          "cue": "Current rung: bodyweight strict pull-up, 5 crisp reps. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation rung because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×6–8 exposures at 2–3RIR/≤RPE8 before adding load. Five reps uses the reported 14-rep benchmark conservatively; last planned Oct 5.",
           "media": {
             "type": "youtube",
-            "videoId": "GGd76507zio",
-            "sourceUrl": "https://www.youtube.com/shorts/GGd76507zio",
-            "thumbnailUrl": "https://i.ytimg.com/vi/GGd76507zio/hqdefault.jpg",
-            "sourceName": "Jim Stoppani, PhD"
+            "videoId": "WqCXcFrA1Iw",
+            "sourceUrl": "https://www.youtube.com/shorts/WqCXcFrA1Iw",
+            "thumbnailUrl": "https://i.ytimg.com/vi/WqCXcFrA1Iw/hqdefault.jpg",
+            "sourceName": "FitnessFAQs"
           },
-          "prescription": "6 one-arm seated cable rows/side at 3RIR; torso square",
-          "category": "strength",
-          "sideMode": "per-side",
-          "sideCount": 2,
-          "sideSeconds": 20,
-          "sideTime": "0:20",
-          "switchSeconds": 10
+          "prescription": "5 strict pull-ups; chest tall, no kick",
+          "category": "strength"
         },
         {
-          "id": "EX-FUNC-008",
-          "name": "Split-Stance Single-Arm Cable Press",
-          "reps": "6/SIDE",
-          "timeSeconds": 40,
-          "time": "0:40",
-          "setupSeconds": 30,
+          "id": "EX-R009",
+          "name": "Pike Push-Up",
+          "reps": "6",
+          "timeSeconds": 30,
+          "time": "0:30",
+          "setupSeconds": 20,
           "timerMode": "exercise",
-          "home": "6 split-stance single-arm cable presses/side at 3RIR; ribs and pelvis square",
-          "away": "6 one-arm loaded-backpack floor presses/side at 3RIR",
-          "cue": "Current rung: split-stance single-arm cable-press foundation. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation rung in Week 5 because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×6–8/side exposures with known load/ROM at 2–3RIR/≤RPE8 before the smallest load increase. Deliberate Friday weighted-press anchor, last planned Oct 2.",
+          "home": "6 pike push-ups; head travels forward/down",
+          "away": "6 floor pike push-ups",
+          "cue": "Current rung: floor pike push-up. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation rung because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×6–8 exposures at 2–3RIR/≤RPE8 before feet elevation or load. Submaximal Saturday vertical press; last planned Oct 5.",
           "media": {
             "type": "youtube",
-            "videoId": "6hY2HlS05gU",
-            "sourceUrl": "https://www.youtube.com/shorts/6hY2HlS05gU",
-            "thumbnailUrl": "https://i.ytimg.com/vi/6hY2HlS05gU/hq2.jpg",
-            "sourceName": "CresseyPerf"
+            "videoId": "f4bqhcmSWNU",
+            "sourceUrl": "https://www.youtube.com/shorts/f4bqhcmSWNU",
+            "thumbnailUrl": "https://i.ytimg.com/vi/f4bqhcmSWNU/hqdefault.jpg",
+            "sourceName": "SaturnoMovement"
           },
-          "prescription": "6 split-stance single-arm cable presses/side at 3RIR; ribs and pelvis square",
-          "category": "strength",
-          "sideMode": "per-side",
-          "sideCount": 2,
-          "sideSeconds": 20,
-          "sideTime": "0:20",
-          "switchSeconds": 10
+          "prescription": "6 pike push-ups; head travels forward/down",
+          "category": "strength"
         }
       ]
     },
     {
       "label": "C",
-      "title": "HINGE + TRUNK",
+      "title": "UNILATERAL LEGS + CONTROLLED ROTATION",
       "rounds": 3,
-      "effort": "Rest 1:15 after EVERY round, including final. Planned RPE7; 3RIR. Current rung: barbell Romanian-deadlift foundation. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation rung in Week 5 because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×6–8 exposures with known load/ROM at 2–3RIR/≤RPE8 before the smallest load increase. Deliberate weekly Friday hinge anchor, last planned Oct 2. Current rung: 20-sec bent-knee hollow hold. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation rung in Week 5 because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×20-sec exposures at ≤RPE7 before extending one leg. Trunk adjunct only; it does not satisfy the front-lever gate.",
+      "effort": "Rest 1:15 after EVERY round, including final. Planned RPE7; 3RIR. Current rung: front-foot-elevated dumbbell split squat. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation rung because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×6–8/side exposures with known load/ROM at 2–3RIR/≤RPE8 before the smallest load increase. Meaningful unilateral squat plus active hip/ankle mobility; last planned Sep 26. Current rung: standing cable rotation, 6/side. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation rung because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×6–8/side exposures with known load/range and safe pivot before load. Tuesday/Saturday dynamic rotational-strength anchor; last planned Oct 6.",
       "exercises": [
         {
-          "id": "EX-H006",
-          "name": "Barbell Romanian Deadlift",
-          "reps": "6",
+          "id": "EX-FUNC-012",
+          "name": "Front-Foot-Elevated Dumbbell Split Squat",
+          "reps": "6/SIDE",
           "timeSeconds": 40,
           "time": "0:40",
           "setupSeconds": 30,
           "timerMode": "exercise",
-          "home": "6 barbell Romanian deadlifts at 3RIR; record load and comfortable ROM",
-          "away": "6 loaded-backpack Romanian deadlifts at 3RIR",
-          "cue": "Current rung: barbell Romanian-deadlift foundation. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation rung in Week 5 because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×6–8 exposures with known load/ROM at 2–3RIR/≤RPE8 before the smallest load increase. Deliberate weekly Friday hinge anchor, last planned Oct 2.",
+          "home": "6 front-foot-elevated dumbbell split squats/side at 3RIR",
+          "away": "6 floor split squats/side at 3RIR",
+          "cue": "Current rung: front-foot-elevated dumbbell split squat. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation rung because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×6–8/side exposures with known load/ROM at 2–3RIR/≤RPE8 before the smallest load increase. Meaningful unilateral squat plus active hip/ankle mobility; last planned Sep 26.",
           "media": {
             "type": "youtube",
-            "videoId": "d-hn_0sEpRQ",
-            "sourceUrl": "https://www.youtube.com/shorts/d-hn_0sEpRQ",
-            "thumbnailUrl": "https://i.ytimg.com/vi/d-hn_0sEpRQ/hq2.jpg",
-            "sourceName": "Squat University"
+            "videoId": "w2oxzOGPgfU",
+            "sourceUrl": "https://www.youtube.com/shorts/w2oxzOGPgfU",
+            "thumbnailUrl": "https://i.ytimg.com/vi/w2oxzOGPgfU/hq2.jpg",
+            "sourceName": "UNIT Fitness Rushden"
           },
-          "prescription": "6 barbell Romanian deadlifts at 3RIR; record load and comfortable ROM",
-          "category": "strength"
+          "prescription": "6 front-foot-elevated dumbbell split squats/side at 3RIR",
+          "category": "strength",
+          "sideMode": "per-side",
+          "sideCount": 2,
+          "sideSeconds": 20,
+          "sideTime": "0:20",
+          "switchSeconds": 10
         },
         {
-          "id": "EX-FUNC-027",
-          "name": "Bent-Knee Hollow Hold",
-          "reps": "TIMED",
-          "timeSeconds": 20,
-          "time": "0:20",
-          "setupSeconds": 20,
-          "timerMode": "exercise",
-          "home": "Bent-knee hollow hold 0:20; low back down, breathe",
-          "away": "Supine abdominal brace 0:20",
-          "cue": "Current rung: 20-sec bent-knee hollow hold. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation rung in Week 5 because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×20-sec exposures at ≤RPE7 before extending one leg. Trunk adjunct only; it does not satisfy the front-lever gate.",
-          "media": {
-            "type": "youtube",
-            "videoId": "vt_12h0vaG0",
-            "sourceUrl": "https://www.youtube.com/shorts/vt_12h0vaG0",
-            "thumbnailUrl": "https://i.ytimg.com/vi/vt_12h0vaG0/hq2.jpg",
-            "sourceName": "Dr. Kira Steele"
-          },
-          "prescription": "Bent-knee hollow hold 0:20; low back down, breathe",
-          "category": "strength"
-        }
-      ]
-    },
-    {
-      "label": "D",
-      "title": "HINGE POWER",
-      "rounds": 2,
-      "effort": "Rest 1:00 after EVERY round, including final. Planned RPE6; 4RIR. Current rung: two-hand kettlebell swing. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE. Next gate: two confirmed crisp 3×10 exposures with stable speed/posture at ≤RPE7 before load or reps. Stop immediately when speed or posture declines. Deliberate Friday power anchor, last planned Oct 2.",
-      "exercises": [
-        {
-          "id": "EX-H008",
-          "name": "Kettlebell Swing",
-          "reps": "10",
-          "timeSeconds": 30,
-          "time": "0:30",
-          "setupSeconds": 30,
-          "timerMode": "exercise",
-          "home": "10 two-hand kettlebell swings; crisp hip snap, bell floats",
-          "away": "5 crisp broad jumps with full reset",
-          "cue": "Current rung: two-hand kettlebell swing. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE. Next gate: two confirmed crisp 3×10 exposures with stable speed/posture at ≤RPE7 before load or reps. Stop immediately when speed or posture declines. Deliberate Friday power anchor, last planned Oct 2.",
-          "media": {
-            "type": "youtube",
-            "videoId": "CA_LkNOu34w",
-            "sourceUrl": "https://www.youtube.com/shorts/CA_LkNOu34w",
-            "thumbnailUrl": "https://i.ytimg.com/vi/CA_LkNOu34w/hqdefault.jpg",
-            "sourceName": "NeuStrength | Personal Trainer Wilmington NC"
-          },
-          "prescription": "10 two-hand kettlebell swings; crisp hip snap, bell floats",
-          "category": "strength"
-        }
-      ]
-    },
-    {
-      "label": "E",
-      "title": "CARRY + ACTIVE HIP CONTROL",
-      "rounds": 2,
-      "effort": "Rest 0:50 after EVERY round, including final. Planned RPE7; 3RIR. Current rung: 30-sec double-kettlebell front-rack carry. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE. Next gate: two confirmed clean 3×30-sec exposures at ≤RPE8 with known load before adding time or load. Current rung: supported hip airplane. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE. Next gate: two confirmed controlled 2×3/side exposures with repeatable balance/range before reducing support.",
-      "exercises": [
-        {
-          "id": "EX-FUNC-002",
-          "name": "Double Kettlebell Front-Rack Carry",
-          "reps": "TIMED",
-          "timeSeconds": 30,
-          "time": "0:30",
-          "setupSeconds": 30,
-          "timerMode": "exercise",
-          "home": "Double-kettlebell front-rack carry 0:30; tall, quiet steps",
-          "away": "Double-backpack front-rack carry 0:30",
-          "cue": "Current rung: 30-sec double-kettlebell front-rack carry. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE. Next gate: two confirmed clean 3×30-sec exposures at ≤RPE8 with known load before adding time or load.",
-          "media": {
-            "type": "youtube",
-            "videoId": "_N0MAobs4wc",
-            "sourceUrl": "https://www.youtube.com/shorts/_N0MAobs4wc",
-            "thumbnailUrl": "https://i.ytimg.com/vi/_N0MAobs4wc/hq2.jpg",
-            "sourceName": "All Day Fit"
-          },
-          "prescription": "Double-kettlebell front-rack carry 0:30; tall, quiet steps",
-          "category": "strength"
-        },
-        {
-          "id": "EX-H027",
-          "name": "Supported Hip Airplane",
-          "reps": "3/SIDE",
+          "id": "EX-FUNC-026",
+          "name": "Standing Cable Rotation",
+          "reps": "6/SIDE",
           "timeSeconds": 40,
           "time": "0:40",
-          "setupSeconds": 20,
+          "setupSeconds": 30,
           "timerMode": "exercise",
-          "home": "3 supported hip airplanes/side; rotate from the hip under control",
-          "away": "3 wall-supported hip airplanes/side",
-          "cue": "Current rung: supported hip airplane. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE. Next gate: two confirmed controlled 2×3/side exposures with repeatable balance/range before reducing support.",
+          "home": "6 standing cable rotations/side; coordinated hip/trunk turn and controlled return",
+          "away": "6 controlled band-free split-stance rotations/side",
+          "cue": "Current rung: standing cable rotation, 6/side. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation rung because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×6–8/side exposures with known load/range and safe pivot before load. Tuesday/Saturday dynamic rotational-strength anchor; last planned Oct 6.",
           "media": {
             "type": "youtube",
-            "videoId": "uEqg50HSqMk",
-            "sourceUrl": "https://www.youtube.com/shorts/uEqg50HSqMk",
-            "thumbnailUrl": "https://i.ytimg.com/vi/uEqg50HSqMk/hqdefault.jpg",
-            "sourceName": "Dr. Carl Baird"
+            "videoId": "rk6zS3eJICY",
+            "sourceUrl": "https://www.youtube.com/shorts/rk6zS3eJICY",
+            "thumbnailUrl": "https://i.ytimg.com/vi/rk6zS3eJICY/hqdefault.jpg",
+            "sourceName": "Live Lean TV"
           },
-          "prescription": "3 supported hip airplanes/side; rotate from the hip under control",
-          "category": "mobility",
+          "prescription": "6 standing cable rotations/side; coordinated hip/trunk turn and controlled return",
+          "category": "strength",
           "sideMode": "per-side",
           "sideCount": 2,
           "sideSeconds": 20,
@@ -255,27 +192,90 @@
           "switchSeconds": 10
         }
       ]
+    },
+    {
+      "label": "D",
+      "title": "ROTATIONAL POWER",
+      "rounds": 2,
+      "effort": "Rest 0:45 after EVERY round, including final. Planned RPE6; 4RIR. Current rung: medicine-ball shot-put throw, 3/side. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE. Next gate: two confirmed crisp 2×3/side exposures with coordinated pivot before adding volume. Stop when speed, distance, landing or posture declines. Distinct from Tuesday scoop throw; last planned Oct 3.",
+      "exercises": [
+        {
+          "id": "EX-FUNC-020",
+          "name": "Medicine-Ball Shot-Put Throw",
+          "reps": "3/SIDE",
+          "timeSeconds": 30,
+          "time": "0:30",
+          "setupSeconds": 30,
+          "timerMode": "exercise",
+          "home": "3 medicine-ball shot-put throws/side; use 20 lb only while fast and crisp",
+          "away": "3 explosive shadow shot-put actions/side with full reset",
+          "cue": "Current rung: medicine-ball shot-put throw, 3/side. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE. Next gate: two confirmed crisp 2×3/side exposures with coordinated pivot before adding volume. Stop when speed, distance, landing or posture declines. Distinct from Tuesday scoop throw; last planned Oct 3.",
+          "media": {
+            "type": "youtube",
+            "videoId": "1h1usmKQPfs",
+            "sourceUrl": "https://www.youtube.com/shorts/1h1usmKQPfs",
+            "thumbnailUrl": "https://i.ytimg.com/vi/1h1usmKQPfs/hq2.jpg",
+            "sourceName": "Sean Smith"
+          },
+          "prescription": "3 medicine-ball shot-put throws/side; use 20 lb only while fast and crisp",
+          "category": "power",
+          "sideMode": "per-side",
+          "sideCount": 2,
+          "sideSeconds": 15,
+          "sideTime": "0:15",
+          "switchSeconds": 10
+        }
+      ]
+    },
+    {
+      "label": "E",
+      "title": "REPEATABLE INTERVALS",
+      "rounds": 1,
+      "effort": "Rest 0:00 after EVERY round, including final. Planned RPE7; 3RIR. Current rung: fixed 8-minute interval task. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE. Next gate: two confirmed 8:00 exposures near RPE7 without posture or output collapse before faster pace or longer work. Last planned Oct 5.",
+      "exercises": [
+        {
+          "id": "EX-I001",
+          "name": "Curved-Treadmill Intervals",
+          "reps": "TIMED",
+          "timeSeconds": 480,
+          "time": "8:00",
+          "setupSeconds": 0,
+          "timerMode": "cardio-exempt",
+          "home": "Curved treadmill 0:20 strong + 0:40 easy ×8; posture and output stay repeatable",
+          "away": "Outdoor run 0:20 strong + walk 0:40 ×8",
+          "cue": "Current rung: fixed 8-minute interval task. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE. Next gate: two confirmed 8:00 exposures near RPE7 without posture or output collapse before faster pace or longer work. Last planned Oct 5.",
+          "media": {
+            "type": "youtube",
+            "videoId": "Q3mGikLadak",
+            "sourceUrl": "https://www.youtube.com/shorts/Q3mGikLadak",
+            "thumbnailUrl": "https://i.ytimg.com/vi/Q3mGikLadak/hqdefault.jpg",
+            "sourceName": "Assault Fitness"
+          },
+          "prescription": "Curved treadmill 0:20 strong + 0:40 easy ×8; posture and output stay repeatable",
+          "category": "engine"
+        }
+      ]
     }
   ],
   "martialSupplement": {
-    "id": "EX-DOPA-0202",
-    "name": "Dopa Band Hand Fighting Drill",
-    "reps": "3/SIDE/MIN ALTERNATING",
+    "id": "EX-F002",
+    "name": "Hip Escape",
+    "reps": "2/SIDE/MIN ALTERNATING",
     "timeSeconds": 300,
     "time": "5:00",
     "setupSeconds": 20,
     "timerMode": "exercise",
-    "home": "Optional 5:00 Dopa-band hand fighting, 3 clean entries/side/min alternating",
-    "away": "Optional 5:00 shadow hand fighting, 3 entries/side/min alternating",
+    "home": "Optional 5:00 hip-escape practice, 2 controlled reps/side/min alternating",
+    "away": "Optional 5:00 hip-escape practice on mat, 2 controlled reps/side/min alternating",
     "cue": "Separate—not counted in physical duration, completion, or progression. Never auto-log.",
     "media": {
       "type": "youtube",
-      "videoId": "EVQVIvDrW8g",
-      "sourceUrl": "https://www.youtube.com/shorts/EVQVIvDrW8g",
-      "thumbnailUrl": "https://i.ytimg.com/vi/EVQVIvDrW8g/hqdefault.jpg",
-      "sourceName": "DopamineO"
+      "videoId": "FZHVLwQp7oE",
+      "sourceUrl": "https://www.youtube.com/shorts/FZHVLwQp7oE",
+      "thumbnailUrl": "https://i.ytimg.com/vi/FZHVLwQp7oE/hq2.jpg",
+      "sourceName": "Ares East Mesa BJJ"
     },
-    "prescription": "Optional 5:00 Dopa-band hand fighting, 3 clean entries/side/min alternating",
+    "prescription": "Optional 5:00 hip-escape practice, 2 controlled reps/side/min alternating",
     "category": "martial"
   },
   "featuredMode": "standard",
