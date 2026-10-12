@@ -760,3 +760,21 @@ button {
   .exercise-clock { grid-row: 1 / span 3; }
   .exercise-countdown__value { font-size: clamp(3.5rem, 10vw, 7rem); }
 }
+
+
+/* Session controls retain the existing display style. */
+.controls {max-width:calc(100vw - 1rem); opacity:.72;flex-wrap:wrap;justify-content:center;}
+.controls select, dialog input, dialog select, dialog textarea, dialog button {font:inherit;color:var(--ink);background:var(--panel-strong);border:1px solid var(--line);border-radius:.42rem;padding:.5rem;}
+.controls [hidden] {display:none;}
+.controls button:disabled {color:var(--gold);cursor:default;}
+dialog {width:min(42rem,94vw);max-height:90vh;overflow:auto;border:1px solid var(--line);border-radius:1rem;background:var(--panel);color:var(--ink);padding:1.5rem;}
+dialog::backdrop {background:rgb(0 0 0 / 78%);}
+dialog h2 {margin-top:0;}
+dialog p {color:var(--muted);}
+dialog form {display:grid;grid-template-columns:1fr 1fr;gap:.8rem;}
+dialog label {display:grid;gap:.35rem;}
+dialog label:last-child {grid-column:1/-1;}
+dialog input,dialog select,dialog textarea {width:100%;min-width:0;}
+.checkin-actions {display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0;}
+[data-report] {width:100%;}
+@media (max-width:700px) {dialog form {grid-template-columns:1fr;}.controls {width:calc(100vw - 1rem);}.controls button {font-size:.8rem;padding:.3rem;}.slide--overview {padding-bottom:7.5rem;}.level__value {white-space:normal;}.featured-mode {min-width:0;}}

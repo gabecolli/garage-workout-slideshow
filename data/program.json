@@ -1,0 +1,1345 @@
+{
+  "version": "2026-10-12-v4",
+  "cycleStart": "2026-09-10",
+  "effectiveDate": "2026-10-12",
+  "anchorReviewDate": "2026-11-09",
+  "timezone": "America/Chicago",
+  "weeklySchedule": {
+    "Monday": "strength-a",
+    "Tuesday": "endurance-a",
+    "Wednesday": "strength-b",
+    "Thursday": "endurance-b",
+    "Friday": "strength-c",
+    "Saturday": "boxing",
+    "Sunday": "recovery"
+  },
+  "templates": {
+    "strength-a": {
+      "templateId": "strength-a",
+      "title": "STRENGTH A · SQUAT + PULL",
+      "featuredMode": "Dopa → rack / Ares",
+      "emphasis": "Use the full session when recovered. A short day still counts as showing up.",
+      "ignition": {
+        "id": "EX-I002",
+        "name": "Movement prep",
+        "reps": "TIMED",
+        "timeSeconds": 360,
+        "time": "6:00",
+        "setupSeconds": 0,
+        "restSeconds": 0,
+        "timerMode": "exercise",
+        "category": "conditioning",
+        "cue": "Finish warm, with steady breathing.",
+        "equipment": "Jump rope",
+        "prescription": "2 min easy rope or walk; 2 min hips/ankles/shoulders; 2 min unloaded rehearsal of today’s lifts.",
+        "home": "2 min easy rope or walk; 2 min hips/ankles/shoulders; 2 min unloaded rehearsal of today’s lifts.",
+        "away": "Jumping jacks",
+        "media": {
+          "type": "youtube",
+          "videoId": "XSY9AE72inM",
+          "sourceUrl": "https://www.youtube.com/shorts/XSY9AE72inM",
+          "thumbnailUrl": "https://i.ytimg.com/vi/XSY9AE72inM/hqdefault.jpg",
+          "sourceName": "Exercise library reference"
+        }
+      },
+      "deposits": [
+        {
+          "title": "SINGLE-LEG POWER",
+          "rounds": 3,
+          "exercises": [
+            {
+              "id": "EX-DOPA-0267",
+              "name": "Dopa Band Side-Step Single Leg Drill",
+              "reps": "3/SIDE",
+              "timeSeconds": 30,
+              "time": "0:30",
+              "setupSeconds": 15,
+              "restSeconds": 90,
+              "timerMode": "exercise",
+              "category": "power",
+              "cue": "Light resistance; fast clean entry, controlled reset. Stop when speed fades.",
+              "equipment": "Dopa Band",
+              "prescription": "3 crisp single-leg entries/side; reset fully between reps. No grind or fatigue circuit.",
+              "home": "3 crisp single-leg entries/side; reset fully between reps. No grind or fatigue circuit.",
+              "away": "Unresisted shadow/partner drill",
+              "sideMode": "per-side",
+              "sideCount": 2,
+              "sideSeconds": 15,
+              "sideTime": "0:15",
+              "switchSeconds": 10,
+              "media": {
+                "type": "youtube",
+                "videoId": "Xx3ikDpEWV8",
+                "sourceUrl": "https://youtube.com/shorts/Xx3ikDpEWV8",
+                "thumbnailUrl": "https://i.ytimg.com/vi/Xx3ikDpEWV8/hqdefault.jpg",
+                "sourceName": "Exercise library reference"
+              }
+            }
+          ],
+          "effort": "Fresh, fast reps. Rest 90 sec after both sides.",
+          "role": "power",
+          "label": "A"
+        },
+        {
+          "title": "BELT SQUAT",
+          "rounds": 3,
+          "exercises": [
+            {
+              "id": "EX-H001",
+              "name": "Belt Squat",
+              "reps": "6–8",
+              "timeSeconds": 45,
+              "time": "0:45",
+              "setupSeconds": 15,
+              "restSeconds": 120,
+              "timerMode": "exercise",
+              "category": "strength",
+              "cue": "Knees track; torso tall",
+              "equipment": "Belt squat",
+              "prescription": "3 sets of 6–8. Choose a load leaving 2–3 good reps; record load.",
+              "home": "3 sets of 6–8. Choose a load leaving 2–3 good reps; record load.",
+              "away": "Backpack goblet squat",
+              "media": {
+                "type": "youtube",
+                "videoId": "cWZrLzEqD5w",
+                "sourceUrl": "https://www.youtube.com/shorts/cWZrLzEqD5w",
+                "thumbnailUrl": "https://i.ytimg.com/vi/cWZrLzEqD5w/hqdefault.jpg",
+                "sourceName": "Exercise library reference"
+              }
+            }
+          ],
+          "effort": "Leave 2–3 good reps in reserve. Rest is included in the timer.",
+          "role": "strength",
+          "label": "B"
+        },
+        {
+          "title": "PULL + CABLE PRESS",
+          "rounds": 3,
+          "exercises": [
+            {
+              "id": "EX-G001",
+              "name": "Strict Pull-Up",
+              "reps": "5–8",
+              "timeSeconds": 40,
+              "time": "0:40",
+              "setupSeconds": 10,
+              "restSeconds": 90,
+              "timerMode": "exercise",
+              "category": "strength",
+              "cue": "Chest tall; no kicking",
+              "equipment": "Pull-up bar",
+              "prescription": "5–8 clean pull-ups. Assistance if needed; no added load until confirmed.",
+              "home": "5–8 clean pull-ups. Assistance if needed; no added load until confirmed.",
+              "away": "Playground bar or sturdy beam",
+              "media": {
+                "type": "youtube",
+                "videoId": "WqCXcFrA1Iw",
+                "sourceUrl": "https://www.youtube.com/shorts/WqCXcFrA1Iw",
+                "thumbnailUrl": "https://i.ytimg.com/vi/WqCXcFrA1Iw/hqdefault.jpg",
+                "sourceName": "Exercise library reference"
+              }
+            },
+            {
+              "id": "EX-FUNC-008",
+              "name": "Split-Stance Single-Arm Cable Press",
+              "reps": "6–10/SIDE",
+              "timeSeconds": 60,
+              "time": "1:00",
+              "setupSeconds": 15,
+              "restSeconds": 75,
+              "timerMode": "exercise",
+              "category": "strength",
+              "cue": "Brace in split stance; keep ribs and pelvis facing forward.",
+              "equipment": "Functional trainer",
+              "prescription": "6–10/SIDE; leave 2–3 good reps in reserve",
+              "home": "6–10/SIDE; leave 2–3 good reps in reserve",
+              "away": "Use the listed unloaded regression or comparable available equipment",
+              "sideMode": "per-side",
+              "sideCount": 2,
+              "sideSeconds": 30,
+              "sideTime": "0:30",
+              "switchSeconds": 10,
+              "media": {
+                "type": "youtube",
+                "videoId": "6hY2HlS05gU",
+                "sourceUrl": "https://www.youtube.com/shorts/6hY2HlS05gU",
+                "thumbnailUrl": "https://i.ytimg.com/vi/6hY2HlS05gU/hqdefault.jpg",
+                "sourceName": "Exercise library reference"
+              }
+            }
+          ],
+          "effort": "Leave 2–3 good reps in reserve. Rest is included in the timer.",
+          "role": "strength",
+          "label": "C"
+        },
+        {
+          "title": "PLANCHE PRACTICE",
+          "rounds": 2,
+          "exercises": [
+            {
+              "id": "EX-CAL-PL001",
+              "name": "Planche Lean",
+              "reps": "TIMED",
+              "timeSeconds": 15,
+              "time": "0:15",
+              "setupSeconds": 10,
+              "restSeconds": 45,
+              "timerMode": "exercise",
+              "category": "rings-calisthenics",
+              "cue": "Push the floor away. Stop before the shoulders or wrists lose position.",
+              "equipment": "Floor or parallettes",
+              "prescription": "15-sec easy planche lean; stop well before failure.",
+              "home": "15-sec easy planche lean; stop well before failure.",
+              "away": "Floor planche lean",
+              "media": {
+                "type": "youtube",
+                "videoId": "s4_dcFZstSA",
+                "sourceUrl": "https://www.youtube.com/shorts/s4_dcFZstSA",
+                "thumbnailUrl": "https://i.ytimg.com/vi/s4_dcFZstSA/hqdefault.jpg",
+                "sourceName": "Exercise library reference"
+              }
+            }
+          ],
+          "effort": "Low fatigue skill practice.",
+          "role": "skill",
+          "label": "D"
+        },
+        {
+          "title": "TRUNK + MOBILITY",
+          "rounds": 1,
+          "exercises": [
+            {
+              "id": "EX-T012",
+              "name": "Pallof Press",
+              "reps": "6/SIDE",
+              "timeSeconds": 60,
+              "time": "1:00",
+              "setupSeconds": 15,
+              "restSeconds": 30,
+              "timerMode": "exercise",
+              "category": "strength",
+              "cue": "Do not let cable turn you",
+              "equipment": "Functional trainer or band",
+              "prescription": "6/SIDE; leave 2–3 good reps in reserve",
+              "home": "6/SIDE; leave 2–3 good reps in reserve",
+              "away": "Towel press isometric",
+              "sideMode": "per-side",
+              "sideCount": 2,
+              "sideSeconds": 30,
+              "sideTime": "0:30",
+              "switchSeconds": 10,
+              "media": {
+                "type": "youtube",
+                "videoId": "P1H4IzD9rbQ",
+                "sourceUrl": "https://www.youtube.com/shorts/P1H4IzD9rbQ",
+                "thumbnailUrl": "https://i.ytimg.com/vi/P1H4IzD9rbQ/hqdefault.jpg",
+                "sourceName": "Exercise library reference"
+              }
+            },
+            {
+              "id": "EX-FUNC-025",
+              "name": "Hips, ankles and thoracic rotation",
+              "reps": "TIMED",
+              "timeSeconds": 120,
+              "time": "2:00",
+              "setupSeconds": 0,
+              "restSeconds": 0,
+              "timerMode": "exercise",
+              "category": "mobility",
+              "cue": "Use comfortable active range. No forced stretching.",
+              "equipment": "Mat",
+              "prescription": "2 min easy 90/90 switches, knee-to-wall rocks and open books; split time evenly.",
+              "home": "2 min easy 90/90 switches, knee-to-wall rocks and open books; split time evenly.",
+              "away": "Use the listed unloaded regression or comparable available equipment",
+              "media": {
+                "type": "youtube",
+                "videoId": "iPqysXFsvTQ",
+                "sourceUrl": "https://www.youtube.com/shorts/iPqysXFsvTQ",
+                "thumbnailUrl": "https://i.ytimg.com/vi/iPqysXFsvTQ/hqdefault.jpg",
+                "sourceName": "Exercise library reference"
+              }
+            }
+          ],
+          "effort": "Leave 2–3 good reps in reserve. Rest is included in the timer.",
+          "role": "accessory",
+          "label": "E"
+        }
+      ]
+    },
+    "strength-b": {
+      "templateId": "strength-b",
+      "title": "STRENGTH B · HINGE + RINGS",
+      "featuredMode": "Trap bar → rings / carry",
+      "emphasis": "Use the full session when recovered. A short day still counts as showing up.",
+      "ignition": {
+        "id": "EX-I002",
+        "name": "Movement prep",
+        "reps": "TIMED",
+        "timeSeconds": 360,
+        "time": "6:00",
+        "setupSeconds": 0,
+        "restSeconds": 0,
+        "timerMode": "exercise",
+        "category": "conditioning",
+        "cue": "Finish warm, with steady breathing.",
+        "equipment": "Jump rope",
+        "prescription": "2 min easy rope or walk; 2 min hips/ankles/shoulders; 2 min unloaded rehearsal of today’s lifts.",
+        "home": "2 min easy rope or walk; 2 min hips/ankles/shoulders; 2 min unloaded rehearsal of today’s lifts.",
+        "away": "Jumping jacks",
+        "media": {
+          "type": "youtube",
+          "videoId": "XSY9AE72inM",
+          "sourceUrl": "https://www.youtube.com/shorts/XSY9AE72inM",
+          "thumbnailUrl": "https://i.ytimg.com/vi/XSY9AE72inM/hqdefault.jpg",
+          "sourceName": "Exercise library reference"
+        }
+      },
+      "deposits": [
+        {
+          "title": "TRAP BAR DEADLIFT",
+          "rounds": 3,
+          "exercises": [
+            {
+              "id": "EX-H005",
+              "name": "Trap Bar Deadlift",
+              "reps": "5",
+              "timeSeconds": 35,
+              "time": "0:35",
+              "setupSeconds": 15,
+              "restSeconds": 150,
+              "timerMode": "exercise",
+              "category": "strength",
+              "cue": "Push floor away",
+              "equipment": "Trap bar",
+              "prescription": "3 sets of 5; leave 3 good reps. Use a repeatable load and record it.",
+              "home": "3 sets of 5; leave 3 good reps. Use a repeatable load and record it.",
+              "away": "Backpack deadlift"
+            }
+          ],
+          "effort": "Leave 2–3 good reps in reserve. Rest is included in the timer.",
+          "role": "strength",
+          "label": "A"
+        },
+        {
+          "title": "RING ROW + PUSH-UP",
+          "rounds": 3,
+          "exercises": [
+            {
+              "id": "EX-G009",
+              "name": "Ring Row",
+              "reps": "6–10",
+              "timeSeconds": 45,
+              "time": "0:45",
+              "setupSeconds": 15,
+              "restSeconds": 90,
+              "timerMode": "exercise",
+              "category": "strength",
+              "cue": "Body rigid; rings to ribs",
+              "equipment": "Gym rings",
+              "prescription": "6–10; leave 2–3 good reps in reserve",
+              "home": "6–10; leave 2–3 good reps in reserve",
+              "away": "Towel row around post",
+              "media": {
+                "type": "youtube",
+                "videoId": "etiOULaW7tc",
+                "sourceUrl": "https://www.youtube.com/shorts/etiOULaW7tc",
+                "thumbnailUrl": "https://i.ytimg.com/vi/etiOULaW7tc/hqdefault.jpg",
+                "sourceName": "Exercise library reference"
+              }
+            },
+            {
+              "id": "EX-R002",
+              "name": "Ring Push-Up",
+              "reps": "6–10",
+              "timeSeconds": 45,
+              "time": "0:45",
+              "setupSeconds": 15,
+              "restSeconds": 90,
+              "timerMode": "exercise",
+              "category": "strength",
+              "cue": "Turn rings; stay rigid",
+              "equipment": "Gym rings",
+              "prescription": "6–10; leave 2–3 good reps in reserve",
+              "home": "6–10; leave 2–3 good reps in reserve",
+              "away": "Push-up",
+              "media": {
+                "type": "youtube",
+                "videoId": "QtJNskFMZpY",
+                "sourceUrl": "https://www.youtube.com/shorts/QtJNskFMZpY",
+                "thumbnailUrl": "https://i.ytimg.com/vi/QtJNskFMZpY/hqdefault.jpg",
+                "sourceName": "Exercise library reference"
+              }
+            }
+          ],
+          "effort": "Set rings once at a height that allows both movements. Adjust foot position for difficulty.",
+          "role": "strength",
+          "label": "B"
+        },
+        {
+          "title": "SUITCASE CARRY",
+          "rounds": 2,
+          "exercises": [
+            {
+              "id": "EX-G020",
+              "name": "Suitcase Carry",
+              "reps": "TIMED",
+              "timeSeconds": 60,
+              "time": "1:00",
+              "setupSeconds": 15,
+              "restSeconds": 60,
+              "timerMode": "exercise",
+              "category": "strength",
+              "cue": "Do not lean",
+              "equipment": "Kettlebell or dumbbell",
+              "prescription": "30 sec/side with a kettlebell or dumbbell. Walk tall without leaning.",
+              "home": "30 sec/side with a kettlebell or dumbbell. Walk tall without leaning.",
+              "away": "Suitcase or loaded backpack",
+              "sideMode": "per-side",
+              "sideCount": 2,
+              "sideSeconds": 30,
+              "sideTime": "0:30",
+              "switchSeconds": 10,
+              "media": {
+                "type": "youtube",
+                "videoId": "9xjSFwKIehY",
+                "sourceUrl": "https://www.youtube.com/shorts/9xjSFwKIehY",
+                "thumbnailUrl": "https://i.ytimg.com/vi/9xjSFwKIehY/hqdefault.jpg",
+                "sourceName": "Exercise library reference"
+              }
+            }
+          ],
+          "effort": "Leave 2–3 good reps in reserve. Rest is included in the timer.",
+          "role": "accessory",
+          "label": "C"
+        },
+        {
+          "title": "FRONT LEVER PRACTICE",
+          "rounds": 2,
+          "exercises": [
+            {
+              "id": "EX-CAL-FL001",
+              "name": "Tuck Front Lever Hold",
+              "reps": "TIMED",
+              "timeSeconds": 8,
+              "time": "0:08",
+              "setupSeconds": 15,
+              "restSeconds": 60,
+              "timerMode": "exercise",
+              "category": "rings-calisthenics",
+              "cue": "Keep shoulders active. Use feet assistance if the shape changes.",
+              "equipment": "Pull-up bar or rings",
+              "prescription": "8-sec assisted tuck hold; leave plenty in reserve.",
+              "home": "8-sec assisted tuck hold; leave plenty in reserve.",
+              "away": "Tuck lever row under sturdy table",
+              "media": {
+                "type": "youtube",
+                "videoId": "EkdHh8DYlQ0",
+                "sourceUrl": "https://www.youtube.com/shorts/EkdHh8DYlQ0",
+                "thumbnailUrl": "https://i.ytimg.com/vi/EkdHh8DYlQ0/hqdefault.jpg",
+                "sourceName": "Exercise library reference"
+              }
+            }
+          ],
+          "effort": "Low fatigue. Regress if position cannot be held.",
+          "role": "skill",
+          "label": "D"
+        },
+        {
+          "title": "MOBILITY",
+          "rounds": 1,
+          "exercises": [
+            {
+              "id": "EX-FUNC-025",
+              "name": "Hips, ankles and thoracic rotation",
+              "reps": "TIMED",
+              "timeSeconds": 150,
+              "time": "2:30",
+              "setupSeconds": 0,
+              "restSeconds": 0,
+              "timerMode": "exercise",
+              "category": "mobility",
+              "cue": "Use comfortable active range. No forced stretching.",
+              "equipment": "Mat",
+              "prescription": "2 min easy 90/90 switches, knee-to-wall rocks and open books; split time evenly.",
+              "home": "2 min easy 90/90 switches, knee-to-wall rocks and open books; split time evenly.",
+              "away": "Use the listed unloaded regression or comparable available equipment",
+              "media": {
+                "type": "youtube",
+                "videoId": "iPqysXFsvTQ",
+                "sourceUrl": "https://www.youtube.com/shorts/iPqysXFsvTQ",
+                "thumbnailUrl": "https://i.ytimg.com/vi/iPqysXFsvTQ/hqdefault.jpg",
+                "sourceName": "Exercise library reference"
+              }
+            }
+          ],
+          "effort": "Leave 2–3 good reps in reserve. Rest is included in the timer.",
+          "role": "mobility",
+          "label": "E"
+        }
+      ]
+    },
+    "strength-c": {
+      "templateId": "strength-c",
+      "title": "STRENGTH C · SINGLE LEG + PRESS",
+      "featuredMode": "Medicine ball → dumbbells / cable",
+      "emphasis": "Use the full session when recovered. A short day still counts as showing up.",
+      "ignition": {
+        "id": "EX-I002",
+        "name": "Movement prep",
+        "reps": "TIMED",
+        "timeSeconds": 360,
+        "time": "6:00",
+        "setupSeconds": 0,
+        "restSeconds": 0,
+        "timerMode": "exercise",
+        "category": "conditioning",
+        "cue": "Finish warm, with steady breathing.",
+        "equipment": "Jump rope",
+        "prescription": "2 min easy rope or walk; 2 min hips/ankles/shoulders; 2 min unloaded rehearsal of today’s lifts.",
+        "home": "2 min easy rope or walk; 2 min hips/ankles/shoulders; 2 min unloaded rehearsal of today’s lifts.",
+        "away": "Jumping jacks",
+        "media": {
+          "type": "youtube",
+          "videoId": "XSY9AE72inM",
+          "sourceUrl": "https://www.youtube.com/shorts/XSY9AE72inM",
+          "thumbnailUrl": "https://i.ytimg.com/vi/XSY9AE72inM/hqdefault.jpg",
+          "sourceName": "Exercise library reference"
+        }
+      },
+      "deposits": [
+        {
+          "title": "ROTATIONAL POWER",
+          "rounds": 3,
+          "exercises": [
+            {
+              "id": "EX-FUNC-021",
+              "name": "Rotational Medicine-Ball Slam",
+              "reps": "3/SIDE",
+              "timeSeconds": 30,
+              "time": "0:30",
+              "setupSeconds": 15,
+              "restSeconds": 90,
+              "timerMode": "exercise",
+              "category": "power",
+              "cue": "Snap from hips; reset completely. Use only a ball rated for slams.",
+              "equipment": "Medicine ball suitable for slams",
+              "prescription": "3 crisp rotational slams/side with controlled retrieval. Light enough to stay fast.",
+              "home": "3 crisp rotational slams/side with controlled retrieval. Light enough to stay fast.",
+              "away": "Use the listed unloaded regression or comparable available equipment",
+              "sideMode": "per-side",
+              "sideCount": 2,
+              "sideSeconds": 15,
+              "sideTime": "0:15",
+              "switchSeconds": 10,
+              "media": {
+                "type": "youtube",
+                "videoId": "M9ryqecCLf0",
+                "sourceUrl": "https://www.youtube.com/shorts/M9ryqecCLf0",
+                "thumbnailUrl": "https://i.ytimg.com/vi/M9ryqecCLf0/hqdefault.jpg",
+                "sourceName": "Exercise library reference"
+              }
+            }
+          ],
+          "effort": "Rest 90 sec. End early if speed drops.",
+          "role": "power",
+          "label": "A"
+        },
+        {
+          "title": "DB SPLIT SQUAT",
+          "rounds": 3,
+          "exercises": [
+            {
+              "id": "EX-FUNC-012",
+              "name": "Front-Foot-Elevated Dumbbell Split Squat",
+              "reps": "6–8/SIDE",
+              "timeSeconds": 60,
+              "time": "1:00",
+              "setupSeconds": 15,
+              "restSeconds": 90,
+              "timerMode": "exercise",
+              "category": "strength",
+              "cue": "Use a stable low step; front knee tracks over toes; control the descent.",
+              "equipment": "Dumbbells + stable low platform",
+              "prescription": "6–8/side; use floor-level stance if no stable riser. Leave 2–3 good reps.",
+              "home": "6–8/side; use floor-level stance if no stable riser. Leave 2–3 good reps.",
+              "away": "Use the listed unloaded regression or comparable available equipment",
+              "sideMode": "per-side",
+              "sideCount": 2,
+              "sideSeconds": 30,
+              "sideTime": "0:30",
+              "switchSeconds": 10,
+              "media": {
+                "type": "youtube",
+                "videoId": "w2oxzOGPgfU",
+                "sourceUrl": "https://www.youtube.com/shorts/w2oxzOGPgfU",
+                "thumbnailUrl": "https://i.ytimg.com/vi/w2oxzOGPgfU/hqdefault.jpg",
+                "sourceName": "Exercise library reference"
+              }
+            }
+          ],
+          "effort": "Leave 2–3 good reps in reserve. Rest is included in the timer.",
+          "role": "strength",
+          "label": "B"
+        },
+        {
+          "title": "DB FLOOR PRESS + CABLE ROW",
+          "rounds": 3,
+          "exercises": [
+            {
+              "id": "EX-R011",
+              "name": "Dumbbell Floor Press",
+              "reps": "6–10",
+              "timeSeconds": 45,
+              "time": "0:45",
+              "setupSeconds": 15,
+              "restSeconds": 75,
+              "timerMode": "exercise",
+              "category": "strength",
+              "cue": "Pause triceps; drive",
+              "equipment": "Dumbbells + mat",
+              "prescription": "6–10; leave 2–3 good reps in reserve",
+              "home": "6–10; leave 2–3 good reps in reserve",
+              "away": "Weighted backpack floor press"
+            },
+            {
+              "id": "EX-G014",
+              "name": "One-Arm Cable Row",
+              "reps": "6–10/SIDE",
+              "timeSeconds": 60,
+              "time": "1:00",
+              "setupSeconds": 15,
+              "restSeconds": 75,
+              "timerMode": "exercise",
+              "category": "strength",
+              "cue": "Do not rotate torso",
+              "equipment": "Functional trainer",
+              "prescription": "6–10/SIDE; leave 2–3 good reps in reserve",
+              "home": "6–10/SIDE; leave 2–3 good reps in reserve",
+              "away": "Backpack row",
+              "sideMode": "per-side",
+              "sideCount": 2,
+              "sideSeconds": 30,
+              "sideTime": "0:30",
+              "switchSeconds": 10,
+              "media": {
+                "type": "youtube",
+                "videoId": "GGd76507zio",
+                "sourceUrl": "https://www.youtube.com/shorts/GGd76507zio",
+                "thumbnailUrl": "https://i.ytimg.com/vi/GGd76507zio/hqdefault.jpg",
+                "sourceName": "Exercise library reference"
+              }
+            }
+          ],
+          "effort": "Leave 2–3 good reps in reserve. Rest is included in the timer.",
+          "role": "strength",
+          "label": "C"
+        },
+        {
+          "title": "ROTATION + MOBILITY",
+          "rounds": 1,
+          "exercises": [
+            {
+              "id": "EX-FUNC-028",
+              "name": "Half-Kneeling Low-to-High Cable Rotation",
+              "reps": "6/SIDE",
+              "timeSeconds": 60,
+              "time": "1:00",
+              "setupSeconds": 15,
+              "restSeconds": 45,
+              "timerMode": "exercise",
+              "category": "strength",
+              "cue": "Stay tall over the kneeling hip; turn through upper back; control the return.",
+              "equipment": "Functional trainer",
+              "prescription": "6/SIDE; leave 2–3 good reps in reserve",
+              "home": "6/SIDE; leave 2–3 good reps in reserve",
+              "away": "Use the listed unloaded regression or comparable available equipment",
+              "sideMode": "per-side",
+              "sideCount": 2,
+              "sideSeconds": 30,
+              "sideTime": "0:30",
+              "switchSeconds": 10,
+              "media": {
+                "type": "youtube",
+                "videoId": "v4MzgcVGNcg",
+                "sourceUrl": "https://www.youtube.com/shorts/v4MzgcVGNcg",
+                "thumbnailUrl": "https://i.ytimg.com/vi/v4MzgcVGNcg/hqdefault.jpg",
+                "sourceName": "Exercise library reference"
+              }
+            },
+            {
+              "id": "EX-FUNC-025",
+              "name": "Hips, ankles and thoracic rotation",
+              "reps": "TIMED",
+              "timeSeconds": 180,
+              "time": "3:00",
+              "setupSeconds": 0,
+              "restSeconds": 0,
+              "timerMode": "exercise",
+              "category": "mobility",
+              "cue": "Use comfortable active range. No forced stretching.",
+              "equipment": "Mat",
+              "prescription": "3 min easy 90/90 switches, knee-to-wall rocks and open books; split time evenly.",
+              "home": "3 min easy 90/90 switches, knee-to-wall rocks and open books; split time evenly.",
+              "away": "Use the listed unloaded regression or comparable available equipment",
+              "media": {
+                "type": "youtube",
+                "videoId": "iPqysXFsvTQ",
+                "sourceUrl": "https://www.youtube.com/shorts/iPqysXFsvTQ",
+                "thumbnailUrl": "https://i.ytimg.com/vi/iPqysXFsvTQ/hqdefault.jpg",
+                "sourceName": "Exercise library reference"
+              }
+            }
+          ],
+          "effort": "Leave 2–3 good reps in reserve. Rest is included in the timer.",
+          "role": "accessory",
+          "label": "D"
+        }
+      ]
+    },
+    "endurance-a": {
+      "templateId": "endurance-a",
+      "title": "ENDURANCE A · BUILD THE ENGINE",
+      "featuredMode": "Treadmill / outdoors → mat",
+      "emphasis": "Use the full session when recovered. A short day still counts as showing up.",
+      "ignition": {
+        "id": "EX-I004",
+        "name": "Easy walk warm-up",
+        "reps": "TIMED",
+        "timeSeconds": 180,
+        "time": "3:00",
+        "setupSeconds": 0,
+        "restSeconds": 0,
+        "timerMode": "exercise",
+        "category": "conditioning",
+        "cue": "Build pace gradually.",
+        "equipment": "Curved treadmill",
+        "prescription": "3 min easy walking.",
+        "home": "3 min easy walking.",
+        "away": "Brisk outdoor walk",
+        "media": {
+          "type": "youtube",
+          "videoId": "hGaVza0pWdw",
+          "sourceUrl": "https://www.youtube.com/shorts/hGaVza0pWdw",
+          "thumbnailUrl": "https://i.ytimg.com/vi/hGaVza0pWdw/hqdefault.jpg",
+          "sourceName": "Exercise library reference"
+        }
+      },
+      "deposits": [
+        {
+          "title": "STEADY ENDURANCE",
+          "rounds": 1,
+          "exercises": [
+            {
+              "id": "EX-I004",
+              "name": "Steady treadmill or outdoor walk",
+              "reps": "TIMED",
+              "timeSeconds": 2100,
+              "time": "35:00",
+              "setupSeconds": 0,
+              "restSeconds": 0,
+              "timerMode": "exercise",
+              "category": "conditioning",
+              "cue": "Keep a pace that lets you speak complete sentences.",
+              "equipment": "Curved treadmill",
+              "prescription": "35 min moderate continuous walking/jogging; conversational breathing.",
+              "home": "35 min moderate continuous walking/jogging; conversational breathing.",
+              "away": "Brisk outdoor walk",
+              "media": {
+                "type": "youtube",
+                "videoId": "hGaVza0pWdw",
+                "sourceUrl": "https://www.youtube.com/shorts/hGaVza0pWdw",
+                "thumbnailUrl": "https://i.ytimg.com/vi/hGaVza0pWdw/hqdefault.jpg",
+                "sourceName": "Exercise library reference"
+              }
+            }
+          ],
+          "effort": "35 min at a conversational pace. Start with 20–25 min if this exceeds recent capacity.",
+          "role": "endurance",
+          "label": "A"
+        },
+        {
+          "title": "ACTIVE MOBILITY",
+          "rounds": 1,
+          "exercises": [
+            {
+              "id": "EX-FUNC-025",
+              "name": "Hips, ankles and thoracic rotation",
+              "reps": "TIMED",
+              "timeSeconds": 120,
+              "time": "2:00",
+              "setupSeconds": 0,
+              "restSeconds": 0,
+              "timerMode": "exercise",
+              "category": "mobility",
+              "cue": "Use comfortable active range. No forced stretching.",
+              "equipment": "Mat",
+              "prescription": "4 min easy 90/90 switches, knee-to-wall rocks and open books; split time evenly.",
+              "home": "2 min easy hip switches and ankle rocks.",
+              "away": "Use the listed unloaded regression or comparable available equipment",
+              "media": {
+                "type": "youtube",
+                "videoId": "iPqysXFsvTQ",
+                "sourceUrl": "https://www.youtube.com/shorts/iPqysXFsvTQ",
+                "thumbnailUrl": "https://i.ytimg.com/vi/iPqysXFsvTQ/hqdefault.jpg",
+                "sourceName": "Exercise library reference"
+              }
+            },
+            {
+              "id": "IRON-NECK-EASY",
+              "name": "Iron Neck · easy control",
+              "reps": "TIMED",
+              "timeSeconds": 120,
+              "time": "2:00",
+              "setupSeconds": 15,
+              "restSeconds": 0,
+              "category": "mobility",
+              "timerMode": "exercise",
+              "home": "2 min of familiar, light controlled neck work. Substitute open books if uncomfortable or setup is a hassle.",
+              "away": "2 min comfortable thoracic rotations.",
+              "cue": "Small comfortable range; no ballistic motion or strain."
+            }
+          ],
+          "effort": "Leave 2–3 good reps in reserve. Rest is included in the timer.",
+          "role": "mobility",
+          "label": "B"
+        }
+      ]
+    },
+    "endurance-b": {
+      "templateId": "endurance-b",
+      "title": "ENDURANCE B · STEADY + MOBILE",
+      "featuredMode": "Treadmill / outdoors → mat",
+      "emphasis": "Use the full session when recovered. A short day still counts as showing up.",
+      "ignition": {
+        "id": "EX-I004",
+        "name": "Easy walk warm-up",
+        "reps": "TIMED",
+        "timeSeconds": 180,
+        "time": "3:00",
+        "setupSeconds": 0,
+        "restSeconds": 0,
+        "timerMode": "exercise",
+        "category": "conditioning",
+        "cue": "Build pace gradually.",
+        "equipment": "Curved treadmill",
+        "prescription": "3 min easy walking.",
+        "home": "3 min easy walking.",
+        "away": "Brisk outdoor walk",
+        "media": {
+          "type": "youtube",
+          "videoId": "hGaVza0pWdw",
+          "sourceUrl": "https://www.youtube.com/shorts/hGaVza0pWdw",
+          "thumbnailUrl": "https://i.ytimg.com/vi/hGaVza0pWdw/hqdefault.jpg",
+          "sourceName": "Exercise library reference"
+        }
+      },
+      "deposits": [
+        {
+          "title": "STEADY ENDURANCE",
+          "rounds": 1,
+          "exercises": [
+            {
+              "id": "EX-I004",
+              "name": "Steady treadmill or outdoor walk",
+              "reps": "TIMED",
+              "timeSeconds": 2100,
+              "time": "35:00",
+              "setupSeconds": 0,
+              "restSeconds": 0,
+              "timerMode": "exercise",
+              "category": "conditioning",
+              "cue": "Keep a pace that lets you speak complete sentences.",
+              "equipment": "Curved treadmill",
+              "prescription": "35 min moderate continuous walking/jogging; conversational breathing.",
+              "home": "35 min moderate continuous walking/jogging; conversational breathing.",
+              "away": "Brisk outdoor walk",
+              "media": {
+                "type": "youtube",
+                "videoId": "hGaVza0pWdw",
+                "sourceUrl": "https://www.youtube.com/shorts/hGaVza0pWdw",
+                "thumbnailUrl": "https://i.ytimg.com/vi/hGaVza0pWdw/hqdefault.jpg",
+                "sourceName": "Exercise library reference"
+              }
+            }
+          ],
+          "effort": "35 min at a conversational pace. Start with 20–25 min if this exceeds recent capacity.",
+          "role": "endurance",
+          "label": "A"
+        },
+        {
+          "title": "ACTIVE MOBILITY",
+          "rounds": 1,
+          "exercises": [
+            {
+              "id": "EX-FUNC-025",
+              "name": "Hips, ankles and thoracic rotation",
+              "reps": "TIMED",
+              "timeSeconds": 240,
+              "time": "4:00",
+              "setupSeconds": 0,
+              "restSeconds": 0,
+              "timerMode": "exercise",
+              "category": "mobility",
+              "cue": "Use comfortable active range. No forced stretching.",
+              "equipment": "Mat",
+              "prescription": "4 min easy 90/90 switches, knee-to-wall rocks and open books; split time evenly.",
+              "home": "4 min easy 90/90 switches, knee-to-wall rocks and open books; split time evenly.",
+              "away": "Use the listed unloaded regression or comparable available equipment",
+              "media": {
+                "type": "youtube",
+                "videoId": "iPqysXFsvTQ",
+                "sourceUrl": "https://www.youtube.com/shorts/iPqysXFsvTQ",
+                "thumbnailUrl": "https://i.ytimg.com/vi/iPqysXFsvTQ/hqdefault.jpg",
+                "sourceName": "Exercise library reference"
+              }
+            }
+          ],
+          "effort": "Leave 2–3 good reps in reserve. Rest is included in the timer.",
+          "role": "mobility",
+          "label": "B"
+        }
+      ]
+    },
+    "boxing": {
+      "templateId": "boxing",
+      "title": "BOXING · JAB + EXIT",
+      "featuredMode": "Rope → heavy bag → mat",
+      "emphasis": "Use the full session when recovered. A short day still counts as showing up.",
+      "ignition": {
+        "id": "EX-I002",
+        "name": "Movement prep",
+        "reps": "TIMED",
+        "timeSeconds": 360,
+        "time": "6:00",
+        "setupSeconds": 0,
+        "restSeconds": 0,
+        "timerMode": "exercise",
+        "category": "conditioning",
+        "cue": "Finish warm, with steady breathing.",
+        "equipment": "Jump rope",
+        "prescription": "2 min easy rope or walk; 2 min hips/ankles/shoulders; 2 min unloaded rehearsal of today’s lifts.",
+        "home": "2 min easy rope or walk; 2 min hips/ankles/shoulders; 2 min unloaded rehearsal of today’s lifts.",
+        "away": "Jumping jacks",
+        "media": {
+          "type": "youtube",
+          "videoId": "XSY9AE72inM",
+          "sourceUrl": "https://www.youtube.com/shorts/XSY9AE72inM",
+          "thumbnailUrl": "https://i.ytimg.com/vi/XSY9AE72inM/hqdefault.jpg",
+          "sourceName": "Exercise library reference"
+        }
+      },
+      "deposits": [
+        {
+          "title": "BOXING ROUNDS",
+          "rounds": 4,
+          "exercises": [
+            {
+              "id": "BOX-001",
+              "name": "Heavy-bag boxing",
+              "reps": "TIMED",
+              "timeSeconds": 120,
+              "time": "2:00",
+              "setupSeconds": 0,
+              "restSeconds": 60,
+              "timerMode": "exercise",
+              "category": "conditioning",
+              "cue": "Clean stance and breathing before speed. Jab, exit at an angle, reset.",
+              "equipment": "Mat",
+              "prescription": "2 min controlled rounds at RPE 6–7; 1 min rest. Theme: jab → angle exit. Do not chase exhaustion.",
+              "home": "2 min controlled rounds at RPE 6–7; 1 min rest. Theme: jab → angle exit. Do not chase exhaustion.",
+              "away": "Use the same movement pattern with bodyweight or a backpack."
+            }
+          ],
+          "effort": "4 × 2 min. Boxing counts as conditioning. Replace when hard BJJ has filled this week’s hard sessions.",
+          "role": "boxing",
+          "label": "A"
+        },
+        {
+          "title": "EASY AEROBIC FINISH",
+          "rounds": 1,
+          "exercises": [
+            {
+              "id": "EX-I004",
+              "name": "Steady treadmill or outdoor walk",
+              "reps": "TIMED",
+              "timeSeconds": 600,
+              "time": "10:00",
+              "setupSeconds": 0,
+              "restSeconds": 0,
+              "timerMode": "exercise",
+              "category": "conditioning",
+              "cue": "Keep a pace that lets you speak complete sentences.",
+              "equipment": "Curved treadmill",
+              "prescription": "10 min easy continuous walking/jogging; conversational breathing.",
+              "home": "10 min easy continuous walking/jogging; conversational breathing.",
+              "away": "Brisk outdoor walk",
+              "media": {
+                "type": "youtube",
+                "videoId": "hGaVza0pWdw",
+                "sourceUrl": "https://www.youtube.com/shorts/hGaVza0pWdw",
+                "thumbnailUrl": "https://i.ytimg.com/vi/hGaVza0pWdw/hqdefault.jpg",
+                "sourceName": "Exercise library reference"
+              }
+            }
+          ],
+          "effort": "Leave 2–3 good reps in reserve. Rest is included in the timer.",
+          "role": "endurance",
+          "label": "B"
+        },
+        {
+          "title": "MOBILITY",
+          "rounds": 1,
+          "exercises": [
+            {
+              "id": "EX-FUNC-025",
+              "name": "Hips, ankles and thoracic rotation",
+              "reps": "TIMED",
+              "timeSeconds": 180,
+              "time": "3:00",
+              "setupSeconds": 0,
+              "restSeconds": 0,
+              "timerMode": "exercise",
+              "category": "mobility",
+              "cue": "Use comfortable active range. No forced stretching.",
+              "equipment": "Mat",
+              "prescription": "3 min easy 90/90 switches, knee-to-wall rocks and open books; split time evenly.",
+              "home": "3 min easy 90/90 switches, knee-to-wall rocks and open books; split time evenly.",
+              "away": "Use the listed unloaded regression or comparable available equipment",
+              "media": {
+                "type": "youtube",
+                "videoId": "iPqysXFsvTQ",
+                "sourceUrl": "https://www.youtube.com/shorts/iPqysXFsvTQ",
+                "thumbnailUrl": "https://i.ytimg.com/vi/iPqysXFsvTQ/hqdefault.jpg",
+                "sourceName": "Exercise library reference"
+              }
+            }
+          ],
+          "effort": "Leave 2–3 good reps in reserve. Rest is included in the timer.",
+          "role": "mobility",
+          "label": "C"
+        }
+      ]
+    },
+    "recovery": {
+      "templateId": "recovery",
+      "title": "RECOVERY · MOVE WELL",
+      "featuredMode": "Walk → mat",
+      "emphasis": "Use the full session when recovered. A short day still counts as showing up.",
+      "ignition": {
+        "id": "EX-I004",
+        "name": "Steady treadmill or outdoor walk",
+        "reps": "TIMED",
+        "timeSeconds": 60,
+        "time": "1:00",
+        "setupSeconds": 0,
+        "restSeconds": 0,
+        "timerMode": "exercise",
+        "category": "conditioning",
+        "cue": "Keep a pace that lets you speak complete sentences.",
+        "equipment": "Curved treadmill",
+        "prescription": "1 min easy continuous walking/jogging; conversational breathing.",
+        "home": "1 min easy continuous walking/jogging; conversational breathing.",
+        "away": "Brisk outdoor walk",
+        "media": {
+          "type": "youtube",
+          "videoId": "hGaVza0pWdw",
+          "sourceUrl": "https://www.youtube.com/shorts/hGaVza0pWdw",
+          "thumbnailUrl": "https://i.ytimg.com/vi/hGaVza0pWdw/hqdefault.jpg",
+          "sourceName": "Exercise library reference"
+        }
+      },
+      "deposits": [
+        {
+          "title": "EASY WALK",
+          "rounds": 1,
+          "exercises": [
+            {
+              "id": "EX-I004",
+              "name": "Steady treadmill or outdoor walk",
+              "reps": "TIMED",
+              "timeSeconds": 1800,
+              "time": "30:00",
+              "setupSeconds": 0,
+              "restSeconds": 0,
+              "timerMode": "exercise",
+              "category": "conditioning",
+              "cue": "Keep a pace that lets you speak complete sentences.",
+              "equipment": "Curved treadmill",
+              "prescription": "30 min easy continuous walking/jogging; conversational breathing.",
+              "home": "30 min easy continuous walking/jogging; conversational breathing.",
+              "away": "Brisk outdoor walk",
+              "media": {
+                "type": "youtube",
+                "videoId": "hGaVza0pWdw",
+                "sourceUrl": "https://www.youtube.com/shorts/hGaVza0pWdw",
+                "thumbnailUrl": "https://i.ytimg.com/vi/hGaVza0pWdw/hqdefault.jpg",
+                "sourceName": "Exercise library reference"
+              }
+            }
+          ],
+          "effort": "Leave 2–3 good reps in reserve. Rest is included in the timer.",
+          "role": "endurance",
+          "label": "A"
+        },
+        {
+          "title": "MOBILITY",
+          "rounds": 1,
+          "exercises": [
+            {
+              "id": "EX-FUNC-025",
+              "name": "Hips, ankles and thoracic rotation",
+              "reps": "TIMED",
+              "timeSeconds": 300,
+              "time": "5:00",
+              "setupSeconds": 0,
+              "restSeconds": 0,
+              "timerMode": "exercise",
+              "category": "mobility",
+              "cue": "Use comfortable active range. No forced stretching.",
+              "equipment": "Mat",
+              "prescription": "5 min easy 90/90 switches, knee-to-wall rocks and open books; split time evenly.",
+              "home": "5 min easy 90/90 switches, knee-to-wall rocks and open books; split time evenly.",
+              "away": "Use the listed unloaded regression or comparable available equipment",
+              "media": {
+                "type": "youtube",
+                "videoId": "iPqysXFsvTQ",
+                "sourceUrl": "https://www.youtube.com/shorts/iPqysXFsvTQ",
+                "thumbnailUrl": "https://i.ytimg.com/vi/iPqysXFsvTQ/hqdefault.jpg",
+                "sourceName": "Exercise library reference"
+              }
+            }
+          ],
+          "effort": "Leave 2–3 good reps in reserve. Rest is included in the timer.",
+          "role": "mobility",
+          "label": "B"
+        }
+      ]
+    },
+    "minimum": {
+      "templateId": "minimum",
+      "title": "10-MINIMUM · KEEP THE ROUTINE",
+      "featuredMode": "Walk / mat",
+      "emphasis": "Use the full session when recovered. A short day still counts as showing up.",
+      "ignition": {
+        "id": "EX-I004",
+        "name": "Steady treadmill or outdoor walk",
+        "reps": "TIMED",
+        "timeSeconds": 420,
+        "time": "7:00",
+        "setupSeconds": 0,
+        "restSeconds": 0,
+        "timerMode": "exercise",
+        "category": "conditioning",
+        "cue": "Keep a pace that lets you speak complete sentences.",
+        "equipment": "Curved treadmill",
+        "prescription": "7 min easy continuous walking/jogging; conversational breathing.",
+        "home": "7 min easy continuous walking/jogging; conversational breathing.",
+        "away": "Brisk outdoor walk",
+        "media": {
+          "type": "youtube",
+          "videoId": "hGaVza0pWdw",
+          "sourceUrl": "https://www.youtube.com/shorts/hGaVza0pWdw",
+          "thumbnailUrl": "https://i.ytimg.com/vi/hGaVza0pWdw/hqdefault.jpg",
+          "sourceName": "Exercise library reference"
+        }
+      },
+      "deposits": [
+        {
+          "title": "MOBILITY",
+          "rounds": 1,
+          "exercises": [
+            {
+              "id": "EX-FUNC-025",
+              "name": "Hips, ankles and thoracic rotation",
+              "reps": "TIMED",
+              "timeSeconds": 180,
+              "time": "3:00",
+              "setupSeconds": 0,
+              "restSeconds": 0,
+              "timerMode": "exercise",
+              "category": "mobility",
+              "cue": "Use comfortable active range. No forced stretching.",
+              "equipment": "Mat",
+              "prescription": "3 min easy 90/90 switches, knee-to-wall rocks and open books; split time evenly.",
+              "home": "3 min easy 90/90 switches, knee-to-wall rocks and open books; split time evenly.",
+              "away": "Use the listed unloaded regression or comparable available equipment",
+              "media": {
+                "type": "youtube",
+                "videoId": "iPqysXFsvTQ",
+                "sourceUrl": "https://www.youtube.com/shorts/iPqysXFsvTQ",
+                "thumbnailUrl": "https://i.ytimg.com/vi/iPqysXFsvTQ/hqdefault.jpg",
+                "sourceName": "Exercise library reference"
+              }
+            }
+          ],
+          "effort": "Leave 2–3 good reps in reserve. Rest is included in the timer.",
+          "role": "mobility",
+          "label": "A"
+        }
+      ]
+    },
+    "class-day": {
+      "templateId": "class-day",
+      "title": "CLASS DAY · SAVE YOUR ENERGY",
+      "featuredMode": "Easy walk / mat",
+      "emphasis": "Use the full session when recovered. A short day still counts as showing up.",
+      "ignition": {
+        "id": "EX-I004",
+        "name": "Steady treadmill or outdoor walk",
+        "reps": "TIMED",
+        "timeSeconds": 600,
+        "time": "10:00",
+        "setupSeconds": 0,
+        "restSeconds": 0,
+        "timerMode": "exercise",
+        "category": "conditioning",
+        "cue": "Keep a pace that lets you speak complete sentences.",
+        "equipment": "Curved treadmill",
+        "prescription": "10 min easy continuous walking/jogging; conversational breathing.",
+        "home": "10 min easy continuous walking/jogging; conversational breathing.",
+        "away": "Brisk outdoor walk",
+        "media": {
+          "type": "youtube",
+          "videoId": "hGaVza0pWdw",
+          "sourceUrl": "https://www.youtube.com/shorts/hGaVza0pWdw",
+          "thumbnailUrl": "https://i.ytimg.com/vi/hGaVza0pWdw/hqdefault.jpg",
+          "sourceName": "Exercise library reference"
+        }
+      },
+      "deposits": [
+        {
+          "title": "MOBILITY",
+          "rounds": 1,
+          "exercises": [
+            {
+              "id": "EX-FUNC-025",
+              "name": "Hips, ankles and thoracic rotation",
+              "reps": "TIMED",
+              "timeSeconds": 300,
+              "time": "5:00",
+              "setupSeconds": 0,
+              "restSeconds": 0,
+              "timerMode": "exercise",
+              "category": "mobility",
+              "cue": "Use comfortable active range. No forced stretching.",
+              "equipment": "Mat",
+              "prescription": "5 min easy 90/90 switches, knee-to-wall rocks and open books; split time evenly.",
+              "home": "5 min easy 90/90 switches, knee-to-wall rocks and open books; split time evenly.",
+              "away": "Use the listed unloaded regression or comparable available equipment",
+              "media": {
+                "type": "youtube",
+                "videoId": "iPqysXFsvTQ",
+                "sourceUrl": "https://www.youtube.com/shorts/iPqysXFsvTQ",
+                "thumbnailUrl": "https://i.ytimg.com/vi/iPqysXFsvTQ/hqdefault.jpg",
+                "sourceName": "Exercise library reference"
+              }
+            }
+          ],
+          "effort": "Leave 2–3 good reps in reserve. Rest is included in the timer.",
+          "role": "mobility",
+          "label": "A"
+        }
+      ]
+    }
+  },
+  "minimumTemplate": "minimum",
+  "classTemplate": "class-day",
+  "rules": {
+    "strengthAnchors": "Keep main lifts through Nov 9 review. Retain longer if progress is good; do not rotate just for novelty.",
+    "progression": "Two explicitly confirmed successful exposures at the top of the rep range, same load/setup, 2–3 RIR and no pain: add the smallest available load and return to the lower rep target. Unknown load or completion never earns progression. For holds, add 2–5 sec after two clean confirmed exposures before changing leverage.",
+    "power": "Power goes after warm-up and before strength. 2 exposures/week; low resistance, 3 crisp reps/side with 90 sec rest. Stop on slowing or lost form. Never turn the dummy lab into conditioning.",
+    "endurance": "Start with two 35-min steady sessions plus the easy Sunday walk. Do not jump to a volume target beyond recent capacity. Build toward 150 moderate-equivalent min/week: add 10-min brisk walks on strength days, then 5-min increases to a steady session after two comfortable confirmed exposures. Count only actual moderate/vigorous active minutes, not all warm-up, rest or class time.",
+    "setup": "Maximum 3 equipment areas/day. Initial setup is counted once per movement; later sets use prescribed rest to reset. Batch rack/cable work and set rings once.",
+    "variety": "Keep anchors. Alternate one accessory and one power or boxing theme every 2 weeks, only if it does not add setup or recovery cost. Never randomize all exercises.",
+    "weeklyReview": "Count only confirmed training. Look at strength, aerobic minutes, quality power exposures, mobility, and skill learning separately. No catch-up doubles or guilt streaks.",
+    "feedback": "BJJ class, boxing and strength add physical load. Slow dummy lab adds skill practice only. Unknown is not no. Check reports before every build; never auto-complete silence."
+  },
+  "equipmentRotation": [
+    {
+      "equipment": "Belt squat / rack / Ares / pull-up bar",
+      "role": "Monday squat/pull/cable anchors",
+      "cadence": "weekly"
+    },
+    {
+      "equipment": "Trap bar / rings / kettlebell",
+      "role": "Wednesday hinge, push/pull and carry",
+      "cadence": "weekly"
+    },
+    {
+      "equipment": "Dumbbells / cable / medicine ball",
+      "role": "Friday unilateral strength, pressing and rotational power",
+      "cadence": "weekly"
+    },
+    {
+      "equipment": "Dopamineo",
+      "role": "Monday single-leg power; alternate side-step and sweep entry every two weeks",
+      "cadence": "weekly"
+    },
+    {
+      "equipment": "Curved treadmill / jump rope",
+      "role": "Steady endurance and short warm-ups",
+      "cadence": "weekly"
+    },
+    {
+      "equipment": "Heavy bag",
+      "role": "Saturday boxing; removed/reduced when hard BJJ supplies the load",
+      "cadence": "weekly if recovered"
+    },
+    {
+      "equipment": "Dummy / mat",
+      "role": "Slow technical lab with one question",
+      "cadence": "5–10 min on chosen days; no workout credit"
+    },
+    {
+      "equipment": "Iron Neck",
+      "role": "Optional easy controlled work on Tuesday, replace 2 min mobility; no ballistic neck work",
+      "cadence": "weekly only if comfortable and familiar"
+    },
+    {
+      "equipment": "Barbell",
+      "role": "Next block may substitute RDL for trap bar or overhead press for DB press, based on preference/progress",
+      "cadence": "4–6 week review"
+    },
+    {
+      "equipment": "Kettlebell",
+      "role": "Carry now; swing may replace a later power slot if technique is established",
+      "cadence": "weekly carry, optional later power rotation"
+    }
+  ],
+  "accessoryRotation": {
+    "weeks1and2": {
+      "power": "EX-DOPA-0267",
+      "trunk": "EX-FUNC-028",
+      "carry": "EX-G020",
+      "boxing": "Jab → angle exit"
+    },
+    "weeks3and4": {
+      "power": "EX-DOPA-0261",
+      "trunk": "EX-T013",
+      "carry": "EX-FUNC-002",
+      "boxing": "Jab-cross → slip → exit"
+    }
+  },
+  "dummyLab": {
+    "countsAsWorkout": false,
+    "defaultMinutes": 7,
+    "theme": "Single-leg entry → position → controlled finish",
+    "question": "Can I keep head, posture and connection consistent through the entry?",
+    "dailySteps": {
+      "Monday": "Watch one familiar entry; rehearse slowly 3 times/side. Freeze at contact and inspect position.",
+      "Tuesday": "Repeat entry; pause at head and hand position. 3 slow repetitions/side; name the hardest checkpoint.",
+      "Wednesday": "Connect entry to one controlled finish. 3 slow repetitions/side without driving into the dummy.",
+      "Thursday": "Link finish to stable top position. 3 slow repetitions/side; identify one gap.",
+      "Friday": "Recall the sequence without video; check 3 repetitions/side and compare against the reference.",
+      "Saturday": "Troubleshoot one reported class/lab difficulty using the same theme. No new chain unless needed.",
+      "Sunday": "Review: what became clearer, what remains uncertain, one question for a coach."
+    },
+    "advance": "Learning, not a conditioning timer. Reuse the theme until the sequence and one cue can be explained and reproduced. A dummy cannot supply live resistance; reserve timing/pressure testing for class. User-reported class difficulty supersedes the default theme."
+  },
+  "checkIn": {
+    "deliveryRequested": "Dot",
+    "deliveryStatus": "pending_connection",
+    "question": "Quick training check-in: what did you actually do—strength/endurance, BJJ CLASS (minutes + intensity), boxing, and/or slow DUMMY LAB (theme + discovery)? What felt hard or painful, how is your energy, and any class/time limits tomorrow? A one-line reply is enough.",
+    "unknownPolicy": "No reply → unreported, no progression, no invented fatigue or missed-session punishment."
+  }
+}

@@ -1,43 +1,164 @@
 {
-  "schemaVersion": 3,
-  "date": "2026-10-12",
-  "generatedAt": "2026-10-12T05:54:23.101Z",
-  "planId": "DP-20261012-UW-001",
-  "title": "45-MIN INTENSIFICATION — BLOCK 2 WEEK 5 DAY 33",
-  "emphasis": "MONDAY HARD • GREEN • PLANCHE + VERTICAL STRENGTH + SQUAT + POWER + CARRY",
-  "additionalTitle": "GREEN • FOUNDATION PRESCRIPTIONS RETAINED • NO INJURY-BASED RESTRICTIONS",
-  "levels": {
-    "floor": "25:35: Ignition+A×3/B×2/C×1.",
-    "standard": "45:55: Ignition+A×3/B×3/C×3/D×3/E×2.",
-    "bonus": "Optional 5–10 min easy walk. BJJ 18:40: Ignition+A×2/C×1/D×1, or skip physical workout if class/time load is high."
-  },
+  "templateId": "strength-a",
+  "title": "STRENGTH A · SQUAT + PULL",
+  "featuredMode": "Dopa → rack / Ares",
+  "emphasis": "Updated plan. If you already trained today, do not repeat the workout.",
   "ignition": {
     "id": "EX-I002",
-    "name": "Jump-Rope Intervals",
+    "name": "Movement prep",
     "reps": "TIMED",
-    "timeSeconds": 600,
-    "time": "10:00",
+    "timeSeconds": 360,
+    "time": "6:00",
     "setupSeconds": 0,
-    "timerMode": "cardio-exempt",
-    "home": "Jump rope 0:20 smooth + 0:40 easy bounce/walk ×10, RPE4–5",
-    "away": "Shadow rope 0:20 smooth + 0:40 easy walk ×10, RPE4–5",
-    "cue": "Exactly 10 minutes. Build rhythm and temperature for vertical pulling, pressing, squatting and jumping; no martial drilling.",
+    "restSeconds": 0,
+    "timerMode": "exercise",
+    "category": "conditioning",
+    "cue": "Finish warm, with steady breathing.",
+    "equipment": "Jump rope",
+    "prescription": "2 min easy rope or walk; 2 min hips/ankles/shoulders; 2 min unloaded rehearsal of today’s lifts.",
+    "home": "2 min easy rope or walk; 2 min hips/ankles/shoulders; 2 min unloaded rehearsal of today’s lifts.",
+    "away": "Jumping jacks",
     "media": {
       "type": "youtube",
       "videoId": "XSY9AE72inM",
       "sourceUrl": "https://www.youtube.com/shorts/XSY9AE72inM",
       "thumbnailUrl": "https://i.ytimg.com/vi/XSY9AE72inM/hqdefault.jpg",
-      "sourceName": "Lauren Jumps"
-    },
-    "prescription": "Jump rope 0:20 smooth + 0:40 easy bounce/walk ×10, RPE4–5",
-    "category": "ignition"
+      "sourceName": "Exercise library reference"
+    }
   },
   "deposits": [
     {
-      "label": "A",
-      "title": "PLANCHE SKILL",
+      "title": "SINGLE-LEG POWER",
       "rounds": 3,
-      "effort": "Rest 1:15 after EVERY round, including final. Planned RPE6; 4RIR. Current rung: 15-sec planche lean. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation prescription because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×15–20-sec exposures at ≤RPE8 before pseudo-planche push-ups. Stable Monday/Thursday planche anchor; last planned Oct 8.",
+      "exercises": [
+        {
+          "id": "EX-DOPA-0267",
+          "name": "Dopa Band Side-Step Single Leg Drill",
+          "reps": "3/SIDE",
+          "timeSeconds": 30,
+          "time": "0:30",
+          "setupSeconds": 15,
+          "restSeconds": 90,
+          "timerMode": "exercise",
+          "category": "power",
+          "cue": "Light resistance; fast clean entry, controlled reset. Stop when speed fades.",
+          "equipment": "Dopa Band",
+          "prescription": "3 crisp single-leg entries/side; reset fully between reps. No grind or fatigue circuit.",
+          "home": "3 crisp single-leg entries/side; reset fully between reps. No grind or fatigue circuit.",
+          "away": "Unresisted shadow/partner drill",
+          "sideMode": "per-side",
+          "sideCount": 2,
+          "sideSeconds": 15,
+          "sideTime": "0:15",
+          "switchSeconds": 10,
+          "media": {
+            "type": "youtube",
+            "videoId": "Xx3ikDpEWV8",
+            "sourceUrl": "https://youtube.com/shorts/Xx3ikDpEWV8",
+            "thumbnailUrl": "https://i.ytimg.com/vi/Xx3ikDpEWV8/hqdefault.jpg",
+            "sourceName": "Exercise library reference"
+          }
+        }
+      ],
+      "effort": "Fresh, fast reps. Rest 90 sec after both sides.",
+      "role": "power",
+      "label": "A"
+    },
+    {
+      "title": "BELT SQUAT",
+      "rounds": 3,
+      "exercises": [
+        {
+          "id": "EX-H001",
+          "name": "Belt Squat",
+          "reps": "6–8",
+          "timeSeconds": 45,
+          "time": "0:45",
+          "setupSeconds": 15,
+          "restSeconds": 120,
+          "timerMode": "exercise",
+          "category": "strength",
+          "cue": "Knees track; torso tall",
+          "equipment": "Belt squat",
+          "prescription": "3 sets of 6–8. Choose a load leaving 2–3 good reps; record load.",
+          "home": "3 sets of 6–8. Choose a load leaving 2–3 good reps; record load.",
+          "away": "Backpack goblet squat",
+          "media": {
+            "type": "youtube",
+            "videoId": "cWZrLzEqD5w",
+            "sourceUrl": "https://www.youtube.com/shorts/cWZrLzEqD5w",
+            "thumbnailUrl": "https://i.ytimg.com/vi/cWZrLzEqD5w/hqdefault.jpg",
+            "sourceName": "Exercise library reference"
+          }
+        }
+      ],
+      "effort": "Leave 2–3 good reps in reserve. Rest is included in the timer.",
+      "role": "strength",
+      "label": "B"
+    },
+    {
+      "title": "PULL + CABLE PRESS",
+      "rounds": 3,
+      "exercises": [
+        {
+          "id": "EX-G001",
+          "name": "Strict Pull-Up",
+          "reps": "5–8",
+          "timeSeconds": 40,
+          "time": "0:40",
+          "setupSeconds": 10,
+          "restSeconds": 90,
+          "timerMode": "exercise",
+          "category": "strength",
+          "cue": "Chest tall; no kicking",
+          "equipment": "Pull-up bar",
+          "prescription": "5–8 clean pull-ups. Assistance if needed; no added load until confirmed.",
+          "home": "5–8 clean pull-ups. Assistance if needed; no added load until confirmed.",
+          "away": "Playground bar or sturdy beam",
+          "media": {
+            "type": "youtube",
+            "videoId": "WqCXcFrA1Iw",
+            "sourceUrl": "https://www.youtube.com/shorts/WqCXcFrA1Iw",
+            "thumbnailUrl": "https://i.ytimg.com/vi/WqCXcFrA1Iw/hqdefault.jpg",
+            "sourceName": "Exercise library reference"
+          }
+        },
+        {
+          "id": "EX-FUNC-008",
+          "name": "Split-Stance Single-Arm Cable Press",
+          "reps": "6–10/SIDE",
+          "timeSeconds": 60,
+          "time": "1:00",
+          "setupSeconds": 15,
+          "restSeconds": 75,
+          "timerMode": "exercise",
+          "category": "strength",
+          "cue": "Brace in split stance; keep ribs and pelvis facing forward.",
+          "equipment": "Functional trainer",
+          "prescription": "6–10/SIDE; leave 2–3 good reps in reserve",
+          "home": "6–10/SIDE; leave 2–3 good reps in reserve",
+          "away": "Use the listed unloaded regression or comparable available equipment",
+          "sideMode": "per-side",
+          "sideCount": 2,
+          "sideSeconds": 30,
+          "sideTime": "0:30",
+          "switchSeconds": 10,
+          "media": {
+            "type": "youtube",
+            "videoId": "6hY2HlS05gU",
+            "sourceUrl": "https://www.youtube.com/shorts/6hY2HlS05gU",
+            "thumbnailUrl": "https://i.ytimg.com/vi/6hY2HlS05gU/hqdefault.jpg",
+            "sourceName": "Exercise library reference"
+          }
+        }
+      ],
+      "effort": "Leave 2–3 good reps in reserve. Rest is included in the timer.",
+      "role": "strength",
+      "label": "C"
+    },
+    {
+      "title": "PLANCHE PRACTICE",
+      "rounds": 2,
       "exercises": [
         {
           "id": "EX-CAL-PL001",
@@ -45,239 +166,116 @@
           "reps": "TIMED",
           "timeSeconds": 15,
           "time": "0:15",
-          "setupSeconds": 20,
+          "setupSeconds": 10,
+          "restSeconds": 45,
           "timerMode": "exercise",
-          "home": "Planche lean 0:15; protract hard, lock elbows and keep ribs down",
-          "away": "Floor planche lean 0:15 with the same positions",
-          "cue": "Current rung: 15-sec planche lean. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation prescription because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×15–20-sec exposures at ≤RPE8 before pseudo-planche push-ups. Stable Monday/Thursday planche anchor; last planned Oct 8.",
+          "category": "rings-calisthenics",
+          "cue": "Push the floor away. Stop before the shoulders or wrists lose position.",
+          "equipment": "Floor or parallettes",
+          "prescription": "15-sec easy planche lean; stop well before failure.",
+          "home": "15-sec easy planche lean; stop well before failure.",
+          "away": "Floor planche lean",
           "media": {
             "type": "youtube",
             "videoId": "s4_dcFZstSA",
             "sourceUrl": "https://www.youtube.com/shorts/s4_dcFZstSA",
             "thumbnailUrl": "https://i.ytimg.com/vi/s4_dcFZstSA/hqdefault.jpg",
-            "sourceName": "STRIQfit"
-          },
-          "prescription": "Planche lean 0:15; protract hard, lock elbows and keep ribs down",
-          "category": "strength"
+            "sourceName": "Exercise library reference"
+          }
         }
-      ]
+      ],
+      "effort": "Low fatigue skill practice.",
+      "role": "skill",
+      "label": "D"
     },
     {
-      "label": "B",
-      "title": "VERTICAL PULL + PRESS",
-      "rounds": 3,
-      "effort": "Rest 1:00 after EVERY round, including final. Planned RPE8; 3RIR. Current rung: 5 weighted pull-ups at a repeatable submaximal load. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation prescription because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×6–8 exposures with known load at 2–3RIR/≤RPE8 before the smallest load increase. Hard vertical pull; last planned Oct 7. Current rung: barbell overhead press, 6 reps at a repeatable submaximal load. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation prescription because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×6–8 exposures with known load/ROM at 2–3RIR/≤RPE8 before the smallest load increase. Hard vertical press; last planned Oct 7.",
+      "title": "TRUNK + MOBILITY",
+      "rounds": 1,
       "exercises": [
-        {
-          "id": "EX-G004",
-          "name": "Weighted Pull-Up",
-          "reps": "5",
-          "timeSeconds": 35,
-          "time": "0:35",
-          "setupSeconds": 30,
-          "timerMode": "exercise",
-          "home": "5 weighted pull-ups with the smallest load leaving 3RIR; use bodyweight if needed and record load",
-          "away": "5 strict pull-ups or loaded-backpack pull-ups leaving 3RIR",
-          "cue": "Current rung: 5 weighted pull-ups at a repeatable submaximal load. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation prescription because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×6–8 exposures with known load at 2–3RIR/≤RPE8 before the smallest load increase. Hard vertical pull; last planned Oct 7.",
-          "media": {
-            "type": "youtube",
-            "videoId": "9aD6_71_234",
-            "sourceUrl": "https://www.youtube.com/shorts/9aD6_71_234",
-            "thumbnailUrl": "https://i.ytimg.com/vi/9aD6_71_234/hqdefault.jpg",
-            "sourceName": "Calixpert"
-          },
-          "prescription": "5 weighted pull-ups with the smallest load leaving 3RIR; use bodyweight if needed and record load",
-          "category": "strength"
-        },
-        {
-          "id": "EX-R014",
-          "name": "Barbell Overhead Press",
-          "reps": "6",
-          "timeSeconds": 40,
-          "time": "0:40",
-          "setupSeconds": 30,
-          "timerMode": "exercise",
-          "home": "6 barbell overhead presses at 3RIR; brace and record load",
-          "away": "6 pike push-ups or loaded-backpack presses at 3RIR",
-          "cue": "Current rung: barbell overhead press, 6 reps at a repeatable submaximal load. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation prescription because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×6–8 exposures with known load/ROM at 2–3RIR/≤RPE8 before the smallest load increase. Hard vertical press; last planned Oct 7.",
-          "media": {
-            "type": "youtube",
-            "videoId": "4LBVP2Oe7fg",
-            "sourceUrl": "https://www.youtube.com/shorts/4LBVP2Oe7fg",
-            "thumbnailUrl": "https://i.ytimg.com/vi/4LBVP2Oe7fg/hqdefault.jpg",
-            "sourceName": "Andrew Kwong (DeltaBolic)"
-          },
-          "prescription": "6 barbell overhead presses at 3RIR; brace and record load",
-          "category": "strength"
-        }
-      ]
-    },
-    {
-      "label": "C",
-      "title": "SQUAT + ANTI-ROTATION",
-      "rounds": 3,
-      "effort": "Rest 1:00 after EVERY round, including final. Planned RPE7; 3RIR. Current rung: belt squat, 8 reps at a repeatable submaximal load. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation prescription because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×6–8 exposures with known load/ROM at 2–3RIR/≤RPE8 before the smallest load increase. Monday squat anchor; last planned Oct 5. Current rung: Pallof press, 6/side. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation prescription because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×6–8/side exposures with known resistance and no trunk drift before more load. Anti-rotation strength; last planned Oct 5.",
-      "exercises": [
-        {
-          "id": "EX-H001",
-          "name": "Belt Squat",
-          "reps": "8",
-          "timeSeconds": 45,
-          "time": "0:45",
-          "setupSeconds": 30,
-          "timerMode": "exercise",
-          "home": "8 belt squats at 3RIR; consistent depth and record load",
-          "away": "8 loaded-backpack squats at 3RIR",
-          "cue": "Current rung: belt squat, 8 reps at a repeatable submaximal load. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation prescription because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×6–8 exposures with known load/ROM at 2–3RIR/≤RPE8 before the smallest load increase. Monday squat anchor; last planned Oct 5.",
-          "media": {
-            "type": "youtube",
-            "videoId": "cWZrLzEqD5w",
-            "sourceUrl": "https://www.youtube.com/shorts/cWZrLzEqD5w",
-            "thumbnailUrl": "https://i.ytimg.com/vi/cWZrLzEqD5w/hqdefault.jpg",
-            "sourceName": "Juggernaut Training Systems"
-          },
-          "prescription": "8 belt squats at 3RIR; consistent depth and record load",
-          "category": "strength"
-        },
         {
           "id": "EX-T012",
           "name": "Pallof Press",
           "reps": "6/SIDE",
-          "timeSeconds": 40,
-          "time": "0:40",
-          "setupSeconds": 30,
+          "timeSeconds": 60,
+          "time": "1:00",
+          "setupSeconds": 15,
+          "restSeconds": 30,
           "timerMode": "exercise",
-          "home": "6 Pallof presses/side; two-count reach, resist rotation",
-          "away": "6 band Pallof presses/side",
-          "cue": "Current rung: Pallof press, 6/side. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation prescription because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 3×6–8/side exposures with known resistance and no trunk drift before more load. Anti-rotation strength; last planned Oct 5.",
+          "category": "strength",
+          "cue": "Do not let cable turn you",
+          "equipment": "Functional trainer or band",
+          "prescription": "6/SIDE; leave 2–3 good reps in reserve",
+          "home": "6/SIDE; leave 2–3 good reps in reserve",
+          "away": "Towel press isometric",
+          "sideMode": "per-side",
+          "sideCount": 2,
+          "sideSeconds": 30,
+          "sideTime": "0:30",
+          "switchSeconds": 10,
           "media": {
             "type": "youtube",
             "videoId": "P1H4IzD9rbQ",
             "sourceUrl": "https://www.youtube.com/shorts/P1H4IzD9rbQ",
             "thumbnailUrl": "https://i.ytimg.com/vi/P1H4IzD9rbQ/hqdefault.jpg",
-            "sourceName": "Colossus Fitness"
-          },
-          "prescription": "6 Pallof presses/side; two-count reach, resist rotation",
-          "category": "strength",
-          "sideMode": "per-side",
-          "sideCount": 2,
-          "sideSeconds": 20,
-          "sideTime": "0:20",
-          "switchSeconds": 10
-        }
-      ]
-    },
-    {
-      "label": "D",
-      "title": "LOWER-BODY POWER",
-      "rounds": 3,
-      "effort": "Rest 0:45 after EVERY round, including final. Planned RPE6; 4RIR. Current rung: reset broad jump, 3 reps. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE. Next gate: two confirmed crisp 3×3 exposures with repeatable distance and quiet landings before more intent or volume. Stop when distance, height, landing or posture declines; last planned Oct 5.",
-      "exercises": [
-        {
-          "id": "EX-E003",
-          "name": "Broad Jump",
-          "reps": "3",
-          "timeSeconds": 20,
-          "time": "0:20",
-          "setupSeconds": 20,
-          "timerMode": "exercise",
-          "home": "3 reset broad jumps; full reset and stick each landing",
-          "away": "3 reset broad jumps on level ground",
-          "cue": "Current rung: reset broad jump, 3 reps. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE. Next gate: two confirmed crisp 3×3 exposures with repeatable distance and quiet landings before more intent or volume. Stop when distance, height, landing or posture declines; last planned Oct 5.",
-          "media": {
-            "type": "youtube",
-            "videoId": "AupLjwEflR4",
-            "sourceUrl": "https://www.youtube.com/shorts/AupLjwEflR4",
-            "thumbnailUrl": "https://i.ytimg.com/vi/AupLjwEflR4/hqdefault.jpg",
-            "sourceName": "Martell Elite Fitness"
-          },
-          "prescription": "3 reset broad jumps; full reset and stick each landing",
-          "category": "power"
-        }
-      ]
-    },
-    {
-      "label": "E",
-      "title": "CARRY + ACTIVE ANKLES",
-      "rounds": 2,
-      "effort": "Rest 0:30 after EVERY round, including final. Planned RPE7; 3RIR. Current rung: 40-sec farmer carry at a repeatable load. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation prescription because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 2×0:40 exposures with known load and stable posture before the smallest load increase. Loaded carry; last planned Oct 7. Current rung: knee-to-wall mobilization, 5/side. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation prescription because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED controlled 2×5/side exposures with repeatable heel-down range before more range. Active ankle mobility; last planned Oct 8.",
-      "exercises": [
-        {
-          "id": "EX-G019",
-          "name": "Farmer Carry",
-          "reps": "TIMED",
-          "timeSeconds": 40,
-          "time": "0:40",
-          "setupSeconds": 30,
-          "timerMode": "exercise",
-          "home": "Heavy farmer carry 0:40; tall posture and quiet steps",
-          "away": "Heavy bag or bucket farmer carry 0:40",
-          "cue": "Current rung: 40-sec farmer carry at a repeatable load. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation prescription because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED clean 2×0:40 exposures with known load and stable posture before the smallest load increase. Loaded carry; last planned Oct 7.",
-          "media": {
-            "type": "youtube",
-            "videoId": "k83HQI2P-rk",
-            "sourceUrl": "https://www.youtube.com/shorts/k83HQI2P-rk",
-            "thumbnailUrl": "https://i.ytimg.com/vi/k83HQI2P-rk/hqdefault.jpg",
-            "sourceName": "KevTheTrainer"
-          },
-          "prescription": "Heavy farmer carry 0:40; tall posture and quiet steps",
-          "category": "strength"
+            "sourceName": "Exercise library reference"
+          }
         },
         {
-          "id": "EX-FUNC-016",
-          "name": "Knee-to-Wall Ankle Mobilization",
-          "reps": "5/SIDE",
-          "timeSeconds": 40,
-          "time": "0:40",
-          "setupSeconds": 20,
+          "id": "EX-FUNC-025",
+          "name": "Hips, ankles and thoracic rotation",
+          "reps": "TIMED",
+          "timeSeconds": 120,
+          "time": "2:00",
+          "setupSeconds": 0,
+          "restSeconds": 0,
           "timerMode": "exercise",
-          "home": "5 knee-to-wall ankle mobilizations/side; heel stays down",
-          "away": "5 controlled knee-over-toe rocks/side",
-          "cue": "Current rung: knee-to-wall mobilization, 5/side. Last qualifying USER-CONFIRMED completed exposure: NONE VERIFIED. Today progression variable NONE; retain the foundation prescription because silence-based logs do not earn advancement. Next gate: two USER-CONFIRMED controlled 2×5/side exposures with repeatable heel-down range before more range. Active ankle mobility; last planned Oct 8.",
+          "category": "mobility",
+          "cue": "Use comfortable active range. No forced stretching.",
+          "equipment": "Mat",
+          "prescription": "2 min easy 90/90 switches, knee-to-wall rocks and open books; split time evenly.",
+          "home": "2 min easy 90/90 switches, knee-to-wall rocks and open books; split time evenly.",
+          "away": "Use the listed unloaded regression or comparable available equipment",
           "media": {
             "type": "youtube",
-            "videoId": "vcq7GllDOJI",
-            "sourceUrl": "https://www.youtube.com/shorts/vcq7GllDOJI",
-            "thumbnailUrl": "https://i.ytimg.com/vi/vcq7GllDOJI/hqdefault.jpg",
-            "sourceName": "Return 2 Sport PT & Performance"
-          },
-          "prescription": "5 knee-to-wall ankle mobilizations/side; heel stays down",
-          "category": "mobility",
-          "sideMode": "per-side",
-          "sideCount": 2,
-          "sideSeconds": 20,
-          "sideTime": "0:20",
-          "switchSeconds": 10
+            "videoId": "iPqysXFsvTQ",
+            "sourceUrl": "https://www.youtube.com/shorts/iPqysXFsvTQ",
+            "thumbnailUrl": "https://i.ytimg.com/vi/iPqysXFsvTQ/hqdefault.jpg",
+            "sourceName": "Exercise library reference"
+          }
         }
-      ]
+      ],
+      "effort": "Leave 2–3 good reps in reserve. Rest is included in the timer.",
+      "role": "accessory",
+      "label": "E"
     }
   ],
-  "martialSupplement": {
-    "id": "EX-F002",
-    "name": "Hip Escape",
-    "reps": "2/SIDE/MIN ALTERNATING",
-    "timeSeconds": 300,
-    "time": "5:00",
-    "setupSeconds": 20,
-    "timerMode": "exercise",
-    "home": "Optional 5:00 solo hip escapes, 2 controlled reps/side/min alternating",
-    "away": "Optional 5:00 hip escapes on a mat, 2 controlled reps/side/min alternating",
-    "cue": "Separate—not counted in physical duration, completion, or progression. Never auto-log.",
-    "media": {
-      "type": "youtube",
-      "videoId": "FZHVLwQp7oE",
-      "sourceUrl": "https://www.youtube.com/shorts/FZHVLwQp7oE",
-      "thumbnailUrl": "https://i.ytimg.com/vi/FZHVLwQp7oE/hqdefault.jpg",
-      "sourceName": "Ares East Mesa BJJ"
-    },
-    "prescription": "Optional 5:00 solo hip escapes, 2 controlled reps/side/min alternating",
-    "category": "martial"
+  "schemaVersion": 4,
+  "date": "2026-10-12",
+  "generatedAt": "2026-10-12T23:53:09.762Z",
+  "planId": "F4-2026-10-12-strength-a",
+  "programVersion": "2026-10-12-v4",
+  "totalSeconds": 2490,
+  "additionalTitle": "TODAY’S NEXT BLOCKS",
+  "levels": {
+    "floor": "10:00 · 7 min walk + 3 min mobility",
+    "standard": "41:30 · includes setup + rest",
+    "bonus": "Optional brisk walk; dummy lab separate"
   },
-  "featuredMode": "standard",
-  "transitionPolicy": {
-    "sameSetupSeconds": 15,
-    "standardSeconds": 20,
-    "equipmentChangeSeconds": 30,
-    "sideSwitchSeconds": 10
+  "weekSummary": "Mon strength A · Tue endurance · Wed strength B · Thu endurance · Fri strength C · Sat boxing · Sun recovery",
+  "martialSupplement": {
+    "id": "DUMMY-LAB",
+    "name": "DUMMY LAB · SINGLE-LEG STUDY",
+    "reps": "3 SLOW/SIDE",
+    "timeSeconds": 420,
+    "time": "7:00",
+    "setupSeconds": 0,
+    "restSeconds": 0,
+    "timerMode": "exercise",
+    "category": "martial",
+    "countsAsWorkout": false,
+    "home": "Watch one familiar entry; rehearse slowly 3 times/side. Freeze at contact and inspect position.",
+    "away": "Visualize the same positions and write one question.",
+    "cue": "One question: where do posture or connection change? Pause and inspect.",
+    "text": "7 min slow technical study. Record one discovery. Not conditioning."
   }
 }

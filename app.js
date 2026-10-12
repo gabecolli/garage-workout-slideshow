@@ -17,6 +17,16 @@ let currentIndex = 0;
 let timerId;
 let pollId;
 let isPaused = false;
+let workoutMode = false;
+let activeWorkout = null;
+let serverWorkout = null;
+let trainingProgram = null;
+let rotationExercises = {};
+let selectedVersion = 'standard';
+let completedSets = new Set();
+const startButton = document.querySelector('[data-start]');
+const doneButton = document.querySelector('[data-done]');
+const versionSelect = document.querySelector('[data-version]');
 let currentRevision = "";
 let hasWorkout = false;
 let youtubeSequence = 0;
@@ -37,7 +47,7 @@ const CATEGORY_LABELS = {
   power: "POWER",
   strength: "STRENGTH",
   mobility: "MOBILITY",
-  martial: "MARTIAL SUPPLEMENT",
+  martial: "DUMMY LAB",
 };
 
 function createElement(tag, className, text) {
@@ -98,7 +108,7 @@ function makeExerciseClock(item) {
   for (const [label, value] of [
     ["REPS", safeText(item?.reps, "TIMED")],
     ["TIME", getTimeLabel(item)],
-    ["SETUP", formatDuration(getSetupSeconds(item))],
+    ["REST", formatDuration(Number(item?.restSeconds) || 0)],
   ]) {
     const field = createElement("div", "timing-field");
     field.append(
@@ -321,7 +331,7 @@ function makeOverview(workout, deposits, pageIndex = 0, pageCount = 1) {
 
   const ignition = createElement("div", "overview-footer__item");
   ignition.append(
-    createElement("span", "overview-footer__label", "10-MIN IGNITION"),
+    createElement("span", "overview-footer__label", "MOVEMENT PREP"),
     createElement(
       "strong",
       "",
@@ -330,8 +340,8 @@ function makeOverview(workout, deposits, pageIndex = 0, pageCount = 1) {
   );
   const supplement = createElement("div", "overview-footer__item overview-footer__item--muted");
   supplement.append(
-    createElement("span", "overview-footer__label", "MARTIAL SUPPLEMENT • SEPARATE"),
-    createElement("strong", "", safeText(workout.martialSupplement?.text, "Optional")),
+    createElement("span", "overview-footer__label", "DUMMY LAB • SKILL ONLY"),
+    createElement("strong", "", safeText(workout.martialSupplement?.text, "Optional slow technical practice")),
   );
   const footer = createElement("footer", "overview-footer");
   footer.append(ignition, supplement);
@@ -344,7 +354,10 @@ function makeIgnitionSlide(ignition) {
   if (!ignition) return null;
   const slide = createElement("section", "slide slide--exercise");
   slide.dataset.slide = "";
-  slide.dataset.timerMode = safeText(ignition.timerMode, "cardio-exempt");
+  slide.dataset.timerMode = "exercise";
+  slide.dataset.countdownSeconds = String(getTimeSeconds(ignition));
+  slide.dataset.setupSeconds = String(getSetupSeconds(ignition));
+  slide.dataset.restSeconds = String(Number(ignition.restSeconds) || 0);
   slide.setAttribute("aria-hidden", "true");
 
   const mediaExercise = {
@@ -354,15 +367,10 @@ function makeIgnitionSlide(ignition) {
   const detail = createElement("article", "exercise-detail");
   detail.append(
     makeCategory(ignition.category || "conditioning"),
-    createElement("p", "exercise-kicker", "10-MIN IGNITION"),
+    createElement("p", "exercise-kicker", "MOVEMENT PREP"),
     createElement("h1", "exercise-title", safeText(ignition.name, "Movement prep")),
   );
-  if (isCardioExempt(ignition)) {
-    detail.append(makeCardioDuration(ignition));
-  } else {
-    slide.dataset.countdownSeconds = String(getTimeSeconds(ignition));
-    detail.append(makeExerciseClock(ignition));
-  }
+  detail.append(makeExerciseClock(ignition));
   const routes = createElement("div", "routes");
   routes.append(
     makeRoute("HOME", safeText(ignition.home, "As prescribed"), true),
@@ -392,11 +400,15 @@ function makeCue(text) {
 }
 
 function makeExerciseSlide(exercise, deposit, roundNumber = 1) {
+  if (roundNumber > 1) exercise = {...exercise, setupSeconds: 0};
   const slide = createElement("section", "slide slide--exercise");
   slide.dataset.slide = "";
   slide.dataset.timerMode = "exercise";
   slide.dataset.countdownSeconds = String(getTimeSeconds(exercise));
   slide.dataset.setupSeconds = String(getSetupSeconds(exercise));
+  slide.dataset.restSeconds = String(Number(exercise.restSeconds) || 0);
+  slide.dataset.setKey = `${deposit.label}:${roundNumber}:${exercise.id || exercise.name}`;
+  slide.dataset.exerciseName = safeText(exercise.name);
   if (isPerSide(exercise)) {
     slide.dataset.sideMode = "per-side";
     slide.dataset.sideSeconds = String(getSideSeconds(exercise));
@@ -433,11 +445,11 @@ function makeExerciseSlide(exercise, deposit, roundNumber = 1) {
 
 function makeMartialSupplementSlide(supplement) {
   if (!supplement?.name) return null;
-  const deposit = { label: "M", title: "MARTIAL SUPPLEMENT", rounds: 1, effort: "SEPARATE — NOT COUNTED" };
+  const deposit = { label: "M", title: "DUMMY LAB", rounds: 1, effort: "SLOW STUDY · NO CONDITIONING CREDIT" };
   const slide = makeExerciseSlide(supplement, deposit, 1);
   slide.classList.add("slide--martial");
   const kicker = slide.querySelector(".exercise-kicker");
-  if (kicker) kicker.textContent = "MARTIAL SUPPLEMENT • SEPARATE — NOT COUNTED";
+  if (kicker) kicker.textContent = "DUMMY LAB • SLOW TECHNICAL STUDY";
   return slide;
 }
 
@@ -459,6 +471,11 @@ function buildSlides(workout) {
       }
     }
   }
+  const finish = createElement('section', 'slide slide--loading');
+  finish.dataset.slide = ''; finish.dataset.sessionEnd = 'true';
+  const card = createElement('div','loading-card');
+  card.append(createElement('p','eyebrow','PHYSICAL SESSION FINISHED'),createElement('h1','','Report what you did.'),createElement('p','','Timers do not confirm completion. Use Check-in to record your session. Next opens the separate slow dummy lab.'));
+  finish.append(card); nextSlides.push(finish);
   const martialSlide = makeMartialSupplementSlide(workout.martialSupplement);
   if (martialSlide) nextSlides.push(martialSlide);
   return nextSlides;
@@ -471,7 +488,8 @@ function validateTimedMovement(item, label) {
   if (!Number.isInteger(seconds) || seconds < 1) throw new Error(`${label} must include a positive timeSeconds value`);
   if (!safeText(item?.time) || item.time !== formatDuration(seconds)) throw new Error(`${label} TIME must match timeSeconds in m:ss format`);
   const setupSeconds = getSetupSeconds(item);
-  if (![15, 20, 30].includes(setupSeconds)) throw new Error(`${label} setupSeconds must be 15, 20, or 30`);
+  if (!Number.isInteger(Number(item.setupSeconds)) || Number(item.setupSeconds)<0 || Number(item.setupSeconds)>120) throw new Error(`${label} setupSeconds must be 0–120`);
+  if (item.restSeconds !== undefined && (!Number.isInteger(item.restSeconds) || item.restSeconds<0 || item.restSeconds>300)) throw new Error(`${label} invalid restSeconds`);
   if (item?.sideMode === "per-side") {
     if (Number(item?.sideCount) !== 2) throw new Error(`${label} sideCount must equal 2`);
     const sideSeconds = getSideSeconds(item);
@@ -490,13 +508,13 @@ function validateTimedMovement(item, label) {
 function validateWorkout(workout) {
   if (!workout || typeof workout !== "object") throw new Error("Workout data is missing");
   if (workout.schemaVersion < 3) throw new Error("Workout timing schema v3 is required");
-  if (!Array.isArray(workout.deposits) || workout.deposits.length < 3 || workout.deposits.length > 5) {
-    throw new Error("Workout must contain three to five deposits");
+  if (!Array.isArray(workout.deposits) || workout.deposits.length < 1 || workout.deposits.length > 5) {
+    throw new Error("Workout must contain one to five blocks");
   }
   if (workout.ignition) validateTimedMovement(workout.ignition, "Ignition");
   for (const deposit of workout.deposits) {
     if (!Array.isArray(deposit.exercises) || deposit.exercises.length < 1 || deposit.exercises.length > 3) {
-      throw new Error("Each deposit must contain two or three exercises");
+      throw new Error("Each block must contain one to three exercises");
     }
     if (!Number.isInteger(deposit.rounds) || deposit.rounds < 1 || deposit.rounds > 5) {
       throw new Error("Deposit rounds must be between one and five");
@@ -508,6 +526,8 @@ function validateWorkout(workout) {
 
 function setWorkout(workout) {
   validateWorkout(workout);
+  activeWorkout = workout;
+  completedSets = new Set(readLocal(`fighter-sets:${workout.planId}`, []));
   const nextSlides = buildSlides(workout);
   slideshow.replaceChildren(...nextSlides);
   slides = nextSlides;
@@ -641,6 +661,7 @@ function getActiveSlideDurationMs() {
   if (activeTimerPhase === "left" || activeTimerPhase === "right") return getActiveSideDurationMs();
   if (activeTimerPhase === "switch") return getActiveSwitchDurationMs();
   if (activeTimerPhase === "work") return getActiveWorkDurationMs();
+  if (activeTimerPhase === "rest") return Number(slides[currentIndex]?.dataset.restSeconds || 0) * 1000;
   return SLIDE_INTERVAL_MS;
 }
 
@@ -659,18 +680,19 @@ function setActiveTimerPhase(phase) {
     left: "LEFT SIDE",
     switch: "SWITCH SIDES",
     right: "RIGHT SIDE",
+    rest: "REST / CHANGE STATION",
   };
   if (activeCountdownLabel) {
     activeCountdownLabel.textContent = phaseLabels[phase] || "WORK";
   }
   if (activeCountdownPanel) {
-    activeCountdownPanel.classList.toggle("is-setup", phase === "setup" || phase === "switch");
+    activeCountdownPanel.classList.toggle("is-setup", phase === "setup" || phase === "switch" || phase === "rest");
     activeCountdownPanel.classList.toggle("is-work", ["work", "left", "right"].includes(phase));
   }
 }
 
 function resetActiveTimerPhase() {
-  const hasWorkTimer = getActiveWorkDurationMs() > 0;
+  const hasWorkTimer = workoutMode && getActiveWorkDurationMs() > 0;
   const hasSetupTimer = getActiveSetupDurationMs() > 0;
   let nextPhase = "slide";
   if (hasWorkTimer) {
@@ -714,6 +736,8 @@ function finishCurrentTimerPhase() {
     nextPhase = getActiveSwitchDurationMs() > 0 ? "switch" : "right";
   } else if (activeTimerPhase === "switch") {
     nextPhase = "right";
+  } else if (['work','right'].includes(activeTimerPhase) && Number(slides[currentIndex]?.dataset.restSeconds)>0) {
+    nextPhase = 'rest';
   }
 
   if (nextPhase) {
@@ -745,6 +769,7 @@ function startCurrentTimer(reset = false) {
   setActiveTimerPhase(activeTimerPhase);
   updateTimerVisual();
   if (isPaused || document.hidden || slides.length < 2) return;
+  if (workoutMode && slides[currentIndex]?.dataset.sessionEnd) { setPaused(true); return; }
 
   slideStartedAt = performance.now();
   timerTickId = window.setInterval(updateTimerVisual, TIMER_TICK_MS);
@@ -759,12 +784,17 @@ function render({ resetTimer = true } = {}) {
     slide.setAttribute("aria-hidden", String(!isActive));
   });
   counter.textContent = `${currentIndex + 1} / ${slides.length}`;
+  const key=slides[currentIndex]?.dataset.setKey;
+  doneButton.hidden = !workoutMode || !key || slides[currentIndex].classList.contains('slide--martial');
+  doneButton.textContent = completedSets.has(key) ? 'Set logged ✓' : 'Log set';
+  doneButton.disabled = completedSets.has(key);
   activateMedia();
   startCurrentTimer(resetTimer);
 }
 
 function showSlide(index) {
   if (!slides.length) return;
+  if (workoutMode && index >= slides.length) {setPaused(true);return;}
   currentIndex = (index + slides.length) % slides.length;
   render({ resetTimer: true });
 }
@@ -793,8 +823,9 @@ async function fetchWorkout() {
     const workout = await response.json();
     const revision = safeText(workout.generatedAt, `${workout.date}:${JSON.stringify(workout).length}`);
     if (revision !== currentRevision) {
-      setWorkout(workout);
-      currentRevision = revision;
+      serverWorkout = workout;
+      if (!workoutMode) { applyVersion(); currentRevision = revision; }
+      else liveStatus.textContent = 'UPDATED PLAN READY · FINISH CURRENT SESSION';
     }
     if (hasWorkout) {
       liveStatus.classList.remove("live-badge--offline");
@@ -816,6 +847,7 @@ nextButton.addEventListener("click", () => showSlide(currentIndex + 1));
 toggleButton.addEventListener("click", () => setPaused(!isPaused));
 
 document.addEventListener("keydown", (event) => {
+  if (/INPUT|TEXTAREA|SELECT/.test(event.target.tagName) || document.querySelector("[data-checkin]").open) return;
   if (event.key === "ArrowLeft") showSlide(currentIndex - 1);
   if (event.key === "ArrowRight") showSlide(currentIndex + 1);
   if (event.key === " " && !(event.target instanceof HTMLButtonElement)) {
@@ -838,11 +870,70 @@ document.addEventListener("visibilitychange", () => {
 window.addEventListener("online", fetchWorkout);
 window.addEventListener("pageshow", fetchWorkout);
 
+Promise.all([fetch('data/program.json', {cache:'no-store'}).then(r=>r.ok?r.json():null),fetch('data/rotation-exercises.json',{cache:'no-store'}).then(r=>r.ok?r.json():{})]).then(([p,r])=>{trainingProgram=p;rotationExercises=r;}).catch(()=>{});
 fetchWorkout();
 pollId = window.setInterval(fetchWorkout, POLL_INTERVAL_MS);
-window.setTimeout(() => window.location.reload(), AUTO_RELOAD_INTERVAL_MS);
+window.setTimeout(() => { if (!workoutMode) window.location.reload(); }, AUTO_RELOAD_INTERVAL_MS);
 
 window.addEventListener("pagehide", () => {
   clearTimerHandles();
   window.clearInterval(pollId);
+});
+
+
+function readLocal(key, fallback) { try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; } }
+function writeLocal(key,value) { try { localStorage.setItem(key,JSON.stringify(value)); return true; } catch { return false; } }
+function applyVersion() {
+  if(!serverWorkout) return;
+  if(selectedVersion==='standard') setWorkout(serverWorkout);
+  else if(trainingProgram && window.FighterEngine) setWorkout(FighterEngine.generate(trainingProgram, serverWorkout.date, {targetDate:serverWorkout.date,mode:selectedVersion},rotationExercises));
+  else { liveStatus.textContent='SHORT VERSION UNAVAILABLE · RELOAD WHEN ONLINE'; return; }
+}
+versionSelect.addEventListener('change',()=>{
+  selectedVersion=versionSelect.value;
+  workoutMode=false; startButton.textContent='Start';
+  applyVersion();
+});
+startButton.addEventListener('click',()=>{
+  workoutMode=!workoutMode;
+  startButton.textContent=workoutMode?'End / preview':'Start';
+  if(workoutMode) {
+    isPaused=false; toggleButton.textContent='Pause'; toggleButton.setAttribute('aria-pressed','false');
+    const first=slides.findIndex(s=>Number(s.dataset.countdownSeconds)>0);
+    showSlide(Math.max(0,first));
+  } else {applyVersion();}
+});
+doneButton.addEventListener('click',()=>{
+  const key=slides[currentIndex]?.dataset.setKey;
+  if(!workoutMode || !key) return;
+  completedSets.add(key);
+  const saved=writeLocal(`fighter-sets:${activeWorkout.planId}`,[...completedSets]);
+  doneButton.textContent=saved?'Set logged ✓':'Logged for this visit'; doneButton.disabled=true;
+});
+const checkin=document.querySelector('[data-checkin]');
+const report=document.querySelector('[data-report]');
+let checkinWasPaused=true;
+document.querySelector('[data-open-checkin]').addEventListener('click',()=>{
+  checkinWasPaused=isPaused;setPaused(true);checkin.showModal();
+  document.querySelector('[name=reportDate]').value=activeWorkout?.date || getChicagoDate();
+  document.querySelector('[data-checkin-status]').textContent='Saved on this device only. Copy your report into your coach/Dot chat to share it.';
+});
+checkin.addEventListener('close',()=>{if(!checkinWasPaused)setPaused(false);});
+document.querySelector('[data-close-checkin]').addEventListener('click',()=>checkin.close());
+function makeReport() {
+  const form=document.querySelector('[data-checkin-form]');
+  const fields=new FormData(form);
+  return `Training report ${fields.get('reportDate')}\nPlan: ${activeWorkout?.planId || 'unknown'}; explicitly logged sets: ${completedSets.size}\nPhysical session: ${fields.get('completion')}\nBJJ CLASS: ${fields.get('bjj')}\nBoxing: ${fields.get('boxing')}\nDUMMY LAB (skill only): ${fields.get('dummy') || 'unreported'}\nDifficulty / loads / reps / pain / energy / tomorrow: ${fields.get('notes') || 'unreported'}`;
+}
+document.querySelector('[data-save-report]').addEventListener('click',()=>{
+  report.value=makeReport();
+  const history=readLocal('fighter-checkins',[]);
+  history.push({savedAt:new Date().toISOString(),report:report.value});
+  const saved=writeLocal('fighter-checkins',history.slice(-90));
+  document.querySelector('[data-checkin-status]').textContent=saved?'Saved on this device. Copy and send to your coach/Dot; it has not been uploaded.':'Device storage unavailable. Copy the report below before closing.';
+});
+document.querySelector('[data-copy-report]').addEventListener('click',async()=>{
+  report.value=makeReport();
+  try {await navigator.clipboard.writeText(report.value);document.querySelector('[data-checkin-status]').textContent='Copied. Paste into your coach/Dot chat so the next plan can use it.';}
+  catch {report.focus();report.select();document.querySelector('[data-checkin-status]').textContent='Select and copy the report below.';}
 });

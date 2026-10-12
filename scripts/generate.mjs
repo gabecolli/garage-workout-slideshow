@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import {createRequire} from 'node:module';
+const require=createRequire(import.meta.url);
+const engine=require('../training-engine.js');
+const program=JSON.parse(fs.readFileSync(new URL('../data/program.json',import.meta.url)));
+const rotation=JSON.parse(fs.readFileSync(new URL('../data/rotation-exercises.json',import.meta.url)));
+const date=process.argv[2] || new Intl.DateTimeFormat('en-CA',{timeZone:'America/Chicago'}).format(new Date());
+const feedback=process.argv[3] ? JSON.parse(fs.readFileSync(process.argv[3])) : {};
+if(!/^\d{4}-\d{2}-\d{2}$/.test(date)) throw new Error('Use YYYY-MM-DD');
+const plan=engine.generate(program,date,feedback,rotation);
+fs.writeFileSync(new URL('../data/today.json',import.meta.url),JSON.stringify(plan,null,2)+'\n');
+console.log(`${plan.date}: ${plan.title}; ${(plan.totalSeconds/60).toFixed(1)} physical minutes; dummy separate`);

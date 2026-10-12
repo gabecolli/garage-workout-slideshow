@@ -8,8 +8,9 @@
     <title>Daily FIGHTER Workout</title>
     <link rel="preconnect" href="https://www.youtube-nocookie.com">
     <link rel="preconnect" href="https://i.ytimg.com">
-    <link rel="stylesheet" href="styles.css?v=20260823-timers-1">
-    <script src="app.js?v=20260905-skill-block-1" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20261012-v4">
+    <script src="training-engine.js?v=20261012-v4" defer></script>
+    <script src="app.js?v=20261012-v4" defer></script>
   </head>
   <body>
     <main class="slideshow" data-slideshow aria-label="Daily garage workout">
@@ -27,13 +28,32 @@
     </div>
 
     <div class="controls" role="group" aria-label="Slideshow controls">
+      <button type="button" data-start>Start</button>
+      <select data-version aria-label="Session version"><option value="standard">Today</option><option value="minimum">10-min minimum</option><option value="class-day">BJJ class day</option></select>
       <button type="button" data-previous aria-label="Show previous slide">
         Previous
       </button>
       <button type="button" data-toggle aria-pressed="false">Pause</button>
       <output data-counter aria-live="polite">1 / 1</output>
       <button type="button" data-next aria-label="Show next slide">Next</button>
+      <button type="button" data-done hidden>Log set</button>
+      <button type="button" data-open-checkin>Check-in</button>
     </div>
+
+    <dialog data-checkin aria-labelledby="checkin-title">
+      <h2 id="checkin-title">What did you actually do?</h2>
+      <p data-checkin-status role="status"></p>
+      <form data-checkin-form>
+        <label>Date <input name="reportDate" type="date"></label>
+        <label>Physical plan <select name="completion"><option>Unreported</option><option>Completed</option><option>Partly completed</option><option>Skipped</option><option>10-min minimum completed</option></select></label>
+        <label>BJJ class <input name="bjj" value="Unreported" placeholder="No, or minutes + easy/moderate/hard"></label>
+        <label>Boxing <input name="boxing" value="Unreported" placeholder="No, or rounds/minutes + intensity"></label>
+        <label>Slow dummy lab <input name="dummy" placeholder="Theme, minutes, one discovery or question"></label>
+        <label>How it went + tomorrow <textarea name="notes" rows="3" placeholder="Loads/reps, what felt hard, pain or soreness, energy, class plans and time available"></textarea></label>
+      </form>
+      <div class="checkin-actions"><button type="button" data-save-report>Save on device</button><button type="button" data-copy-report>Copy for coach / Dot</button><button type="button" data-close-checkin>Close</button></div>
+      <textarea data-report rows="5" aria-label="Report to copy" readonly></textarea>
+    </dialog>
 
     <div class="progress" aria-hidden="true">
       <div class="progress__bar" data-progress></div>
@@ -44,3 +64,4 @@
     </noscript>
   </body>
 </html>
+
