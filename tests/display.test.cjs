@@ -11,3 +11,24 @@ test('endurance prep keeps its real 420-second timer',()=>{const {context,run}=e
 test('initial setup counted once, later rounds get no duplicate setup',()=>{const {context,run}=env();context.move=require('../data/program.json').templates['strength-a'].deposits[0].exercises[0];assert.equal(run('makeExerciseSlide(move,{label:"A",rounds:3},1).dataset.setupSeconds'),'15');assert.equal(run('makeExerciseSlide(move,{label:"A",rounds:3},2).dataset.setupSeconds'),'0');});
 test('per-side sequence includes switch and prescribed rest; no automatic completion',()=>{const {context,run}=env();context.move=require('../data/program.json').templates['strength-a'].deposits[0].exercises[0];run('slides=[makeExerciseSlide(move,{label:"A",rounds:3},1),makeExerciseSlide(move,{label:"A",rounds:3},2)];currentIndex=0;workoutMode=true;isPaused=true;startCurrentTimer(true)');assert.equal(run('activeTimerPhase'),'setup');for(const phase of ['left','switch','right','rest']){run('finishCurrentTimerPhase()');assert.equal(run('activeTimerPhase'),phase);}assert.equal(run('getActiveSlideDurationMs()'),90000);assert.equal(run('completedSets.size'),0);});
 test('preview uses 18-second slideshow; workout uses real time; finish stops',()=>{const {context,run}=env();context.move=require('../data/program.json').templates.minimum.ignition;run('slides=[makeIgnitionSlide(move),makeIgnitionSlide(move)];currentIndex=0;workoutMode=false;resetActiveTimerPhase()');assert.equal(run('slideTotalMs'),18000);run('workoutMode=true;resetActiveTimerPhase()');assert.equal(run('slideTotalMs'),420000);run('slides[0].dataset.sessionEnd="true";isPaused=false;startCurrentTimer(true)');assert.equal(run('isPaused'),true);});
+
+test('preview clock displays prescribed movement time, not slide dwell countdown',()=>{
+ const {context,run}=env();context.move=require('../data/program.json').templates.minimum.ignition;
+ run('slides=[makeIgnitionSlide(move),makeIgnitionSlide(move)];currentIndex=0;workoutMode=false;isPaused=true;startCurrentTimer(true)');
+ assert.equal(run('slideTotalMs'),18000);
+ assert.equal(run('activeCountdownOutput.textContent'),'7:00');
+ assert.equal(run('activeCountdownLabel.textContent'),'PREVIEW · MOVEMENT TIME');
+ run('slideRemainingMs=9000;updateTimerVisual()');
+ assert.equal(run('activeCountdownOutput.textContent'),'7:00');
+ run('workoutMode=true;startCurrentTimer(true)');
+ assert.equal(run('activeCountdownLabel.textContent'),'WORK');
+ assert.equal(run('activeCountdownOutput.textContent'),'7:00');
+ run('slideRemainingMs=410000;updateTimerVisual()');
+ assert.equal(run('activeCountdownOutput.textContent'),'6:50');
+});
+test('unilateral preview clock shows the prescribed duration of one side',()=>{
+ const {context,run}=env();context.move=require('../data/program.json').templates['strength-a'].deposits[0].exercises[0];
+ run('slides=[makeExerciseSlide(move,{label:"A",rounds:3},1),makeExerciseSlide(move,{label:"A",rounds:3},2)];currentIndex=0;workoutMode=false;isPaused=true;startCurrentTimer(true)');
+ assert.equal(run('activeCountdownOutput.textContent'),'0:15');
+ assert.equal(run('activeCountdownLabel.textContent'),'PREVIEW · MOVEMENT TIME');
+});

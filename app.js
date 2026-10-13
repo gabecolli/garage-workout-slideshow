@@ -683,9 +683,12 @@ function setActiveTimerPhase(phase) {
     rest: "REST / CHANGE STATION",
   };
   if (activeCountdownLabel) {
-    activeCountdownLabel.textContent = phaseLabels[phase] || "WORK";
+    activeCountdownLabel.textContent = !workoutMode && phase === 'slide'
+      ? 'PREVIEW · MOVEMENT TIME'
+      : phaseLabels[phase] || 'WORK';
   }
   if (activeCountdownPanel) {
+    activeCountdownPanel.classList.toggle("is-preview", !workoutMode && phase === "slide");
     activeCountdownPanel.classList.toggle("is-setup", phase === "setup" || phase === "switch" || phase === "rest");
     activeCountdownPanel.classList.toggle("is-work", ["work", "left", "right"].includes(phase));
   }
@@ -713,7 +716,12 @@ function updateTimerVisual() {
   const remaining = currentRemainingMs();
   const ratio = slideTotalMs > 0 ? 1 - remaining / slideTotalMs : 0;
   progress.style.transform = `scaleX(${Math.min(1, Math.max(0, ratio))})`;
-  if (activeCountdownOutput) activeCountdownOutput.textContent = formatDuration(Math.ceil(remaining / 1000));
+  if (activeCountdownOutput) {
+    const displayed = !workoutMode && activeTimerPhase === 'slide'
+      ? (isActivePerSide() ? getActiveSideDurationMs() : getActiveWorkDurationMs())
+      : remaining;
+    activeCountdownOutput.textContent = formatDuration(Math.ceil(displayed / 1000));
+  }
 }
 
 function pauseCurrentTimer() {
@@ -783,7 +791,7 @@ function render({ resetTimer = true } = {}) {
     slide.classList.toggle("is-active", isActive);
     slide.setAttribute("aria-hidden", String(!isActive));
   });
-  counter.textContent = `${currentIndex + 1} / ${slides.length}`;
+  counter.textContent = `${workoutMode ? 'WORKOUT' : 'PREVIEW'} ${currentIndex + 1} / ${slides.length}`;
   const key=slides[currentIndex]?.dataset.setKey;
   doneButton.hidden = !workoutMode || !key || slides[currentIndex].classList.contains('slide--martial');
   doneButton.textContent = completedSets.has(key) ? 'Set logged ✓' : 'Log set';
@@ -891,12 +899,12 @@ function applyVersion() {
 }
 versionSelect.addEventListener('change',()=>{
   selectedVersion=versionSelect.value;
-  workoutMode=false; startButton.textContent='Start';
+  workoutMode=false; startButton.textContent='Start workout';
   applyVersion();
 });
 startButton.addEventListener('click',()=>{
   workoutMode=!workoutMode;
-  startButton.textContent=workoutMode?'End / preview':'Start';
+  startButton.textContent=workoutMode?'End / preview':'Start workout';
   if(workoutMode) {
     isPaused=false; toggleButton.textContent='Pause'; toggleButton.setAttribute('aria-pressed','false');
     const first=slides.findIndex(s=>Number(s.dataset.countdownSeconds)>0);

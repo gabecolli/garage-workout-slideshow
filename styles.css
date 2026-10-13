@@ -778,3 +778,6 @@ dialog input,dialog select,dialog textarea {width:100%;min-width:0;}
 .checkin-actions {display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0;}
 [data-report] {width:100%;}
 @media (max-width:700px) {dialog form {grid-template-columns:1fr;}.controls {width:calc(100vw - 1rem);}.controls button {font-size:.8rem;padding:.3rem;}.slide--overview {padding-bottom:7.5rem;}.level__value {white-space:normal;}.featured-mode {min-width:0;}}
+
+.exercise-countdown.is-preview {background:rgb(255 255 255 / 5%);border-color:var(--line);box-shadow:none;}
+.exercise-countdown.is-preview .exercise-countdown__label {color:var(--gold);}

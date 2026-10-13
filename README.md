@@ -27,7 +27,8 @@ this public repository never stores that journal.
 ## Display
 
 The existing appearance and demonstration layout are retained. In preview mode,
-slides rotate every 18 seconds. **Start** runs actual work, side-switch and rest
+slides rotate every 18 seconds while the large clock shows the prescribed movement
+duration, explicitly labeled PREVIEW. **Start workout** runs actual work, side-switch and rest
 timers. Warm-ups and endurance remain on screen for their prescribed durations.
 Setup is counted only on the first round. **Pause**, Previous/Next and keyboard
 controls remain available. The physical session stops before the separate dummy
