@@ -37,8 +37,10 @@ lab. Timers and viewing slides never mark sets or sessions completed.
 Choose **Today**, **10-min minimum**, or **BJJ class day**. **Log set** explicitly
 records a set on this device. **Check-in** distinguishes physical work, BJJ class,
 boxing and slow dummy study. Save locally or copy the report into the coach/Dot
-conversation. Nothing is automatically uploaded, and local logs do not sync
-between devices. Dot notification routing must be connected separately.
+conversation, or tell your Dot naturally what you did. Dot now has an enabled daily
+check-in around 7pm America/Chicago and instructions to save reports to the private
+journal read by the nightly builder. Local page logs are not automatically uploaded
+and do not sync between devices.
 
 The display polls `data/today.json` every 60 seconds. Updates wait until an active
 workout ends. A six-hour reload is suppressed during an active workout. On a

@@ -1338,8 +1338,11 @@
   },
   "checkIn": {
     "deliveryRequested": "Dot",
-    "deliveryStatus": "pending_connection",
+    "deliveryStatus": "scheduled",
     "question": "Quick training check-in: what did you actually do—strength/endurance, BJJ CLASS (minutes + intensity), boxing, and/or slow DUMMY LAB (theme + discovery)? What felt hard or painful, how is your energy, and any class/time limits tomorrow? A one-line reply is enough.",
-    "unknownPolicy": "No reply → unreported, no progression, no invented fatigue or missed-session punishment."
+    "unknownPolicy": "No reply → unreported, no progression, no invented fatigue or missed-session punishment.",
+    "dailyTime": "19:00",
+    "timezone": "America/Chicago",
+    "destination": "https://chatgpt.com/dots/home"
   }
 }

@@ -924,7 +924,7 @@ let checkinWasPaused=true;
 document.querySelector('[data-open-checkin]').addEventListener('click',()=>{
   checkinWasPaused=isPaused;setPaused(true);checkin.showModal();
   document.querySelector('[name=reportDate]').value=activeWorkout?.date || getChicagoDate();
-  document.querySelector('[data-checkin-status]').textContent='Saved on this device only. Copy your report into your coach/Dot chat to share it.';
+  document.querySelector('[data-checkin-status]').textContent='You can tell your Dot naturally. Local records stay on this device; copy them to Dot to share.';
 });
 checkin.addEventListener('close',()=>{if(!checkinWasPaused)setPaused(false);});
 document.querySelector('[data-close-checkin]').addEventListener('click',()=>checkin.close());
@@ -938,10 +938,10 @@ document.querySelector('[data-save-report]').addEventListener('click',()=>{
   const history=readLocal('fighter-checkins',[]);
   history.push({savedAt:new Date().toISOString(),report:report.value});
   const saved=writeLocal('fighter-checkins',history.slice(-90));
-  document.querySelector('[data-checkin-status]').textContent=saved?'Saved on this device. Copy and send to your coach/Dot; it has not been uploaded.':'Device storage unavailable. Copy the report below before closing.';
+  document.querySelector('[data-checkin-status]').textContent=saved?'Saved on this device. Copy and send to Dot; this local record has not been uploaded.':'Device storage unavailable. Copy the report below before closing.';
 });
 document.querySelector('[data-copy-report]').addEventListener('click',async()=>{
   report.value=makeReport();
-  try {await navigator.clipboard.writeText(report.value);document.querySelector('[data-checkin-status]').textContent='Copied. Paste into your coach/Dot chat so the next plan can use it.';}
+  try {await navigator.clipboard.writeText(report.value);document.querySelector('[data-checkin-status]').textContent='Copied. Paste into your Dot so the next plan can use it.';}
   catch {report.focus();report.select();document.querySelector('[data-checkin-status]').textContent='Select and copy the report below.';}
 });
