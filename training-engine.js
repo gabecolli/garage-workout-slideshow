@@ -4,6 +4,23 @@
   const clone = value => JSON.parse(JSON.stringify(value));
   const duration = n => `${Math.floor(n / 60)}:${String(n % 60).padStart(2, '0')}`;
   const dayName = date => new Intl.DateTimeFormat('en-US', {weekday:'long',timeZone:'UTC'}).format(new Date(`${date}T12:00:00Z`));
+  const dayOffset = (date, start) => Math.floor((new Date(`${date}T12:00:00Z`) - new Date(`${start}T12:00:00Z`)) / 86400000);
+  // Stable daily rotation, with an optional history check for moved/modified plans.
+  // History contains only dated plan IDs/themes, never inferred completion.
+  function chooseDaily(options, program, date, feedback, historyIds) {
+    if (!Array.isArray(options) || !options.length) return null;
+    const index = ((dayOffset(date, program.effectiveDate) % options.length) + options.length) % options.length;
+    const recent = Array.isArray(feedback.recentPlans) ? feedback.recentPlans.filter(p => {
+      const age = dayOffset(date, p.date);
+      return age >= 1 && age <= 2;
+    }) : [];
+    const used = new Set(recent.flatMap(historyIds));
+    for (let offset = 0; offset < options.length; offset++) {
+      const candidate = options[(index + offset) % options.length];
+      if (!used.has(candidate.id)) return candidate;
+    }
+    return options[index];
+  }
   function seconds(plan) {
     const movement = e => (e.timeSeconds || 0)+(e.setupSeconds || 0)+(e.restSeconds || 0)+(e.sideMode === 'per-side' ? e.switchSeconds || 0 : 0);
     return (plan.ignition ? movement(plan.ignition) : 0)+plan.deposits.reduce((n,b)=>n+b.exercises.reduce((s,e)=>s+b.rounds*(movement(e)-(e.setupSeconds||0))+(e.setupSeconds||0),0),0);
@@ -26,6 +43,18 @@
     } else if (f.mode === 'minimum') { key = 'minimum'; note = 'Ten-minute minimum selected.'; }
     if (key === 'boxing' && Number(f.hardCombatSessions7d) >= 2) { key = 'endurance-b'; note = 'Hard combat sessions already supplied intensity. Steady endurance replaces boxing.'; }
     const plan = clone(program.templates[key]);
+    const mobility = chooseDaily(program.mobilityRotation?.options, program, date, f,
+      p => p.exerciseIds || p.deposits?.flatMap(b => b.exercises.map(e => e.id)) || []);
+    if (mobility) for (const block of plan.deposits) for (const e of block.exercises) {
+      if (e.rotationSlot !== 'daily-mobility' && e.id !== 'EX-FUNC-025') continue;
+      Object.assign(e, {id:mobility.id, name:mobility.name, cue:mobility.cue, equipment:mobility.equipment,
+        rotationSlot:'daily-mobility', home:mobility.instructions, prescription:mobility.instructions,
+        away:'Use the same comfortable unloaded movements, with a wall or chair for support.'});
+      // The old 90/90 clip must not masquerade as the new movement bundle.
+      delete e.media;
+    }
+    const dummy = chooseDaily(program.dummyLab.themes, program, date, f,
+      p => [p.dummyThemeId || p.martialSupplement?.themeId].filter(Boolean));
     // Two-week rotations replace slots, not anchors or entire sessions.
     const phase = Math.floor((new Date(`${date}T12:00:00Z`) - new Date(`${program.effectiveDate}T12:00:00Z`))/86400000/14) % 2;
     if (phase === 1) {
@@ -80,8 +109,9 @@
       additionalTitle:'TODAY’S NEXT BLOCKS',emphasis:note,
       levels:{floor:'10:00 · 7 min walk + 3 min mobility',standard:`${duration(total)} · includes setup + rest`,bonus:'Optional brisk walk; dummy lab separate'},
       weekSummary:'Mon strength A · Tue endurance · Wed strength B · Thu endurance · Fri strength C · Sat boxing · Sun recovery',
-      martialSupplement:{id:'DUMMY-LAB',name:'DUMMY LAB · SINGLE-LEG STUDY',reps:'3 SLOW/SIDE',timeSeconds:420,time:'7:00',setupSeconds:0,restSeconds:0,timerMode:'exercise',category:'martial',countsAsWorkout:false,home:program.dummyLab.dailySteps[day],away:'Visualize the same positions and write one question.',cue:'One question: where do posture or connection change? Pause and inspect.',text:'7 min slow technical study. Record one discovery. Not conditioning.'}});
+      martialSupplement:{id:'DUMMY-LAB',themeId:dummy?.id || 'single-leg-position',name:'DUMMY LAB · '+(dummy?.name || 'SINGLE-LEG STUDY'),reps:dummy?.reps || '3 SLOW/SIDE',timeSeconds:420,time:'7:00',setupSeconds:0,restSeconds:0,timerMode:'exercise',category:'martial',countsAsWorkout:false,home:dummy ? `${dummy.home} Focus: ${dummy.cue}` : program.dummyLab.dailySteps?.[day],away:'Visualize the same familiar positions and write one question.',cue:program.dummyLab.question || 'One question: where do posture or connection change? Pause and inspect.',text:'Optional 7 min slow technical study. Record one discovery. Not conditioning.'}});
     if (typeof f.dummyTheme==='string' && f.dummyTheme.trim()) {
+      plan.martialSupplement.themeId='reported-focus';
       plan.martialSupplement.name='DUMMY LAB · '+f.dummyTheme.trim().slice(0,70).toUpperCase();
       plan.martialSupplement.home='7 min slow rehearsal of one familiar sequence from this theme. Pause at the difficult position; record one discovery.';
       if(typeof f.dummyQuestion==='string') plan.martialSupplement.cue=f.dummyQuestion.slice(0,180);

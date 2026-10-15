@@ -763,7 +763,7 @@ button {
 
 
 /* Session controls retain the existing display style. */
-.controls {max-width:calc(100vw - 1rem); opacity:.72;flex-wrap:wrap;justify-content:center;}
+.controls {max-width:calc(100vw - 1rem); opacity:1;flex-wrap:wrap;justify-content:center;}
 .controls select, dialog input, dialog select, dialog textarea, dialog button {font:inherit;color:var(--ink);background:var(--panel-strong);border:1px solid var(--line);border-radius:.42rem;padding:.5rem;}
 .controls [hidden] {display:none;}
 .controls button:disabled {color:var(--gold);cursor:default;}
@@ -781,5 +781,8 @@ dialog input,dialog select,dialog textarea {width:100%;min-width:0;}
 
 .exercise-countdown.is-preview {background:rgb(255 255 255 / 5%);border-color:var(--line);box-shadow:none;}
 .exercise-countdown.is-preview .exercise-countdown__label {color:var(--gold);}
+.exercise-countdown.is-paused {border-style:dashed;}
+.exercise-countdown__action {margin-top:.65rem;padding:.5rem .8rem;color:var(--ink);background:var(--panel-strong);border:1px solid var(--gold);border-radius:.42rem;font:inherit;font-weight:800;cursor:pointer;}
+.exercise-countdown__action:focus-visible {outline:3px solid var(--gold);outline-offset:3px;}
 
 .checkin-actions a {color:var(--gold);padding:.5rem;align-self:center;}

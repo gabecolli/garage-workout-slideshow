@@ -15,12 +15,14 @@ Saturday: focused boxing, adjusted around actual BJJ class load.
 Sunday: easy movement and mobility.
 
 Main lifts repeat for measurable progress. Selected accessories, Dopa entries,
-and boxing themes rotate every two weeks. Slow dummy study follows one technical
-question; it is separate from class and never counted as conditioning.
+and boxing themes rotate every two weeks. Mobility bundles and familiar dummy-study
+contexts rotate daily, avoiding the previous two days. Slow dummy study follows one
+shared weekly technical question; it is separate from class and never counted as conditioning.
 
 `data/program.json` defines the program. `training-engine.js` generates a session
 and applies dated reports about class, fatigue, pain, time limits and struggles.
-No report means unknown. Only explicit, comparable completed exposures can earn
+The optional dated feedback input may include recentPlans with date, exerciseIds and
+dummyThemeId to avoid repeated optional slots after a moved plan. No report means unknown. Only explicit, comparable completed exposures can earn
 progression. The private coaching process owns history and reads actual reports;
 this public repository never stores that journal.
 
@@ -28,8 +30,11 @@ this public repository never stores that journal.
 
 The existing appearance and demonstration layout are retained. In preview mode,
 slides rotate every 18 seconds while the large clock shows the prescribed movement
-duration, explicitly labeled PREVIEW. **Start workout** runs actual work, side-switch and rest
-timers. Warm-ups and endurance remain on screen for their prescribed durations.
+duration, explicitly labeled PREVIEW · TIMER NOT STARTED. Manual Previous/Next holds
+the selected preview. **Start this exercise** beside the clock starts the selected
+movement without jumping back to warm-up; **Start workout** on an overview starts
+the warm-up. Actual setup, work, side-switch and rest timers then count down.
+**Pause timer** / **Resume timer** preserve the remaining time. Warm-ups and endurance remain on screen for their prescribed durations.
 Setup is counted only on the first round. **Pause**, Previous/Next and keyboard
 controls remain available. The physical session stops before the separate dummy
 lab. Timers and viewing slides never mark sets or sessions completed.

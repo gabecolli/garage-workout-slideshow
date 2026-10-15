@@ -31,12 +31,13 @@ let currentRevision = "";
 let hasWorkout = false;
 let youtubeSequence = 0;
 let timerTickId;
-let slideStartedAt = 0;
+let slideStartedAt = null;
 let slideRemainingMs = 0;
 let slideTotalMs = 0;
 let activeCountdownOutput = null;
 let activeCountdownLabel = null;
 let activeCountdownPanel = null;
+let activeCountdownAction = null;
 let activeTimerPhase = "slide";
 
 const CATEGORY_LABELS = {
@@ -130,6 +131,14 @@ function makeExerciseClock(item) {
   );
   output.dataset.exerciseCountdown = "";
   countdown.append(output);
+  const action = createElement("button", "exercise-countdown__action", "Start this exercise");
+  action.type = "button";
+  action.dataset.timerAction = "";
+  action.addEventListener("click", () => {
+    if (!workoutMode) startWorkout();
+    else setPaused(!isPaused);
+  });
+  countdown.append(action);
   clock.append(fields, countdown);
   return clock;
 }
@@ -684,14 +693,31 @@ function setActiveTimerPhase(phase) {
   };
   if (activeCountdownLabel) {
     activeCountdownLabel.textContent = !workoutMode && phase === 'slide'
-      ? 'PREVIEW · MOVEMENT TIME'
-      : phaseLabels[phase] || 'WORK';
+      ? 'PREVIEW · TIMER NOT STARTED'
+      : `${isPaused ? 'PAUSED · ' : ''}${phaseLabels[phase] || 'WORK'}`;
   }
   if (activeCountdownPanel) {
     activeCountdownPanel.classList.toggle("is-preview", !workoutMode && phase === "slide");
     activeCountdownPanel.classList.toggle("is-setup", phase === "setup" || phase === "switch" || phase === "rest");
     activeCountdownPanel.classList.toggle("is-work", ["work", "left", "right"].includes(phase));
+    activeCountdownPanel.classList.toggle("is-paused", workoutMode && isPaused);
   }
+}
+
+function updateControls() {
+  const hasTimer = getActiveWorkDurationMs() > 0;
+  startButton.textContent = workoutMode ? 'End / preview' : (hasTimer ? 'Start this exercise' : 'Start workout');
+  startButton.disabled = !slides.some(slide => Number(slide.dataset.countdownSeconds) > 0);
+  toggleButton.textContent = workoutMode
+    ? (isPaused ? 'Resume timer' : 'Pause timer')
+    : (isPaused ? 'Resume preview' : 'Pause preview');
+  toggleButton.disabled = workoutMode && Boolean(slides[currentIndex]?.dataset.sessionEnd);
+  toggleButton.setAttribute('aria-pressed', String(isPaused));
+  if (activeCountdownAction) {
+    activeCountdownAction.textContent = workoutMode ? (isPaused ? 'Resume timer' : 'Pause timer') : 'Start this exercise';
+    activeCountdownAction.setAttribute('aria-pressed', String(workoutMode && !isPaused));
+  }
+  setActiveTimerPhase(activeTimerPhase);
 }
 
 function resetActiveTimerPhase() {
@@ -704,11 +730,11 @@ function resetActiveTimerPhase() {
   setActiveTimerPhase(nextPhase);
   slideTotalMs = getActiveSlideDurationMs();
   slideRemainingMs = slideTotalMs;
-  slideStartedAt = 0;
+  slideStartedAt = null;
 }
 
 function currentRemainingMs() {
-  if (!slideStartedAt) return slideRemainingMs;
+  if (slideStartedAt === null) return slideRemainingMs;
   return Math.max(0, slideRemainingMs - (performance.now() - slideStartedAt));
 }
 
@@ -726,14 +752,14 @@ function updateTimerVisual() {
 
 function pauseCurrentTimer() {
   slideRemainingMs = currentRemainingMs();
-  slideStartedAt = 0;
+  slideStartedAt = null;
   clearTimerHandles();
   updateTimerVisual();
 }
 
 function finishCurrentTimerPhase() {
   slideRemainingMs = 0;
-  slideStartedAt = 0;
+  slideStartedAt = null;
   clearTimerHandles();
   updateTimerVisual();
 
@@ -757,27 +783,29 @@ function finishCurrentTimerPhase() {
     return;
   }
 
-  timerId = window.setTimeout(() => showSlide(currentIndex + 1), TIMER_TICK_MS);
+  showSlide(currentIndex + 1);
 }
 
 function startCurrentTimer(reset = false) {
+  // Preserve elapsed time if a visibility or render event restarts the scheduler.
+  slideRemainingMs = currentRemainingMs();
+  slideStartedAt = null;
   clearTimerHandles();
   const activeSlide = slides[currentIndex];
   activeCountdownOutput = activeSlide?.querySelector("[data-exercise-countdown]") || null;
   activeCountdownLabel = activeSlide?.querySelector("[data-timer-phase-label]") || null;
   activeCountdownPanel = activeSlide?.querySelector("[data-timer-phase-panel]") || null;
+  activeCountdownAction = activeSlide?.querySelector("[data-timer-action]") || null;
 
   if (reset) {
     resetActiveTimerPhase();
-  } else if (!slideRemainingMs || slideRemainingMs < 1) {
-    slideTotalMs = getActiveSlideDurationMs();
-    slideRemainingMs = slideTotalMs;
   }
 
-  setActiveTimerPhase(activeTimerPhase);
+  updateControls();
   updateTimerVisual();
-  if (isPaused || document.hidden || slides.length < 2) return;
-  if (workoutMode && slides[currentIndex]?.dataset.sessionEnd) { setPaused(true); return; }
+  if (workoutMode && activeSlide?.dataset.sessionEnd) { setPaused(true); return; }
+  if (isPaused || document.hidden || (!workoutMode && slides.length < 2)) return;
+  if (slideRemainingMs <= 0) { finishCurrentTimerPhase(); return; }
 
   slideStartedAt = performance.now();
   timerTickId = window.setInterval(updateTimerVisual, TIMER_TICK_MS);
@@ -808,12 +836,31 @@ function showSlide(index) {
 }
 
 function setPaused(paused) {
-  if (paused === isPaused) return;
+  if (!paused && workoutMode && slides[currentIndex]?.dataset.sessionEnd) return;
+  if (paused === isPaused) { updateControls(); return; }
   if (paused) pauseCurrentTimer();
   isPaused = paused;
-  toggleButton.textContent = paused ? "Play" : "Pause";
-  toggleButton.setAttribute("aria-pressed", String(paused));
+  updateControls();
   if (!paused) startCurrentTimer(false);
+}
+
+function startWorkout() {
+  // Starting from an exercise means starting that exercise, including its setup.
+  // Overview and finish slides still start at the first movement prep slide.
+  const index = getActiveWorkDurationMs() > 0
+    ? currentIndex
+    : slides.findIndex(slide => Number(slide.dataset.countdownSeconds) > 0);
+  if (index < 0) return;
+  workoutMode = true;
+  isPaused = false;
+  showSlide(index);
+}
+
+function navigateSlide(index) {
+  // Manual browsing holds the selected preview so it cannot disappear mid-read.
+  // During a workout, navigation keeps the explicit running/paused choice.
+  if (!workoutMode) setPaused(true);
+  showSlide(index);
 }
 
 async function fetchWorkout() {
@@ -850,14 +897,14 @@ async function fetchWorkout() {
   }
 }
 
-previousButton.addEventListener("click", () => showSlide(currentIndex - 1));
-nextButton.addEventListener("click", () => showSlide(currentIndex + 1));
+previousButton.addEventListener("click", () => navigateSlide(currentIndex - 1));
+nextButton.addEventListener("click", () => navigateSlide(currentIndex + 1));
 toggleButton.addEventListener("click", () => setPaused(!isPaused));
 
 document.addEventListener("keydown", (event) => {
   if (/INPUT|TEXTAREA|SELECT/.test(event.target.tagName) || document.querySelector("[data-checkin]").open) return;
-  if (event.key === "ArrowLeft") showSlide(currentIndex - 1);
-  if (event.key === "ArrowRight") showSlide(currentIndex + 1);
+  if (event.key === "ArrowLeft") navigateSlide(currentIndex - 1);
+  if (event.key === "ArrowRight") navigateSlide(currentIndex + 1);
   if (event.key === " " && !(event.target instanceof HTMLButtonElement)) {
     event.preventDefault();
     setPaused(!isPaused);
@@ -869,9 +916,9 @@ document.addEventListener("visibilitychange", () => {
     pauseCurrentTimer();
     activateMedia();
   } else {
-    fetchWorkout().finally(() => {
-      if (!isPaused) startCurrentTimer(false);
-    });
+    // Timer resumption must not wait for a plan fetch or an offline timeout.
+    if (!isPaused) startCurrentTimer(false);
+    fetchWorkout();
   }
 });
 
@@ -899,17 +946,12 @@ function applyVersion() {
 }
 versionSelect.addEventListener('change',()=>{
   selectedVersion=versionSelect.value;
-  workoutMode=false; startButton.textContent='Start workout';
+  workoutMode=false; isPaused=false;
   applyVersion();
 });
 startButton.addEventListener('click',()=>{
-  workoutMode=!workoutMode;
-  startButton.textContent=workoutMode?'End / preview':'Start workout';
-  if(workoutMode) {
-    isPaused=false; toggleButton.textContent='Pause'; toggleButton.setAttribute('aria-pressed','false');
-    const first=slides.findIndex(s=>Number(s.dataset.countdownSeconds)>0);
-    showSlide(Math.max(0,first));
-  } else {applyVersion();}
+  if (!workoutMode) startWorkout();
+  else { workoutMode=false; isPaused=false; applyVersion(); }
 });
 doneButton.addEventListener('click',()=>{
   const key=slides[currentIndex]?.dataset.setKey;

@@ -21,3 +21,47 @@ test('progression needs two confirmed comparable pain-free exposures',()=>{
  for(const delta of [{confirmed:false},{pain:true},{load:51},{setup:'per hand'},{rir:0},{allSetsAtTop:false}])assert.equal(engine.canProgress([good,{...good,...delta}]),false);
 });
 test('struggle feedback keeps movement but reduces demand and blocks progression',()=>{const w=make({struggledExerciseIds:['EX-H001']});const squat=w.deposits.flatMap(b=>b.exercises).find(e=>e.id==='EX-H001');assert.match(squat.home,/reduce load/);});
+
+test('daily mobility and dummy study rotate without changing the physical dose',()=>{
+ const seen=[];
+ for(let i=12;i<=26;i++){
+  const w=make({},`2026-10-${i}`);
+  const mobility=w.deposits.flatMap(b=>b.exercises).find(e=>e.rotationSlot==='daily-mobility');
+  assert(mobility);
+  assert(!mobility.media,'no stale 90/90 demo on a different mobility bundle');
+  assert(!/90\/90/.test(mobility.home));
+  for(const previous of seen.slice(-2)){
+   assert.notEqual(mobility.id,previous.mobility);
+   assert.notEqual(w.martialSupplement.themeId,previous.dummy);
+  }
+  assert.equal(w.totalSeconds,engine.seconds(w));
+  assert.equal(w.martialSupplement.countsAsWorkout,false);
+  seen.push({mobility:mobility.id,dummy:w.martialSupplement.themeId});
+ }
+ assert.equal(make({},'2026-10-15').totalSeconds,2520);
+ assert.equal(make({mode:'minimum'},'2026-10-15').totalSeconds,600);
+});
+test('recent moved plans prevent repeating the same optional slots; old and future plans are ignored',()=>{
+ const date='2026-10-15', baseline=make({},date);
+ const getMobility=w=>w.deposits.flatMap(b=>b.exercises).find(e=>e.rotationSlot==='daily-mobility');
+ const repeated={date:'2026-10-14',exerciseIds:[getMobility(baseline).id],dummyThemeId:baseline.martialSupplement.themeId};
+ const adjusted=make({recentPlans:[repeated]},date);
+ assert.notEqual(getMobility(adjusted).id,getMobility(baseline).id);
+ assert.notEqual(adjusted.martialSupplement.themeId,baseline.martialSupplement.themeId);
+ for(const ignored of ['2026-10-01','2026-10-15','2026-10-16']){
+  const w=make({recentPlans:[{...repeated,date:ignored}]},date);
+  assert.equal(getMobility(w).id,getMobility(baseline).id);
+  assert.equal(w.martialSupplement.themeId,baseline.martialSupplement.themeId);
+ }
+});
+test('short versions preserve daily variety and a reported skill question wins',()=>{
+ const date='2026-10-15';
+ for(const mode of ['minimum','class-day']){
+  const w=make({mode},date);
+  assert.equal(w.deposits[0].exercises[0].id,'MOB-SPINE-ROCKBACK');
+ }
+ const w=make({dummyTheme:'arm drag',dummyQuestion:'Where is my connection?'},date);
+ assert.equal(w.martialSupplement.name,'DUMMY LAB · ARM DRAG');
+ assert.equal(w.martialSupplement.themeId,'reported-focus');
+ assert.equal(w.martialSupplement.cue,'Where is my connection?');
+});
