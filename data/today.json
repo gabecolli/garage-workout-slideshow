@@ -1,199 +1,82 @@
 {
-  "templateId": "strength-b",
-  "title": "STRENGTH B · HINGE + RINGS",
-  "featuredMode": "Trap bar → rings / carry",
+  "templateId": "endurance-b",
+  "title": "ENDURANCE B · STEADY + MOBILE",
+  "featuredMode": "Treadmill / outdoors → mat",
   "emphasis": "Baseline plan. Tell your coach what you actually completed.",
   "ignition": {
-    "id": "EX-I002",
-    "name": "Movement prep",
+    "id": "EX-I004",
+    "name": "Easy walk warm-up",
     "reps": "TIMED",
-    "timeSeconds": 360,
-    "time": "6:00",
+    "timeSeconds": 180,
+    "time": "3:00",
     "setupSeconds": 0,
     "restSeconds": 0,
     "timerMode": "exercise",
     "category": "conditioning",
-    "cue": "Finish warm, with steady breathing.",
-    "equipment": "Jump rope",
-    "prescription": "2 min easy rope or walk; 2 min hips/ankles/shoulders; 2 min unloaded rehearsal of today’s lifts.",
-    "home": "2 min easy rope or walk; 2 min hips/ankles/shoulders; 2 min unloaded rehearsal of today’s lifts.",
-    "away": "Jumping jacks",
+    "cue": "Build pace gradually.",
+    "equipment": "Curved treadmill",
+    "prescription": "3 min easy walking.",
+    "home": "3 min easy walking.",
+    "away": "Brisk outdoor walk",
     "media": {
       "type": "youtube",
-      "videoId": "XSY9AE72inM",
-      "sourceUrl": "https://www.youtube.com/shorts/XSY9AE72inM",
-      "thumbnailUrl": "https://i.ytimg.com/vi/XSY9AE72inM/hqdefault.jpg",
+      "videoId": "hGaVza0pWdw",
+      "sourceUrl": "https://www.youtube.com/shorts/hGaVza0pWdw",
+      "thumbnailUrl": "https://i.ytimg.com/vi/hGaVza0pWdw/hqdefault.jpg",
       "sourceName": "Exercise library reference"
     }
   },
   "deposits": [
     {
-      "title": "TRAP BAR DEADLIFT",
-      "rounds": 3,
+      "title": "STEADY ENDURANCE",
+      "rounds": 1,
       "exercises": [
         {
-          "id": "EX-H005",
-          "name": "Trap Bar Deadlift",
-          "reps": "5",
-          "timeSeconds": 35,
-          "time": "0:35",
-          "setupSeconds": 15,
-          "restSeconds": 150,
+          "id": "EX-I004",
+          "name": "Steady treadmill or outdoor walk",
+          "reps": "TIMED",
+          "timeSeconds": 2100,
+          "time": "35:00",
+          "setupSeconds": 0,
+          "restSeconds": 0,
           "timerMode": "exercise",
-          "category": "strength",
-          "cue": "Push floor away",
-          "equipment": "Trap bar",
-          "prescription": "3 sets of 5; leave 3 good reps. Use a repeatable load and record it.",
-          "home": "3 sets of 5; leave 3 good reps. Use a repeatable load and record it.",
-          "away": "Backpack deadlift"
+          "category": "conditioning",
+          "cue": "Keep a pace that lets you speak complete sentences.",
+          "equipment": "Curved treadmill",
+          "prescription": "35 min moderate continuous walking/jogging; conversational breathing.",
+          "home": "35 min moderate continuous walking/jogging; conversational breathing.",
+          "away": "Brisk outdoor walk",
+          "media": {
+            "type": "youtube",
+            "videoId": "hGaVza0pWdw",
+            "sourceUrl": "https://www.youtube.com/shorts/hGaVza0pWdw",
+            "thumbnailUrl": "https://i.ytimg.com/vi/hGaVza0pWdw/hqdefault.jpg",
+            "sourceName": "Exercise library reference"
+          }
         }
       ],
-      "effort": "Leave 2–3 good reps in reserve. Rest is included in the timer.",
-      "role": "strength",
+      "effort": "35 min at a conversational pace. Start with 20–25 min if this exceeds recent capacity.",
+      "role": "endurance",
       "label": "A"
     },
     {
-      "title": "RING ROW + PUSH-UP",
-      "rounds": 3,
-      "exercises": [
-        {
-          "id": "EX-G009",
-          "name": "Ring Row",
-          "reps": "6–10",
-          "timeSeconds": 45,
-          "time": "0:45",
-          "setupSeconds": 15,
-          "restSeconds": 90,
-          "timerMode": "exercise",
-          "category": "strength",
-          "cue": "Body rigid; rings to ribs",
-          "equipment": "Gym rings",
-          "prescription": "6–10; leave 2–3 good reps in reserve",
-          "home": "6–10; leave 2–3 good reps in reserve",
-          "away": "Towel row around post",
-          "media": {
-            "type": "youtube",
-            "videoId": "etiOULaW7tc",
-            "sourceUrl": "https://www.youtube.com/shorts/etiOULaW7tc",
-            "thumbnailUrl": "https://i.ytimg.com/vi/etiOULaW7tc/hqdefault.jpg",
-            "sourceName": "Exercise library reference"
-          }
-        },
-        {
-          "id": "EX-R002",
-          "name": "Ring Push-Up",
-          "reps": "6–10",
-          "timeSeconds": 45,
-          "time": "0:45",
-          "setupSeconds": 15,
-          "restSeconds": 90,
-          "timerMode": "exercise",
-          "category": "strength",
-          "cue": "Turn rings; stay rigid",
-          "equipment": "Gym rings",
-          "prescription": "6–10; leave 2–3 good reps in reserve",
-          "home": "6–10; leave 2–3 good reps in reserve",
-          "away": "Push-up",
-          "media": {
-            "type": "youtube",
-            "videoId": "QtJNskFMZpY",
-            "sourceUrl": "https://www.youtube.com/shorts/QtJNskFMZpY",
-            "thumbnailUrl": "https://i.ytimg.com/vi/QtJNskFMZpY/hqdefault.jpg",
-            "sourceName": "Exercise library reference"
-          }
-        }
-      ],
-      "effort": "Set rings once at a height that allows both movements. Adjust foot position for difficulty.",
-      "role": "strength",
-      "label": "B"
-    },
-    {
-      "title": "SUITCASE CARRY",
-      "rounds": 2,
-      "exercises": [
-        {
-          "id": "EX-G020",
-          "name": "Suitcase Carry",
-          "reps": "TIMED",
-          "timeSeconds": 60,
-          "time": "1:00",
-          "setupSeconds": 15,
-          "restSeconds": 60,
-          "timerMode": "exercise",
-          "category": "strength",
-          "cue": "Do not lean",
-          "equipment": "Kettlebell or dumbbell",
-          "prescription": "30 sec/side with a kettlebell or dumbbell. Walk tall without leaning.",
-          "home": "30 sec/side with a kettlebell or dumbbell. Walk tall without leaning.",
-          "away": "Suitcase or loaded backpack",
-          "sideMode": "per-side",
-          "sideCount": 2,
-          "sideSeconds": 30,
-          "sideTime": "0:30",
-          "switchSeconds": 10,
-          "media": {
-            "type": "youtube",
-            "videoId": "9xjSFwKIehY",
-            "sourceUrl": "https://www.youtube.com/shorts/9xjSFwKIehY",
-            "thumbnailUrl": "https://i.ytimg.com/vi/9xjSFwKIehY/hqdefault.jpg",
-            "sourceName": "Exercise library reference"
-          }
-        }
-      ],
-      "effort": "Leave 2–3 good reps in reserve. Rest is included in the timer.",
-      "role": "accessory",
-      "label": "C"
-    },
-    {
-      "title": "FRONT LEVER PRACTICE",
-      "rounds": 2,
-      "exercises": [
-        {
-          "id": "EX-CAL-FL001",
-          "name": "Tuck Front Lever Hold",
-          "reps": "TIMED",
-          "timeSeconds": 8,
-          "time": "0:08",
-          "setupSeconds": 15,
-          "restSeconds": 60,
-          "timerMode": "exercise",
-          "category": "rings-calisthenics",
-          "cue": "Keep shoulders active. Use feet assistance if the shape changes.",
-          "equipment": "Pull-up bar or rings",
-          "prescription": "8-sec assisted tuck hold; leave plenty in reserve.",
-          "home": "8-sec assisted tuck hold; leave plenty in reserve.",
-          "away": "Tuck lever row under sturdy table",
-          "media": {
-            "type": "youtube",
-            "videoId": "EkdHh8DYlQ0",
-            "sourceUrl": "https://www.youtube.com/shorts/EkdHh8DYlQ0",
-            "thumbnailUrl": "https://i.ytimg.com/vi/EkdHh8DYlQ0/hqdefault.jpg",
-            "sourceName": "Exercise library reference"
-          }
-        }
-      ],
-      "effort": "Low fatigue. Regress if position cannot be held.",
-      "role": "skill",
-      "label": "D"
-    },
-    {
-      "title": "MOBILITY",
+      "title": "ACTIVE MOBILITY",
       "rounds": 1,
       "exercises": [
         {
           "id": "EX-FUNC-025",
           "name": "Hips, ankles and thoracic rotation",
           "reps": "TIMED",
-          "timeSeconds": 150,
-          "time": "2:30",
+          "timeSeconds": 240,
+          "time": "4:00",
           "setupSeconds": 0,
           "restSeconds": 0,
           "timerMode": "exercise",
           "category": "mobility",
           "cue": "Use comfortable active range. No forced stretching.",
           "equipment": "Mat",
-          "prescription": "2 min easy 90/90 switches, knee-to-wall rocks and open books; split time evenly.",
-          "home": "2 min easy 90/90 switches, knee-to-wall rocks and open books; split time evenly.",
+          "prescription": "4 min easy 90/90 switches, knee-to-wall rocks and open books; split time evenly.",
+          "home": "4 min easy 90/90 switches, knee-to-wall rocks and open books; split time evenly.",
           "away": "Use the listed unloaded regression or comparable available equipment",
           "media": {
             "type": "youtube",
@@ -206,19 +89,19 @@
       ],
       "effort": "Leave 2–3 good reps in reserve. Rest is included in the timer.",
       "role": "mobility",
-      "label": "E"
+      "label": "B"
     }
   ],
   "schemaVersion": 4,
-  "date": "2026-10-14",
-  "generatedAt": "2026-10-14T05:20:47.471Z",
-  "planId": "F4-2026-10-14-strength-b",
+  "date": "2026-10-15",
+  "generatedAt": "2026-10-15T05:24:46.828Z",
+  "planId": "F4-2026-10-15-endurance-b",
   "programVersion": "2026-10-12-v4",
-  "totalSeconds": 2346,
+  "totalSeconds": 2520,
   "additionalTitle": "TODAY’S NEXT BLOCKS",
   "levels": {
     "floor": "10:00 · 7 min walk + 3 min mobility",
-    "standard": "39:06 · includes setup + rest",
+    "standard": "42:00 · includes setup + rest",
     "bonus": "Optional brisk walk; dummy lab separate"
   },
   "weekSummary": "Mon strength A · Tue endurance · Wed strength B · Thu endurance · Fri strength C · Sat boxing · Sun recovery",
@@ -233,7 +116,7 @@
     "timerMode": "exercise",
     "category": "martial",
     "countsAsWorkout": false,
-    "home": "Connect entry to one controlled finish. 3 slow repetitions/side without driving into the dummy.",
+    "home": "Link finish to stable top position. 3 slow repetitions/side; identify one gap.",
     "away": "Visualize the same positions and write one question.",
     "cue": "One question: where do posture or connection change? Pause and inspect.",
     "text": "7 min slow technical study. Record one discovery. Not conditioning."
