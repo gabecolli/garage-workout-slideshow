@@ -54,7 +54,7 @@ class Element {
 }
 class ButtonElement extends Element { constructor() { super('button'); } }
 
-function env() {
+function env(initialStorage = new Map()) {
   const elements = new Map();
   const doc = new Element('document');
   doc.hidden = false;
@@ -95,19 +95,19 @@ function env() {
     }
     now = target;
   };
-  const storage = new Map();
+  const storage = initialStorage;
   const src = fs.readFileSync('app.js', 'utf8')
     .replace(/Promise\.all\(\[fetch\('data\/program[\s\S]*?\.catch\(\(\)=>\{\}\);/, '')
     .replace(/^fetchWorkout\(\);/m, '')
     .replace(/^pollId = window\.setInterval\(fetchWorkout, POLL_INTERVAL_MS\);/m, '');
   const context = vm.createContext({
-    window, document: doc, console, URL, URLSearchParams, Intl, Date, Number, Set, JSON, Math,
+    window, document: doc, console, URL, URLSearchParams, Intl, Date: class extends Date { static now() { return now; } }, Number, Set, JSON, Math,
     performance: {now: () => now}, AbortController,
     localStorage: {getItem: key => storage.get(key) ?? null, setItem: (key, value) => storage.set(key, value)},
     HTMLButtonElement: ButtonElement,
   });
   vm.runInContext(src, context);
-  return {context, doc, window, timers, advance, storage, click: query => doc.querySelector(query).click(), run: code => vm.runInContext(code, context)};
+  return {context, doc, window, timers, advance, elapse: ms => { now += ms; }, storage, click: query => doc.querySelector(query).click(), run: code => vm.runInContext(code, context)};
 }
 
 function timerSession() {
@@ -157,58 +157,54 @@ test('initial setup counted once, later rounds get no duplicate setup', () => {
   assert.equal(run('makeExerciseSlide(move,{label:"A",rounds:3},1).dataset.setupSeconds'), '15');
   assert.equal(run('makeExerciseSlide(move,{label:"A",rounds:3},2).dataset.setupSeconds'), '0');
 });
-test('preview rotates every 18 seconds without running or logging work', () => {
+test('page load starts real warm-up countdown with zero clicks', () => {
+  const e = env();
+  e.context.plan = require('../training-engine').generate(require('../data/program.json'), '2026-10-15');
+  e.run('setWorkout(plan)');
+  assert.equal(e.run('workoutMode'), true);
+  assert.equal(e.run('currentIndex'), 1);
+  assert.equal(clockText(e), '3:00');
+  e.advance(3000);
+  assert.equal(clockText(e), '2:57');
+  assert.equal(e.run('activeCountdownAction.textContent'), 'Pause timer');
+  assert.equal(e.run('completedSets.size'), 0);
+  assert.equal(e.storage.size, 0);
+});
+test('cold-start fetch loads despite timer display being the default', async () => {
+  const e = env();
+  e.context.plan = require('../training-engine').generate(require('../data/program.json'), '2026-10-15');
+  e.run('fetch = async () => ({ok:true, json:async()=>plan})');
+  await e.run('fetchWorkout()');
+  assert.equal(e.run('hasWorkout'), true);
+  assert.equal(e.run('currentIndex'), 1);
+  e.advance(1000);
+  assert.equal(clockText(e), '2:59');
+});
+test('overview auto-advances into a running interval without any interaction', () => {
   const e = timerSession();
   e.advance(18000);
   assert.equal(e.run('currentIndex'), 1);
-  assert.equal(clockText(e), '0:20');
-  assert.equal(e.run('activeCountdownLabel.textContent'), 'PREVIEW · TIMER NOT STARTED');
-  e.advance(5000);
-  assert.equal(clockText(e), '0:20');
+  assert.equal(e.run('activeTimerPhase'), 'setup');
+  e.advance(3000);
+  assert.equal(clockText(e), '0:19');
   assert.equal(e.run('completedSets.size'), 0);
 });
-test('manual selection holds preview and Start starts selected exercise at clock time zero', () => {
+test('manual exercise selection immediately runs setup, then work', () => {
   const e = timerSession();
-  e.click('[data-next]');
-  e.click('[data-next]');
+  e.click('[data-next]'); e.click('[data-next]');
   assert.equal(e.run('currentIndex'), 2);
-  assert.equal(e.run('isPaused'), true);
-  assert.equal(e.run('startButton.textContent'), 'Start this exercise');
-  e.advance(19000);
-  assert.equal(e.run('currentIndex'), 2);
-  assert.equal(clockText(e), '0:05');
-  e.click('[data-start]');
-  assert.equal(e.run('currentIndex'), 2);
-  assert.equal(e.run('activeTimerPhase'), 'setup');
+  assert.equal(e.run('isPaused'), false);
   assert.equal(clockText(e), '0:02');
   e.advance(1000);
   assert.equal(clockText(e), '0:01');
-  assert.equal(e.run('completedSets.size'), 0);
-});
-test('in-clock Start starts selected exercise immediately and ticks from performance.now() = 0', () => {
-  const e = timerSession();
-  e.click('[data-next]'); e.click('[data-next]');
-  timerAction(e);
-  assert.equal(e.run('currentIndex'), 2);
-  e.advance(1000);
-  assert.equal(clockText(e), '0:01');
   e.advance(1000);
   assert.equal(e.run('activeTimerPhase'), 'work');
-  assert.equal(clockText(e), '0:05');
   e.advance(1000);
   assert.equal(clockText(e), '0:04');
 });
-test('Start from overview begins with movement prep', () => {
-  const e = timerSession();
-  e.click('[data-start]');
-  assert.equal(e.run('currentIndex'), 1);
-  e.advance(3000);
-  assert.equal(e.run('activeTimerPhase'), 'work');
-  assert.equal(clockText(e), '0:19');
-});
 test('pause holds exact remaining time and Resume continues without resetting', () => {
   const e = timerSession();
-  e.click('[data-next]'); e.click('[data-next]'); timerAction(e);
+  e.click('[data-next]'); e.click('[data-next]');
   e.advance(3200);
   e.click('[data-toggle]');
   assert.equal(clockText(e), '0:04');
@@ -219,13 +215,10 @@ test('pause holds exact remaining time and Resume continues without resetting', 
   timerAction(e);
   e.advance(1000);
   assert.equal(clockText(e), '0:03');
-  assert.equal(e.run('activeTimerPhase'), 'work');
 });
-test('unilateral setup, left, switch, right and rest advance on scheduled events', () => {
+test('unilateral setup, left, switch, right and rest auto-advance', () => {
   const e = timerSession();
   e.click('[data-next]'); e.click('[data-next]'); e.click('[data-next]');
-  assert.equal(clockText(e), '0:03');
-  timerAction(e);
   for (const [elapsed, phase, text] of [[2000,'left','0:03'],[3000,'switch','0:01'],[1000,'right','0:03'],[3000,'rest','0:03']]) {
     e.advance(elapsed);
     assert.equal(e.run('activeTimerPhase'), phase);
@@ -238,30 +231,28 @@ test('unilateral setup, left, switch, right and rest advance on scheduled events
   assert.equal(e.run('completedSets.size'), 0);
   assert.equal(e.storage.size, 0);
 });
-test('running navigation starts selected interval and paused navigation clearly stays paused', () => {
+test('explicit pause survives navigation, version changes and reload', () => {
   const e = timerSession();
-  e.click('[data-start]');
-  e.advance(500);
-  e.click('[data-next]');
-  assert.equal(e.run('currentIndex'), 2);
-  e.advance(1000);
-  assert.equal(clockText(e), '0:01');
-  e.click('[data-toggle]');
-  e.click('[data-next]');
-  assert.equal(e.run('currentIndex'), 3);
-  assert.equal(e.run('activeCountdownAction.textContent'), 'Resume timer');
+  e.click('[data-next]'); e.click('[data-toggle]'); e.click('[data-next]');
   assert.equal(e.run('activeCountdownLabel.textContent'), 'PAUSED · GET READY');
   e.advance(10000);
   assert.equal(clockText(e), '0:02');
-  e.click('[data-toggle]');
-  e.advance(1000);
-  assert.equal(clockText(e), '0:01');
+  e.context.plan = require('../training-engine').generate(require('../data/program.json'), '2026-10-15');
+  e.run('serverWorkout=plan; versionSelect.value="standard"; versionSelect.dispatch("change")');
+  assert.equal(e.run('isPaused'), true);
+  const reloaded=env(e.storage);
+  reloaded.context.plan=e.context.plan;
+  reloaded.run('setWorkout(plan)');
+  reloaded.advance(5000);
+  assert.equal(clockText(reloaded),'3:00');
+  assert.equal(reloaded.run('isPaused'),true);
+  reloaded.click('[data-toggle]'); reloaded.advance(1000);
+  assert.equal(clockText(reloaded),'2:59');
 });
-test('keyboard selection and pause/resume use the same countdown controls', () => {
+test('keyboard selection auto-runs and space explicitly pauses/resumes', () => {
   const e = timerSession();
   e.doc.dispatch('keydown', {key:'ArrowRight'});
   e.doc.dispatch('keydown', {key:'ArrowRight'});
-  e.click('[data-start]');
   e.advance(1000);
   e.doc.dispatch('keydown', {key:' '});
   e.advance(4000);
@@ -269,78 +260,109 @@ test('keyboard selection and pause/resume use the same countdown controls', () =
   e.doc.dispatch('keydown', {key:' '});
   e.advance(1000);
   assert.equal(e.run('activeTimerPhase'), 'work');
-  e.doc.dispatch('keydown', {key:'ArrowLeft'});
-  assert.equal(e.run('currentIndex'), 1);
 });
-test('hiding pauses elapsed time and returning resumes without waiting for a fetch', () => {
+test('background throttling catches up across phases without waiting for a fetch', () => {
   const e = timerSession();
   e.run('fetchWorkout = () => new Promise(() => {})');
-  e.click('[data-next]'); e.click('[data-next]'); timerAction(e);
-  e.advance(3000);
-  e.doc.hidden = true;
-  e.doc.dispatch('visibilitychange');
-  e.advance(10000);
-  assert.equal(clockText(e), '0:04');
-  e.doc.hidden = false;
-  e.doc.dispatch('visibilitychange');
-  e.advance(1000);
-  assert.equal(clockText(e), '0:03');
-  e.click('[data-toggle]');
+  e.click('[data-next]'); e.click('[data-next]');
   e.doc.hidden = true; e.doc.dispatch('visibilitychange');
+  e.elapse(8500); // No callbacks: setup 2 + work 5 + 1.5 seconds of rest.
   e.doc.hidden = false; e.doc.dispatch('visibilitychange');
-  e.advance(5000);
-  assert.equal(clockText(e), '0:03');
-});
-test('restarting scheduler never adds time and pause at a deadline does not restart the phase', () => {
-  const e = timerSession();
-  e.click('[data-next]'); e.click('[data-next]'); timerAction(e);
-  e.advance(600);
-  e.run('startCurrentTimer(false)');
-  e.advance(1400);
-  assert.equal(e.run('activeTimerPhase'), 'work');
-  e.run('setPaused(true); slideRemainingMs=0; setPaused(false)');
-  assert.equal(e.run('activeTimerPhase'), 'rest');
-  assert.equal(clockText(e), '0:03');
-});
-test('check-in freezes timer and closing resumes only if it was running', () => {
-  const e = timerSession();
-  e.click('[data-start]');
-  e.advance(1000);
-  e.click('[data-open-checkin]');
-  e.advance(10000);
-  assert.equal(clockText(e), '0:01');
-  e.click('[data-close-checkin]');
-  e.advance(1000);
-  assert.equal(e.run('activeTimerPhase'), 'work');
+  assert.equal(e.run('activeTimerPhase'),'rest');
+  assert.equal(clockText(e),'0:02');
+  assert.equal(e.run('currentRemainingMs()'),1500);
+  e.advance(1500);
+  assert.equal(e.run('currentIndex'),3);
   e.click('[data-toggle]');
-  e.click('[data-open-checkin]');
-  e.click('[data-close-checkin]');
-  e.advance(3000);
-  assert.equal(clockText(e), '0:20');
+  e.doc.hidden=true; e.doc.dispatch('visibilitychange'); e.elapse(20000);
+  e.doc.hidden=false; e.doc.dispatch('visibilitychange');
+  assert.equal(e.run('isPaused'),true);
+  assert.equal(clockText(e),'0:02');
 });
-test('physical-session finish stops before the separate dummy lab and never logs sets', () => {
+test('late timer callbacks carry elapsed time into later slides', () => {
   const e = timerSession();
-  e.run('slides.push(makeExerciseSlide(sideMove,{label:"M", rounds:1},1))');
-  for (let i = 0; i < 4; i++) e.click('[data-next]');
-  timerAction(e);
-  e.advance(8000);
-  assert.equal(e.run('currentIndex'), 5);
-  assert.equal(e.run('isPaused'), true);
-  assert.equal(e.run('toggleButton.disabled'), true);
-  e.advance(60000);
-  e.doc.dispatch('keydown', {key:' '});
-  assert.equal(e.run('currentIndex'), 5);
-  assert.equal(e.run('isPaused'), true);
-  assert.equal(e.run('completedSets.size'), 0);
+  e.click('[data-next]'); e.click('[data-next]');
+  e.elapse(15000); // First movement 10 sec; next movement setup 2 + left 3.
+  e.run('finishCurrentTimerPhase()');
+  assert.equal(e.run('currentIndex'),3);
+  assert.equal(e.run('activeTimerPhase'),'switch');
+  assert.equal(clockText(e),'0:01');
 });
-test('a single timed slide still counts down; only Log set writes completion', () => {
+test('pageshow after a suspended page reconciles time and preserves user pause', () => {
+  const e = timerSession(); e.run('fetchWorkout = () => new Promise(() => {})');
+  e.click('[data-next]'); e.click('[data-next]');
+  e.window.dispatch('pagehide'); e.elapse(3000); e.window.dispatch('pageshow');
+  assert.equal(e.run('activeTimerPhase'),'work'); assert.equal(clockText(e),'0:04');
+  e.click('[data-toggle]'); e.window.dispatch('pagehide'); e.elapse(2000); e.window.dispatch('pageshow');
+  assert.equal(clockText(e),'0:04'); assert.equal(e.run('isPaused'),true);
+});
+test('check-in temporarily freezes the timer and resumes only if it was running', () => {
+  const e = timerSession(); e.click('[data-next]');
+  e.advance(1000); e.click('[data-open-checkin]'); e.advance(10000);
+  assert.equal(clockText(e),'0:01'); assert.equal(e.storage.size,0);
+  e.click('[data-close-checkin]'); e.advance(1000);
+  assert.equal(e.run('activeTimerPhase'),'work');
+  e.click('[data-toggle]'); e.click('[data-open-checkin]'); e.click('[data-close-checkin]');
+  e.advance(3000); assert.equal(clockText(e),'0:20');
+});
+test('physical boundary loops the display after 18 seconds, skipping optional dummy and logging nothing', () => {
   const e = timerSession();
-  e.run('slides=[makeExerciseSlide(move,{label:"A",rounds:1},1)];currentIndex=0;render()');
-  timerAction(e);
-  e.advance(3000);
-  assert.equal(clockText(e), '0:04');
-  assert.equal(e.storage.size, 0);
-  e.click('[data-done]');
-  assert.equal(e.run('completedSets.size'), 1);
-  assert.equal(e.storage.size, 1);
+  e.run('slides.push(makeExerciseSlide(sideMove,{label:"M",rounds:1},1))');
+  for(let i=0;i<4;i++)e.click('[data-next]');
+  e.advance(8000); assert.equal(e.run('currentIndex'),5); assert.equal(e.run('isPaused'),false);
+  e.advance(17999); assert.equal(e.run('currentIndex'),5);
+  e.advance(1); assert.equal(e.run('currentIndex'),0);
+  assert.equal(e.run('completedSets.size'),0); assert.equal(e.storage.size,0);
+});
+test('optional dummy is accessible manually but not part of unattended physical loop', () => {
+  const e=timerSession(); e.run('slides.push(makeExerciseSlide(sideMove,{label:"M",rounds:1},1)); showSlide(5)');
+  e.click('[data-next]'); assert.equal(e.run('currentIndex'),6);
+  e.advance(1000); assert.equal(clockText(e),'0:01');
+  assert.equal(e.run('completedSets.size'),0);
+});
+test('a newer plan waits for the boundary, then starts automatically', async () => {
+  const e=env(); const engine=require('../training-engine'); const p=require('../data/program.json');
+  e.context.oldPlan=engine.generate(p,'2026-10-15'); e.context.newPlan=engine.generate(p,'2026-10-16');
+  e.run('serverWorkout=oldPlan; currentRevision=workoutRevision(oldPlan); setWorkout(oldPlan); fetch=async()=>({ok:true,json:async()=>newPlan})');
+  await e.run('fetchWorkout()'); assert.equal(e.run('activeWorkout.date'),'2026-10-15');
+  e.run('showSlide(slides.findIndex(s=>s.dataset.sessionEnd))');
+  e.advance(18000); assert.equal(e.run('activeWorkout.date'),'2026-10-16');
+  assert.equal(e.run('currentIndex'),2); // Strength day has two overview pages.
+  e.advance(1000); assert.equal(clockText(e),'5:59');
+});
+test('preview is optional and returning to timers runs the selected exercise', () => {
+  const e=env(); e.context.plan=require('../training-engine').generate(require('../data/program.json'),'2026-10-15');
+  e.run('serverWorkout=plan;setWorkout(plan)');e.click('[data-start]');
+  assert.equal(e.run('workoutMode'),false);e.click('[data-next]');e.advance(3000);assert.equal(clockText(e),'3:00');
+  e.click('[data-start]');e.advance(1000);assert.equal(clockText(e),'2:59');
+});
+test('a single timed slide auto-counts; only Log set writes completion', () => {
+  const e=timerSession(); e.run('slides=[makeExerciseSlide(move,{label:"A",rounds:1},1)];currentIndex=0;render()');
+  e.advance(3000); assert.equal(clockText(e),'0:04'); assert.equal(e.storage.size,0);
+  e.click('[data-done]'); assert.equal(e.run('completedSets.size'),1); assert.equal(e.storage.size,1);
+});
+
+test('long unattended sleeps skip whole display cycles without logging training', () => {
+  const e=timerSession();e.click('[data-next]');e.click('[data-next]');
+  const cycle=e.run('physicalDisplayCycleMs()');
+  e.elapse(cycle*10000+3000);e.run('finishCurrentTimerPhase()');
+  assert.equal(e.run('currentIndex'),2);assert.equal(e.run('activeTimerPhase'),'work');
+  assert.equal(clockText(e),'0:04');assert.equal(e.storage.size,0);
+});
+test('stale fetched plans cannot replace a newer displayed day', async () => {
+  const e=env();const engine=require('../training-engine');const p=require('../data/program.json');
+  e.context.newPlan=engine.generate(p,'2026-10-16');e.context.oldPlan=engine.generate(p,'2026-10-15');
+  e.run('serverWorkout=newPlan;currentRevision=workoutRevision(newPlan);setWorkout(newPlan);fetch=async()=>({ok:true,json:async()=>oldPlan})');
+  await e.run('fetchWorkout()');assert.equal(e.run('serverWorkout.date'),'2026-10-16');
+});
+
+test('invalid refresh preserves the running loop and a later valid revision recovers', async () => {
+  const e=env();const engine=require('../training-engine');const p=require('../data/program.json');
+  e.context.oldPlan=engine.generate(p,'2026-10-15');e.context.newPlan=engine.generate(p,'2026-10-16');
+  e.run('console={warn(){}};serverWorkout=oldPlan;currentRevision=workoutRevision(oldPlan);setWorkout(oldPlan);fetch=async()=>({ok:true,json:async()=>({date:"2026-10-16",generatedAt:"bad",deposits:[]})})');
+  await e.run('fetchWorkout()');assert.equal(e.run('serverWorkout.date'),'2026-10-15');
+  e.advance(1000);assert.equal(clockText(e),'2:59');
+  e.run('fetch=async()=>({ok:true,json:async()=>newPlan})');await e.run('fetchWorkout()');
+  e.run('showSlide(slides.findIndex(s=>s.dataset.sessionEnd))');e.advance(18000);
+  assert.equal(e.run('activeWorkout.date'),'2026-10-16');e.advance(1000);assert.equal(clockText(e),'5:59');
 });

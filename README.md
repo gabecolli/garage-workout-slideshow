@@ -28,16 +28,20 @@ this public repository never stores that journal.
 
 ## Display
 
-The existing appearance and demonstration layout are retained. In preview mode,
-slides rotate every 18 seconds while the large clock shows the prescribed movement
-duration, explicitly labeled PREVIEW · TIMER NOT STARTED. Manual Previous/Next holds
-the selected preview. **Start this exercise** beside the clock starts the selected
-movement without jumping back to warm-up; **Start workout** on an overview starts
-the warm-up. Actual setup, work, side-switch and rest timers then count down.
-**Pause timer** / **Resume timer** preserve the remaining time. Warm-ups and endurance remain on screen for their prescribed durations.
-Setup is counted only on the first round. **Pause**, Previous/Next and keyboard
-controls remain available. The physical session stops before the separate dummy
-lab. Timers and viewing slides never mark sets or sessions completed.
+The always-on display starts the first movement countdown automatically on page
+load. Every selected or automatically displayed exercise runs its real setup,
+work, side-switch and rest timers without a Start click. **Pause timer** /
+**Resume timer** preserve remaining time; an explicit pause survives navigation,
+plan changes and reload. Background throttling is reconciled against wall-clock
+time when callbacks or visibility resume. Reload starts a fresh display pass
+unless paused; neither reload nor timer progress records training.
+
+At the end of physical movements, an 18-second **PHYSICAL DISPLAY CYCLE ENDED**
+boundary counts down before looping the physical display. This is screen playback,
+not a prescription for another workout. The optional dummy lab stays outside the
+automatic loop and can be reached with Next at that boundary. Nothing is marked
+completed automatically. **Preview slides** is an optional static-clock preview;
+**Run timers** returns to the selected exercise with a running timer.
 
 Choose **Today**, **10-min minimum**, or **BJJ class day**. **Log set** explicitly
 records a set on this device. **Check-in** distinguishes physical work, BJJ class,
@@ -47,8 +51,9 @@ check-in around 7pm America/Chicago and instructions to save reports to the priv
 journal read by the nightly builder. Local page logs are not automatically uploaded
 and do not sync between devices.
 
-The display polls `data/today.json` every 60 seconds. Updates wait until an active
-workout ends. A six-hour reload is suppressed during an active workout. On a
+The display polls `data/today.json` every 60 seconds. Updated plans wait until the
+physical display boundary, then load automatically. Explicit Pause is respected.
+A six-hour reload is suppressed while timers are running. On a
 failed refresh the current plan remains; a cold start falls back to movement
 posters. Video links retain library references; unavailable demonstrations show
 an explicit fallback rather than an unrelated movement.

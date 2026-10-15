@@ -16,8 +16,9 @@ let slides = Array.from(document.querySelectorAll("[data-slide]"));
 let currentIndex = 0;
 let timerId;
 let pollId;
-let isPaused = false;
-let workoutMode = false;
+let isPaused = readLocal('fighter-display-paused', false) === true;
+let workoutMode = true;
+let synchronizingTimer = false;
 let activeWorkout = null;
 let serverWorkout = null;
 let trainingProgram = null;
@@ -131,12 +132,12 @@ function makeExerciseClock(item) {
   );
   output.dataset.exerciseCountdown = "";
   countdown.append(output);
-  const action = createElement("button", "exercise-countdown__action", "Start this exercise");
+  const action = createElement("button", "exercise-countdown__action", "Pause timer");
   action.type = "button";
   action.dataset.timerAction = "";
   action.addEventListener("click", () => {
     if (!workoutMode) startWorkout();
-    else setPaused(!isPaused);
+    else setPaused(!isPaused, {persist:true});
   });
   countdown.append(action);
   clock.append(fields, countdown);
@@ -483,7 +484,10 @@ function buildSlides(workout) {
   const finish = createElement('section', 'slide slide--loading');
   finish.dataset.slide = ''; finish.dataset.sessionEnd = 'true';
   const card = createElement('div','loading-card');
-  card.append(createElement('p','eyebrow','PHYSICAL SESSION FINISHED'),createElement('h1','','Report what you did.'),createElement('p','','Timers do not confirm completion. Use Check-in to record your session. Next opens the separate slow dummy lab.'));
+  card.append(createElement('p','eyebrow','PHYSICAL DISPLAY CYCLE ENDED'),createElement('h1','','Display loop will restart.'),createElement('p','','This is a repeating timer display, not another prescribed session or a completion record. Nothing has been logged. Next opens optional slow dummy study; it is outside the automatic loop.'));
+  const restartLabel=createElement('p','eyebrow','DISPLAY RESTART'); restartLabel.dataset.timerPhaseLabel='';
+  const restartClock=createElement('output','exercise-countdown__value','0:18'); restartClock.dataset.boundaryCountdown='';
+  card.append(restartLabel,restartClock);
   finish.append(card); nextSlides.push(finish);
   const martialSlide = makeMartialSupplementSlide(workout.martialSupplement);
   if (martialSlide) nextSlides.push(martialSlide);
@@ -540,7 +544,7 @@ function setWorkout(workout) {
   const nextSlides = buildSlides(workout);
   slideshow.replaceChildren(...nextSlides);
   slides = nextSlides;
-  currentIndex = 0;
+  currentIndex = workoutMode ? Math.max(0, slides.findIndex(slide => Number(slide.dataset.countdownSeconds) > 0)) : 0;
   hasWorkout = true;
   render();
 
@@ -684,6 +688,7 @@ function clearTimerHandles() {
 function setActiveTimerPhase(phase) {
   activeTimerPhase = phase;
   const phaseLabels = {
+    slide: "DISPLAY RESTART",
     setup: "GET READY",
     work: "WORK",
     left: "LEFT SIDE",
@@ -705,16 +710,15 @@ function setActiveTimerPhase(phase) {
 }
 
 function updateControls() {
-  const hasTimer = getActiveWorkDurationMs() > 0;
-  startButton.textContent = workoutMode ? 'End / preview' : (hasTimer ? 'Start this exercise' : 'Start workout');
+  startButton.textContent = workoutMode ? 'Preview slides' : 'Run timers';
   startButton.disabled = !slides.some(slide => Number(slide.dataset.countdownSeconds) > 0);
   toggleButton.textContent = workoutMode
     ? (isPaused ? 'Resume timer' : 'Pause timer')
     : (isPaused ? 'Resume preview' : 'Pause preview');
-  toggleButton.disabled = workoutMode && Boolean(slides[currentIndex]?.dataset.sessionEnd);
+  toggleButton.disabled = false;
   toggleButton.setAttribute('aria-pressed', String(isPaused));
   if (activeCountdownAction) {
-    activeCountdownAction.textContent = workoutMode ? (isPaused ? 'Resume timer' : 'Pause timer') : 'Start this exercise';
+    activeCountdownAction.textContent = workoutMode ? (isPaused ? 'Resume timer' : 'Pause timer') : 'Run timers';
     activeCountdownAction.setAttribute('aria-pressed', String(workoutMode && !isPaused));
   }
   setActiveTimerPhase(activeTimerPhase);
@@ -735,7 +739,7 @@ function resetActiveTimerPhase() {
 
 function currentRemainingMs() {
   if (slideStartedAt === null) return slideRemainingMs;
-  return Math.max(0, slideRemainingMs - (performance.now() - slideStartedAt));
+  return Math.max(0, slideRemainingMs - (Date.now() - slideStartedAt));
 }
 
 function updateTimerVisual() {
@@ -743,7 +747,7 @@ function updateTimerVisual() {
   const ratio = slideTotalMs > 0 ? 1 - remaining / slideTotalMs : 0;
   progress.style.transform = `scaleX(${Math.min(1, Math.max(0, ratio))})`;
   if (activeCountdownOutput) {
-    const displayed = !workoutMode && activeTimerPhase === 'slide'
+    const displayed = !workoutMode && activeTimerPhase === 'slide' && !slides[currentIndex]?.dataset.sessionEnd
       ? (isActivePerSide() ? getActiveSideDurationMs() : getActiveWorkDurationMs())
       : remaining;
     activeCountdownOutput.textContent = formatDuration(Math.ceil(displayed / 1000));
@@ -757,7 +761,7 @@ function pauseCurrentTimer() {
   updateTimerVisual();
 }
 
-function finishCurrentTimerPhase() {
+function advanceTimerPhase() {
   slideRemainingMs = 0;
   slideStartedAt = null;
   clearTimerHandles();
@@ -783,7 +787,50 @@ function finishCurrentTimerPhase() {
     return;
   }
 
+  if (workoutMode && slides[currentIndex]?.dataset.sessionEnd) {
+    if (serverWorkout && workoutRevision(serverWorkout) !== currentRevision) {
+      applyVersion();
+      currentRevision = workoutRevision(serverWorkout);
+    } else showSlide(0);
+    return;
+  }
   showSlide(currentIndex + 1);
+}
+
+function physicalDisplayCycleMs() {
+  const boundary = slides.findIndex(slide => slide.dataset.sessionEnd);
+  if (boundary < 0) return 0;
+  return slides.slice(0, boundary + 1).reduce((total, slide) => {
+    const d=slide.dataset;
+    return total + (Number(d.countdownSeconds) > 0
+      ? (Number(d.countdownSeconds) + Number(d.setupSeconds || 0) + Number(d.restSeconds || 0) + (d.sideMode === 'per-side' ? Number(d.switchSeconds || 0) : 0)) * 1000
+      : SLIDE_INTERVAL_MS);
+  }, 0);
+}
+
+function finishCurrentTimerPhase() {
+  // Browser background throttling must not turn a 5-minute interval into 10.
+  // Carry lateness through every elapsed phase, including side switches/rest.
+  if (isPaused || slideStartedAt === null) return;
+  let remaining = slideRemainingMs - (Date.now() - slideStartedAt);
+  if (remaining > 0) { updateTimerVisual(); return; }
+  clearTimerHandles();
+  slideStartedAt = null;
+  synchronizingTimer = true;
+  try {
+    while (remaining <= 0 && !isPaused && slides.length) {
+      // Skip whole identical display loops after a long sleep, without replaying
+      // thousands of DOM transitions. A queued new plan must still load first.
+      if (workoutMode && slides[currentIndex]?.dataset.sessionEnd && (!serverWorkout || workoutRevision(serverWorkout) === currentRevision)) {
+        const cycleMs = physicalDisplayCycleMs();
+        if (cycleMs > 0 && -remaining >= cycleMs) remaining = -((-remaining) % cycleMs);
+      }
+      advanceTimerPhase();
+      remaining += slideRemainingMs;
+    }
+    slideRemainingMs = Math.max(0, remaining);
+  } finally { synchronizingTimer = false; }
+  startCurrentTimer(false);
 }
 
 function startCurrentTimer(reset = false) {
@@ -792,7 +839,7 @@ function startCurrentTimer(reset = false) {
   slideStartedAt = null;
   clearTimerHandles();
   const activeSlide = slides[currentIndex];
-  activeCountdownOutput = activeSlide?.querySelector("[data-exercise-countdown]") || null;
+  activeCountdownOutput = activeSlide?.querySelector("[data-exercise-countdown]") || activeSlide?.querySelector("[data-boundary-countdown]") || null;
   activeCountdownLabel = activeSlide?.querySelector("[data-timer-phase-label]") || null;
   activeCountdownPanel = activeSlide?.querySelector("[data-timer-phase-panel]") || null;
   activeCountdownAction = activeSlide?.querySelector("[data-timer-action]") || null;
@@ -803,12 +850,10 @@ function startCurrentTimer(reset = false) {
 
   updateControls();
   updateTimerVisual();
-  if (workoutMode && activeSlide?.dataset.sessionEnd) { setPaused(true); return; }
-  if (isPaused || document.hidden || (!workoutMode && slides.length < 2)) return;
+  if (synchronizingTimer || isPaused || (!workoutMode && slides.length < 2)) return;
+  slideStartedAt = Date.now();
   if (slideRemainingMs <= 0) { finishCurrentTimerPhase(); return; }
-
-  slideStartedAt = performance.now();
-  timerTickId = window.setInterval(updateTimerVisual, TIMER_TICK_MS);
+  timerTickId = window.setInterval(() => { finishCurrentTimerPhase(); updateTimerVisual(); }, TIMER_TICK_MS);
   timerId = window.setTimeout(finishCurrentTimerPhase, slideRemainingMs);
 }
 
@@ -819,7 +864,7 @@ function render({ resetTimer = true } = {}) {
     slide.classList.toggle("is-active", isActive);
     slide.setAttribute("aria-hidden", String(!isActive));
   });
-  counter.textContent = `${workoutMode ? 'WORKOUT' : 'PREVIEW'} ${currentIndex + 1} / ${slides.length}`;
+  counter.textContent = `${workoutMode ? 'TIMER DISPLAY' : 'PREVIEW'} ${currentIndex + 1} / ${slides.length}`;
   const key=slides[currentIndex]?.dataset.setKey;
   doneButton.hidden = !workoutMode || !key || slides[currentIndex].classList.contains('slide--martial');
   doneButton.textContent = completedSets.has(key) ? 'Set logged ✓' : 'Log set';
@@ -830,15 +875,14 @@ function render({ resetTimer = true } = {}) {
 
 function showSlide(index) {
   if (!slides.length) return;
-  if (workoutMode && index >= slides.length) {setPaused(true);return;}
   currentIndex = (index + slides.length) % slides.length;
   render({ resetTimer: true });
 }
 
-function setPaused(paused) {
-  if (!paused && workoutMode && slides[currentIndex]?.dataset.sessionEnd) return;
+function setPaused(paused, {persist = false} = {}) {
+  if (persist) writeLocal('fighter-display-paused', paused);
   if (paused === isPaused) { updateControls(); return; }
-  if (paused) pauseCurrentTimer();
+  if (paused) { finishCurrentTimerPhase(); pauseCurrentTimer(); }
   isPaused = paused;
   updateControls();
   if (!paused) startCurrentTimer(false);
@@ -853,14 +897,18 @@ function startWorkout() {
   if (index < 0) return;
   workoutMode = true;
   isPaused = false;
+  writeLocal('fighter-display-paused', false);
   showSlide(index);
 }
 
 function navigateSlide(index) {
-  // Manual browsing holds the selected preview so it cannot disappear mid-read.
-  // During a workout, navigation keeps the explicit running/paused choice.
-  if (!workoutMode) setPaused(true);
+  // Appearing on screen starts the new interval unless the user chose Pause.
+  // Navigation never changes that explicit pause preference.
   showSlide(index);
+}
+
+function workoutRevision(workout) {
+  return `${workout?.date}:${safeText(workout?.generatedAt, String(JSON.stringify(workout).length))}`;
 }
 
 async function fetchWorkout() {
@@ -876,11 +924,15 @@ async function fetchWorkout() {
     });
     if (!response.ok) throw new Error(`Workout request failed: ${response.status}`);
     const workout = await response.json();
-    const revision = safeText(workout.generatedAt, `${workout.date}:${JSON.stringify(workout).length}`);
+    validateWorkout(workout);
+    // Concurrent fetches or a stale cache must not roll an always-on display back.
+    if (serverWorkout && (workout.date < serverWorkout.date ||
+      (workout.date === serverWorkout.date && Date.parse(workout.generatedAt) < Date.parse(serverWorkout.generatedAt)))) return;
+    const revision = workoutRevision(workout);
     if (revision !== currentRevision) {
       serverWorkout = workout;
-      if (!workoutMode) { applyVersion(); currentRevision = revision; }
-      else liveStatus.textContent = 'UPDATED PLAN READY · FINISH CURRENT SESSION';
+      if (!hasWorkout || !workoutMode) { applyVersion(); currentRevision = revision; }
+      else liveStatus.textContent = 'UPDATED PLAN READY · LOADS AT DISPLAY BOUNDARY';
     }
     if (hasWorkout) {
       liveStatus.classList.remove("live-badge--offline");
@@ -899,7 +951,7 @@ async function fetchWorkout() {
 
 previousButton.addEventListener("click", () => navigateSlide(currentIndex - 1));
 nextButton.addEventListener("click", () => navigateSlide(currentIndex + 1));
-toggleButton.addEventListener("click", () => setPaused(!isPaused));
+toggleButton.addEventListener("click", () => setPaused(!isPaused, {persist:true}));
 
 document.addEventListener("keydown", (event) => {
   if (/INPUT|TEXTAREA|SELECT/.test(event.target.tagName) || document.querySelector("[data-checkin]").open) return;
@@ -907,23 +959,27 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "ArrowRight") navigateSlide(currentIndex + 1);
   if (event.key === " " && !(event.target instanceof HTMLButtonElement)) {
     event.preventDefault();
-    setPaused(!isPaused);
+    setPaused(!isPaused, {persist:true});
   }
 });
 
 document.addEventListener("visibilitychange", () => {
-  if (document.hidden) {
-    pauseCurrentTimer();
-    activateMedia();
-  } else {
-    // Timer resumption must not wait for a plan fetch or an offline timeout.
+  if (!document.hidden) {
+    // Reconcile wall-clock time even when background timers were throttled.
+    finishCurrentTimerPhase();
     if (!isPaused) startCurrentTimer(false);
     fetchWorkout();
   }
 });
 
 window.addEventListener("online", fetchWorkout);
-window.addEventListener("pageshow", fetchWorkout);
+window.addEventListener("pageshow", () => {
+  finishCurrentTimerPhase();
+  if (!isPaused) startCurrentTimer(false);
+  window.clearInterval(pollId);
+  pollId = window.setInterval(fetchWorkout, POLL_INTERVAL_MS);
+  fetchWorkout();
+});
 
 Promise.all([fetch('data/program.json', {cache:'no-store'}).then(r=>r.ok?r.json():null),fetch('data/rotation-exercises.json',{cache:'no-store'}).then(r=>r.ok?r.json():{})]).then(([p,r])=>{trainingProgram=p;rotationExercises=r;}).catch(()=>{});
 fetchWorkout();
@@ -946,12 +1002,11 @@ function applyVersion() {
 }
 versionSelect.addEventListener('change',()=>{
   selectedVersion=versionSelect.value;
-  workoutMode=false; isPaused=false;
   applyVersion();
 });
 startButton.addEventListener('click',()=>{
   if (!workoutMode) startWorkout();
-  else { workoutMode=false; isPaused=false; applyVersion(); }
+  else { workoutMode=false; applyVersion(); }
 });
 doneButton.addEventListener('click',()=>{
   const key=slides[currentIndex]?.dataset.setKey;
