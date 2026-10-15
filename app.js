@@ -484,7 +484,7 @@ function buildSlides(workout) {
   const finish = createElement('section', 'slide slide--loading');
   finish.dataset.slide = ''; finish.dataset.sessionEnd = 'true';
   const card = createElement('div','loading-card');
-  card.append(createElement('p','eyebrow','PHYSICAL DISPLAY CYCLE ENDED'),createElement('h1','','Display loop will restart.'),createElement('p','','This is a repeating timer display, not another prescribed session or a completion record. Nothing has been logged. Next opens optional slow dummy study; it is outside the automatic loop.'));
+  card.append(createElement('p','eyebrow','PHYSICAL DISPLAY CYCLE ENDED'),createElement('h1','','Display loop will restart.'),createElement('p','','This is a repeating timer display, not another prescribed session or a completion record. Nothing is logged automatically. Next opens optional slow dummy study; it is outside the automatic loop.'));
   const restartLabel=createElement('p','eyebrow','DISPLAY RESTART'); restartLabel.dataset.timerPhaseLabel='';
   const restartClock=createElement('output','exercise-countdown__value','0:18'); restartClock.dataset.boundaryCountdown='';
   card.append(restartLabel,restartClock);

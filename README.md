@@ -53,7 +53,7 @@ and do not sync between devices.
 
 The display polls `data/today.json` every 60 seconds. Updated plans wait until the
 physical display boundary, then load automatically. Explicit Pause is respected.
-A six-hour reload is suppressed while timers are running. On a
+A six-hour reload is suppressed in the default timer-display mode. On a
 failed refresh the current plan remains; a cold start falls back to movement
 posters. Video links retain library references; unavailable demonstrations show
 an explicit fallback rather than an unrelated movement.
