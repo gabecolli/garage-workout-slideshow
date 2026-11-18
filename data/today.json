@@ -2,7 +2,7 @@
   "templateId": "strength-b-endurance",
   "title": "STRENGTH + ENDURANCE · HINGE + RINGS",
   "featuredMode": "Trap bar / kettlebell → rings → treadmill",
-  "emphasis": "Strength first, then a comfortable steady finish. Leave 2–3 good reps in reserve.",
+  "emphasis": "Strength first, then steady cardio. Leave 3 good reps in reserve.",
   "ignition": {
     "id": "EX-I002",
     "name": "Movement prep",
@@ -82,7 +82,7 @@
         {
           "id": "EX-R002",
           "name": "Ring Push-Up",
-          "reps": "6–10",
+          "reps": "6",
           "timeSeconds": 45,
           "time": "0:45",
           "setupSeconds": 15,
@@ -181,8 +181,8 @@
       "rounds": 1,
       "exercises": [
         {
-          "id": "MOB-ANKLE-CALF",
-          "name": "Ankle rocks + calf mobility",
+          "id": "MOB-SHOULDER-SPINE",
+          "name": "Wall slides + open-book rotation",
           "reps": "TIMED",
           "timeSeconds": 150,
           "time": "2:30",
@@ -190,10 +190,10 @@
           "restSeconds": 0,
           "timerMode": "exercise",
           "category": "mobility",
-          "cue": "Move slowly in a comfortable range. No forcing or bouncing.",
-          "equipment": "Wall",
-          "prescription": "Alternate gentle knee-to-wall ankle rocks and a comfortable standing calf stretch. Split the allotted time equally between movements and sides; heel stays down. Demo unavailable.",
-          "home": "Alternate gentle knee-to-wall ankle rocks and a comfortable standing calf stretch. Split the allotted time equally between movements and sides; heel stays down. Demo unavailable.",
+          "cue": "Keep ribs relaxed and shoulders comfortable. Stop if painful.",
+          "equipment": "Wall + mat",
+          "prescription": "Alternate gentle wall slides and side-lying open-book rotations. Split the allotted time equally; turn both ways without forcing range. Demo unavailable.",
+          "home": "Alternate gentle wall slides and side-lying open-book rotations. Split the allotted time equally; turn both ways without forcing range. Demo unavailable.",
           "away": "Use the same comfortable unloaded movements, with a wall or chair for support.",
           "rotationSlot": "daily-mobility"
         }
@@ -204,10 +204,10 @@
     }
   ],
   "schemaVersion": 4,
-  "date": "2026-11-17",
-  "generatedAt": "2026-11-17T15:10:13.495Z",
-  "planId": "F4-2026-11-17-strength-b-endurance",
-  "programVersion": "2026-11-17-v4.3",
+  "date": "2026-11-18",
+  "generatedAt": "2026-11-18T15:57:40.043Z",
+  "planId": "F4-2026-11-18-strength-b-endurance",
+  "programVersion": "2026-11-18-v4.4",
   "totalSeconds": 2795,
   "additionalTitle": "TODAY’S NEXT BLOCKS",
   "levels": {
@@ -215,11 +215,11 @@
     "standard": "46:35 · includes setup + rest",
     "bonus": "Optional brisk walk; dummy lab separate"
   },
-  "weekSummary": "This week: Mon strength A · Tue strength B + steady finish · Wed endurance · Thu endurance · Fri strength C · Sat boxing · Sun recovery",
+  "weekSummary": "Wed strength B + cardio · Thu steady endurance · Fri strength C · Sat boxing · Sun recovery",
   "martialSupplement": {
     "id": "DUMMY-LAB",
-    "themeId": "single-leg-position",
-    "name": "DUMMY LAB · SINGLE-LEG POSITION CHECK",
+    "themeId": "arm-drag-connection",
+    "name": "DUMMY LAB · ARM-DRAG CONNECTION",
     "reps": "3 SLOW/SIDE",
     "timeSeconds": 420,
     "time": "7:00",
@@ -228,7 +228,7 @@
     "timerMode": "exercise",
     "category": "martial",
     "countsAsWorkout": false,
-    "home": "Study one familiar single-leg entry slowly. Pause at contact to check posture and connection; do not drive or finish forcefully into the dummy. Up to 3 slow reps/side. Focus: Where can posture or connection be kept more consistent?",
+    "home": "Review a familiar arm-drag sequence slowly with the dummy, or study your trusted reference. Pause after the arm clears; inspect angle and connection. Up to 3 slow reps/side. Focus: Can I keep a useful connection after the drag without pulling harder?",
     "away": "Visualize the same familiar positions and write one question.",
     "cue": "Weekly question: can I keep posture and connection consistent while changing position?",
     "text": "Optional 7 min slow technical study. Record one discovery. Not conditioning."
