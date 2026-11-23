@@ -1,22 +1,22 @@
 {
-  "templateId": "endurance-b",
-  "title": "ENDURANCE B · STEADY + MOBILE",
-  "featuredMode": "Treadmill / outdoors → mat",
+  "templateId": "recovery",
+  "title": "RECOVERY · MOVE WELL",
+  "featuredMode": "Walk → mat",
   "emphasis": "Baseline plan. Tell your coach what you actually completed.",
   "ignition": {
     "id": "EX-I004",
-    "name": "Easy walk warm-up",
+    "name": "Steady treadmill or outdoor walk",
     "reps": "TIMED",
-    "timeSeconds": 180,
-    "time": "3:00",
+    "timeSeconds": 60,
+    "time": "1:00",
     "setupSeconds": 0,
     "restSeconds": 0,
     "timerMode": "exercise",
     "category": "conditioning",
-    "cue": "Build pace gradually.",
+    "cue": "Keep a pace that lets you speak complete sentences.",
     "equipment": "Curved treadmill",
-    "prescription": "3 min easy walking.",
-    "home": "3 min easy walking.",
+    "prescription": "1 min easy continuous walking/jogging; conversational breathing.",
+    "home": "1 min easy continuous walking/jogging; conversational breathing.",
     "away": "Brisk outdoor walk",
     "media": {
       "type": "youtube",
@@ -28,23 +28,23 @@
   },
   "deposits": [
     {
-      "title": "STEADY ENDURANCE",
+      "title": "EASY WALK",
       "rounds": 1,
       "exercises": [
         {
           "id": "EX-I004",
           "name": "Steady treadmill or outdoor walk",
           "reps": "TIMED",
-          "timeSeconds": 2100,
-          "time": "35:00",
+          "timeSeconds": 1800,
+          "time": "30:00",
           "setupSeconds": 0,
           "restSeconds": 0,
           "timerMode": "exercise",
           "category": "conditioning",
           "cue": "Keep a pace that lets you speak complete sentences.",
           "equipment": "Curved treadmill",
-          "prescription": "35 min moderate continuous walking/jogging; conversational breathing.",
-          "home": "35 min moderate continuous walking/jogging; conversational breathing.",
+          "prescription": "30 min easy continuous walking/jogging; conversational breathing.",
+          "home": "30 min easy continuous walking/jogging; conversational breathing.",
           "away": "Brisk outdoor walk",
           "media": {
             "type": "youtube",
@@ -55,28 +55,28 @@
           }
         }
       ],
-      "effort": "35 min at a conversational pace. Start with 20–25 min if this exceeds recent capacity.",
+      "effort": "Leave 2–3 good reps in reserve. Rest is included in the timer.",
       "role": "endurance",
       "label": "A"
     },
     {
-      "title": "ACTIVE MOBILITY",
+      "title": "MOBILITY",
       "rounds": 1,
       "exercises": [
         {
-          "id": "MOB-HIPS-POSTERIOR",
-          "name": "Hip-flexor stretch + seated hamstring reach",
+          "id": "MOB-SHOULDER-SPINE",
+          "name": "Wall slides + open-book rotation",
           "reps": "TIMED",
-          "timeSeconds": 240,
-          "time": "4:00",
+          "timeSeconds": 300,
+          "time": "5:00",
           "setupSeconds": 0,
           "restSeconds": 0,
           "timerMode": "exercise",
           "category": "mobility",
-          "cue": "Use light support; stay tall and avoid pulling into the stretch.",
-          "equipment": "Chair or wall + mat",
-          "prescription": "Alternate a gentle supported standing hip-flexor stretch and an easy seated hamstring reach. Split the allotted time equally between movements and sides; no deep knee bend. Demo unavailable.",
-          "home": "Alternate a gentle supported standing hip-flexor stretch and an easy seated hamstring reach. Split the allotted time equally between movements and sides; no deep knee bend. Demo unavailable.",
+          "cue": "Keep ribs relaxed and shoulders comfortable. Stop if painful.",
+          "equipment": "Wall + mat",
+          "prescription": "Alternate gentle wall slides and side-lying open-book rotations. Split the allotted time equally; turn both ways without forcing range. Demo unavailable.",
+          "home": "Alternate gentle wall slides and side-lying open-book rotations. Split the allotted time equally; turn both ways without forcing range. Demo unavailable.",
           "away": "Use the same comfortable unloaded movements, with a wall or chair for support.",
           "rotationSlot": "daily-mobility"
         }
@@ -87,23 +87,23 @@
     }
   ],
   "schemaVersion": 4,
-  "date": "2026-11-19",
-  "generatedAt": "2026-11-19T08:55:43.920Z",
-  "planId": "F4-2026-11-19-endurance-b",
+  "date": "2026-11-22",
+  "generatedAt": "2026-11-23T01:06:08.473Z",
+  "planId": "F4-2026-11-22-recovery",
   "programVersion": "2026-11-18-v4.4",
-  "totalSeconds": 2520,
+  "totalSeconds": 2160,
   "additionalTitle": "TODAY’S NEXT BLOCKS",
   "levels": {
     "floor": "10:00 · 7 min walk + 3 min mobility",
-    "standard": "42:00 · includes setup + rest",
+    "standard": "36:00 · includes setup + rest",
     "bonus": "Optional brisk walk; dummy lab separate"
   },
   "weekSummary": "Mon strength A · Tue endurance · Wed strength B · Thu endurance · Fri strength C · Sat boxing · Sun recovery",
   "martialSupplement": {
     "id": "DUMMY-LAB",
-    "themeId": "guard-frames",
-    "name": "DUMMY LAB · GUARD FRAMES + HIP MOVEMENT",
-    "reps": "SLOW STUDY",
+    "themeId": "arm-drag-connection",
+    "name": "DUMMY LAB · ARM-DRAG CONNECTION",
+    "reps": "3 SLOW/SIDE",
     "timeSeconds": 420,
     "time": "7:00",
     "setupSeconds": 0,
@@ -111,10 +111,9 @@
     "timerMode": "exercise",
     "category": "martial",
     "countsAsWorkout": false,
-    "home": "Review familiar guard frames and slow hip movement on the mat or with the dummy. Freeze between positions and identify one place where the frame or distance changes. No speed target. Focus: What changes when I create a little more space before moving my hips?",
+    "home": "Review a familiar arm-drag sequence slowly with the dummy, or study your trusted reference. Pause after the arm clears; inspect angle and connection. Up to 3 slow reps/side. Focus: Can I keep a useful connection after the drag without pulling harder?",
     "away": "Visualize the same familiar positions and write one question.",
     "cue": "Weekly question: can I keep posture and connection consistent while changing position?",
     "text": "Optional 7 min slow technical study. Record one discovery. Not conditioning."
   }
 }
-
