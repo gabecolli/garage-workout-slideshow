@@ -167,10 +167,5 @@
     "bonus": "None required"
   },
   "weekSummary": "Moving prep → guard skill → strength that supports it → repeat the same skill in rounds",
-  "martialSupplement": {
-    "id": "SKILL-INCLUDED",
-    "name": "SKILL PRACTICE IS IN THE WORKOUT",
-    "countsAsWorkout": false,
-    "text": "No separate dummy lab today—the mandatory guard skill is included in the workout above."
-  }
+  "martialSupplement": null
 }
